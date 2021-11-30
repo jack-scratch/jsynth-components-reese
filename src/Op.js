@@ -10,7 +10,7 @@ const Op = (props) => {
 		<div className="head">
 			<Label text={props.name} />
 		</div>
-		<div className="head">
+		<div className="body">
 			<Knob val="30" rad="25" />
 		</div>
 	</div>;
