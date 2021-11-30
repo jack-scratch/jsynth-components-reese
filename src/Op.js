@@ -3,7 +3,7 @@ import './App.css';
 import React from 'react';
 
 import Label from './Label';
-import Knob from './Knob';
+import Param from './Param';
 
 const Op = (props) => {
 	return <div className="op">
@@ -11,8 +11,8 @@ const Op = (props) => {
 			<Label text={props.name} />
 		</div>
 		<div className="body">
-			<Knob val="30" rad="25" />
-			<Knob val="30" rad="25" />
+			<Param name="Frequency" rad="25" val="0" />
+			<Param name="Volume" rad="40" val="0" />
 		</div>
 	</div>;
 }
