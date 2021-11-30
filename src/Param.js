@@ -10,10 +10,10 @@ const Param = (props) => {
 
 	return (
 		<div>
-			<div class="head">
-				<div class="mark">{props.name}</div>
+			<div className="head">
+				<div className="mark">{props.name}</div>
 			</div>
-			<div class="body">
+			<div className="body">
 				<Knob val={props.val} rad={props.rad} />
 			</div>
 		</div>
