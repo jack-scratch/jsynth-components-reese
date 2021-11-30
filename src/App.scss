@@ -1,54 +1,65 @@
+$margin: 6px;
+$pad: 6px;
+$bevel: 4px;
+
+$bg: #333;
+$fg: grey;
+
 .op {
 	display: inline-flex;
 	flex-direction: column;
-	padding: 6px;
-	background: #333;
-	border-radius: 4px;
-}
+	padding: $pad;
+	background: $bg;
+	border-radius: $bevel;
 
-.op > * {
-	margin: 6px;
-}
+	> * {
+		margin: $margin;
+	}
 
-.op .body div > * {
-	justify-content: center;
-	align-items: center;
-}
+	.body {
+		div {
+			> * {
+				justify-content: center;
+				align-items: center;
+			}
+		}
+	}
 
-.op .mark {
-	text-align: center;
+	.mark {
+		text-align: center;
+	}
 }
 
 .label {
 	font-family: Arial;
 	background: grey;
-	color: #333;
+	color: $bg;
 	width: 100%;
 }
 
 .mark {
 	font-family: Arial;
-	color: grey;
+	color: $fg;
 }
 
 .knob {
 	overflow: visible;
 	cursor: pointer;
+
+	line {
+		stroke-linecap: round;
+	}
 }
 
 .raised {
 	-webkit-filter: drop-shadow(0px 0px 1px #000);
 }
 
-.knob line {
-	stroke-linecap: round;
-}
-
 .body {
 	display: flex;
 	flex-direction: column;
-}
 
-.body > * {
-	margin: 6px;
+	> * {
+		margin: $margin;
+	}
 }
