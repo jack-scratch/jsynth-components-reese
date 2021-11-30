@@ -6,6 +6,10 @@
 	border-radius: 4px;
 }
 
+.op > * {
+	margin: 6px;
+}
+
 .label {
 	font-family: Arial;
 	background: grey;
