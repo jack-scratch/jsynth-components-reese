@@ -11,7 +11,7 @@ const Param = (props) => {
 	return (
 		<div>
 			<div class="head">
-				<Label text={props.name} />
+				<div class="mark">{props.name}</div>
 			</div>
 			<div class="body">
 				<Knob val={props.val} rad={props.rad} />

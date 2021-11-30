@@ -17,6 +17,11 @@
 	width: 100%;
 }
 
+.mark {
+	font-family: Arial;
+	color: grey;
+}
+
 .knob {
 	overflow: visible;
 }
