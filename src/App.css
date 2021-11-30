@@ -33,6 +33,7 @@
 
 .knob {
 	overflow: visible;
+	cursor: pointer;
 }
 
 .raised {
