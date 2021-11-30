@@ -28,3 +28,12 @@
 .knob line {
 	stroke-linecap: round;
 }
+
+.body {
+	display: flex;
+	flex-direction: column;
+}
+
+.body > * {
+	margin: 6px;
+}

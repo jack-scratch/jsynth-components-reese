@@ -12,6 +12,7 @@ const Op = (props) => {
 		</div>
 		<div className="body">
 			<Knob val="30" rad="25" />
+			<Knob val="30" rad="25" />
 		</div>
 	</div>;
 }
