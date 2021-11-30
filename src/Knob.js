@@ -1,10 +1,14 @@
 import React from 'react';
 
 const Knob = (props) => {
+	const
+		diam = props.rad * 2,
+		lineLn = 16;
+
 	return (
-		<svg className="knob" width="50" height="50" transform={"rotate(" + props.val + ")"}>
-			<circle cx="25" cy="25" r="25" fill="#333" />
-			<line x1="25" x2="25" y1="34" y2="50" stroke-width="3" stroke="grey" />
+		<svg className="knob" width={diam} height={diam} transform={"rotate(" + props.val + ")"}>
+			<circle cx={props.rad} cy={props.rad} r={props.rad} fill="#333" />
+			<line x1={props.rad} x2={props.rad} y1={diam - lineLn} y2={props.rad * 2} stroke-width="3" stroke="grey" />
 		</svg>
 	);
 }
