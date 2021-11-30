@@ -10,6 +10,15 @@
 	margin: 6px;
 }
 
+.op .body div > * {
+	justify-content: center;
+	align-items: center;
+}
+
+.op .mark {
+	text-align: center;
+}
+
 .label {
 	font-family: Arial;
 	background: grey;
