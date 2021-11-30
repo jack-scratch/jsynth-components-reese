@@ -6,6 +6,16 @@ import Label from './Label';
 import Param from './Param';
 
 const Op = (props) => {
+	// source
+	let osc = props.ctx.createOscillator();
+	osc.type = 'sine';
+	osc.frequency.value = 440.0;
+
+	osc.connect(props.ctx.destination);
+
+	// start
+	osc.start();
+
 	return <div className="op">
 		<div className="head">
 			<Label text={props.name} />
