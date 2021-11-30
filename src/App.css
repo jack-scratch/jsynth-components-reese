@@ -1,5 +1,6 @@
 .op {
 	display: inline-flex;
+	flex-direction: column;
 	padding: 6px;
 	background: #333;
 	border-radius: 4px;
@@ -10,4 +11,8 @@
 	background: grey;
 	color: #333;
 	width: 100%;
+}
+
+circle {
+	-webkit-filter: drop-shadow(0px 0px 1px #000);
 }
