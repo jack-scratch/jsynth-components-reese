@@ -5,26 +5,41 @@ import React from 'react';
 import Label from './Label';
 import Param from './Param';
 
-const Op = (props) => {
-	// source
-	let osc = props.ctx.createOscillator();
-	osc.type = 'sine';
-	osc.frequency.value = 440.0;
+class Op extends React.Component {
+	constructor(props) {
+		super(props);
 
-	osc.connect(props.ctx.destination);
+		// source
+		this.state = {
+			osc: this.props.ctx.createOscillator()
+		};
 
-	// start
-	osc.start();
+		this.state.osc.type = 'sine';
+		this.state.osc.frequency.value = 440.0;
 
-	return <div className="op">
-		<div className="head">
-			<Label text={props.name} />
-		</div>
-		<div className="body">
-			<Param name="Frequency" rad="25" val="0" />
-			<Param name="Volume" rad="40" val="0" />
-		</div>
-	</div>;
-}
+		// start
+		this.state.osc.start();
+
+		this.play = this.play.bind(this);
+	}
+
+	play() {
+		this.state.osc.connect(this.props.ctx.destination);
+	}
+
+	render() {
+		return (
+			<div onClick={this.play} className="op">
+				<div className="head">
+					<Label text={this.props.name} />
+				</div>
+				<div className="body">
+					<Param name="Frequency" rad="25" val="0" />
+					<Param name="Volume" rad="40" val="0" />
+				</div>
+			</div>
+		);
+	}
+};
 
 export default Op;
