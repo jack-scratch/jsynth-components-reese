@@ -2,7 +2,7 @@ import Op from './Op.js';
 
 function App() {
   return (
-    <Op />
+    <Op name='asdf' />
   );
 }
 

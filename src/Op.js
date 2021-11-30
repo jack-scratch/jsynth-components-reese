@@ -1,9 +1,7 @@
 import React from 'react';
 
-class Op extends React.Component {
-	render() {
-		return <div>asdf</div>;
-	}
+const Op = (props) => {
+	return <div>{props.name}</div>;
 }
 
 export default Op;
