@@ -30,16 +30,13 @@ $fg: grey;
 	}
 }
 
-.label {
-	font-family: Arial;
-	background: grey;
-	color: $bg;
-	width: 100%;
-}
+.body {
+	display: flex;
+	flex-direction: column;
 
-.mark {
-	font-family: Arial;
-	color: $fg;
+	> * {
+		margin: $margin;
+	}
 }
 
 .knob {
@@ -55,11 +52,14 @@ $fg: grey;
 	-webkit-filter: drop-shadow(0px 0px 1px #000);
 }
 
-.body {
-	display: flex;
-	flex-direction: column;
+.label {
+	font-family: Arial;
+	background: grey;
+	color: $bg;
+	width: 100%;
+}
 
-	> * {
-		margin: $margin;
-	}
+.mark {
+	font-family: Arial;
+	color: $fg;
 }
