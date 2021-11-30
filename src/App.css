@@ -4,3 +4,10 @@
 	background: #333;
 	border-radius: 4px;
 }
+
+.label {
+	font-family: Arial;
+	background: grey;
+	color: #333;
+	width: 100%;
+}
