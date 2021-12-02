@@ -4,7 +4,27 @@ class Knob extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this._rad = props.rad;
+		if (props.rad) {
+			this._rad = props.rad;
+		} else {
+			switch (props.sz) {
+				case 's':
+					this._rad = 26;
+
+					break;
+
+				case 'm':
+					this._rad = 40;
+
+					break;
+
+				case 'l':
+					this._rad = 60;
+
+					break;
+			}
+		}
+
 		this._val = props.val;
 	}
 
