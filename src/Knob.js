@@ -2,7 +2,7 @@ import React from 'react';
 
 class Knob extends React.Component {
 	constructor(props) {
-		super();
+		super(props);
 
 		this.rad = props.rad;
 		this.val = props.val;
