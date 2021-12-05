@@ -1,7 +1,6 @@
 import Op from './Op.js';
 
 function App() {
-	// init
 	const ctx = new window.AudioContext() || window.webkitAudioContext();
 
   return (
