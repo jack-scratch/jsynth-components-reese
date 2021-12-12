@@ -26,6 +26,11 @@ class Knob extends React.Component {
 		}
 
 		this._val = props.val;
+
+		this.turn = this.turn.bind(this);
+	}
+
+	turn() {
 	}
 
 	render() {
@@ -34,7 +39,7 @@ class Knob extends React.Component {
 			lineLn = 16;
 
 		return (
-			<svg className="knob raised" width={diam} height={diam} transform={"rotate(" + this._val + ")"}>
+			<svg className="knob raised" width={diam} height={diam} transform={"rotate(" + this._val + ")"} onClick={this.turn}>
 				<defs>
 					<clipPath id="circ">
 						<circle cx={this._rad} cy={this._rad} r={this._rad} />
