@@ -20,6 +20,7 @@ class Knob extends React.Component {
 	render() {
 		let rad;
 		switch (this.props.sz) {
+			default:
 			case 's':
 				rad = 26;
 
@@ -32,11 +33,6 @@ class Knob extends React.Component {
 
 			case 'l':
 				rad = 60;
-
-				break;
-
-			default:
-				rad = 26;
 
 				break;
 		}
