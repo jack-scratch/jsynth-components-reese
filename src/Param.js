@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Knob from './Knob';
-import Label from './Label';
 
 const Param = (props) => {
 	return (
