@@ -5,7 +5,9 @@ import Module from './Module';
 class Source extends React.Component {
 	render() {
 		return (
-			<Module />
+			<Module port={[
+				"In"
+			]} />
 		);
 	}
 };
