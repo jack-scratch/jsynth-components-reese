@@ -34,7 +34,7 @@ class Op extends React.Component {
 					<Label text={this.props.name} />
 				</div>
 				<div className="body">
-					<Param name="Frequency" rad="25" val="0" />
+					<Param name="Frequency" rad="25" />
 					<Param name="Volume" rad="40" val="0" />
 				</div>
 			</div>

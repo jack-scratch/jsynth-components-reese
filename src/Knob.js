@@ -25,12 +25,17 @@ class Knob extends React.Component {
 			}
 		}
 
-		this._val = props.val;
+		this.state = {
+			val: 0
+		};
 
 		this.turn = this.turn.bind(this);
 	}
 
 	turn() {
+		this.setState((prevState, props) => ({
+			val: this.state.val + 1
+		}));
 	}
 
 	render() {
