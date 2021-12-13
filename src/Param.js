@@ -10,7 +10,7 @@ const Param = (props) => {
 				<div className="mark">{props.name}</div>
 			</div>
 			<div className="body">
-				<Knob param={props.param} rad={props.rad} />
+				<Knob paramRef={props.paramRef} rad={props.rad} />
 			</div>
 		</div>
 	);
