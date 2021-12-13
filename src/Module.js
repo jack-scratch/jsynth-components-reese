@@ -12,7 +12,7 @@ class Module extends React.Component {
 			<div className="module">
 				<div className="io">
 					{this.props.port.map((type) =>
-						<div>
+						<div key="{type}">
 							<div className="head">
 								<div className="label">{type}</div>
 							</div>
