@@ -111,3 +111,8 @@ $portRad: calc(10px);
 		cy: $portRad;
 	}
 }
+
+.io {
+	display: flex;
+	justify-content: center;
+}
