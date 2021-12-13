@@ -6,7 +6,7 @@ class Source extends React.Component {
 	render() {
 		return (
 			<Module port={[
-				"In"
+				"Out"
 			]} />
 		);
 	}
