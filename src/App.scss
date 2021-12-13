@@ -101,7 +101,7 @@ $portRad: calc(10px);
 .port {
 	width: calc(#{$portRad} * 2);
 	height: calc(#{$portRad} * 2);
-	fill: $inert;
+	fill: $bg;
 	cursor: pointer;
 	-webkit-filter: drop-shadow(0px 0px 1px #000);
 
