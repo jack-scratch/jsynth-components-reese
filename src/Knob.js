@@ -22,6 +22,11 @@ class Knob extends React.Component {
 					this._rad = 60;
 
 					break;
+
+				default:
+					this._rad = 40;
+
+					break;
 			}
 		}
 
