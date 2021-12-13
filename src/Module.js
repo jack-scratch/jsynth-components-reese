@@ -2,6 +2,7 @@ import React from 'react';
 
 import Port from './Port';
 import Label from './Label';
+import Knob from './Knob';
 
 class Module extends React.Component {
 	constructor(props) {
@@ -14,9 +15,16 @@ class Module extends React.Component {
 				<div className="head">
 					<Label text={this.props.name} />
 				</div>
-				<div>
+				<div className="body">
 					{this.props.knob.map((name) =>
-						<div key="{name}">{name}</div>
+						<div key={name}>
+							<div className="head">
+								<Label text={name} />
+							</div>
+							<div className="body">
+								<Knob />
+							</div>
+						</div>
 					)}
 				</div>
 				<div className="body">
