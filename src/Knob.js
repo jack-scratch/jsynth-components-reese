@@ -48,7 +48,7 @@ class Knob extends React.Component {
 					</clipPath>
 				</defs>
 				<circle cx={rad} cy={rad} r={rad} fill="#333" />
-				<line x1={rad} x2={rad} y1={diam - lineLn} y2={rad * 2} strokeWidth="3" stroke="grey" clipPath="url(#circ)" />
+				<line x1={rad} x2={rad} y1={diam - lineLn} y2={rad * 2} strokeWidth="3" stroke="grey" />
 			</svg>
 		);
 	}
