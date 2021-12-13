@@ -14,7 +14,7 @@ const Param = (props) => {
 				<div className="mark">{props.name}</div>
 			</div>
 			<div className="body">
-				<Knob val={props.val} rad={props.rad} />
+				<Knob param={props.param} rad={props.rad} />
 			</div>
 		</div>
 	);
