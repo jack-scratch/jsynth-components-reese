@@ -28,11 +28,6 @@ $portRad: calc(10px);
 			}
 		}
 	}
-
-	.label,
-	.mark {
-		text-align: center;
-	}
 }
 
 .body {
@@ -58,6 +53,11 @@ $portRad: calc(10px);
 	padding: $pad;
 	background: $bg;
 	border-radius: $bevel;
+
+	.label,
+	.mark {
+		text-align: center;
+	}
 }
 
 .sys {
