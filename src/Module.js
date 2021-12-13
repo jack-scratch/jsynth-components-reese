@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Port from './Port';
+
 class Module extends React.Component {
 	constructor(props) {
 		super(props)
@@ -10,7 +12,14 @@ class Module extends React.Component {
 			<div className="module">
 				<div className="io">
 					{this.props.port.map((type) =>
-						<div className="label">{type}</div>
+						<div>
+							<div className="head">
+								<div className="label">{type}</div>
+							</div>
+							<div className="body">
+								<Port />
+							</div>
+						</div>
 					)}
 				</div>
 			</div>
