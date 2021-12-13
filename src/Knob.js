@@ -37,9 +37,8 @@ class Knob extends React.Component {
 				break;
 		}
 
-		const
-			diam = rad * 2,
-			lineLn = 16;
+		const diam = rad * 2;
+		const lineLn = 16;
 
 		return (
 			<svg className="knob raised" width={diam} height={diam} transform={"rotate(" + this.state.paramRef + ")"} onClick={this.turn}>
