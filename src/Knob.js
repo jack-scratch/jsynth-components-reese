@@ -24,7 +24,7 @@ class Knob extends React.Component {
 					break;
 
 				default:
-					this._rad = 40;
+					this._rad = 26;
 
 					break;
 			}
