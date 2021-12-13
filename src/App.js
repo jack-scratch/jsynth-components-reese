@@ -11,8 +11,7 @@ function App() {
 			{/* patch bay */}
 			<div className="sys">
 				<Osc knob={[
-					"asdf",
-					"hjkl"
+					"Frequency"
 				]} />
 			</div>
 		</div>
