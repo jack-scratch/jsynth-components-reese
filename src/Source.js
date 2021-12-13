@@ -2,7 +2,7 @@ import React from 'react';
 
 import Module from './Module';
 
-class Source extends React.Component {
+class Source extends Module {
 	render() {
 		return (
 			<Module port={[
