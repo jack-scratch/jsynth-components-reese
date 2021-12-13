@@ -13,7 +13,7 @@ class Knob extends React.Component {
 
 	turn() {
 		this.setState((prevState, props) => ({
-			paramRef: this.state.paramRef + 1
+			paramRef: this.state.paramRef + 10
 		}));
 	}
 
