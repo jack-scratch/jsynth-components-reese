@@ -8,7 +8,7 @@ function App() {
 		<div>
 			<Op name='Operator' ctx={ctx} />
 			<div className="sys">
-				<Module ctx={ctx} />
+				<Module />
 			</div>
 		</div>
   );
