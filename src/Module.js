@@ -9,9 +9,7 @@ class Module extends React.Component {
 
 	render() {
 		return (
-			<div className="module">
-				<div className="module"></div>
-			</div>
+			<div className="module">asdf</div>
 		);
 	}
 };
