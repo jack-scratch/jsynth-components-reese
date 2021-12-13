@@ -3,10 +3,6 @@ import React from 'react';
 import Port from './Port';
 
 class Module extends React.Component {
-	constructor(props) {
-		super(props)
-	}
-
 	render() {
 		return (
 			<div className="module">
