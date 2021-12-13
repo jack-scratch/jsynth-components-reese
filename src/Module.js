@@ -14,6 +14,11 @@ class Module extends React.Component {
 				<div className="head">
 					<Label text={this.props.name} />
 				</div>
+				<div>
+					{this.props.knob.map((name) =>
+						<div key="{name}">{name}</div>
+					)}
+				</div>
 				<div className="body">
 					<div className="io">
 						{this.props.port.map((type) =>

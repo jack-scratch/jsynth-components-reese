@@ -1,5 +1,5 @@
 import Op from './Op.js';
-import Source from './Source.js';
+import Osc from './Osc.js';
 
 function App() {
 	const ctx = new window.AudioContext() || window.webkitAudioContext();
@@ -10,7 +10,10 @@ function App() {
 
 			{/* patch bay */}
 			<div className="sys">
-				<Source />
+				<Osc knob={[
+					"asdf",
+					"hjkl"
+				]} />
 			</div>
 		</div>
   );

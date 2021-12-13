@@ -1,15 +1,15 @@
 import React from 'react';
 
-import Module from './Module';
+import Source from './Source';
 
-class Source extends Module {
+class Osc extends Source {
 	constructor(props) {
 		super(props);
 	}
 
 	render() {
 		return (
-			<Module knob={[
+			<Source knob={[
 				this.props.knob
 			]} port={[
 				"Out"
@@ -18,4 +18,4 @@ class Source extends Module {
 	}
 };
 
-export default Source;
+export default Osc;
