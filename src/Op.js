@@ -2,10 +2,11 @@ import './App.css';
 
 import React from 'react';
 
+import Source from './Source';
 import Label from './Label';
 import Param from './Param';
 
-class Op extends React.Component {
+class Op extends Source {
 	constructor(props) {
 		super(props);
 
