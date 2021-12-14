@@ -6,11 +6,19 @@ class Knob extends React.Component {
 	constructor(props) {
 		super(props);
 
+		this.state = {
+			val: this.props.paramRef.value
+		};
+
 		this.turn = this.turn.bind(this);
 	}
 
 	turn() {
-		this.props.paramRef.value += 10.0;
+		this.setState((prevState, props) => ({
+			val: prevState.val + 10.0
+		}));
+
+		this.props.paramRef.value = this.state.val;
 	}
 
 	render() {
@@ -37,7 +45,7 @@ class Knob extends React.Component {
 		const lineLn = 16;
 
 		return (
-			<svg className="knob raised" width={diam} height={diam} transform={`rotate(${0})`} onClick={this.turn}>
+			<svg className="knob raised" width={diam} height={diam} transform={`rotate(${this.state.val})`} onClick={this.turn}>
 				<defs>
 					<clipPath id="circ">
 						<circle cx={rad} cy={this._rad} r={rad} />
