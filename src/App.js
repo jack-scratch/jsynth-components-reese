@@ -28,7 +28,7 @@ function App() {
 				});
 			}
 		}}>
-			<Knob osc={osc} />
+			<Knob paramRef={osc.frequency} />
 		</div>
   );
 }
