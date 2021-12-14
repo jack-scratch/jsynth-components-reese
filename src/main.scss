@@ -3,6 +3,8 @@
 
 $portRad: calc(10px);
 
+$stroke: 3px;
+
 body {
 	display: flex;
 
@@ -30,7 +32,7 @@ body {
 }
 
 .group {
-	border: 3px solid $fg;
+	border: $stroke solid $fg;
 	border-radius: $bevel;
 }
 
