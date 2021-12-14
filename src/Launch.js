@@ -5,16 +5,21 @@ import './Launch.css';
 
 class Launch extends React.Component {
 	render() {
+		const x = 3;
+		const y = 3;
+
 		return (
 			<table className='launch'>
 				<tbody>
-					<tr>
-						{[...Array(3).keys()].map((i) =>
-							<td>
-								<Btn sz={this.props.sz} name={i} />
-							</td>
-						)}
-					</tr>
+					{[...Array(y).keys()].map((j) =>
+						<tr>
+							{[...Array(x).keys()].map((i) =>
+								<td>
+									<Btn sz={this.props.sz} name={(j * y) + i} />
+								</td>
+							)}
+						</tr>
+					)}
 				</tbody>
 			</table>
 		);
