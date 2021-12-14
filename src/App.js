@@ -2,6 +2,8 @@ import Osc from './Osc.js';
 import Effect from './Effect.js';
 import Out from './Out.js';
 
+import './App.css';
+
 function App() {
 	const ctx = new window.AudioContext() || window.webkitAudioContext();
 
