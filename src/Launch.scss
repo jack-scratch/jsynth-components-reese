@@ -4,6 +4,15 @@
 
 .launch {
 	@extend .cont;
+	display: inline-block;
+
+	.head {
+		padding: $margin;
+
+		> * {
+			margin: $margin;
+		}
+	}
 
 	td {
 		> * {
