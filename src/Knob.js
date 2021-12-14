@@ -8,8 +8,6 @@ class Knob extends React.Component {
 	}
 
 	turn() {
-		this.props.osc.start();
-
 		this.props.osc.frequency.value += 10.0;
 	}
 

@@ -12,10 +12,22 @@ function App() {
 	osc.type = 'sine';
 	osc.frequency.value = 440.0;
 
-	osc.connect(ctx.destination);
+	osc.start();
 
   return (
-		<div>
+		<div onClick={() => {
+			if (ctx.state == 'running') {
+				ctx.suspend().then(function() {
+					osc.disconnect(ctx.destination);
+				});
+			}
+
+			if (ctx.state == 'suspended') {
+				ctx.resume().then(function() {
+					osc.connect(ctx.destination);
+				});
+			}
+		}}>
 			<Knob osc={osc} />
 		</div>
   );
