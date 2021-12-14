@@ -6,7 +6,7 @@ import './Light.css';
 class Launch extends React.Component {
 	render() {
 		return (
-			<div className='light on'></div>
+			<div className='light off'></div>
 		);
 	}
 };
