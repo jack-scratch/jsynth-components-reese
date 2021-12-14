@@ -15,7 +15,7 @@ class Launch extends React.Component {
 						<tr>
 							{[...Array(x).keys()].map((i) =>
 								<td>
-									<Btn sz={this.props.sz} name={(j * y) + i} />
+									<Btn sz={this.props.sz} name={1 + ((j * y) + i)} />
 								</td>
 							)}
 						</tr>
