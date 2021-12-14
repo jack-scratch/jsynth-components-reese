@@ -2,7 +2,7 @@ import Op from './Op';
 import Effect from './Effect';
 import Out from './Out';
 import Knob from './Knob';
-import Btn from './Btn';
+import Launch from './Launch';
 
 import './App.css';
 
@@ -30,7 +30,7 @@ function App() {
 			}
 		}}>
 			<Knob paramRef={osc.frequency} />
-			<Btn name='asdf' sz='s' />
+			<Launch />
 		</div>
   );
 }
