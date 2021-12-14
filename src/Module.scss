@@ -4,6 +4,10 @@
 	@extend .cont;
 	display: inline-block;
 
+	> * {
+		margin: $margin;
+	}
+
 	.label,
 	.mark {
 		text-align: center;
