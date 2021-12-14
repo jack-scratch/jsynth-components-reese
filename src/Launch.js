@@ -5,10 +5,11 @@ import Light from './Light';
 import './Launch.css';
 
 class Launch extends React.Component {
-	render() {
-		const x = 3;
-		const y = 3;
+	constructor(props) {
+		super(props);
+	}
 
+	render() {
 		return (
 			<div className='launch'>
 				<div className='head'>
@@ -19,11 +20,11 @@ class Launch extends React.Component {
 					<div className="group">
 						<table>
 							<tbody>
-								{[...Array(y).keys()].map((j) =>
+								{[...Array(this.props.y).keys()].map((j) =>
 									<tr>
-										{[...Array(x).keys()].map((i) =>
+										{[...Array(this.props.x).keys()].map((i) =>
 											<td>
-												<Btn sz='m' name={1 + ((j * y) + i)} />
+												<Btn sz='m' name={1 + ((j * this.props.y) + i)} />
 											</td>
 										)}
 									</tr>

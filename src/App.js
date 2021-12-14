@@ -30,7 +30,7 @@ function App() {
 				});
 			}
 		}}>
-			<Launch name='asdf' />
+			<Launch x={3} y={3} name='asdf' />
 			<Pulse />
 		</div>
   );
