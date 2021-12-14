@@ -10,7 +10,7 @@ class Btn extends React.Component {
 	}
 
 	play() {
-		alert('asdf')
+		alert('asdf');
 	}
 
 	render() {
