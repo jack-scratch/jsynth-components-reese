@@ -10,7 +10,7 @@ class Launch extends React.Component {
 				<tbody>
 					<tr>
 						<td>
-							<Btn sz='s' />
+							<Btn sz={this.props.sz} />
 						</td>
 					</tr>
 				</tbody>

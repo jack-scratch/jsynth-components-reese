@@ -30,7 +30,7 @@ function App() {
 			}
 		}}>
 			<Knob paramRef={osc.frequency} />
-			<Launch />
+			<Launch sz='s' />
 		</div>
   );
 }
