@@ -1,0 +1,17 @@
+@import 'col.scss';
+
+$sz: 6px;
+
+.light {
+	width: $sz;
+	height: $sz;
+	border-radius: calc(#{$sz} / 2);
+
+	&.off {
+		background: $lightInert;
+	}
+
+	&.on {
+		background: $lightActive;
+	}
+}

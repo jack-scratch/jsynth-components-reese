@@ -1,5 +1,6 @@
 import React from 'react';
 import Btn from './Btn';
+import Light from './Light';
 
 import './Launch.css';
 
@@ -12,6 +13,7 @@ class Launch extends React.Component {
 			<div className='launch'>
 				<div className="head">
 					<div className="mark">{this.props.name}</div>
+					<Light />
 				</div>
 				<div className="body">
 					<table>
