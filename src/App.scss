@@ -11,15 +11,6 @@ $portRad: calc(10px);
 	}
 }
 
-.knob {
-	overflow: visible;
-	cursor: pointer;
-
-	line {
-		stroke-linecap: round;
-	}
-}
-
 .module {
 	display: inline-block;
 	padding: $pad;

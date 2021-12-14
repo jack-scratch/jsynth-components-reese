@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Knob.css';
+
 class Knob extends React.Component {
 	constructor(props) {
 		super(props);
