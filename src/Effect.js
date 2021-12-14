@@ -8,9 +8,7 @@ class Effect extends Module {
 
 	render() {
 		return (
-			<Module name={this.props.name} knob={[
-				this.props.knob
-			]} port={[
+			<Module name={this.props.name} param={this.props.param} port={[
 				'In',
 				'Out'
 			]} paramRef={this.props.paramRef} />

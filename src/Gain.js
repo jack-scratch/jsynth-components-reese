@@ -10,8 +10,10 @@ class Gain extends Effect {
 		let amp = this.props.ctx.createGain();
 
 		return (
-			<Effect name='Gain' knob={[
-				'Level'
+			<Effect name='Gain' param={[
+				{
+					name: 'Level'
+				}
 			]} paramRef={amp.gain} />
 		);
 	}

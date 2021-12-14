@@ -17,10 +17,10 @@ class Module extends React.Component {
 					<Label text={this.props.name} />
 				</div>
 				<div className='body'>
-					{this.props.knob.map((name) =>
-						<div key={name}>
+					{this.props.param.map((inst) =>
+						<div key={inst.name}>
 							<div className='head'>
-								<Label text={name} />
+								<Label text={inst.name} />
 							</div>
 							<div className='body'>
 								<Knob paramRef={this.props.paramRef} />

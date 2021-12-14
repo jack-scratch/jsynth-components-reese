@@ -19,9 +19,12 @@ class Op extends Source {
 
 	render() {
 		return (
-			<Source name='Oscillator' paramRef={this.state.osc.frequency} knob={[
-				'Frequency',
-				'Volume'
+			<Source name='Oscillator' paramRef={this.state.osc.frequency} param={[
+				{
+					name: 'Frequency'
+				}, {
+					name: 'Volume'
+				}
 			]} port={[
 				'Out'
 			]} />

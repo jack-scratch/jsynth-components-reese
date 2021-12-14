@@ -8,7 +8,7 @@ class Out extends Module {
 
 	render() {
 		return (
-			<Module paramRef={this.props.propRef} name={this.props.name} knob={[
+			<Module paramRef={this.props.propRef} name={this.props.name} param={[
 				this.props.knob
 			]} port={[
 				'In'
