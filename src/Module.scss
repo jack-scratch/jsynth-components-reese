@@ -1,0 +1,11 @@
+@import 'main.scss';
+
+.module {
+	@extend .cont;
+	display: inline-block;
+
+	.label,
+	.mark {
+		text-align: center;
+	}
+}

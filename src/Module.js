@@ -3,6 +3,8 @@ import Port from './Port';
 import Label from './Label';
 import Knob from './Knob';
 
+import './Module.css';
+
 class Module extends React.Component {
 	constructor(props) {
 		super(props);

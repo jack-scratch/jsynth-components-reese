@@ -36,16 +36,6 @@ body {
 	border-radius: $bevel;
 }
 
-.module {
-	@extend .cont;
-	display: inline-block;
-
-	.label,
-	.mark {
-		text-align: center;
-	}
-}
-
 .sys {
 	display: inline-flex;
 
