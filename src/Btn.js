@@ -11,17 +11,24 @@ class Btn extends React.Component {
 		};
 
 		this.play = this.play.bind(this);
+		this.release = this.release.bind(this);
 	}
 
 	play() {
-		this.setState((prevState, props) => ({
-			down: !prevState.down
+		this.setState(() => ({
+			down: true
+		}));
+	}
+
+	release() {
+		this.setState(() => ({
+			down: false
 		}));
 	}
 
 	render() {
 		return (
-			<div className={'btn ' + (this.state.down ? ' ' : 'raised ') + this.props.sz} onMouseDown={this.play}>
+			<div className={'btn ' + (this.state.down ? ' ' : 'raised ') + this.props.sz} onMouseDown={this.play} onMouseUp={this.release} onMouseLeave={this.release}>
 				<div>
 					<div className='mark'>{this.props.name}</div>
 				</div>
