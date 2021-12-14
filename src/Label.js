@@ -2,7 +2,7 @@ import React from 'react';
 
 const Label = (props) => {
 	return (
-		<div className="label">{props.text}</div>
+		<div className='label'>{props.text}</div>
 	);
 }
 

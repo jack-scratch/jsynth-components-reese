@@ -11,7 +11,7 @@ class Source extends Module {
 			<Module name={this.props.name} knob={[
 				this.props.knob
 			]} port={[
-				"Out"
+				'Out'
 			]} />
 		);
 	}

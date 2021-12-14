@@ -11,7 +11,7 @@ class Out extends Module {
 			<Module paramRef={this.props.propRef} name={this.props.name} knob={[
 				this.props.knob
 			]} port={[
-				"In"
+				'In'
 			]} />
 		);
 	}

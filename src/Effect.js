@@ -11,8 +11,8 @@ class Effect extends Module {
 			<Module name={this.props.name} knob={[
 				this.props.knob
 			]} port={[
-				"In",
-				"Out"
+				'In',
+				'Out'
 			]} />
 		);
 	}
