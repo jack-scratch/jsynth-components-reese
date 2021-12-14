@@ -6,7 +6,7 @@ import './Launch.css';
 class Launch extends React.Component {
 	render() {
 		return (
-			<table class="launch">
+			<table className="launch">
 				<tbody>
 					<tr>
 						<td>
