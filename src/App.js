@@ -4,6 +4,7 @@ import Out from './Out';
 import Knob from './Knob';
 import Launch from './Launch';
 import Pulse from './Pulse';
+import Module from './Module';
 
 import './main.css';
 
@@ -30,8 +31,6 @@ function App() {
 				});
 			}
 		}}>
-			<Launch name='asdf' />
-			<Pulse />
 		</div>
   );
 }
