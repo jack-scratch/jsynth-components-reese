@@ -36,15 +36,6 @@ body {
 	border-radius: $bevel;
 }
 
-.sys {
-	display: inline-flex;
-
-	.module {
-		margin: $margin;
-		background: $inert;
-	}
-}
-
 .label {
 	font-family: Arial;
 	background: $fg;

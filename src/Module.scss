@@ -9,3 +9,12 @@
 		text-align: center;
 	}
 }
+
+.sys {
+	display: inline-flex;
+
+	.module {
+		margin: $margin;
+		background: $inert;
+	}
+}
