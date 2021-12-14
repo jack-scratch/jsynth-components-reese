@@ -9,9 +9,11 @@ class Launch extends React.Component {
 			<table className='launch'>
 				<tbody>
 					<tr>
-						<td>
-							<Btn sz={this.props.sz} name={0} />
-						</td>
+						{[...Array(3).keys()].map((i) =>
+							<td>
+								<Btn sz={this.props.sz} name={i} />
+							</td>
+						)}
 					</tr>
 				</tbody>
 			</table>
