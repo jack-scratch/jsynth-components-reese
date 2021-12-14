@@ -7,9 +7,9 @@ import Pulse from './Pulse';
 
 import './main.css';
 
-function App() {
-	const ctx = new window.AudioContext() || window.webkitAudioContext();
+const ctx = new window.AudioContext() || window.webkitAudioContext();
 
+function App() {
 	let osc = ctx.createOscillator();
 	osc.type = 'sine';
 	osc.frequency.value = 440.0;
