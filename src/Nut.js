@@ -18,8 +18,8 @@ class Nut extends React.Component {
 			]);
 		}
 
-		const radius = 26;
-		const offset = radius;
+		const hexRad = 26;
+		const portRad = 10;
 
 		let serial = '';
 		for (let i = 0; i < pt.length; i++) {
@@ -30,7 +30,7 @@ class Nut extends React.Component {
 				op = 'M';
 			}
 
-			let node = op + ' ' + (offset + (pt[i][0] * radius)) + ', ' + (offset + (pt[i][1] * radius))
+			let node = op + ' ' + (portRad + (pt[i][0] * hexRad)) + ', ' + (portRad + (pt[i][1] * hexRad))
 
 			serial += node;
 		}

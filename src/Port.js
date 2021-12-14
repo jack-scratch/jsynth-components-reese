@@ -5,8 +5,8 @@ class Port extends React.Component {
 	render() {
 		return (
 			<svg className="port" overflow="visible">
-				<circle />
 				<Nut />
+				<circle />
 			</svg>
 		);
 	}
