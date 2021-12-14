@@ -5,5 +5,7 @@ $fg: grey;
 
 $inert: #111;
 
-$lightInert: rgba(240, 219, 79, 0.2);
-$lightActive: rgba(240, 219, 79, 1.0);
+$light: (
+	'inert': rgba(240, 219, 79, 0.2),
+	'active': rgba(240, 219, 79, 1.0)
+);

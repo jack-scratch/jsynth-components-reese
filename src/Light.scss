@@ -8,10 +8,10 @@ $sz: 6px;
 	border-radius: calc(#{$sz} / 2);
 
 	&.off {
-		background: $lightInert;
+		background: map-get($light, 'inert');
 	}
 
 	&.on {
-		background: $lightActive;
+		background: map-get($light, 'active');
 	}
 }
