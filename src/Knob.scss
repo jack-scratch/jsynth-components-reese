@@ -1,8 +1,16 @@
+@import 'col.scss';
+
 .knob {
 	overflow: visible;
 	cursor: pointer;
 
+	circle {
+		fill: $bg;
+	}
+
 	line {
+		stroke-width: 3;
 		stroke-linecap: round;
+		stroke: $fg;
 	}
 }
