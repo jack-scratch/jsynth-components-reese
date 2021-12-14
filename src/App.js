@@ -8,9 +8,7 @@ function App() {
 		<div>
 			{/* patch bay */}
 			<div className="sys">
-				<Osc knob={[
-					"Frequency"
-				]} />
+				<Osc />
 			</div>
 		</div>
   );
