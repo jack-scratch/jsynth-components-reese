@@ -3,6 +3,7 @@ import Effect from './Effect';
 import Out from './Out';
 import Knob from './Knob';
 import Launch from './Launch';
+import Pulse from './Pulse';
 
 import './main.css';
 
@@ -30,6 +31,7 @@ function App() {
 			}
 		}}>
 			<Launch sz='s' name='asdf' />
+			<Pulse />
 		</div>
   );
 }
