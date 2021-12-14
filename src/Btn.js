@@ -5,7 +5,7 @@ import './Btn.css';
 class Btn extends React.Component {
 	render() {
 		return (
-			<div className="btn raised s"></div>
+			<div className={"btn raised " + this.props.sz}></div>
 		);
 	}
 };
