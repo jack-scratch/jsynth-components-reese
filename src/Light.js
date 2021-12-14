@@ -1,9 +1,8 @@
 import React from 'react';
-import Light from './Light';
 
 import './Light.css';
 
-class Launch extends React.Component {
+class Light extends React.Component {
 	render() {
 		return (
 			<div className='light off'></div>
@@ -11,4 +10,4 @@ class Launch extends React.Component {
 	}
 };
 
-export default Launch;
+export default Light;
