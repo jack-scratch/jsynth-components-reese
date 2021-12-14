@@ -6,7 +6,7 @@ import './Btn.css';
 class Btn extends Source {
 	render() {
 		return (
-			<div className="btn raised"></div>
+			<div className="btn raised s"></div>
 		);
 	}
 };
