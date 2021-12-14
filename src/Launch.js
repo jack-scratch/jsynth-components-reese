@@ -16,19 +16,21 @@ class Launch extends React.Component {
 					<Light />
 				</div>
 				<div className='body'>
-					<table>
-						<tbody>
-							{[...Array(y).keys()].map((j) =>
-								<tr>
-									{[...Array(x).keys()].map((i) =>
-										<td>
-											<Btn sz={this.props.sz} name={1 + ((j * y) + i)} />
-										</td>
-									)}
-								</tr>
-							)}
-						</tbody>
-					</table>
+					<div className="group">
+						<table>
+							<tbody>
+								{[...Array(y).keys()].map((j) =>
+									<tr>
+										{[...Array(x).keys()].map((i) =>
+											<td>
+												<Btn sz={this.props.sz} name={1 + ((j * y) + i)} />
+											</td>
+										)}
+									</tr>
+								)}
+							</tbody>
+						</table>
+					</div>
 				</div>
 			</div>
 		);
