@@ -13,7 +13,7 @@ class Effect extends Module {
 			]} port={[
 				'In',
 				'Out'
-			]} />
+			]} paramRef={this.props.paramRef} />
 		);
 	}
 };
