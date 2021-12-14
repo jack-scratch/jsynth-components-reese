@@ -3,6 +3,14 @@
 
 $portRad: calc(10px);
 
+body {
+	display: flex;
+
+	> * {
+		margin: $margin;
+	}
+}
+
 .body {
 	display: flex;
 
