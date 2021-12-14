@@ -6,16 +6,22 @@ class Btn extends React.Component {
 	constructor(props) {
 		super(props);
 
+		this.state = {
+			down: false
+		};
+
 		this.play = this.play.bind(this);
 	}
 
 	play() {
-		alert('asdf');
+		this.setState((prevState, props) => ({
+			down: !prevState.down
+		}));
 	}
 
 	render() {
 		return (
-			<div className={'btn raised ' + this.props.sz} onClick={this.play}>
+			<div className={'btn ' + (this.state.down ? ' ' : 'raised ') + this.props.sz} onClick={this.play}>
 				<div>
 					<div className='mark'>{this.props.name}</div>
 				</div>
