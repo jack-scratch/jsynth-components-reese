@@ -1,10 +1,9 @@
+@import 'App.scss';
 @import 'layout.scss';
 @import 'col.scss';
 
 .launch {
-	padding: $pad;
-	border-radius: $bevel;
-	background: $bg;
+	@extend .cont;
 
 	td {
 		> * {

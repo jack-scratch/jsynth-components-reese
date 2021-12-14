@@ -11,11 +11,15 @@ $portRad: calc(10px);
 	}
 }
 
-.module {
-	display: inline-block;
+.cont {
 	padding: $pad;
-	background: $bg;
 	border-radius: $bevel;
+	background: $bg;
+}
+
+.module {
+	@extend .cont;
+	display: inline-block;
 
 	.label,
 	.mark {
@@ -25,9 +29,6 @@ $portRad: calc(10px);
 
 .sys {
 	display: inline-flex;
-	border-radius: $bevel;
-	background: $bg;
-	padding: $pad;
 
 	.module {
 		margin: $margin;
