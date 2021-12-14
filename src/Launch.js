@@ -38,4 +38,9 @@ class Launch extends React.Component {
 	}
 };
 
+Launch.defaultProps = {
+	x: 1,
+	y: 1
+};
+
 export default Launch;
