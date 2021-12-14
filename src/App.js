@@ -30,7 +30,7 @@ function App() {
 			}
 		}}>
 			<Knob paramRef={osc.frequency} />
-			<Btn sz='s' />
+			<Btn name='asdf' sz='s' />
 		</div>
   );
 }

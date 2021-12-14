@@ -20,4 +20,9 @@
 		width: 120px;
 		height: 120px;
 	}
+
+	> div {
+		display: inline-block;
+		margin: $margin;
+	}
 }
