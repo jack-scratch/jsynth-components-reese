@@ -29,7 +29,6 @@ function App() {
 				});
 			}
 		}}>
-			<Knob paramRef={osc.frequency} />
 			<Launch sz='s' name='asdf' />
 		</div>
   );
