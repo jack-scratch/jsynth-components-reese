@@ -1,9 +1,8 @@
 import React from 'react';
-import Source from './Source';
 
 import './Btn.css';
 
-class Btn extends Source {
+class Btn extends React.Component {
 	render() {
 		return (
 			<div className="btn raised s"></div>
