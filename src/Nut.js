@@ -2,11 +2,15 @@ import React from 'react';
 
 class Nut extends React.Component {
 	render() {
-		const rot = 3 * 2;
+		const rot = Math.PI * 2;
+
+		const n = 3 * 2;
+
+		const stride = rot / n;
 
 		let pt = [];
 		for (let i = 0; i < rot; i++) {
-			let step = i * ((Math.PI * 2) / rot);
+			let step = i * stride;
 
 			pt.push([
 				Math.cos(step),
