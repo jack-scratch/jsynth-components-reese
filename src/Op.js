@@ -1,7 +1,7 @@
 import React from 'react';
 import Source from './Source';
 
-class Osc extends Source {
+class Op extends Source {
 	render() {
 		return (
 			<Source name="Oscillator" knob={[
@@ -14,4 +14,4 @@ class Osc extends Source {
 	}
 };
 
-export default Osc;
+export default Op;

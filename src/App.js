@@ -1,4 +1,4 @@
-import Osc from './Osc';
+import Op from './Op';
 import Effect from './Effect';
 import Out from './Out';
 import Knob from './Knob';
