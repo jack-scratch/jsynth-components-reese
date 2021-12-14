@@ -13,7 +13,7 @@ function App() {
 			<div className="sys">
 				<Osc />
 				<Effect />
-				<Out />
+				<Out paramRef={ctx.destination} name="Output" />
 			</div>
 		</div>
   );

@@ -21,7 +21,7 @@ class Module extends React.Component {
 								<Label text={name} />
 							</div>
 							<div className="body">
-								<Knob />
+								<Knob paramRef={this.props.paramRef} />
 							</div>
 						</div>
 					)}
