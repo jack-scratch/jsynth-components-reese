@@ -11,11 +11,11 @@ class Launch extends React.Component {
 
 		return (
 			<div className='launch'>
-				<div className="head">
-					<div className="mark">{this.props.name}</div>
+				<div className='head'>
+					<div className='mark'>{this.props.name}</div>
 					<Light />
 				</div>
-				<div className="body">
+				<div className='body'>
 					<table>
 						<tbody>
 							{[...Array(y).keys()].map((j) =>
