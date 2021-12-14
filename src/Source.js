@@ -8,7 +8,7 @@ class Source extends Module {
 
 	render() {
 		return (
-			<Module name={this.props.name} knob={[
+			<Module name={this.props.name} paramRef={this.props.paramRef} knob={[
 				this.props.knob
 			]} port={[
 				'Out'

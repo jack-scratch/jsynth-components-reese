@@ -45,10 +45,12 @@ class Knob extends React.Component {
 		const lineLn = 16;
 
 		return (
-			<svg className='knob raised' width={diam} height={diam} transform={`rotate(${this.state.val})`}>
-				<circle cx={rad} cy={rad} r={rad} onClick={this.turn} />
-				<line x1={rad} x2={rad} y1={diam - lineLn} y2={rad * 2} />
-			</svg>
+			<div>
+				<svg className='knob raised' width={diam} height={diam} transform={`rotate(${this.state.val})`}>
+					<circle cx={rad} cy={rad} r={rad} onClick={this.turn} />
+					<line x1={rad} x2={rad} y1={diam - lineLn} y2={rad * 2} />
+				</svg>
+			</div>
 		);
 	}
 }

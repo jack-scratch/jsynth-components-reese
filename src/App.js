@@ -11,26 +11,17 @@ import './main.css';
 const ctx = new window.AudioContext() || window.webkitAudioContext();
 
 function App() {
-	let osc = ctx.createOscillator();
-	osc.type = 'sine';
-	osc.frequency.value = 440.0;
-
-	osc.start();
-
   return (
 		<div onClick={() => {
 			if (ctx.state == 'running') {
-				ctx.suspend().then(function() {
-					osc.disconnect(ctx.destination);
-				});
+				ctx.suspend();
 			}
 
 			if (ctx.state == 'suspended') {
-				ctx.resume().then(function() {
-					osc.connect(ctx.destination);
-				});
+				ctx.resume();
 			}
 		}}>
+			<Op ctx={ctx} />
 		</div>
   );
 }
