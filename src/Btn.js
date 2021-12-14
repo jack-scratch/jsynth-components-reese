@@ -21,7 +21,7 @@ class Btn extends React.Component {
 
 	render() {
 		return (
-			<div className={'btn ' + (this.state.down ? ' ' : 'raised ') + this.props.sz} onClick={this.play}>
+			<div className={'btn ' + (this.state.down ? ' ' : 'raised ') + this.props.sz} onMouseDown={this.play}>
 				<div>
 					<div className='mark'>{this.props.name}</div>
 				</div>
