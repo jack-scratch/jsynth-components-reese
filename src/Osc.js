@@ -4,7 +4,7 @@ import Source from './Source';
 class Osc extends Source {
 	render() {
 		return (
-			<Source knob={[
+			<Source name="Oscillator" knob={[
 				"Frequency",
 				"Volume"
 			]} port={[
