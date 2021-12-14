@@ -10,11 +10,11 @@ class Nut extends React.Component {
 
 		let pt = [];
 		for (let i = 0; i < rot; i++) {
-			let step = i * stride;
+			let idx = i * stride;
 
 			pt.push([
-				Math.cos(step),
-				Math.sin(step)
+				Math.cos(idx),
+				Math.sin(idx)
 			]);
 		}
 
