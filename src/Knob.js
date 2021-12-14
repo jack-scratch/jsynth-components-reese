@@ -37,7 +37,7 @@ class Knob extends React.Component {
 		const lineLn = 16;
 
 		return (
-			<svg className="knob raised" width={diam} height={diam} transform={"rotate(0)"} onClick={this.turn}>
+			<svg className="knob raised" width={diam} height={diam} transform={`rotate(${0})`} onClick={this.turn}>
 				<defs>
 					<clipPath id="circ">
 						<circle cx={rad} cy={this._rad} r={rad} />
