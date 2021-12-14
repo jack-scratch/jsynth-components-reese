@@ -3,33 +3,6 @@
 
 $portRad: calc(10px);
 
-.op {
-	display: inline-flex;
-	flex-direction: column;
-	padding: $pad;
-	background: $bg;
-	border-radius: $bevel;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-
-	> * {
-		margin: $margin;
-	}
-
-	.body {
-		div {
-			> * {
-				justify-content: center;
-				align-items: center;
-			}
-		}
-	}
-}
-
 .body {
 	display: flex;
 	flex-direction: column;

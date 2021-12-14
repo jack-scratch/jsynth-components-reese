@@ -1,4 +1,3 @@
-import Op from './Op.js';
 import Osc from './Osc.js';
 import Effect from './Effect.js';
 import Out from './Out.js';
