@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Port from './Port';
 import Label from './Label';
 import Knob from './Knob';

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Knob from './Knob';
 
 const Param = (props) => {
