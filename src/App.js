@@ -4,7 +4,7 @@ import Out from './Out';
 import Knob from './Knob';
 import Launch from './Launch';
 
-import './App.css';
+import './main.css';
 
 function App() {
 	const ctx = new window.AudioContext() || window.webkitAudioContext();
