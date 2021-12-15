@@ -24,11 +24,11 @@ class Cable extends React.Component {
 		this.drag = this.drag.bind(this);
 	}
 
-	drag() {
+	drag(e) {
 		this.setState(() => ({
 			end: [
-				100,
-				100
+				e.nativeEvent.offsetX,
+				e.nativeEvent.offsetY
 			]
 		}));
 	}
