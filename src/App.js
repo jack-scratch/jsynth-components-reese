@@ -6,7 +6,6 @@ import Launch from "./Launch";
 import Pulse from "./Pulse";
 import Module from "./Module";
 import Gain from "./Gain";
-import Led from "./Led";
 
 import "./main.css";
 
@@ -24,7 +23,6 @@ function App() {
 			}
 		}}>
 			<Gain ctx={ctx} min={-12} max={12} />
-			<Led />
 		</div>
   );
 }
