@@ -16,7 +16,7 @@ class Module extends React.Component {
 				<div className="head">
 					<Label text={this.props.name} />
 				</div>
-				<div className="body">
+				<div>
 					{this.props.param.map((inst) =>
 						<div key={inst.name}>
 							<div className="head">
