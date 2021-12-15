@@ -6,10 +6,10 @@ class Gain extends Effect {
 		super(props);
 
 		this.state = {
-			amp: this.props.ctx.createGain()
+			node: this.props.ctx.createGain()
 		};
 
-		this.state.amp.gain.value = this.props.level;
+		this.state.node.gain.value = this.props.level;
 	}
 
 	render() {
@@ -18,7 +18,7 @@ class Gain extends Effect {
 				{
 					name: "Level"
 				}
-			]} paramRef={this.state.amp.gain} min={this.props.min} max={this.props.max} />
+			]} paramRef={this.state.node.gain} min={this.props.min} max={this.props.max} />
 		);
 	}
 };
