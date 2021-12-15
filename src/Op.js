@@ -10,7 +10,7 @@ class Op extends Source {
 		};
 
 		this.state.osc.type = this.props.type;
-		this.state.osc.frequency.value = 440.0;
+		this.state.osc.frequency.value = this.props.hz;
 
 		this.state.osc.start();
 
