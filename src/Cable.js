@@ -25,7 +25,12 @@ class Cable extends React.Component {
 	}
 
 	drag() {
-		alert('asdf');
+		this.setState(() => ({
+			end: [
+				100,
+				100
+			]
+		}));
 	}
 
 	render() {
