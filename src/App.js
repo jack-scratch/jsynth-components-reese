@@ -24,7 +24,7 @@ function App() {
 				ctx.resume();
 			}
 		}}>
-			<Gain ctx={ctx} min={-12} max={12} />
+			<Gain ctx={ctx} min={-12} max={12} level={0.0} />
 			<Op ctx={ctx} type="sine" hz={a} />
 		</div>
   );

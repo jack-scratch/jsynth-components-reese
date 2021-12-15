@@ -8,6 +8,8 @@ class Gain extends Effect {
 		this.state = {
 			amp: this.props.ctx.createGain()
 		};
+
+		this.state.amp.gain.value = this.props.level;
 	}
 
 	render() {
