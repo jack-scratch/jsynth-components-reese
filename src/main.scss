@@ -48,6 +48,10 @@ body {
 	color: $fg;
 }
 
+text.mark {
+	fill: $fg;
+}
+
 .label,
 .mark {
 	-webkit-touch-callout: none;

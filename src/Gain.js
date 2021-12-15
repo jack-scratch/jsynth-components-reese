@@ -14,7 +14,7 @@ class Gain extends Effect {
 				{
 					name: 'Level'
 				}
-			]} paramRef={amp.gain} />
+			]} paramRef={amp.gain} min={this.props.min} max={this.props.max} />
 		);
 	}
 };

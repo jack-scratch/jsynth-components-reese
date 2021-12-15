@@ -10,7 +10,7 @@ class Source extends Module {
 		return (
 			<Module name={this.props.name} paramRef={this.props.paramRef} param={this.props.param} port={[
 				'Out'
-			]} />
+			]} min={this.props.min} max={this.props.max} />
 		);
 	}
 };

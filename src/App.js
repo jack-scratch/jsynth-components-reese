@@ -22,7 +22,7 @@ function App() {
 				ctx.resume();
 			}
 		}}>
-			<Gain ctx={ctx} />
+			<Gain ctx={ctx} min={-12} max={12} />
 		</div>
   );
 }
