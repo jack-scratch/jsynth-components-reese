@@ -8,6 +8,7 @@ import Module from "./Module";
 import Gain from "./Gain";
 import Filter from "./Filter";
 import Osc from "./Osc";
+import Cable from "./Cable";
 
 import "./main.css";
 
@@ -31,6 +32,7 @@ function App() {
 				<Op ctx={ctx} type="sine" hz={a} level={0.0} />
 				<Filter ctx={ctx} type="lowpass" hz={100.0} />
 				<Osc ctx={ctx} type="sine" hz={a} />
+				<Cable />
 			</div>
 		</div>
   );
