@@ -9,6 +9,8 @@ import Gain from "./Gain";
 
 import "./main.css";
 
+const a = 440.0;
+
 const ctx = new window.AudioContext() || window.webkitAudioContext();
 
 function App() {
@@ -23,7 +25,7 @@ function App() {
 			}
 		}}>
 			<Gain ctx={ctx} min={-12} max={12} />
-			<Op ctx={ctx} type="sine" hz={440.0} />
+			<Op ctx={ctx} type="sine" hz={a} />
 		</div>
   );
 }
