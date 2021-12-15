@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import './Knob.css';
+import "./Knob.css";
 
 class Knob extends React.Component {
 	constructor(props) {
@@ -25,17 +25,17 @@ class Knob extends React.Component {
 		let rad;
 		switch (this.props.sz) {
 			default:
-			case 's':
+			case "s":
 				rad = 26;
 
 				break;
 
-			case 'm':
+			case "m":
 				rad = 40;
 
 				break;
 
-			case 'l':
+			case "l":
 				rad = 60;
 
 				break;
@@ -46,8 +46,8 @@ class Knob extends React.Component {
 
 		return (
 			<div>
-				<svg className='knob' width={diam} height={diam} transform={`rotate(${this.state.val})`}>
-					<circle className='raised' cx={rad} cy={rad} r={rad} onClick={this.turn} />
+				<svg className="knob" width={diam} height={diam} transform={`rotate(${this.state.val})`}>
+					<circle className="raised" cx={rad} cy={rad} r={rad} onClick={this.turn} />
 					<line x1={rad} x2={rad} y1={diam - lineLn} y2={rad * 2} />
 					<text className="mark" y={rad}>{this.props.min}</text>
 					<text className="mark" x={diam} y={rad}>{this.props.max}</text>

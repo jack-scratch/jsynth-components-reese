@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import './Btn.css';
+import "./Btn.css";
 
 class Btn extends React.Component {
 	constructor(props) {
@@ -28,9 +28,9 @@ class Btn extends React.Component {
 
 	render() {
 		return (
-			<div className={'btn ' + (this.state.down ? ' ' : 'raised ') + this.props.sz} onMouseDown={this.play} onMouseUp={this.release} onMouseLeave={this.release}>
+			<div className={"btn " + (this.state.down ? " " : "raised ") + this.props.sz} onMouseDown={this.play} onMouseUp={this.release} onMouseLeave={this.release}>
 				<div>
-					<div className='mark'>{this.props.name}</div>
+					<div className="mark">{this.props.name}</div>
 				</div>
 			</div>
 		);

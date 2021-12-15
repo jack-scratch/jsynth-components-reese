@@ -1,9 +1,9 @@
-import React from 'react';
-import Port from './Port';
-import Label from './Label';
-import Knob from './Knob';
+import React from "react";
+import Port from "./Port";
+import Label from "./Label";
+import Knob from "./Knob";
 
-import './Module.css';
+import "./Module.css";
 
 class Module extends React.Component {
 	constructor(props) {
@@ -12,30 +12,30 @@ class Module extends React.Component {
 
 	render() {
 		return (
-			<div className='module'>
-				<div className='head'>
+			<div className="module">
+				<div className="head">
 					<Label text={this.props.name} />
 				</div>
-				<div className='body'>
+				<div className="body">
 					{this.props.param.map((inst) =>
 						<div key={inst.name}>
-							<div className='head'>
+							<div className="head">
 								<Label text={inst.name} />
 							</div>
-							<div className='body'>
+							<div className="body">
 								<Knob paramRef={this.props.paramRef} min={this.props.min} max={this.props.max} />
 							</div>
 						</div>
 					)}
 				</div>
-				<div className='body'>
-					<div className='io'>
+				<div className="body">
+					<div className="io">
 						{this.props.port.map((type) =>
-							<div key='{type}'>
-								<div className='head'>
-									<div className='mark'>{type}</div>
+							<div key="{type}">
+								<div className="head">
+									<div className="mark">{type}</div>
 								</div>
-								<div className='body'>
+								<div className="body">
 									<Port />
 								</div>
 							</div>

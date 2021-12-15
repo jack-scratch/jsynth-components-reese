@@ -1,5 +1,5 @@
-import React from 'react';
-import Source from './Source';
+import React from "react";
+import Source from "./Source";
 
 class Op extends Source {
 	constructor(props) {
@@ -9,7 +9,7 @@ class Op extends Source {
 			osc: this.props.ctx.createOscillator()
 		};
 
-		this.state.osc.type = 'sine';
+		this.state.osc.type = "sine";
 		this.state.osc.frequency.value = 440.0;
 
 		this.state.osc.start();
@@ -19,14 +19,14 @@ class Op extends Source {
 
 	render() {
 		return (
-			<Source name='Oscillator' paramRef={this.state.osc.frequency} param={[
+			<Source name="Oscillator" paramRef={this.state.osc.frequency} param={[
 				{
-					name: 'Frequency'
+					name: "Frequency"
 				}, {
-					name: 'Volume'
+					name: "Volume"
 				}
 			]} port={[
-				'Out'
+				"Out"
 			]} />
 		);
 	}

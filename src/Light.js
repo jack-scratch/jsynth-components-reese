@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import './Light.css';
+import "./Light.css";
 
 class Light extends React.Component {
 	constructor(props) {
@@ -9,7 +9,7 @@ class Light extends React.Component {
 
 	render() {
 		return (
-			<div className={'light ' + (this.props.on ? 'on' : 'off')}></div>
+			<div className={"light " + (this.props.on ? "on" : "off")}></div>
 		);
 	}
 };
