@@ -1,4 +1,4 @@
-@import 'col.scss';
+@import "col.scss";
 
 $sz: 6px;
 
@@ -8,10 +8,10 @@ $sz: 6px;
 	border-radius: calc(#{$sz} / 2);
 
 	&.off {
-		background: map-get($light, 'inert');
+		background: map-get($light, "inert");
 	}
 
 	&.on {
-		background: map-get($light, 'active');
+		background: map-get($light, "active");
 	}
 }

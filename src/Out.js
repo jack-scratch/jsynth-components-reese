@@ -1,5 +1,5 @@
-import React from 'react';
-import Module from './Module';
+import React from "react";
+import Module from "./Module";
 
 class Out extends Module {
 	render() {
@@ -7,7 +7,7 @@ class Out extends Module {
 			<Module paramRef={this.props.propRef} name={this.props.name} param={[
 				this.props.knob
 			]} port={[
-				'In'
+				"In"
 			]} />
 		);
 	}
