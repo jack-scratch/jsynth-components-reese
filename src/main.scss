@@ -84,3 +84,10 @@ text.mark {
 	justify-content: center;
 	display: flex;
 }
+
+.ctrl {
+	.body {
+		display: flex;
+		align-items: center;
+	}
+}
