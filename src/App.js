@@ -6,6 +6,7 @@ import Launch from "./Launch";
 import Pulse from "./Pulse";
 import Module from "./Module";
 import Gain from "./Gain";
+import Filter from "./Filter";
 
 import "./main.css";
 
@@ -26,6 +27,7 @@ function App() {
 		}}>
 			<Gain ctx={ctx} min={-12} max={12} />
 			<Op ctx={ctx} type="sine" hz={a} />
+			<Filter ctx={ctx} type="lowpass" hz={100.0} />
 		</div>
   );
 }
