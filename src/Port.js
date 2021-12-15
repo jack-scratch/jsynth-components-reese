@@ -1,10 +1,12 @@
 import React from "react";
 import Nut from "./Nut";
+import {
+	margin
+} from "./Layout";
 
 class Port extends React.Component {
 	render() {
 		const lineHt = 12;
-		const margin = 6;
 
 		return (
 			<svg className="port">
