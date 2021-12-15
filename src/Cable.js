@@ -7,10 +7,7 @@ class Cable extends React.Component {
 		super(props);
 
 		this.state = {
-			start: [
-				0,
-				0
-			],
+			start: this.props.start,
 			end: [
 				0,
 				0
