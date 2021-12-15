@@ -29,10 +29,10 @@ function App() {
 			}
 		}}>
 			<div className="sys">
-				<Gain ctx={ctx} min={-12} max={12} />
+				<Osc ctx={ctx} type="sine" hz={a} />
 				<Op ctx={ctx} type="sine" hz={a} level={0.0} />
 				<Filter ctx={ctx} type="lowpass" hz={100.0} />
-				<Osc ctx={ctx} type="sine" hz={a} />
+				<Gain ctx={ctx} min={-12} max={12} />
 			</div>
 		</div>
   );
