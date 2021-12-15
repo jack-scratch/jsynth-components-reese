@@ -73,6 +73,10 @@ text.mark {
 	overflow: visible;
 	cursor: pointer;
 
+	text {
+		text-anchor: middle;
+	}
+
 	circle {
 		r: $portRad;
 		cx: calc(#{$hexRad} + #{$portRad});

@@ -10,7 +10,7 @@ class Port extends React.Component {
 
 		return (
 			<svg className="port">
-				<text className="mark" y={-(lineHt + ((margin * 2) / 2))}>{this.props.type}</text>
+				<text className="mark" x="50%">{this.props.type}</text>
 				<Nut />
 				<circle />
 			</svg>
