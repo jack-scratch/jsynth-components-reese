@@ -31,6 +31,13 @@ class Cable extends React.Component {
 				e.nativeEvent.offsetY
 			]
 		}));
+
+		this.setState(() => ({
+			mid: [
+				(this.state.end[0] - this.state.start[0]) / 2,
+				this.state.end[1] * 1.6
+			]
+		}));
 	}
 
 	render() {
