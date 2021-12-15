@@ -4,17 +4,19 @@ import Effect from "./Effect";
 class Gain extends Effect {
 	constructor(props) {
 		super(props);
+
+		this.state = {
+			amp: this.props.ctx.createGain()
+		};
 	}
 
 	render() {
-		let amp = this.props.ctx.createGain();
-
 		return (
 			<Effect name="Gain" param={[
 				{
 					name: "Level"
 				}
-			]} paramRef={amp.gain} min={this.props.min} max={this.props.max} />
+			]} paramRef={this.state.amp.gain} min={this.props.min} max={this.props.max} />
 		);
 	}
 };
