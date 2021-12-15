@@ -65,10 +65,11 @@ text.mark {
 }
 
 .port {
+	@extend .raised;
+
 	width: calc(#{$portRad} * 2);
 	height: calc(#{$portRad} * 2);
 	fill: $bg;
-	-webkit-filter: drop-shadow(0px 0px 1px #000);
 	overflow: visible;
 	cursor: pointer;
 
