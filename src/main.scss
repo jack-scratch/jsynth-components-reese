@@ -2,6 +2,7 @@
 @import 'col.scss';
 
 $portRad: calc(10px);
+$hexRad: 26px;
 
 $stroke: 3px;
 
@@ -66,16 +67,16 @@ text.mark {
 .port {
 	@extend .raised;
 
-	width: calc(#{$portRad} * 2);
-	height: calc(#{$portRad} * 2);
+	width: calc((#{$hexRad} + #{$portRad}) * 2);
+	height: calc((#{$hexRad} + #{$portRad}) * 2);
 	fill: $bg;
 	overflow: visible;
 	cursor: pointer;
 
 	circle {
 		r: $portRad;
-		cx: $portRad;
-		cy: $portRad;
+		cx: calc(#{$hexRad} + #{$portRad});
+		cy: calc(#{$hexRad} + #{$portRad});
 		fill: $inert;
 	}
 }

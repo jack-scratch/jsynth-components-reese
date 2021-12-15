@@ -37,7 +37,7 @@ class Nut extends React.Component {
 		serial += " Z";
 
 		return (
-			<path d={serial} />
+			<path d={serial} transform={`translate(${hexRad} ${hexRad})`} />
 		);
 	}
 };
