@@ -32,12 +32,7 @@ class Module extends React.Component {
 					<div className="io">
 						{this.props.port.map((type) =>
 							<div key="{type}">
-								<div className="head">
-									<div className="mark">{type}</div>
-								</div>
-								<div className="body">
-									<Port />
-								</div>
+								<Port type={type} />
 							</div>
 						)}
 					</div>
