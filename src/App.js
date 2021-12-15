@@ -23,6 +23,7 @@ function App() {
 			}
 		}}>
 			<Gain ctx={ctx} min={-12} max={12} />
+			<Op ctx={ctx} type="sine" />
 		</div>
   );
 }

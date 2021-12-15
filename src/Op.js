@@ -9,7 +9,7 @@ class Op extends Source {
 			osc: this.props.ctx.createOscillator()
 		};
 
-		this.state.osc.type = "sine";
+		this.state.osc.type = this.props.type;
 		this.state.osc.frequency.value = 440.0;
 
 		this.state.osc.start();
