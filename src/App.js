@@ -17,7 +17,7 @@ const ctx = new window.AudioContext() || window.webkitAudioContext();
 
 function App() {
   return (
-		<div onClick={() => {
+		<div id="app" onClick={() => {
 			if (ctx.state == "running") {
 				ctx.suspend();
 			}
