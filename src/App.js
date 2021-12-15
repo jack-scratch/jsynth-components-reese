@@ -26,7 +26,7 @@ function App() {
 			}
 		}}>
 			<Gain ctx={ctx} min={-12} max={12} />
-			<Op ctx={ctx} type="sine" hz={a} />
+			<Op ctx={ctx} type="sine" hz={a} level={0.0} />
 			<Filter ctx={ctx} type="lowpass" hz={100.0} />
 		</div>
   );
