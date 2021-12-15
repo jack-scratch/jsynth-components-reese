@@ -7,7 +7,7 @@ class Port extends React.Component {
 		const margin = 6;
 
 		return (
-			<svg className="port" overflow="visible">
+			<svg className="port">
 				<text className="mark" y={-(lineHt + ((margin * 2) / 2))}>{this.props.type}</text>
 				<Nut />
 				<circle />
