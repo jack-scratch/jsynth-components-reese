@@ -3,9 +3,12 @@ import Nut from "./Nut";
 
 class Port extends React.Component {
 	render() {
+		const lineHt = 12;
+		const margin = 6;
+
 		return (
 			<svg className="port" overflow="visible">
-				<text className="mark">{this.props.type}</text>
+				<text className="mark" y={-(lineHt + ((margin * 2) / 2))}>{this.props.type}</text>
 				<Nut />
 				<circle />
 			</svg>

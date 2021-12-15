@@ -82,6 +82,7 @@ text.mark {
 .io {
 	justify-content: center;
 	display: flex;
+	padding-top: calc((#{$pad} * 2) + 12px);
 }
 
 .ctrl {
