@@ -49,8 +49,8 @@ class Knob extends React.Component {
 				<svg className="knob" width={diam} height={diam} transform={`rotate(${this.state.val})`}>
 					<circle className="raised" cx={rad} cy={rad} r={rad} onClick={this.turn} />
 					<line x1={rad} x2={rad} y1={diam - lineLn} y2={rad * 2} />
-					<text className="mark" y={rad}>{this.props.min}</text>
-					<text className="mark" x={diam} y={rad}>{this.props.max}</text>
+					<text className="mark" alignment-baseline="middle" y={rad}>{this.props.min}</text>
+					<text className="mark" alignment-baseline="middle" x={diam} y={rad}>{this.props.max}</text>
 				</svg>
 			</div>
 		);
