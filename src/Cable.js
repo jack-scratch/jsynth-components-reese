@@ -14,6 +14,10 @@ class Cable extends React.Component {
 			end: [
 				100,
 				0
+			],
+			mid: [
+				50,
+				100
 			]
 		};
 	}
@@ -21,7 +25,7 @@ class Cable extends React.Component {
 	render() {
 		return (
 			<svg className="cable" onClick={this.drag}>
-				<path d={'M ' + this.state.start[0] + ' ' + this.state.start[1] + ' C ' + 50 + ' ' + 50 + ', ' + 100 + ' ' + 150 + ', ' + this.state.end[0] + ' ' + this.state.end[1]} />
+				<path d={'M ' + this.state.start[0] + ' ' + this.state.start[1] + ' C ' + this.state.start[0] + ' ' + this.state.start[1] + ', ' + this.state.mid[0] + ' ' + this.state.mid[1] + ', ' + this.state.end[0] + ' ' + this.state.end[1]} />
 			</svg>
 		);
 	}
