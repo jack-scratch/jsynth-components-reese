@@ -12,12 +12,12 @@ class Cable extends React.Component {
 				0
 			],
 			end: [
-				100,
+				0,
 				0
 			],
 			mid: [
-				50,
-				100
+				0,
+				0
 			]
 		};
 
