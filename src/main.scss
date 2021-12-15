@@ -81,8 +81,8 @@ text.mark {
 }
 
 .io {
-	justify-content: center;
 	display: flex;
+	justify-content: center;
 	padding-top: calc((#{$pad} * 2) + 12px);
 }
 
