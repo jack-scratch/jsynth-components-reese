@@ -9,10 +9,11 @@ import Gain from "./Gain";
 import Filter from "./Filter";
 import Osc from "./Osc";
 import Cable from "./Cable";
+import {
+	a
+} from "./math";
 
 import "./main.css";
-
-const a = 440.0;
 
 const ctx = new window.AudioContext() || window.webkitAudioContext();
 
