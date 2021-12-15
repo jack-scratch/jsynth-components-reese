@@ -49,6 +49,8 @@ body {
 }
 
 text.mark {
+	text-anchor: middle;
+	alignment-baseline: middle;
 	fill: $fg;
 }
 
