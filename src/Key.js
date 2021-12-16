@@ -5,16 +5,16 @@ import "./Key.css";
 
 const oct = 8 - 1;
 
-const mark = {
-	'sharp': false,
-	'flat': true
-};
-
 function note(i, off) {
 	const base = 'A';
 	const sign = {
 		'sharp': '&#9839',
 		'flat': '&#9837'
+	};
+
+	const mark = {
+		'sharp': false,
+		'flat': true
 	};
 
 	const ws = ' ';
