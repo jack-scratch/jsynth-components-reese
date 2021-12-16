@@ -7,8 +7,6 @@ class Btn extends React.Component {
 		super(props);
 
 		this.state = {
-			buffLn: null,
-			pitch: null,
 			buff: null,
 			data: null,
 			src: null,
@@ -17,18 +15,18 @@ class Btn extends React.Component {
 
 		const ln = 3.0;
 
-		this.state.buffLn = ln * this.props.ctx.sampleRate;
-		this.state.buff = this.props.ctx.createBuffer(1, this.state.buffLn, this.props.ctx.sampleRate);
+		const buffLn = ln * this.props.ctx.sampleRate;
+		this.state.buff = this.props.ctx.createBuffer(1, buffLn, this.props.ctx.sampleRate);
 
 		const hz = 440.0;
 
-		this.state.pitch = this.state.buffLn / (ln * hz);
+		const pitch = buffLn / (ln * hz);
 
 		// buffer
 		this.state.data = this.state.buff.getChannelData(0);
 
-		for (let i = 0; i < this.state.buffLn; i++) {
-			this.state.data[i] = Math.sin((i / this.state.pitch) * Math.PI * 2);
+		for (let i = 0; i < buffLn; i++) {
+			this.state.data[i] = Math.sin((i / pitch) * Math.PI * 2);
 		}
 
 		this.state.down = false;
