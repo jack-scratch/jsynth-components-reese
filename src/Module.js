@@ -6,6 +6,10 @@ import Knob from "./Knob";
 import "./Module.css";
 
 class Module extends React.Component {
+	constructor(props) {
+		super(props);
+	}
+
 	render() {
 		return (
 			<div className="module">

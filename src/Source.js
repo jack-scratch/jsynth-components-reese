@@ -2,6 +2,10 @@ import React from "react";
 import Module from "./Module";
 
 class Source extends Module {
+	constructor(props) {
+		super(props);
+	}
+
 	render() {
 		return (
 			<Module name={this.props.name} ref={this.props.ref} param={this.props.param} port={[
