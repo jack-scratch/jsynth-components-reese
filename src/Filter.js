@@ -18,9 +18,10 @@ class Filter extends Effect {
 		return (
 			<Effect name="Filter" param={[
 				{
-					name: "Frequency"
+					name: "Frequency",
+					point: this.state.node.frequency
 				}
-			]} param={this.state.node.frequency} min={this.props.min} max={this.props.max} />
+			]} min={this.props.min} max={this.props.max} />
 		);
 	}
 }

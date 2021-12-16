@@ -16,9 +16,10 @@ class Gain extends Effect {
 		return (
 			<Effect name="Gain" param={[
 				{
-					name: "Level"
+					name: "Level",
+					point: this.state.node.gain
 				}
-			]} param={this.state.node.gain} min={this.props.min} max={this.props.max} />
+			]} min={this.props.min} max={this.props.max} />
 		);
 	}
 };

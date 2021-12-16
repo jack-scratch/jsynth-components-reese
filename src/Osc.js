@@ -18,9 +18,10 @@ class Osc extends Source {
 
 	render() {
 		return (
-			<Source name="Oscillator" param={this.state.node.frequency} param={[
+			<Source name="Oscillator" param={[
 				{
-					name: "Frequency"
+					name: "Frequency",
+					point: this.state.node.frequqncy
 				}
 			]} port={[
 				"Out"

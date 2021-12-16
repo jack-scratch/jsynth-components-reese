@@ -26,11 +26,13 @@ class Op extends Source {
 
 	render() {
 		return (
-			<Source name="Operator" param={this.state.osc.frequency} param={[
+			<Source name="Operator" param={[
 				{
-					name: "Frequency"
+					name: "Frequency",
+					point: this.state.osc.frequency
 				}, {
-					name: "Volume"
+					name: "Volume",
+					point: this.state.amp.gain
 				}
 			]} port={[
 				"Out"

@@ -8,7 +8,7 @@ class Source extends Module {
 
 	render() {
 		return (
-			<Module name={this.props.name} param={this.props.param} param={this.props.param} port={[
+			<Module name={this.props.name} param={this.props.param} port={[
 				"Out"
 			]} min={this.props.min} max={this.props.max} />
 		);
