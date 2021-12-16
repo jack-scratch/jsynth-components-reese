@@ -65,8 +65,6 @@ text.mark {
 }
 
 .port {
-	@extend .raised;
-
 	width: calc((#{$hexRad} + #{$portRad}) * 2);
 	height: calc((#{$hexRad} + #{$portRad}) * 2);
 	fill: $bg;
@@ -75,6 +73,10 @@ text.mark {
 
 	text {
 		text-anchor: middle;
+	}
+
+	path {
+		@extend .raised;
 	}
 
 	circle {

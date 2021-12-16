@@ -26,13 +26,6 @@ class Knob extends React.Component {
 	}
 
 	render() {
-		let shape;
-		if (this.props.quant) {
-			shape = <Poly n={this.props.quant} />
-		} else {
-			shape = `<circle className="raised" cx={rad} cy={rad} r={rad} onClick={this.turn} />`;
-		}
-
 		let rad;
 		switch (this.props.sz) {
 			default:
@@ -50,6 +43,13 @@ class Knob extends React.Component {
 				rad = 60;
 
 				break;
+		}
+
+		let shape;
+		if (this.props.quant) {
+			shape = <Poly n={this.props.quant} />
+		} else {
+			shape = <circle cx={25} cy={25} r={25} onClick={this.turn} />;
 		}
 
 		const diam = rad * 2;
