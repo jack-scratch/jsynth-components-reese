@@ -4,7 +4,9 @@
 	overflow: visible;
 	cursor: pointer;
 
-	circle {
+	circle,
+	path
+	{
 		fill: $bg;
 	}
 

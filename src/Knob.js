@@ -1,4 +1,5 @@
 import React from "react";
+import Poly from "./Poly";
 
 import "./Knob.css";
 
@@ -22,6 +23,13 @@ class Knob extends React.Component {
 	}
 
 	render() {
+		let shape;
+		if (this.props.quant) {
+			shape = <Poly n={this.props.quant} />
+		} else {
+			shape = `<circle className="raised" cx={rad} cy={rad} r={rad} onClick={this.turn} />`;
+		}
+
 		let rad;
 		switch (this.props.sz) {
 			default:
@@ -47,7 +55,7 @@ class Knob extends React.Component {
 		return (
 			<div>
 				<svg className="knob" width={diam} height={diam} transform={`rotate(${this.state.val})`}>
-					<circle className="raised" cx={rad} cy={rad} r={rad} onClick={this.turn} />
+					{shape}
 					<line x1={rad} x2={rad} y1={diam - lineLn} y2={rad * 2} />
 					<text className="mark" textAnchor="end" alignmentBaseline="middle" x={-6} y={rad}>{this.props.min}</text>
 					<text className="mark" textAnchor="start" alignmentBaseline="middle" x={diam + 6} y={rad}>{this.props.max}</text>
