@@ -23,7 +23,7 @@ class Module extends React.Component {
 								<Label text={inst.name} />
 							</div>
 							<div className="body">
-								<Knob ref={this.props.ref} min={this.props.min} max={this.props.max} />
+								<Knob param={this.props.param} min={this.props.min} max={this.props.max} />
 							</div>
 						</div>
 					)}

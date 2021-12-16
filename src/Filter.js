@@ -20,7 +20,7 @@ class Filter extends Effect {
 				{
 					name: "Frequency"
 				}
-			]} ref={this.state.node.frequency} min={this.props.min} max={this.props.max} />
+			]} param={this.state.node.frequency} min={this.props.min} max={this.props.max} />
 		);
 	}
 }

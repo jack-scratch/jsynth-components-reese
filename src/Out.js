@@ -4,7 +4,7 @@ import Module from "./Module";
 class Out extends Module {
 	render() {
 		return (
-			<Module ref={this.props.propRef} name={this.props.name} param={[
+			<Module param={this.props.propRef} name={this.props.name} param={[
 				this.props.knob
 			]} port={[
 				"In"
