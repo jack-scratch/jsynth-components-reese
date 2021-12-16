@@ -1,8 +1,5 @@
 import React from "react";
 import Module from "./Module";
-import {
-	oct
-} from "./math";
 
 import "./Key.css";
 
