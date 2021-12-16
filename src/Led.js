@@ -21,8 +21,6 @@ const Led = props => {
 
 	const draw = ctx => {
 		ctx.fillStyle = js;
-
-		ctx.fillRect(0, 0, 30, 70);
 	}
 
 	useEffect(() => {
