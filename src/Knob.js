@@ -49,7 +49,7 @@ class Knob extends React.Component {
 		if (this.props.quant) {
 			shape = <Poly n={this.props.quant} />
 		} else {
-			shape = <circle cx={25} cy={25} r={25} onClick={this.turn} />;
+			shape = <circle cx={25} cy={25} r={25} onMouseDown={this.turn} />;
 		}
 
 		const diam = rad * 2;
