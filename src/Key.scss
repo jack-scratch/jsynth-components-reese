@@ -1,0 +1,50 @@
+@import "col.scss";
+
+$scale: 0.5;
+
+$keyWd: calc((48in / 52) * #{$scale});
+$keyHtWhite: calc(6in * #{$scale});
+$keyHtBlack: calc(3.5in * #{$scale});
+
+$markOffset: 12px;
+$markHt: 20px;
+
+.key {
+	width: $keyWd;
+	border-radius: 0px 0px 4px 4px;
+	box-shadow: 0px 0px 1px 1px $inert;
+	cursor: pointer;
+
+	&.white {
+		background: #f0f0f0;
+		height: $keyHtWhite;
+	}
+
+	&.black {
+		background: $inert;
+		height: $keyHtBlack;
+	}
+
+	span {
+		min-width: $keyWd;
+		position: absolute;
+		font-family: Arial;
+		font-weight: bold;
+		text-align: center;
+		color: $fg;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+
+		&.white {
+			margin-top: -$markHt;
+		}
+
+		&.black {
+			margin-top: calc((#{$markOffset} + #{$markHt}) * -1);
+		}
+	}
+}
