@@ -3,6 +3,10 @@ import {
 	useRef,
 	useEffect
 } from "react";
+import {
+	inert,
+	js
+} from "./col.js";
 
 const Led = props => {
 	const ref = useRef(null);
@@ -10,13 +14,13 @@ const Led = props => {
 	let canvas;
 
 	const clear = ctx => {
-		ctx.fillStyle = "#111";
+		ctx.fillStyle = inert;
 
 		ctx.fillRect(0, 0, canvas.width, canvas.height);
 	}
 
 	const draw = ctx => {
-		ctx.fillStyle = "#f0db4f";
+		ctx.fillStyle = js;
 
 		ctx.fillRect(0, 0, 100, 100);
 	}
