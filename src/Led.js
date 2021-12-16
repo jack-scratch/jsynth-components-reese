@@ -34,7 +34,7 @@ const Led = props => {
 	}, [draw]);
 
 	return (
-		<canvas ref={ref}></canvas>
+		<canvas ref={ref} />
 	);
 }
 
