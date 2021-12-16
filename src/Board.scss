@@ -1,10 +1,11 @@
+@import "main.scss";
 @import "Key.scss";
 
 .board {
 	display: inline-block;
 	height: calc(#{$keyHtWhite} + (2px * 2));
 	padding: $pad;
-	border-radius: 6px 6px 0px 0px;
+	border-radius: $bevel $bevel 0px 0px;
 	background: $bg;
 	padding-top: calc(#{$markOffset} + #{$markHt});
 
