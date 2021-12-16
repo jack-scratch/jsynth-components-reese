@@ -1,6 +1,6 @@
 const a = 440.0;
 
-const oct = 8 - 1;
+const oct = 8;
 
 function note(i, off) {
 	const base = 'A';
@@ -19,8 +19,8 @@ function note(i, off) {
 
 	let c = '';
 	if (off) {
-		let relFlat = (i + 1) % oct;
-		let relSharp = i % oct;
+		let relFlat = (i + 1) % (oct - 1);
+		let relSharp = i % (oct - 1);
 
 		let note = [];
 
@@ -52,7 +52,7 @@ function note(i, off) {
 
 		c = serial;
 	} else {
-		let rel = i % oct;
+		let rel = i % (oct - 1);
 
 		c += String.fromCharCode(base.charCodeAt() + rel);
 	}

@@ -1,6 +1,9 @@
 import React from "react";
 import Module from "./Module";
 import Key from "./Key";
+import {
+	oct
+} from "./math";
 
 import "./Board.css";
 
@@ -40,7 +43,7 @@ class Board extends Module {
 };
 
 Board.defaultProps = {
-	ln: 8
+	ln: oct
 };
 
 export default Board;
