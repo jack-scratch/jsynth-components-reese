@@ -51,4 +51,8 @@ class Key extends Module {
 	}
 };
 
+Key.defaultProps = {
+	type: "white"
+};
+
 export default Key;
