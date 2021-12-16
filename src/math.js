@@ -2,6 +2,10 @@ const a = 440.0;
 
 const oct = 8;
 
+function trans(hz, oct) {
+	return hz * Math.pow(2, oct);
+}
+
 function note(i, off) {
 	const base = 'A';
 	const sign = {
@@ -64,5 +68,6 @@ export {
 	a,
 	oct,
 
+	trans,
 	note
 };
