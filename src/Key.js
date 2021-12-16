@@ -11,7 +11,8 @@ class Key extends Module {
 		super(props);
 
 		this.state = {
-			down: false
+			down: false,
+			osc: null
 		};
 
 		this.play = this.play.bind(this);
@@ -19,12 +20,26 @@ class Key extends Module {
 	}
 
 	play() {
+		this.state.osc = this.props.ctx.createOscillator();
+		this.state.osc.type = 'sine';
+		this.state.osc.frequency.value = 440.0;
+
+		this.state.osc.connect(this.props.ctx.destination);
+
+		this.state.osc.start();
+
 		this.setState(() => ({
 			down: true
 		}));
 	}
 
 	release() {
+		if (this.state.osc) {
+			this.state.osc.stop();
+
+			this.state.osc = null;
+		}
+
 		this.setState(() => ({
 			down: false
 		}));
