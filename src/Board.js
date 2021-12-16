@@ -5,24 +5,32 @@ import Key from "./Key";
 import "./Board.css";
 
 class Board extends Module {
+	constructor(props) {
+		super(props);
+	}
+
 	render() {
 		return (
 			<div className="board">
 				<table className="body white">
 					<tbody>
 						<tr>
-							<td>
-								<Key />
-							</td>
+							{[...Array(this.props.ln).keys()].map((inst) =>
+								<td key={inst}>
+									<Key ctx={this.props.ctx} />
+								</td>
+							)}
 						</tr>
 					</tbody>
 				</table>
 				<table className="body black">
 					<tbody>
 						<tr>
-							<td>
-								<Key />
-							</td>
+							{[...Array(this.props.ln).keys()].map((inst) =>
+								<td key={inst}>
+									<Key ctx={this.props.ctx} />
+								</td>
+							)}
 						</tr>
 					</tbody>
 				</table>
