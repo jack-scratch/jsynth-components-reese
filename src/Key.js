@@ -1,9 +1,10 @@
 import React from "react";
 import Module from "./Module";
+import {
+	oct
+} from "./math";
 
 import "./Key.css";
-
-const oct = 8 - 1;
 
 function note(i, off) {
 	const base = 'A';
