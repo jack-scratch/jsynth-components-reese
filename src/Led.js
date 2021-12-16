@@ -22,11 +22,15 @@ const Led = props => {
 	const draw = ctx => {
 		ctx.fillStyle = js;
 
-		ctx.fillRect(0, 0, 100, 100);
+		ctx.fillRect(0, 0, 30, 70);
 	}
 
 	useEffect(() => {
 		canvas = ref.current;
+
+		canvas.width = props.wd;
+		canvas.height = props.ht;
+
 		const ctx = canvas.getContext("2d");
 
 		clear(ctx);
