@@ -44,8 +44,8 @@ class Key extends Module {
 
 	render() {
 		return (
-			<div className="key white" onMouseDown={this.play} onMouseUp={this.release} onMouseLeave={this.release}>
-				<span className="white"></span>
+			<div className={`key ${this.props.type}`}onMouseDown={this.play} onMouseUp={this.release} onMouseLeave={this.release}>
+				<span className={`${this.props.type}`}></span>
 			</div>
 		);
 	}
