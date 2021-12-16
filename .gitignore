@@ -25,3 +25,5 @@ yarn-error.log*
 *.css
 *.css.map
 *.sass-cache
+
+src/App.js
