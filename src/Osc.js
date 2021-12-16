@@ -6,11 +6,12 @@ class Osc extends Source {
 		super(props);
 
 		this.state = {
-			node: this.props.ctx.createOscillator()
+			node: this.props.ctx.createOscillator(),
+			hz: 440.0
 		};
 
 		this.state.node.type = this.props.type;
-		this.state.node.frequency.value = this.props.hz;
+		this.state.node.frequency.value = this.state.hz;
 
 		this.state.node.start();
 	}
