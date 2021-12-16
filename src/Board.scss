@@ -1,0 +1,24 @@
+@import "Key.scss";
+
+.board {
+	display: inline-block;
+	height: calc(#{$keyHtWhite} + (2px * 2));
+	padding: $pad;
+	border-radius: 6px 6px 0px 0px;
+	background: $bg;
+	padding-top: calc(#{$markOffset} + #{$markHt});
+
+	> div {
+		margin: $margin;
+	}
+
+	.body {
+		display: flex;
+
+		&.black {
+			margin-top: calc((#{$keyHtWhite} + 6px) * -1);
+			align-items: center;
+			justify-content: center;
+		}
+	}
+}
