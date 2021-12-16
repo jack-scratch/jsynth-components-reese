@@ -44,7 +44,7 @@ class Key extends Module {
 
 	render() {
 		return (
-			<div className="key white"  onMouseDown={this.play} onMouseUp={this.release} onMouseLeave={this.release}>
+			<div className="key white" onMouseDown={this.play} onMouseUp={this.release} onMouseLeave={this.release}>
 				<span className="white"></span>
 			</div>
 		);
