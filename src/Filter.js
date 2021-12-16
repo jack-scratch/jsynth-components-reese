@@ -22,6 +22,6 @@ class Filter extends Effect {
 			]} ref={this.state.node.frequency} min={this.props.min} max={this.props.max} />
 		);
 	}
-};
+}
 
 export default Filter;
