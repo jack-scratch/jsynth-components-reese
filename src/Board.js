@@ -39,4 +39,8 @@ class Board extends Module {
 	}
 };
 
+Board.defaultProps = {
+	ln: 8
+};
+
 export default Board;
