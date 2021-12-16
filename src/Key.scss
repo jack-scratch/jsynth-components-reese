@@ -1,3 +1,4 @@
+@import "main.scss";
 @import "col.scss";
 
 $scale: 0.5;
@@ -11,7 +12,7 @@ $markHt: 20px;
 
 .key {
 	width: $keyWd;
-	border-radius: 0px 0px 4px 4px;
+	border-radius: 0px 0px $bevel $bevel;
 	box-shadow: 0px 0px 1px 1px $inert;
 	cursor: pointer;
 
