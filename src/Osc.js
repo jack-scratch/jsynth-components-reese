@@ -1,7 +1,7 @@
 import React from "react";
 import Source from "./Source";
 
-class Op extends Source {
+class Osc extends Source {
 	constructor(props) {
 		super(props);
 
@@ -28,4 +28,4 @@ class Op extends Source {
 	}
 };
 
-export default Op;
+export default Osc;
