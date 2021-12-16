@@ -23,9 +23,8 @@ function note(i, off) {
 
 	let c = '';
 	if (off) {
-		let
-		relFlat = (i + 1) % oct,
-			relSharp = i % oct;
+		let relFlat = (i + 1) % oct;
+		let relSharp = i % oct;
 
 		let note = [];
 
