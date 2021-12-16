@@ -1,5 +1,8 @@
 import React from "react";
 import Poly from "./Poly";
+import {
+	margin
+} from "./Layout";
 
 import "./Knob.css";
 
@@ -57,8 +60,8 @@ class Knob extends React.Component {
 				<svg className="knob" width={diam} height={diam} transform={`rotate(${this.state.val})`}>
 					{shape}
 					<line x1={rad} x2={rad} y1={diam - lineLn} y2={rad * 2} />
-					<text className="mark" textAnchor="end" alignmentBaseline="middle" x={-6} y={rad}>{this.props.min}</text>
-					<text className="mark" textAnchor="start" alignmentBaseline="middle" x={diam + 6} y={rad}>{this.props.max}</text>
+					<text className="mark" textAnchor="end" alignmentBaseline="middle" x={-margin} y={rad}>{this.props.min}</text>
+					<text className="mark" textAnchor="start" alignmentBaseline="middle" x={diam + margin} y={rad}>{this.props.max}</text>
 				</svg>
 			</div>
 		);
