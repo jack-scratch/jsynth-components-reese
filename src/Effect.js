@@ -7,7 +7,7 @@ class Effect extends Module {
 			<Module name={this.props.name} param={this.props.param} port={[
 				"In",
 				"Out"
-			]} paramRef={this.props.paramRef} min={this.props.min} max={this.props.max} />
+			]} ref={this.props.ref} min={this.props.min} max={this.props.max} />
 		);
 	}
 };

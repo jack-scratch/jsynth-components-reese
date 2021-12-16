@@ -17,7 +17,7 @@ class Op extends Source {
 
 	render() {
 		return (
-			<Source name="Oscillator" paramRef={this.state.osc.frequency} param={[
+			<Source name="Oscillator" ref={this.state.osc.frequency} param={[
 				{
 					name: "Frequency"
 				}

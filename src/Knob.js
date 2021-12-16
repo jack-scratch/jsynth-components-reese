@@ -11,7 +11,7 @@ class Knob extends React.Component {
 		super(props);
 
 		this.state = {
-			val: this.props.paramRef.value
+			val: this.props.ref.value
 		};
 
 		this.turn = this.turn.bind(this);
@@ -22,7 +22,7 @@ class Knob extends React.Component {
 			val: prevState.val + 10.0
 		}));
 
-		this.props.paramRef.value = this.state.val;
+		this.props.ref.value = this.state.val;
 	}
 
 	render() {
