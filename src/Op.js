@@ -34,6 +34,6 @@ class Op extends Source {
 			]} />
 		);
 	}
-};
+}
 
 export default Op;
