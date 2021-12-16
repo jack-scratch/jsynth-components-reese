@@ -10,7 +10,10 @@ class Osc extends Source {
 			hz: 440.0
 		};
 
-		this.state.node.type = this.props.type;
+		if (this.props.type) {
+			this.state.node.type = this.props.type;
+		}
+
 		this.state.node.frequency.value = this.state.hz;
 
 		this.state.node.start();
