@@ -8,10 +8,6 @@ import {
 import "./Board.css";
 
 class Board extends Module {
-	constructor(props) {
-		super(props);
-	}
-
 	render() {
 		return (
 			<div className="board">
