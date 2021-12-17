@@ -1,5 +1,10 @@
 import React from "react";
 import Module from "./Module";
+import {
+	a,
+	oct,
+	trans
+} from "./math";
 
 import "./Key.css";
 
@@ -19,7 +24,7 @@ class Key extends Module {
 	play() {
 		this.state.osc = this.props.ctx.createOscillator();
 		this.state.osc.type = 'sine';
-		this.state.osc.frequency.value = 440.0;
+		this.state.osc.frequency.value = trans(a, this.props.i * (1 / (oct - 1)));
 
 		this.state.osc.connect(this.props.ctx.destination);
 
