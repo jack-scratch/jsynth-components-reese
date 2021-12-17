@@ -5,7 +5,7 @@ class Effect extends Module {
 	render() {
 		return (
 			<Module name={this.props.name} refer={this.props.refer} port={[
-				"In",
+				"in",
 				"Out"
 			]} refer={this.props.refer} min={this.props.min} max={this.props.max} />
 		);

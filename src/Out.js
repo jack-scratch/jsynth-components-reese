@@ -14,7 +14,7 @@ class Out extends Module {
 					point: this.props.ctx.destination
 				}
 			]} port={[
-				"In"
+				"in"
 			]} />
 		);
 	}

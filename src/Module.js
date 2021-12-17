@@ -35,7 +35,7 @@ class Module extends React.Component {
 				<div className="body">
 					<div className="io">
 						{this.props.port.map((type) =>
-							type === "In" ? <PortIn key={type} /> : <PortOut key={type} />
+							type === "in" ? <PortIn key={type} /> : <PortOut key={type} />
 						)}
 					</div>
 				</div>
