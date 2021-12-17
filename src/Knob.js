@@ -11,18 +11,55 @@ class Knob extends React.Component {
 		super(props);
 
 		this.state = {
-			val: this.props.param.value
+			down: false,
+			startY: null,
+			currY: null,
+			val: 0
 		};
 
+		this.start = this.turn.bind(this);
+		this.end = this.turn.bind(this);
 		this.turn = this.turn.bind(this);
 	}
 
-	turn() {
+	start(e) {
 		this.setState((prevState, props) => ({
-			val: prevState.val + 10.0
+			down: true
 		}));
 
-		this.props.param.value = this.state.val;
+		console.log(this.state.down)
+
+		this.setState((prevState, props) => ({
+			startY: e.nativeEvent.offsetY
+		}));
+	}
+
+	end(e) {
+		this.setState((prevState, props) => ({
+			down: false
+		}));
+
+		this.setState((prevState, props) => ({
+			startY: e.nativeEvent.offsetY
+		}));
+	}
+
+	turn(e) {
+		if (this.state.down) {
+			this.setState((prevState, props) => ({
+				currY: e.nativeEvent.offsetY
+			}));
+
+			let delta = this.state.currY - this.state.startY;
+
+			console.log(delta)
+
+			this.setState((prevState, props) => ({
+				val: delta
+			}));
+
+			this.props.param.value = this.state.val;
+		}
 	}
 
 	render() {
@@ -49,11 +86,7 @@ class Knob extends React.Component {
 		if (this.props.quant) {
 			shape = <Poly n={this.props.quant} />
 		} else {
-			shape = <circle cx={25} cy={25} r={25} onMouseDown={() => this.setState((prevState, props) => ({
-				down: true
-			}))} onMouseUp={() => this.setState((prevState, props) => ({
-				down: false
-			}))} />;
+			shape = <circle cx={25} cy={25} r={25} onMouseDown={this.start} onMouseUp={this.end} onMouseMove={this.turn} />;
 		}
 
 		const diam = rad * 2;
