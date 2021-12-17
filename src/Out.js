@@ -11,6 +11,6 @@ class Out extends Module {
 			]} />
 		);
 	}
-};
+}
 
 export default Out;
