@@ -13,22 +13,6 @@ class Btn extends React.Component {
 			down: null
 		};
 
-		const ln = 3.0;
-
-		const buffLn = ln * this.props.ctx.sampleRate;
-		this.state.buff = this.props.ctx.createBuffer(1, buffLn, this.props.ctx.sampleRate);
-
-		const hz = 440.0;
-
-		const pitch = buffLn / (ln * hz);
-
-		// buffer
-		this.state.data = this.state.buff.getChannelData(0);
-
-		for (let i = 0; i < buffLn; i++) {
-			this.state.data[i] = Math.sin((i / pitch) * Math.PI * 2);
-		}
-
 		this.state.down = false;
 
 		this.play = this.play.bind(this);
@@ -37,7 +21,7 @@ class Btn extends React.Component {
 
 	play() {
 		this.state.src = this.props.ctx.createBufferSource();
-		this.state.src.buffer = this.state.buff;
+		this.state.src.buffer = this.props.buff;
 
 		this.state.src.connect(this.props.ctx.destination);
 
