@@ -1,0 +1,52 @@
+@import "main.scss";
+
+$ht: 100px;
+
+.fader {
+	width: 0;
+	height: $ht;
+
+	.groove {
+		height: 100%;
+		border: 3px solid $inert;
+	}
+
+	.thumb {
+		$wd: 40px;
+		$ht: 20px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: $wd;
+		height: $ht;
+		margin-left: calc((#{$wd} / 2) * -1);
+		margin-top: calc((#{$ht} / 2) * -1);
+		border-radius: 6px;
+		cursor: pointer;
+		background: $bg;
+		box-shadow: 0px 0px 1px 1px $inert;
+
+		.mark {
+			width: calc(#{$wd} - (#{$margin} * 2));
+			margin-left: $margin;
+			border-top: 2px solid $inert;
+			border-bottom: 2px solid $inert;
+		}
+	}
+
+	.inc {
+		position: absolute;
+		margin-top: -$ht;
+		height: calc(#{$ht} + #{$margin});
+		overflow: visible;
+		z-index: -1;
+
+		text {
+			font-family: Arial;
+			font-weight: bold;
+			alignment-baseline: middle;
+			fill: $fg;
+		}
+	}
+}
