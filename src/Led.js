@@ -36,7 +36,7 @@ const Led = props => {
 	}, [draw]);
 
 	return (
-		<canvas param={ref} />
+		<canvas refer={ref} />
 	);
 }
 

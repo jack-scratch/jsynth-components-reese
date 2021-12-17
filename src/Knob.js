@@ -58,7 +58,7 @@ class Knob extends React.Component {
 				val: delta
 			}));
 
-			this.props.param.value = this.state.val;
+			this.props.refer.value = this.state.val;
 		}
 	}
 

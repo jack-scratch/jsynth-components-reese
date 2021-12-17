@@ -26,7 +26,7 @@ class Op extends Source {
 
 	render() {
 		return (
-			<Source name="Operator" param={[
+			<Source name="Operator" refer={[
 				{
 					name: "Frequency",
 					point: this.state.osc.frequency

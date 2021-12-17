@@ -21,7 +21,7 @@ class Osc extends Source {
 
 	render() {
 		return (
-			<Source name="Oscillator" param={[
+			<Source name="Oscillator" refer={[
 				{
 					name: "Frequency",
 					point: this.state.node.frequqncy

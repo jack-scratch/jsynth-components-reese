@@ -8,7 +8,7 @@ class Out extends Module {
 
 	render() {
 		return (
-			<Module name={this.props.name} param={[
+			<Module name={this.props.name} refer={[
 				{
 					name: "asdf",
 					point: this.props.ctx.destination

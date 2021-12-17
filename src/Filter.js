@@ -16,7 +16,7 @@ class Filter extends Effect {
 
 	render() {
 		return (
-			<Effect name="Filter" param={[
+			<Effect name="Filter" refer={[
 				{
 					name: "Frequency",
 					point: this.state.node.frequency

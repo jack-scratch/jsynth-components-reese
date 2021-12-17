@@ -18,7 +18,7 @@ class Module extends React.Component {
 					<Label text={this.props.name} />
 				</div>
 				<div className="ctrl">
-					{this.props.param.map((inst) =>
+					{this.props.refer.map((inst) =>
 						<div key={inst.name}>
 							<div className="head">
 								<Label text={inst.name} />
@@ -26,7 +26,7 @@ class Module extends React.Component {
 							<div className="body">
 								<div className="body param">
 									<PortIn />
-									<Knob param={this.props.param} min={this.props.min} max={this.props.max} />
+									<Knob refer={this.props.refer} min={this.props.min} max={this.props.max} />
 								</div>
 							</div>
 						</div>

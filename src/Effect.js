@@ -4,10 +4,10 @@ import Module from "./Module";
 class Effect extends Module {
 	render() {
 		return (
-			<Module name={this.props.name} param={this.props.param} port={[
+			<Module name={this.props.name} refer={this.props.refer} port={[
 				"In",
 				"Out"
-			]} param={this.props.param} min={this.props.min} max={this.props.max} />
+			]} refer={this.props.refer} min={this.props.min} max={this.props.max} />
 		);
 	}
 };
