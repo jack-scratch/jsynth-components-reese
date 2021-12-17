@@ -40,4 +40,9 @@ const Led = props => {
 	);
 }
 
+Led.defaultProps = {
+	wd: 300,
+	ht: 150
+};
+
 export default Led;
