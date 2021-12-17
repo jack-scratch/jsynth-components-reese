@@ -53,7 +53,7 @@ class Btn extends React.Component {
 			</div>
 		);
 	}
-};
+}
 
 Btn.defaultProps = {
 	sz: "s"
