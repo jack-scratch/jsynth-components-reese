@@ -1,0 +1,40 @@
+import React from "react";
+import Btn from "./Btn";
+
+import "./main.css";
+
+class Sample extends React.Component {
+	constructor(props) {
+		super(props);
+
+		const ln = 0.5;
+
+		const buffLn = ln * this.props.ctx.sampleRate;
+
+		this.state = {
+			buff: this.props.ctx.createBuffer(1, buffLn, this.props.ctx.sampleRate)
+		};
+
+		const hz = 440.0;
+
+		const pitch = buffLn / (ln * hz);
+
+		let data = this.state.buff.getChannelData(0);
+
+		for (let i = 0; i < buffLn; i++) {
+			data[i] = Math.sin((i / pitch) * Math.PI * 2);
+		}
+	}
+
+	render() {
+		return (
+			<div className="cont">
+				<div className="body">
+					<Btn buff={this.state.buff} ctx={this.props.ctx} />
+				</div>
+			</div>
+		);
+	}
+};
+
+export default Sample;
