@@ -1,5 +1,6 @@
 import React from "react";
-import Port from "./Port";
+import PortIn from "./PortIn";
+import PortOut from "./PortOut";
 import Label from "./Label";
 import Knob from "./Knob";
 
@@ -24,7 +25,7 @@ class Module extends React.Component {
 							</div>
 							<div className="body">
 								<div className="body param">
-									<Port type={'In'} />
+									<PortIn />
 									<Knob param={this.props.param} min={this.props.min} max={this.props.max} />
 								</div>
 							</div>
@@ -34,7 +35,7 @@ class Module extends React.Component {
 				<div className="body">
 					<div className="io">
 						{this.props.port.map((type) =>
-							<Port key={type} type={type} />
+							type === "In" ? <PortIn key={type} /> : <PortOut key={type} />
 						)}
 					</div>
 				</div>

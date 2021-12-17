@@ -1,6 +1,6 @@
 import React from "react";
 import Btn from "./Btn";
-import Port from "./Port";
+import PortOut from "./PortOut";
 
 class Pulse extends React.Component {
 	render() {
@@ -8,7 +8,7 @@ class Pulse extends React.Component {
 			<div className="cont">
 				<div className="body">
 					<Btn sz="s" />
-					<Port />
+					<PortOut />
 				</div>
 			</div>
 		);
