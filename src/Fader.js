@@ -15,17 +15,17 @@ class Fader extends React.Component {
 		return (
 			<div className="fader" onMouseMove={(e) => {
 				if (this.state.down) {
-					this.setState((prevState, props) => ({
+					this.setState(() => ({
 						val: e.nativeEvent.offsetY
 					}))
 				}
-			}} onMouseUp={() => this.setState((prevState, props) => ({
+			}} onMouseUp={() => this.setState(() => ({
 				down: false
 			}))}>
 				<div className="groove">
 					<div className="thumb" style={{
 						marginTop: this.state.val
-					}} onMouseDown={() => this.setState((prevState, props) => ({
+					}} onMouseDown={() => this.setState(() => ({
 						down: true
 					}))} >
 						<div className="mark"></div>

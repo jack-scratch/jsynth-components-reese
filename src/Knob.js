@@ -25,30 +25,30 @@ class Knob extends React.Component {
 	}
 
 	start(e) {
-		this.setState((prevState, props) => ({
+		this.setState(() => ({
 			down: true
 		}));
 
 		console.log(this.state.down)
 
-		this.setState((prevState, props) => ({
+		this.setState(() => ({
 			startY: e.nativeEvent.offsetY
 		}));
 	}
 
 	end(e) {
-		this.setState((prevState, props) => ({
+		this.setState(() => ({
 			down: false
 		}));
 
-		this.setState((prevState, props) => ({
+		this.setState(() => ({
 			startY: e.nativeEvent.offsetY
 		}));
 	}
 
 	turn(e) {
 		if (this.state.down) {
-			this.setState((prevState, props) => ({
+			this.setState(() => ({
 				currY: e.nativeEvent.offsetY
 			}));
 
@@ -56,7 +56,7 @@ class Knob extends React.Component {
 
 			console.log(delta)
 
-			this.setState((prevState, props) => ({
+			this.setState(() => ({
 				val: delta
 			}));
 
