@@ -36,8 +36,8 @@ function note(i) {
 	return a * Math.pow(2, (i / (oct - 1)));
 }
 
-function trans(hz, oct) {
-	return hz * Math.pow(2, oct);
+function trans(hz, note) {
+	return hz * Math.pow(2, note);
 }
 
 function fmt(i, off) {
