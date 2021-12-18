@@ -7,25 +7,27 @@ class Fader extends React.Component {
 		super(props);
 
 		this.state = {
-			val: 0
+			val: 0,
+			down: false
 		};
-
-		this.drag = this.drag.bind(this);
 	}
-
-	drag() {
-		this.setState((prevState, props) => ({
-			val: prevState.val + 1
-		}));
-	}
-
 	render() {
 		return (
-			<div className="fader">
+			<div className="fader" onMouseMove={(e) => {
+				if (this.state.down) {
+					this.setState((prevState, props) => ({
+						val: e.nativeEvent.offsetY
+					}))
+				}
+			}} onMouseUp={() => this.setState((prevState, props) => ({
+				down: false
+			}))}>
 				<div className="groove">
 					<div className="thumb" style={{
 						marginTop: this.state.val
-					}} onMouseDown={this.drag}>
+					}} onMouseDown={() => this.setState((prevState, props) => ({
+						down: true
+					}))} >
 						<div className="mark"></div>
 					</div>
 				</div>
