@@ -16,12 +16,7 @@ class Filter extends Effect {
 
 	render() {
 		return (
-			<Effect name={this.props.name} refer={[
-				{
-					name: "Frequency",
-					point: this.state.node.frequency
-				}
-			]} min={this.props.min} max={this.props.max} />
+			<Effect name={this.props.name} refer={this.props.refer} min={this.props.min} max={this.props.max} />
 		);
 	}
 }
