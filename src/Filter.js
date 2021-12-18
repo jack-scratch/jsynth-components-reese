@@ -18,12 +18,16 @@ class Filter extends Effect {
 		return (
 			<Effect name="Filter" refer={[
 				{
-					name: "Frequency",
+					name: this.props.name,
 					point: this.state.node.frequency
 				}
 			]} min={this.props.min} max={this.props.max} />
 		);
 	}
 }
+
+Filter.defaultProps = {
+	name: "Frequency"
+};
 
 export default Filter;
