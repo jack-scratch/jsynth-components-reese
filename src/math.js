@@ -21,6 +21,16 @@ class Maj extends Triad {
 	}
 }
 
+class Min extends Triad {
+	constructor(base) {
+		super([
+			base,
+			trans(base, (3 * (1 / 12))),
+			trans(base, (7 * (1 / 12)))
+		]);
+	}
+}
+
 function note(i) {
 	return a * Math.pow(2, (i / (oct - 1)));
 }
@@ -97,6 +107,7 @@ export {
 	Chord,
 	Triad,
 	Maj,
+	Min,
 
 	fmt
 };
