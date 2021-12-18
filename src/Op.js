@@ -32,7 +32,7 @@ class Op extends Source {
 					point: this.state.amp.gain
 				}
 			]} port={[
-				"Out"
+				"out"
 			]} />
 		);
 	}

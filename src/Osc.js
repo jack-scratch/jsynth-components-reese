@@ -27,7 +27,7 @@ class Osc extends Source {
 					point: this.state.node.frequqncy
 				}
 			]} port={[
-				"Out"
+				"out"
 			]} />
 		);
 	}
