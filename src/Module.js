@@ -22,7 +22,7 @@ class Module extends React.Component {
 							<div className="body">
 								<div className="body param">
 									<PortIn />
-									<Knob refer={this.props.refer} min={this.props.min} max={this.props.max} />
+									<Knob refer={inst.point} min={this.props.min} max={this.props.max} />
 								</div>
 							</div>
 						</div>
