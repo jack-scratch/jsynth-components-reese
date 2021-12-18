@@ -2,6 +2,10 @@ const a = 440.0;
 
 const oct = 8;
 
+function note(i) {
+	return a * Math.pow(2, (i / (oct - 1)));
+}
+
 function trans(hz, oct) {
 	return hz * Math.pow(2, oct);
 }
@@ -68,6 +72,7 @@ export {
 	a,
 	oct,
 
+	note,
 	trans,
 	fmt
 };
