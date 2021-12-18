@@ -37,7 +37,7 @@ class Min extends Triad {
 }
 
 function note(i) {
-	return a * Math.pow(2, (i / (oct - 1)));
+	return a * Math.pow(2, (i / oct));
 }
 
 function trans(hz, note) {
