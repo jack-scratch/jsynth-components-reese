@@ -92,7 +92,7 @@ class Knob extends React.Component {
 		const diam = rad * 2;
 		const lineLn = 16;
 
-		const m = 3;
+		const m = 6;
 
 		const rot = 360;
 		const stride = rot / m;
