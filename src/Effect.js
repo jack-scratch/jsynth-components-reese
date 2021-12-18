@@ -12,7 +12,7 @@ class Effect extends Module {
 					type: "out",
 					point: this
 				}
-			]} refer={this.props.refer} min={this.props.min} max={this.props.max} />
+			]} min={this.props.min} max={this.props.max} />
 		);
 	}
 };
