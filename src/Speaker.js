@@ -8,7 +8,7 @@ class Speaker extends Out {
 
 	render() {
 		return (
-			<Out name="Output" />
+			<Out ctx={this.props.ctx} name="Output" />
 		);
 	}
 };

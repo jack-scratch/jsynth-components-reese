@@ -9,7 +9,10 @@ class Out extends Module {
 	render() {
 		return (
 			<Module name={this.props.name} refer={this.props.refer} port={[
-				"in"
+				{
+					type: "in",
+					point: this.props.ctx.destination
+				}
 			]} />
 		);
 	}
