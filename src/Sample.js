@@ -35,6 +35,6 @@ class Sample extends React.Component {
 			</div>
 		);
 	}
-};
+}
 
 export default Sample;

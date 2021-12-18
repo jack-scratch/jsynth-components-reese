@@ -52,7 +52,7 @@ class Key extends Module {
 			</div>
 		);
 	}
-};
+}
 
 Key.defaultProps = {
 	type: "white"

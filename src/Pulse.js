@@ -13,6 +13,6 @@ class Pulse extends React.Component {
 			</div>
 		);
 	}
-};
+}
 
 export default Pulse;

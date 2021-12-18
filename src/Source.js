@@ -9,6 +9,6 @@ class Source extends Module {
 			]} min={this.props.min} max={this.props.max} />
 		);
 	}
-};
+}
 
 export default Source;

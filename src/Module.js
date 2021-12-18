@@ -40,6 +40,6 @@ class Module extends React.Component {
 			</div>
 		);
 	}
-};
+}
 
 export default Module;

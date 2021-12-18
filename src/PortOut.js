@@ -7,6 +7,6 @@ class Out extends React.Component {
 			<Port type="Out" />
 		);
 	}
-};
+}
 
 export default Out;

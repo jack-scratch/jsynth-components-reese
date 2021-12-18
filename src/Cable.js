@@ -44,6 +44,6 @@ class Cable extends React.Component {
 			</svg>
 		);
 	}
-};
+}
 
 export default Cable;

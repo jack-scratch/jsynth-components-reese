@@ -36,7 +36,7 @@ class Board extends Module {
 			</div>
 		);
 	}
-};
+}
 
 Board.defaultProps = {
 	ln: oct

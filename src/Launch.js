@@ -32,7 +32,7 @@ class Launch extends React.Component {
 			</div>
 		);
 	}
-};
+}
 
 Launch.defaultProps = {
 	x: 1,

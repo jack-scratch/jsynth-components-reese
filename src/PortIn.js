@@ -7,6 +7,6 @@ class In extends React.Component {
 			<Port type="In" />
 		);
 	}
-};
+}
 
 export default In;

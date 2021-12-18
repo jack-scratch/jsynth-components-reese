@@ -16,7 +16,7 @@ class Light extends React.Component {
 			<div className={`light ${(this.props.on ? "on" : "off")}`}></div>
 		);
 	}
-};
+}
 
 Light.defaultProps = {
 	on: false

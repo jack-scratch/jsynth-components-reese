@@ -7,6 +7,6 @@ class Speaker extends Out {
 			<Out ctx={this.props.ctx} name="Output" />
 		);
 	}
-};
+}
 
 export default Speaker;

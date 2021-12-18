@@ -38,6 +38,6 @@ class Poly extends React.Component {
 			<path d={serial} transform={`translate(${hexRad} ${hexRad})`} />
 		);
 	}
-};
+}
 
 export default Poly;

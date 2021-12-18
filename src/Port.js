@@ -11,6 +11,6 @@ class Port extends React.Component {
 			</svg>
 		);
 	}
-};
+}
 
 export default Port;

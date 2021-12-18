@@ -31,7 +31,7 @@ class Osc extends Source {
 			]} />
 		);
 	}
-};
+}
 
 Osc.defaultProps = {
 	name: "Oscillator"
