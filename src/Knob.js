@@ -52,8 +52,6 @@ class Knob extends React.Component {
 
 			let delta = this.state.currY - this.state.startY;
 
-			console.log(delta)
-
 			this.setState(() => ({
 				val: delta
 			}));
