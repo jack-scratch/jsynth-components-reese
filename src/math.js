@@ -8,6 +8,9 @@ class Chord {
 	}
 }
 
+class Triad extends Chord {
+}
+
 function note(i) {
 	return a * Math.pow(2, (i / (oct - 1)));
 }
@@ -82,6 +85,7 @@ export {
 	trans,
 
 	Chord,
+	Triad,
 
 	fmt
 };
