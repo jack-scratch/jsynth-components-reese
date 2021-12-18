@@ -8,12 +8,7 @@ class Speaker extends Out {
 
 	render() {
 		return (
-			<Out name="Output" refer={[
-				{
-					name: "Output",
-					point: this.props.ctx.destination
-				}
-			]} />
+			<Out name="Output" />
 		);
 	}
 };
