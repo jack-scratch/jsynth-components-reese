@@ -29,8 +29,6 @@ class Knob extends React.Component {
 			down: true
 		}));
 
-		console.log(this.state.down)
-
 		this.setState(() => ({
 			startY: e.nativeEvent.offsetY
 		}));
