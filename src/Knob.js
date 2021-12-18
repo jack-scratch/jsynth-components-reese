@@ -19,8 +19,8 @@ class Knob extends React.Component {
 			val: 0
 		};
 
-		this.start = this.turn.bind(this);
-		this.end = this.turn.bind(this);
+		this.start = this.start.bind(this);
+		this.end = this.end.bind(this);
 		this.turn = this.turn.bind(this);
 	}
 
