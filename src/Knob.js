@@ -100,7 +100,7 @@ class Knob extends React.Component {
 		return (
 			<svg className="knob" width={diam} height={diam} transform={`rotate(${this.state.val})`}>
 				{[...Array(m).keys()].map((i) =>
-					<line x1={0} y1={0} x2={10} y2={0} transform={`rotate(${i * stride}) translate(${rad} 0)`} />
+					<line x1={0} y1={0} x2={10} y2={0} transform={`translate(${rad} ${rad}) rotate(${i * stride}) translate(${rad} 0)`} />
 				)}
 				{shape}
 				<line x1={rad} x2={rad} y1={diam - lineLn} y2={rad * 2} />
