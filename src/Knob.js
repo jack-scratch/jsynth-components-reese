@@ -20,7 +20,7 @@ class Knob extends React.Component {
 		};
 
 		this.start = this.start.bind(this);
-		this.end = this.end.bind(this);
+		this.release = this.release.bind(this);
 		this.turn = this.turn.bind(this);
 	}
 
@@ -34,7 +34,7 @@ class Knob extends React.Component {
 		}));
 	}
 
-	end() {
+	release() {
 		this.setState(() => ({
 			down: false
 		}));
@@ -78,7 +78,7 @@ class Knob extends React.Component {
 		if (this.props.quant) {
 			shape = <Poly n={this.props.quant} />
 		} else {
-			shape = <circle cx={25} cy={25} r={25} onMouseDown={this.start} onMouseUp={this.end} onMouseLeave={this.end} onMouseMove={this.turn} />;
+			shape = <circle cx={25} cy={25} r={25} onMouseDown={this.start} onMouseUp={this.release} onMouseLeave={this.release} onMouseMove={this.turn} />;
 		}
 
 		const diam = rad * 2;
