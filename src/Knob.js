@@ -14,9 +14,9 @@ class Knob extends React.Component {
 
 		this.state = {
 			down: false,
-			startY: null,
-			currY: null,
-			delta: null,
+			startY: 0,
+			currY: 0,
+			delta: 0,
 			val: 0
 		};
 
@@ -37,7 +37,7 @@ class Knob extends React.Component {
 
 	release() {
 		this.setState((prevState) => ({
-			val: prevState + prevState.delta
+			val: prevState.val + prevState.delta
 		}));
 
 		this.setState(() => ({
