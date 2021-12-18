@@ -1,6 +1,7 @@
 const a = 440.0;
 
 const oct = 8;
+const semi = 12;
 
 class Chord {
 	constructor(note) {
@@ -100,6 +101,7 @@ function fmt(i, off) {
 export {
 	a,
 	oct,
+	semi,
 
 	note,
 	trans,
