@@ -5,6 +5,11 @@
 	overflow: visible;
 	cursor: pointer;
 
+	&.marked {
+		padding-left: calc(10px + (#{$margin}));
+		padding-right: calc(10px + (#{$margin}));
+	}
+
 	circle,
 	path
 	{
