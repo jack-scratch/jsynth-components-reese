@@ -2,7 +2,7 @@ import React from "react";
 import Poly from "./Poly";
 import {
 	margin
-} from "./Layout";
+} from "./layout";
 
 import "./Knob.css";
 
