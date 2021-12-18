@@ -20,8 +20,8 @@ class Maj extends Triad {
 	constructor(base) {
 		super([
 			base,
-			trans(base, (4 * (1 / 12))),
-			trans(base, (7 * (1 / 12)))
+			trans(base, (4 * (1 / semi))),
+			trans(base, (7 * (1 / semi)))
 		]);
 	}
 }
@@ -30,8 +30,8 @@ class Min extends Triad {
 	constructor(base) {
 		super([
 			base,
-			trans(base, (3 * (1 / 12))),
-			trans(base, (7 * (1 / 12)))
+			trans(base, (3 * (1 / semi))),
+			trans(base, (7 * (1 / semi)))
 		]);
 	}
 }
