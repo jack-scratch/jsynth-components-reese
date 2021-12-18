@@ -11,6 +11,7 @@ class Fader extends React.Component {
 			down: false
 		};
 	}
+
 	render() {
 		return (
 			<div className="fader" onMouseMove={(e) => {
