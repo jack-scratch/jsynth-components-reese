@@ -2,6 +2,12 @@ const a = 440.0;
 
 const oct = 8;
 
+class Chord {
+	constructor(note) {
+		this.note = note;
+	}
+}
+
 function note(i) {
 	return a * Math.pow(2, (i / (oct - 1)));
 }
@@ -74,6 +80,8 @@ export {
 
 	note,
 	trans,
+
+	Chord,
 
 	fmt
 };
