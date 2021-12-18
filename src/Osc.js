@@ -24,7 +24,7 @@ class Osc extends Source {
 			<Source name="Oscillator" refer={[
 				{
 					name: "Frequency",
-					point: this.state.node.frequqncy
+					point: this.state.node.frequency
 				}
 			]} port={[
 				"out"
