@@ -1,8 +1,5 @@
 import React from "react";
 import Source from "./Source";
-import {
-	a
-} from "./math";
 
 class Op extends Source {
 	constructor(props) {
