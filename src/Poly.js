@@ -1,13 +1,14 @@
 import React from "react";
+import {
+	rotRad
+} from "./layout";
 
 class Poly extends React.Component {
 	render() {
-		const rot = Math.PI * 2;
-
-		const stride = rot / this.props.n;
+		const stride = rotRad / this.props.n;
 
 		let pt = [];
-		for (let i = 0; i < rot; i++) {
+		for (let i = 0; i < rotRad; i++) {
 			let idx = i * stride;
 
 			pt.push([

@@ -1,7 +1,9 @@
 import React from "react";
 import Poly from "./Poly";
 import {
-	margin
+	margin,
+	rotDeg,
+	lineLn
 } from "./layout";
 
 import "./Knob.css";
@@ -90,13 +92,10 @@ class Knob extends React.Component {
 		}
 
 		const diam = rad * 2;
-		const lineLn = 16;
-
-		const rot = 360;
 
 		let stride;
 		if (this.props.mark) {
-			stride = rot / this.props.mark;
+			stride = rotDeg / this.props.mark;
 		}
 
 		return (

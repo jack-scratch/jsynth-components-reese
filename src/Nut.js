@@ -1,15 +1,16 @@
 import React from "react";
+import {
+	rotRad
+} from "./layout";
 
 class Nut extends React.Component {
 	render() {
-		const rot = Math.PI * 2;
-
 		const n = 3 * 2;
 
-		const stride = rot / n;
+		const stride = rotRad / n;
 
 		let pt = [];
-		for (let i = 0; i < rot; i++) {
+		for (let i = 0; i < rotRad; i++) {
 			let idx = i * stride;
 
 			pt.push([
