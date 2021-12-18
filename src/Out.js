@@ -8,7 +8,7 @@ class Out extends Module {
 
 	render() {
 		return (
-			<Module name={this.props.name} port={[
+			<Module name={this.props.name} refer={this.props.refer} port={[
 				"in"
 			]} />
 		);
