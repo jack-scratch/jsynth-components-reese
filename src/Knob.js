@@ -92,16 +92,20 @@ class Knob extends React.Component {
 		const diam = rad * 2;
 		const lineLn = 16;
 
-		const m = 6;
-
 		const rot = 360;
-		const stride = rot / m;
+
+		let stride;
+		if (this.props.mark) {
+			stride = rot / this.props.mark;
+		}
 
 		return (
 			<svg className="knob" width={diam} height={diam} transform={`rotate(${this.state.val})`}>
-				{[...Array(m).keys()].map((i) =>
-					<line x1={0} y1={0} x2={10} y2={0} transform={`translate(${rad} ${rad}) rotate(${i * stride}) translate(${rad + margin} 0)`} />
-				)}
+				{
+					this.props.mark ? [...Array(this.props.mark).keys()].map((i) =>
+						<line x1={0} y1={0} x2={10} y2={0} transform={`translate(${rad} ${rad}) rotate(${i * stride}) translate(${rad + margin} 0)`} />
+					) : null
+				}
 				{shape}
 				<line x1={rad} x2={rad} y1={diam - lineLn} y2={rad * 2} />
 				<text className="mark" textAnchor="end" alignmentBaseline="middle" x={-margin} y={rad}>{this.props.min}</text>
