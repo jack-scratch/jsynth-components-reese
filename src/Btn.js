@@ -23,8 +23,6 @@ class Btn extends React.Component {
 		this.state.src = this.props.ctx.createBufferSource();
 		this.state.src.buffer = this.props.buff;
 
-		this.state.src.connect(this.props.ctx.destination);
-
 		this.state.src.start();
 
 		this.setState(() => ({

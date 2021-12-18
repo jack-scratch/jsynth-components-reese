@@ -26,8 +26,6 @@ class Key extends Module {
 		this.state.osc.type = 'sine';
 		this.state.osc.frequency.value = trans(a, this.props.i * (1 / (oct - 1)));
 
-		this.state.osc.connect(this.props.ctx.destination);
-
 		this.state.osc.start();
 
 		this.setState(() => ({
