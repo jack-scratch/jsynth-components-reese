@@ -4,7 +4,7 @@ import Port from "./Port";
 class In extends React.Component {
 	render() {
 		return (
-			<Port />
+			<Port type="In" />
 		);
 	}
 };
