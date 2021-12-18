@@ -21,7 +21,7 @@ class Osc extends Source {
 
 	render() {
 		return (
-			<Source name="Oscillator" refer={[
+			<Source name={this.props.name} refer={[
 				{
 					name: "Frequency",
 					point: this.state.node.frequency
@@ -31,6 +31,10 @@ class Osc extends Source {
 			]} />
 		);
 	}
+};
+
+Osc.defaultProps = {
+	name: "Oscillator"
 };
 
 export default Osc;
