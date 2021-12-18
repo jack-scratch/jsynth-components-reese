@@ -47,9 +47,9 @@ class Knob extends React.Component {
 
 	turn(e) {
 		if (this.state.down) {
-			this.setState(() => ({
+			this.setState((prevState) => ({
 				currY: e.nativeEvent.offsetY,
-				delta: this.state.currY - this.state.startY
+				delta: this.state.currY - prevState.startY
 			}));
 
 			this.setState((prevState) => ({
