@@ -6,7 +6,7 @@ function trans(hz, oct) {
 	return hz * Math.pow(2, oct);
 }
 
-function note(i, off) {
+function fmt(i, off) {
 	const base = 'A';
 	const sign = {
 		'sharp': '&#9839',
@@ -69,5 +69,5 @@ export {
 	oct,
 
 	trans,
-	note
+	fmt
 };
