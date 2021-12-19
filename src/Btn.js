@@ -1,4 +1,5 @@
 import React from "react";
+import ctx from "./ctx";
 
 import "./Btn.css";
 
@@ -47,7 +48,10 @@ class Btn extends React.Component {
 
 	render() {
 		return (
-			<div className={"btn " + (this.state.down ? " " : "raised ") + this.props.sz} onMouseDown={this.play} onMouseUp={this.release} onMouseLeave={this.release}>
+			<div className={"btn " + (this.state.down ? " " : "raised ")} onMouseDown={this.play} onMouseUp={this.release} onMouseLeave={this.release} style={{
+				width: this.props.wd,
+				height: this.props.ht
+			}}>
 				<div>
 					<div className="mark">{this.props.name}</div>
 				</div>
@@ -57,7 +61,8 @@ class Btn extends React.Component {
 }
 
 Btn.defaultProps = {
-	sz: "s"
+	wd: 50,
+	ht: 50
 };
 
 export default Btn;

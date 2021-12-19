@@ -7,7 +7,7 @@ class Pulse extends React.Component {
 		return (
 			<div className="cont">
 				<div className="body">
-					<Btn sz="s" />
+					<Btn wd="50" ht="50" />
 					<PortOut />
 				</div>
 			</div>
