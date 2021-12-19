@@ -1,12 +1,16 @@
 import React from "react";
 import Out from "./Out";
+import ctx from "./ctx";
 
-class Speaker extends Out {
-	render() {
-		return (
-			<Out  name="Output" />
-		);
-	}
+const Speaker = () => {
+	return (
+		<Out refer={[
+			{
+				name: "Output",
+				point: ctx.destination
+			}
+		]} name="Output" />
+	);
 }
 
 export default Speaker;
