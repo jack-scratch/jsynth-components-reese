@@ -106,3 +106,14 @@ hr {
 	border: none;
 	border-radius: calc(#{$stroke} / 2);
 }
+
+.sys {
+	@extend .cont;
+
+	display: inline-flex;
+
+	.module {
+		margin: $margin;
+		background: $inert;
+	}
+}
