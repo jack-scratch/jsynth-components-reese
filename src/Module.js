@@ -15,7 +15,7 @@ class Module extends React.Component {
 				</div>
 				<div className="body">
 					<div className="ctrl">
-						{this.props.refer ? this.props.refer.map((inst) =>
+						{this.props.refer && this.props.refer.map((inst) =>
 							<div key={inst.name}>
 								<div className="head">
 									<Label text={inst.name} />
@@ -27,7 +27,7 @@ class Module extends React.Component {
 									</div>
 								</div>
 							</div>
-						) : null}
+						)}
 					</div>
 					<div className="body">
 						<div className="io">
