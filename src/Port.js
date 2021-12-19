@@ -5,7 +5,7 @@ class Port extends React.Component {
 	render() {
 		return (
 			<svg className="port">
-				<text className="mark" x="50%">{this.props.type}</text>
+				<text className="mark" x="50%">{this.props.type == "in" ? "In" : "Out"}</text>
 				<Nut />
 				<circle />
 			</svg>
