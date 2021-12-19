@@ -4,9 +4,9 @@ import ctx from "./ctx";
 
 const Speaker = () => {
 	return (
-		<Out name="Output" refer={[
+		<Out name="Output" port={[
 			{
-				name: "Output",
+				type: "in",
 				point: ctx.destination
 			}
 		]} />

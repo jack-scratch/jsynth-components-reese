@@ -5,12 +5,7 @@ import ctx from "./ctx";
 class Out extends Module {
 	render() {
 		return (
-			<Module name={this.props.name} port={[
-				{
-					type: "in",
-					point: ctx.destination
-				}
-			]} />
+			<Module name={this.props.name} port={this.props.port} />
 		);
 	}
 }
