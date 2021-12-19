@@ -1,4 +1,5 @@
 import React from "react";
+import ctx from "./ctx";
 import Source from "./Source";
 
 class Osc extends Source {
@@ -10,7 +11,7 @@ class Osc extends Source {
 		}
 
 		this.state = {
-			node: this.props.ctx.createOscillator(),
+			node: ctx.createOscillator(),
 			hz: 0.0
 		};
 

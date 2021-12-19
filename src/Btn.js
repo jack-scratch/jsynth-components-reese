@@ -19,7 +19,7 @@ class Btn extends React.Component {
 
 	play() {
 		this.setState(() => ({
-			src: this.props.ctx.createBufferSource()
+			src: ctx.createBufferSource()
 		}));
 
 		this.state.src.buffer = this.props.buff;

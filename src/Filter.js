@@ -7,7 +7,7 @@ class Filter extends Effect {
 
 		this.state = {
 			hz: 100.0,
-			node: this.props.ctx.createBiquadFilter()
+			node: ctx.createBiquadFilter()
 		};
 
 		this.state.node.type = this.props.type;

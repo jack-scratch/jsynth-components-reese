@@ -16,7 +16,7 @@ class Board extends Module {
 						<tr>
 							{[...Array(this.props.ln).keys()].map((i) =>
 								<td key={`white-${i}`}>
-									<Key ctx={this.props.ctx} type="white" i={i} />
+									<Key  type="white" i={i} />
 								</td>
 							)}
 						</tr>
@@ -27,7 +27,7 @@ class Board extends Module {
 						<tr>
 							{[...Array(this.props.ln).keys()].map((i) =>
 								<td key={`black-${i}`}>
-									<Key ctx={this.props.ctx} type="black" i={i} />
+									<Key  type="black" i={i} />
 								</td>
 							)}
 						</tr>

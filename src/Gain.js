@@ -6,7 +6,7 @@ class Gain extends Effect {
 		super(props);
 
 		this.state = {
-			node: this.props.ctx.createGain()
+			node: ctx.createGain()
 		};
 
 		this.state.node.gain.value = this.props.level;

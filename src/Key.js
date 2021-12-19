@@ -22,7 +22,7 @@ class Key extends Module {
 	}
 
 	play() {
-		this.state.osc = this.props.ctx.createOscillator();
+		this.state.osc = ctx.createOscillator();
 		this.state.osc.type = 'sine';
 		this.state.osc.frequency.value = trans(a, this.props.i * (1 / (oct - 1)));
 

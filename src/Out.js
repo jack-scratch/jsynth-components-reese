@@ -1,4 +1,5 @@
 import React from "react";
+import ctx from "./ctx";
 import Module from "./Module";
 
 class Out extends Module {
@@ -7,7 +8,7 @@ class Out extends Module {
 			<Module name={this.props.name} refer={this.props.refer} port={[
 				{
 					type: "in",
-					point: this.props.ctx.destination
+					point: ctx.destination
 				}
 			]} />
 		);

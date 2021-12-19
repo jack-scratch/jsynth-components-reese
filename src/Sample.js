@@ -9,10 +9,10 @@ class Sample extends React.Component {
 
 		const ln = 0.5;
 
-		const buffLn = ln * this.props.ctx.sampleRate;
+		const buffLn = ln * ctx.sampleRate;
 
 		this.state = {
-			buff: this.props.ctx.createBuffer(1, buffLn, this.props.ctx.sampleRate)
+			buff: ctx.createBuffer(1, buffLn, ctx.sampleRate)
 		};
 
 		const hz = 440.0;
@@ -30,7 +30,7 @@ class Sample extends React.Component {
 		return (
 			<div className="cont">
 				<div className="body">
-					<Btn buff={this.state.buff} ctx={this.props.ctx} />
+					<Btn buff={this.state.buff}  />
 				</div>
 			</div>
 		);
