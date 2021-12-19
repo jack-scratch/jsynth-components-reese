@@ -1,9 +1,11 @@
 import React from "react";
 
-const Label = (props) => {
-	return (
-		<div className="label">{props.text}</div>
-	);
+class Label extends React.Component {
+	render() {
+		return (
+			<div className="label">{this.props.text}</div>
+		);
+	}
 }
 
 export default Label;
