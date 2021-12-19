@@ -1,7 +1,7 @@
 import React from "react";
 import Cable from "./Cable";
 
-class Sys extends React.Component {
+class Bay extends React.Component {
 	constructor(props) {
 		super(props);
 
@@ -41,4 +41,4 @@ class Sys extends React.Component {
 	}
 }
 
-export default Sys;
+export default Bay;
