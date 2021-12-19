@@ -4,12 +4,12 @@ import ctx from "./ctx";
 
 const Speaker = () => {
 	return (
-		<Out refer={[
+		<Out name="Output" refer={[
 			{
 				name: "Output",
 				point: ctx.destination
 			}
-		]} name="Output" />
+		]} />
 	);
 }
 
