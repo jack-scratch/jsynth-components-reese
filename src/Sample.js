@@ -30,7 +30,7 @@ class Sample extends React.Component {
 		return (
 			<div className="cont">
 				<div className="body">
-					<Btn buff={this.state.buff}  />
+					<Btn buff={this.state.buff} />
 				</div>
 			</div>
 		);
