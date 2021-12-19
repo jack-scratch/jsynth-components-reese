@@ -17,7 +17,7 @@ class Knob extends React.Component {
 			startY: 0,
 			currY: 0,
 			delta: 0,
-			val: 0
+			val: this.props.refer.value
 		};
 
 		this.start = this.start.bind(this);
