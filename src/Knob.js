@@ -59,33 +59,14 @@ class Knob extends React.Component {
 	}
 
 	render() {
-		let rad;
-		switch (this.props.sz) {
-			default:
-			case "s":
-				rad = 26;
-
-				break;
-
-			case "m":
-				rad = 40;
-
-				break;
-
-			case "l":
-				rad = 60;
-
-				break;
-		}
-
 		let shape;
 		if (this.props.quant) {
-			shape = <Poly n={this.props.quant} />
+			shape = <Poly n={3} />
 		} else {
-			shape = <circle cx={rad} cy={rad} r={rad} onMouseDown={this.start} onMouseUp={this.release} onMouseLeave={this.release} onMouseMove={this.turn} />;
+			shape = <circle cx={this.props.rad} cy={this.props.rad} r={this.props.rad} onMouseDown={this.start} onMouseUp={this.release} onMouseLeave={this.release} onMouseMove={this.turn} />;
 		}
 
-		const diam = rad * 2;
+		const diam = this.props.rad * 2;
 
 		let stride;
 		if (this.props.mark) {
@@ -96,17 +77,21 @@ class Knob extends React.Component {
 			<svg className="knob" width={diam} height={diam} transform={`rotate(${this.state.val})`}>
 				{
 					this.props.mark ? [...Array(this.props.mark).keys()].map((i) =>
-						<line x1={0} y1={0} x2={10} y2={0} transform={`translate(${rad} ${rad}) rotate(${i * stride}) translate(${rad + margin} 0)`} />
+						<line x1={0} y1={0} x2={10} y2={0} transform={`translate(${this.props.rad} ${this.props.rad}) rotate(${i * stride}) translate(${this.props.rad + margin} 0)`} />
 					) : null
 				}
 
 				{shape}
-				<line x1={rad} x2={rad} y1={diam - lineLn} y2={rad * 2} />
-				<text className="mark" textAnchor="end" alignmentBaseline="middle" x={-margin} y={rad}>{this.props.min}</text>
-				<text className="mark" textAnchor="start" alignmentBaseline="middle" x={diam + margin} y={rad}>{this.props.max}</text>
+				<line x1={this.props.rad} x2={this.props.rad} y1={diam - lineLn} y2={this.props.rad * 2} />
+				<text className="mark" textAnchor="end" alignmentBaseline="middle" x={-margin} y={this.props.rad}>{this.props.min}</text>
+				<text className="mark" textAnchor="start" alignmentBaseline="middle" x={diam + margin} y={this.props.rad}>{this.props.max}</text>
 			</svg>
 		);
 	}
 }
+
+Knob.defaultProps = {
+	rad: 26
+};
 
 export default Knob;
