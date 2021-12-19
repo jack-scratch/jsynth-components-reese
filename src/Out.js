@@ -5,7 +5,7 @@ import Module from "./Module";
 class Out extends Module {
 	render() {
 		return (
-			<Module name={this.props.name} refer={this.props.refer} port={[
+			<Module name={this.props.name} port={[
 				{
 					type: "in",
 					point: ctx.destination
