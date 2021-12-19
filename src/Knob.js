@@ -26,13 +26,13 @@ class Knob extends React.Component {
 	}
 
 	start(e) {
-		this.setState(() => ({
+		this.setState({
 			down: true
-		}));
+		});
 
-		this.setState(() => ({
+		this.setState({
 			startY: e.nativeEvent.offsetY
-		}));
+		});
 	}
 
 	release() {
@@ -40,9 +40,9 @@ class Knob extends React.Component {
 			val: prevState.val + prevState.delta
 		}));
 
-		this.setState(() => ({
+		this.setState({
 			down: false
-		}));
+		});
 	}
 
 	turn(e) {

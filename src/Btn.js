@@ -19,18 +19,18 @@ class Btn extends React.Component {
 	}
 
 	play() {
-		this.setState(() => ({
+		this.setState({
 			src: ctx.createBufferSource()
-		}), () => {
+		}, () => {
 			this.state.src.buffer = this.props.buff;
 
 			this.state.src.connect(ctx.destination);
 
 			this.state.src.start();
 
-			this.setState(() => ({
+			this.setState({
 				down: true
-			}));
+			});
 		});
 	}
 
@@ -38,14 +38,14 @@ class Btn extends React.Component {
 		if (this.state.src) {
 			this.state.src.stop();
 
-			this.setState(() => ({
+			this.setState({
 				src: null
-			}))
+			})
 		}
 
-		this.setState(() => ({
+		this.setState({
 			down: false
-		}));
+		});
 	}
 
 	render() {

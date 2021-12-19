@@ -29,9 +29,9 @@ class Key extends Module {
 
 		this.state.osc.start();
 
-		this.setState(() => ({
+		this.setState({
 			down: true
-		}));
+		});
 	}
 
 	release() {
@@ -41,9 +41,9 @@ class Key extends Module {
 			this.state.osc = null;
 		}
 
-		this.setState(() => ({
+		this.setState({
 			down: false
-		}));
+		});
 	}
 
 	render() {

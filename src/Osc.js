@@ -19,9 +19,9 @@ class Osc extends Source {
 	}
 
 	componentDidMount() {
-		this.setState(() => ({
+		this.setState({
 			hz: this.state.node.frequency.value
-		}));
+		});
 	}
 
 	render() {
