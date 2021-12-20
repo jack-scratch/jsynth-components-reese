@@ -8,6 +8,10 @@ class Cable extends React.Component {
 
 		this.state = {
 			start: this.props.start,
+
+			in: null,
+			out: null,
+
 			end: [
 				0,
 				0
