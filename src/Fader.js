@@ -15,18 +15,26 @@ class Fader extends React.Component {
 	}
 
 	scrub(e) {
-		this.setState({
-			val: e.nativeEvent.offsetY
-		});
+		if (this.state.down) {
+			this.setState({
+				val: e.nativeEvent.offsetY
+			});
 
-		this.props.refer.value = this.state.val;
+			this.props.refer.value = this.state.val;
+		}
 	}
 
 	render() {
 		return (
 			<div className="fader" style={{
 				height: this.props.ln
-			}} onMouseDown={this.scrub}>
+			}} onMouseDown={() => this.setState({
+				down: true
+			})} onMouseUp={() => this.setState({
+				down: false
+			})} onMouseLeave={() => this.setState({
+				down: false
+			})} onMouseMove={this.scrub}>
 				<div className="groove">
 					<div className="thumb" style={{
 						marginTop: this.state.val
