@@ -33,7 +33,7 @@ class Osc extends Source {
 				}
 			]} port={[
 				{
-					name: "out",
+					type: "out",
 					point: this.state.node
 				}
 			]} />
