@@ -61,7 +61,7 @@ class Knob extends React.Component {
 	render() {
 		let shape;
 		if (this.props.quant) {
-			shape = <Poly n={3} />
+			shape = <Poly n={this.props.quant} />
 		} else {
 			shape = <circle cx={this.props.rad} cy={this.props.rad} r={this.props.rad} onMouseDown={this.start} onMouseUp={this.release} onMouseLeave={this.release} onMouseMove={this.turn} />;
 		}
