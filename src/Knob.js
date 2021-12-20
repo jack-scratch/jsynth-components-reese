@@ -36,13 +36,13 @@ class Knob extends React.Component {
 	}
 
 	release() {
-		this.setState((prevState) => ({
-			val: prevState.val + prevState.delta
-		}));
-
 		this.setState({
 			down: false
 		});
+
+		this.setState((prevState) => ({
+			val: prevState.val + prevState.delta
+		}));
 	}
 
 	turn(e) {
