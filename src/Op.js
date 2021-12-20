@@ -20,6 +20,8 @@ class Op extends Source {
 		this.state.amp.gain.value = this.props.level;
 
 		this.state.osc.start();
+
+		this.state.osc.connect(this.state.amp);
 	}
 
 	render() {
