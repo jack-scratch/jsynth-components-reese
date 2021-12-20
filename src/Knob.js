@@ -54,7 +54,9 @@ class Knob extends React.Component {
 
 			this.setState((prevState) => ({
 				val: prevState.delta
-			}));
+			}), () => {
+				this.props.refer.value = this.state.val;
+			});
 		}
 	}
 
