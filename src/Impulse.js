@@ -7,28 +7,38 @@ class Impulse extends React.Component {
 	constructor(props) {
 		super(props);
 
-		const ln = 3.0;
-
-		const buffLn = ln * ctx.sampleRate;
-
 		this.state = {
-			buff: ctx.createBuffer(1, buffLn, ctx.sampleRate)
+			buff: null
 		};
 
-		const hz = 440.0;
+		this.play = this.play.bind(this);
+	}
 
-		const pitch = buffLn / (ln * hz);
+	play() {
+		let req = new XMLHttpRequest();
+		req.responseType = "arraybuffer";
 
-		let data = this.state.buff.getChannelData(0);
+		req.open("GET", "./asdf.wav", true);
 
-		for (let i = 0; i < buffLn; i++) {
-			data[i] = Math.sin((i / pitch) * Math.PI * 2);
+		req.onload = () => {
+			let data = req.response;
+
+			ctx.decodeAudioData(data, (buff) => {
+				let src = ctx.createBufferSource();
+				src.buffer = buff;
+
+				src.start();
+
+				src.connect(ctx.destination);
+			});
 		}
+
+		req.send();
 	}
 
 	render() {
 		return (
-			<div className="sys">
+			<div className="sys" onClick={this.play}>
 				<div className="body">
 					<Btn buff={this.state.buff} name={this.props.name} />
 
