@@ -33,6 +33,10 @@ class Bay extends React.Component {
 	render() {
 		return (
 			<div className="sys">
+				{this.props.module.map((inst) =>
+					inst
+				)}
+
 				{this.state.patch.map((inst, i) =>
 					<Cable key={i} start={inst.start} />
 				)}
