@@ -20,12 +20,12 @@ class Knob extends React.Component {
 			val: this.props.refer.value
 		};
 
-		this.start = this.start.bind(this);
+		this.grab = this.grab.bind(this);
 		this.release = this.release.bind(this);
 		this.turn = this.turn.bind(this);
 	}
 
-	start(e) {
+	grab(e) {
 		this.setState({
 			down: true
 		});
@@ -65,7 +65,7 @@ class Knob extends React.Component {
 		if (this.props.quant) {
 			shape = <Poly n={this.props.quant} />
 		} else {
-			shape = <circle cx={this.props.rad} cy={this.props.rad} r={this.props.rad} onMouseDown={this.start} onMouseUp={this.release} onMouseLeave={this.release} onMouseMove={this.turn} />;
+			shape = <circle cx={this.props.rad} cy={this.props.rad} r={this.props.rad} onMouseDown={this.grab} onMouseUp={this.release} onMouseLeave={this.release} onMouseMove={this.turn} />;
 		}
 
 		const diam = this.props.rad * 2;
