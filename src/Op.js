@@ -14,13 +14,17 @@ class Op extends Source {
 		};
 
 		this.state.osc.type = this.props.type;
-		this.state.osc.frequency.value = this.state.hz;
-
-		this.state.amp.gain.value = this.state.level;
 
 		this.state.osc.start();
 
 		this.state.osc.connect(this.state.amp);
+	}
+
+	componentDidMount() {
+		this.setState({
+			hz: this.state.osc.frequency.value,
+			level: this.state.amp.gain.value
+		});
 	}
 
 	render() {
