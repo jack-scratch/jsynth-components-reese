@@ -115,3 +115,9 @@ hr {
 		background: $inert;
 	}
 }
+
+.tick {
+	stroke-width: 3;
+	stroke-linecap: round;
+	stroke: $fg;
+}
