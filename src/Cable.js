@@ -15,7 +15,8 @@ class Cable extends React.Component {
 			mid: [
 				0,
 				0
-			]
+			],
+			active: false
 		};
 
 		this.drag = this.drag.bind(this);
