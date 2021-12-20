@@ -85,7 +85,7 @@ class Knob extends React.Component {
 				)}
 
 				{shape}
-				<line className="tick" x1={this.props.rad} x2={this.props.rad} y1={diam - lineLn} y2={this.props.rad * 2} />
+				<line className="tick" x1={this.props.rad} x2={this.props.rad} y1={diam - lineLn} y2={diam} />
 				<text className="mark" textAnchor="end" x={-margin} y={this.props.rad}>{this.props.min}</text>
 				<text className="mark" textAnchor="start" x={diam + margin} y={this.props.rad}>{this.props.max}</text>
 			</svg>
