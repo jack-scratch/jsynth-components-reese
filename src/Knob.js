@@ -49,8 +49,11 @@ class Knob extends React.Component {
 		if (this.state.down) {
 			this.setState((prevState) => ({
 				currY: e.nativeEvent.offsetY,
-				delta: this.state.currY - prevState.startY
-			}));
+			}), () => {
+				this.setState((prevState) => ({
+					delta: prevState.currY - prevState.startY
+				}));
+			});
 
 			this.setState((prevState) => ({
 				val: prevState.delta
