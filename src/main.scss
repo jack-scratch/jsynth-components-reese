@@ -110,8 +110,6 @@ hr {
 .sys {
 	@extend .cont;
 
-	display: inline-flex;
-
 	.module {
 		margin: $margin;
 		background: $inert;
