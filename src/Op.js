@@ -1,9 +1,6 @@
 import React from "react";
 import Source from "./Source";
 import ctx from "./ctx";
-import {
-	a
-} from "./math";
 
 class Op extends Source {
 	constructor(props) {
@@ -11,13 +8,15 @@ class Op extends Source {
 
 		this.state = {
 			osc: ctx.createOscillator(),
-			amp: ctx.createGain()
+			amp: ctx.createGain(),
+			hz: 0,
+			level: 0
 		};
 
 		this.state.osc.type = this.props.type;
-		this.state.osc.frequency.value = this.props.hz;
+		this.state.osc.frequency.value = this.state.hz;
 
-		this.state.amp.gain.value = this.props.level;
+		this.state.amp.gain.value = this.state.level;
 
 		this.state.osc.start();
 
@@ -40,10 +39,5 @@ class Op extends Source {
 		);
 	}
 }
-
-Op.defaultProps = {
-	hz: a,
-	level: 0.0
-};
 
 export default Op;
