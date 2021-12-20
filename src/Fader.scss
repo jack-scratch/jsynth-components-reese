@@ -40,12 +40,10 @@ $ht: 100px;
 		height: calc(#{$ht} + #{$margin});
 		overflow: visible;
 		z-index: -1;
-
-		text {
-			font-family: Arial;
-			font-weight: bold;
-			alignment-baseline: middle;
-			fill: $fg;
-		}
 	}
+
+	.tick {
+		stroke-width: 3px;
+		stroke: $fg;
+	} 
 }

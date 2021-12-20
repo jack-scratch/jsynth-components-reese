@@ -1,4 +1,7 @@
 import React from "react";
+import {
+	margin
+} from "./layout";
 
 import "./Fader.css";
 
@@ -25,6 +28,11 @@ class Fader extends React.Component {
 	}
 
 	render() {
+		let markStride;
+		if (this.props.mark) {
+			markStride = this.props.ln / (this.props.mark - 1);
+		}
+
 		return (
 			<div className="fader" style={{
 				height: this.props.ln
@@ -42,7 +50,11 @@ class Fader extends React.Component {
 						<div className="mark"></div>
 					</div>
 				</div>
-				<svg xmlns="http://www.w3.org/2000/svg" className="inc"></svg>
+				<svg xmlns="http://www.w3.org/2000/svg" className="inc">
+					{this.props.mark && [...Array(this.props.mark).keys()].map((i) =>
+						<line x1={margin * 2} y1={i * markStride} x2={(margin * 2) + 20} y2={i * markStride} key={i} className="tick" />
+					)}
+				</svg>
 			</div>
 		);
 	}
