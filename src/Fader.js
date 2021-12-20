@@ -10,27 +10,27 @@ class Fader extends React.Component {
 			val: 0,
 			down: false
 		};
+
+		this.scrub = this.scrub.bind(this);
+	}
+
+	scrub(e) {
+		this.setState({
+			val: e.nativeEvent.offsetY
+		});
+
+		this.props.refer.value = this.state.val;
 	}
 
 	render() {
 		return (
 			<div className="fader" style={{
 				height: this.props.ln
-			}} onMouseMove={(e) => {
-				if (this.state.down) {
-					this.setState({
-						val: e.nativeEvent.offsetY
-					})
-				}
-			}} onMouseUp={() => this.setState({
-				down: false
-			})}>
+			}} onMouseDown={this.scrub}>
 				<div className="groove">
 					<div className="thumb" style={{
 						marginTop: this.state.val
-					}} onMouseDown={() => this.setState({
-						down: true
-					})} >
+					}}>
 						<div className="mark"></div>
 					</div>
 				</div>
