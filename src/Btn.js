@@ -14,23 +14,13 @@ class Btn extends React.Component {
 			down: null
 		};
 
-		this.play = this.play.bind(this);
+		this.push = this.push.bind(this);
 		this.release = this.release.bind(this);
 	}
 
-	play() {
+	push() {
 		this.setState({
-			src: ctx.createBufferSource()
-		}, () => {
-			this.state.src.buffer = this.props.buff;
-
-			this.state.src.connect(ctx.destination);
-
-			this.state.src.start();
-
-			this.setState({
-				down: true
-			});
+			down: true
 		});
 	}
 
@@ -50,7 +40,7 @@ class Btn extends React.Component {
 
 	render() {
 		return (
-			<div className={"btn " + (this.state.down ? " " : "raised ")} onMouseDown={this.play} onMouseUp={this.release} onMouseLeave={this.release} style={{
+			<div className={"btn " + (this.state.down ? " " : "raised ")} onMouseDown={this.push} onMouseUp={this.release} onMouseLeave={this.release} style={{
 				width: this.props.wd,
 				height: this.props.ht
 			}}>
