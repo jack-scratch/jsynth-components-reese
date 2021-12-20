@@ -2,7 +2,7 @@ import React from "react";
 import Out from "./Out";
 import ctx from "./ctx";
 
-const Speaker = () => {
+const speaker = () => {
 	return (
 		<Out name="Output" port={[
 			{
@@ -13,4 +13,4 @@ const Speaker = () => {
 	);
 }
 
-export default Speaker;
+export default speaker;
