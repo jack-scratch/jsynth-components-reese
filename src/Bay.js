@@ -6,33 +6,27 @@ class Bay extends React.Component {
 		super(props);
 
 		this.state = {
-			patch: [
-				{
-					start: [
-						30,
-						70
-					],
-					end: [
-						120,
-						300
-					]
-				}, {
-					start: [
-						120,
-						30
-					],
-					end: [
-						120,
-						300
-					]
-				}
-			]
+			patch: []
 		};
 	}
 
 	render() {
 		return (
-			<div className="sys">
+			<div className="sys" onMouseDown={() => this.setState((prevState) => ({
+				patch: [
+					...prevState.patch,
+					{
+						start: [
+							30,
+							70
+						],
+						end: [
+							120,
+							30
+						]
+					}
+				]
+			}))}>
 				{this.props.module.map((inst) =>
 					inst
 				)}
