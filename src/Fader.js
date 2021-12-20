@@ -14,7 +14,9 @@ class Fader extends React.Component {
 
 	render() {
 		return (
-			<div className="fader" onMouseMove={(e) => {
+			<div className="fader" style={{
+				height: this.props.ln
+			}} onMouseMove={(e) => {
 				if (this.state.down) {
 					this.setState({
 						val: e.nativeEvent.offsetY
@@ -37,5 +39,9 @@ class Fader extends React.Component {
 		);
 	}
 }
+
+Fader.defaultProps = {
+	ln: 100
+};
 
 export default Fader;
