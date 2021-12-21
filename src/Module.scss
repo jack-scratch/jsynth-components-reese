@@ -15,8 +15,8 @@
 	}
 
 	.param {
-		padding-top: calc(12px + #{$margin});
 		display: flex;
 		flex-direction: row;
+		padding-top: calc(12px + #{$margin});
 	}
 }
