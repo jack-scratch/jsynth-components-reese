@@ -21,15 +21,13 @@ class Bay extends React.Component {
 							e.nativeEvent.offsetY
 						],
 						end: [
-							120,
-							30
+							e.nativeEvent.offsetX,
+							e.nativeEvent.offsetY
 						]
 					}
 				]
 			}))}>
-				{this.props.module.map((inst) =>
-					inst
-				)}
+				{this.props.module.map((inst) => inst)}
 
 				{this.state.patch.map((inst, i) =>
 					<Cable key={i} start={inst.start} />
