@@ -27,22 +27,13 @@ class Poly extends React.Component {
 
 		let serial = "";
 		for (let i = 0; i < pt.length; i++) {
-			let op;
-			if (i) {
-				op = "L";
-			} else {
-				op = "M";
-			}
-
-			let node = op + ws + ((pt[i][0] * this.props.rad)) + ws + sep + + ((pt[i][1] * this.props.rad))
+			let node = ws + ((pt[i][0] * this.props.rad)) + ws + sep + + ((pt[i][1] * this.props.rad))
 
 			serial += node;
 		}
-		serial += ws;
-		serial += "Z";
 
 		return (
-			<path d={serial} transform={`translate(${this.props.rad} ${this.props.rad})`} />
+			<polygon points={serial} transform={`translate(${this.props.rad} ${this.props.rad})`} />
 		);
 	}
 }
