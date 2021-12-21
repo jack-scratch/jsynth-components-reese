@@ -2,6 +2,10 @@ import React from "react";
 import {
 	rotRad
 } from "./layout";
+import {
+	ws,
+	sep
+} from "./path";
 
 class Poly extends React.Component {
 	render() {
@@ -32,11 +36,12 @@ class Poly extends React.Component {
 				op = "M";
 			}
 
-			let node = op + " " + ((pt[i][0] * hexRad)) + ", " + ((pt[i][1] * hexRad))
+			let node = op + ws + ((pt[i][0] * hexRad)) + ws + sep + + ((pt[i][1] * hexRad))
 
 			serial += node;
 		}
-		serial += " Z";
+		serial += ws;
+		serial += "Z";
 
 		return (
 			<path d={serial} transform={`translate(${hexRad} ${hexRad})`} />
