@@ -4,7 +4,7 @@ import Nut from "./Nut";
 class Port extends React.Component {
 	render() {
 		return (
-			<svg className="port">
+			<svg className="port" onClick={this.props.cb}>
 				<text className="mark" x="50%">{this.props.type == "in" ? "In" : "Out"}</text>
 				<Nut />
 				<circle />
