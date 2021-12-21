@@ -15,6 +15,9 @@ class Led extends React.Component {
 	}
 
 	componentDidMount() {
+		this.canvRef.current.width = this.props.wd;
+		this.canvRef.current.height = this.props.ht;
+
 		this.context = this.canvRef.current.getContext("2d");
 
 		this.clear();
@@ -39,6 +42,11 @@ class Led extends React.Component {
 			<canvas ref={this.canvRef} />
 		)
 	}
+}
+
+Led.defaultProps = {
+	wd: 400,
+	ht: 100
 }
 
 export default Led;
