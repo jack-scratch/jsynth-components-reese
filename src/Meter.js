@@ -1,30 +1,17 @@
-import Led from "Led";
+import React from "react";
+import Led from "./Led";
+import {
+	bg,
+	js
+} from "./col";
 
 class Meter extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this.canvRef = React.createRef();
+		this.wd = 16;
 
-		this.clear = this.clear.bind(this);
-		this.draw = this.draw.bind(this);
-	}
-
-	componentDidMount() {
-		this.canvRef.current.width = this.props.wd;
-		this.canvRef.current.height = this.props.ht;
-
-		this.context = this.canvRef.current.getContext("2d");
-
-		this.clear();
-
-		this.draw();
-	}
-
-	clear() {
-		this.context.fillStyle = bg;
-
-		this.context.fillRect(0, 0, this.canvRef.current.width, this.canvRef.current.height);
+		this.notch = 20;
 	}
 
 	draw() {
@@ -35,9 +22,13 @@ class Meter extends React.Component {
 
 	render() {
 		return (
-			<canvas ref={this.canvRef} />
-		)
+			<Led wd={this.wd} ht={this.notch * this.props.tick} />
+		);
 	}
 }
+
+Meter.defaultProps = {
+	tick: 10
+};
 
 export default Meter;
