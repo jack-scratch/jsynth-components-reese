@@ -86,8 +86,15 @@ class Knob extends React.Component {
 					<line x1={0} y1={0} x2={10} y2={0} transform={`translate(${this.props.rad} ${this.props.rad}) rotate(${i * stride}) translate(${this.props.rad + margin} 0)`} />
 				)}
 
+				<defs>
+					<clipPath id="perim">
+						{shape}
+					</clipPath>
+				</defs>
+
 				{shape}
-				<line className="tick" x1={diam - lineLn} x2={diam} y1={this.props.rad} y2={this.props.rad} />
+
+				<line className="tick" x1={diam - lineLn} x2={diam} y1={this.props.rad} y2={this.props.rad} clip-path="url(#perim)" />
 				<text className="mark" textAnchor="end" x={-margin} y={this.props.rad}>{this.props.min}</text>
 				<text className="mark" textAnchor="start" x={diam + margin} y={this.props.rad}>{this.props.max}</text>
 			</svg>
