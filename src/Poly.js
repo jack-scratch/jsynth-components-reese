@@ -15,8 +15,17 @@ class Poly extends React.Component {
 
 		let pt = [];
 		for (let i = 0; i < rotRad; i++) {
-			for (let b = 0; b < 2; b++) {
-				let step = (i + ((b ? 1 : -1) * bevel)) * stride;
+			if (this.props.bevel) {
+				for (let b = 0; b < 2; b++) {
+					let step = (i + ((b ? 1 : -1) * bevel)) * stride;
+
+					pt.push([
+						Math.cos(step),
+						Math.sin(step)
+					]);
+				}
+			} else {
+				let step = i * stride;
 
 				pt.push([
 					Math.cos(step),
