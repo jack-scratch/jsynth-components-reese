@@ -3,7 +3,6 @@ import Btn from "./Btn";
 import {
 	Out
 } from "./Port";
-import ctx from "./ctx";
 
 class Impulse extends React.Component {
 	constructor(props) {
@@ -25,11 +24,11 @@ class Impulse extends React.Component {
 		req.onload = () => {
 			let data = req.response;
 
-			ctx.decodeAudioData(data, (buff) => {
-				let src = ctx.createBufferSource();
+			window.ctx.decodeAudioData(data, (buff) => {
+				let src = window.ctx.createBufferSource();
 				src.buffer = buff;
 
-				src.connect(ctx.destination);
+				src.connect(window.ctx.destination);
 
 				src.start();
 			});

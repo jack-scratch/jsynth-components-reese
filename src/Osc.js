@@ -1,19 +1,20 @@
 import React from "react";
 import Source from "./Source";
-import ctx from "./ctx";
 
 class Osc extends Source {
 	constructor(props) {
 		super(props);
 
 		this.state = {
-			node: ctx.createOscillator(),
+			node: window.ctx.createOscillator(),
 			hz: 0.0
 		};
 
 		if (this.props.type) {
 			this.state.node.type = this.props.type;
 		}
+
+		this.state.node.connect(window.ctx.destination);
 
 		this.state.node.start();
 	}

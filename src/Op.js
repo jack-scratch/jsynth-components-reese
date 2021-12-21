@@ -1,14 +1,13 @@
 import React from "react";
 import Source from "./Source";
-import ctx from "./ctx";
 
 class Op extends Source {
 	constructor(props) {
 		super(props);
 
 		this.state = {
-			osc: ctx.createOscillator(),
-			amp: ctx.createGain(),
+			osc: window.ctx.createOscillator(),
+			amp: window.ctx.createGain(),
 			hz: 0,
 			level: 0
 		};

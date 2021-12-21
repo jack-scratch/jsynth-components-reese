@@ -1,13 +1,12 @@
 import React from "react";
 import Effect from "./Effect";
-import ctx from "./ctx";
 
 class Gain extends Effect {
 	constructor(props) {
 		super(props);
 
 		this.state = {
-			node: ctx.createGain()
+			node: window.ctx.createGain()
 		};
 
 		this.state.node.gain.value = this.props.level;

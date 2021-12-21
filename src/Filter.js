@@ -1,6 +1,5 @@
 import React from "react";
 import Effect from "./Effect";
-import ctx from "./ctx";
 
 class Filter extends Effect {
 	constructor(props) {
@@ -8,7 +7,7 @@ class Filter extends Effect {
 
 		this.state = {
 			hz: 100.0,
-			node: ctx.createBiquadFilter()
+			node: window.ctx.createBiquadFilter()
 		};
 
 		this.state.node.type = this.props.type;

@@ -1,5 +1,4 @@
 import React from "react";
-import ctx from "./ctx";
 
 import "./Btn.css";
 
