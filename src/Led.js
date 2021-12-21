@@ -1,46 +1,24 @@
-import {
-	React,
-	useRef,
-	useEffect
-} from "react";
-import {
-	inert,
-	js
-} from "./col.js";
-import ctx from "./ctx";
+import React from "react";
 
-const Led = (props) => {
-	const ref = useRef(null);
+class Led extends React.Component {
+	constructor(props) {
+		super(props);
 
-	let canvas;
-
-	const clear = ctx => {
-		ctx.fillStyle = inert;
-
-		ctx.fillRect(0, 0, canvas.width, canvas.height);
+		this.canvRef = React.createRef();
 	}
 
-	const draw = ctx => {
-		ctx.fillStyle = js;
+	componentDidMount() {
+		this.context = this.canvRef.current.getContext("2d");
+
+		this.context.fillStyle = "red";
+		this.context.fillRect(0, 0, 30, 70);
 	}
 
-	useEffect(() => {
-		canvas = ref.current;
-
-		const ctx = canvas.getContext("2d");
-
-		clear(ctx);
-		draw(ctx);
-	}, [draw]);
-
-	return (
-		<canvas refer={ref} />
-	);
+	render() {
+		return (
+			<canvas ref={this.canvRef} />
+		)
+	}
 }
-
-Led.defaultProps = {
-	wd: 300,
-	ht: 150
-};
 
 export default Led;
