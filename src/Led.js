@@ -25,13 +25,13 @@ class Led extends React.Component {
 	}
 
 	clear() {
-		this.ctx.fillStyle = light['inert'];
+		this.ctx.fillStyle = light["inert"];
 
 		this.ctx.fillRect(0, 0, this.canvRef.current.width, this.canvRef.current.height);
 	}
 
 	draw() {
-		this.ctx.fillStyle = light['active'];
+		this.ctx.fillStyle = light["active"];
 	}
 
 	render() {
