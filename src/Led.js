@@ -1,7 +1,6 @@
 import React from "react";
 import {
-	bg,
-	js
+	light
 } from "./col";
 
 class Led extends React.Component {
@@ -26,13 +25,13 @@ class Led extends React.Component {
 	}
 
 	clear() {
-		this.ctx.fillStyle = bg;
+		this.ctx.fillStyle = light['inert'];
 
 		this.ctx.fillRect(0, 0, this.canvRef.current.width, this.canvRef.current.height);
 	}
 
 	draw() {
-		this.ctx.fillStyle = js;
+		this.ctx.fillStyle = light['active'];
 	}
 
 	render() {
