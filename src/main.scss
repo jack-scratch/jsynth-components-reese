@@ -104,6 +104,8 @@ text.mark {
 .sys {
 	@extend .cont;
 
+	position: relative;
+
 	.module {
 		margin: $margin;
 		background: $inert;

@@ -2,17 +2,17 @@
 
 .cable {
 	position: absolute;
-	width: 100%;
-	height: 100%;
 	left: 0;
 	top: 0;
+	width: 100%;
+	height: 100%;
 	overflow: visible;
 	stroke-width: 10px;
 	stroke-linecap: round;
 	pointer-events: none;
 
 	path {
-		fill: transparent;
+		fill: red;
 		stroke: $fg;
 	}
 }
