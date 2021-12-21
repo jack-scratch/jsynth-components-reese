@@ -1,4 +1,7 @@
 import React from "react";
+import {
+	js
+} from "./col";
 
 class Led extends React.Component {
 	constructor(props) {
@@ -10,7 +13,7 @@ class Led extends React.Component {
 	componentDidMount() {
 		this.context = this.canvRef.current.getContext("2d");
 
-		this.context.fillStyle = "red";
+		this.context.fillStyle = js;
 		this.context.fillRect(0, 0, 30, 70);
 	}
 
