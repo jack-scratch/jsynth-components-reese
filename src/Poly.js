@@ -25,8 +25,6 @@ class Poly extends React.Component {
 			}
 		}
 
-		const hexRad = 26;
-
 		let serial = "";
 		for (let i = 0; i < pt.length; i++) {
 			let op;
@@ -36,7 +34,7 @@ class Poly extends React.Component {
 				op = "M";
 			}
 
-			let node = op + ws + ((pt[i][0] * hexRad)) + ws + sep + + ((pt[i][1] * hexRad))
+			let node = op + ws + ((pt[i][0] * this.props.rad)) + ws + sep + + ((pt[i][1] * this.props.rad))
 
 			serial += node;
 		}
@@ -44,7 +42,7 @@ class Poly extends React.Component {
 		serial += "Z";
 
 		return (
-			<path d={serial} transform={`translate(${hexRad} ${hexRad})`} />
+			<path d={serial} transform={`translate(${this.props.rad} ${this.props.rad})`} />
 		);
 	}
 }
