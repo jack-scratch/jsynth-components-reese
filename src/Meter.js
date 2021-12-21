@@ -16,8 +16,6 @@ class Meter extends React.Component {
 
 	draw() {
 		this.ctx.fillStyle = js;
-
-		this.ctx.fillRect(0, 0, 30, 70);
 	}
 
 	render() {
