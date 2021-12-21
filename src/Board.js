@@ -1,7 +1,9 @@
 import React from "react";
 import Module from "./Module";
 import Key from "./Key";
-import PortOut from "./PortOut";
+import {
+	Out
+} from "./Port";
 import {
 	oct
 } from "./math";
@@ -37,7 +39,7 @@ class Board extends Module {
 					</table>
 				</div>
 				<div>
-					<PortOut />
+					<Out />
 				</div>
 			</div>
 		);

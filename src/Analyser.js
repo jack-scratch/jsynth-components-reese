@@ -1,6 +1,8 @@
 import React from "react";
 import Led from "./Led";
-import PortIn from "./PortIn";
+import {
+	In
+} from "./Port";
 
 class Analyser extends React.Component {
 	render() {
@@ -11,7 +13,7 @@ class Analyser extends React.Component {
 					<Led />
 				</div>
 				<div className="io">
-					<PortIn refer={this.props.refer} />
+					<In refer={this.props.refer} />
 				</div>
 			</div>
 		);

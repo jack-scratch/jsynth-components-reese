@@ -1,6 +1,8 @@
 import React from "react";
 import Btn from "./Btn";
-import PortOut from "./PortOut";
+import {
+	Out
+} from "./Port";
 import ctx from "./ctx";
 
 class Impulse extends React.Component {
@@ -43,7 +45,7 @@ class Impulse extends React.Component {
 					<Btn buff={this.state.buff} name={this.props.name} />
 
 					<div className="io">
-						<PortOut />
+						<Out />
 					</div>
 				</div>
 			</div>

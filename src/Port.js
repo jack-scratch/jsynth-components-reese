@@ -13,4 +13,23 @@ class Port extends React.Component {
 	}
 }
 
-export default Port;
+class In extends React.Component {
+	render() {
+		return (
+			<Port type="in" />
+		);
+	}
+}
+
+class Out extends React.Component {
+	render() {
+		return (
+			<Port type="out" />
+		);
+	}
+}
+
+export {
+	In,
+	Out
+};
