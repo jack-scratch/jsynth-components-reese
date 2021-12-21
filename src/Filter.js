@@ -1,5 +1,6 @@
 import React from "react";
 import Effect from "./Effect";
+import ctx from "./ctx";
 
 class Filter extends Effect {
 	constructor(props) {

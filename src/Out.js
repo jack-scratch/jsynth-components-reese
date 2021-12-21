@@ -1,6 +1,5 @@
 import React from "react";
 import Module from "./Module";
-import ctx from "./ctx";
 
 class Out extends Module {
 	render() {
