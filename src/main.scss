@@ -39,14 +39,12 @@ $stroke: 3px;
 }
 
 .label {
-	font-family: Arial;
 	background: $fg;
 	color: $bg;
 	width: 100%;
 }
 
 .mark {
-	font-family: Arial;
 	color: $fg;
 }
 
@@ -56,6 +54,7 @@ text.mark {
 
 .label,
 .mark {
+	font-family: Arial;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
