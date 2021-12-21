@@ -38,7 +38,10 @@ class Op extends Source {
 					point: this.state.amp.gain
 				}
 			]} port={[
-				"out"
+				{
+					type: "out",
+					point: this.state.osc
+				}
 			]} />
 		);
 	}

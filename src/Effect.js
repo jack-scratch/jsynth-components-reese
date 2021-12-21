@@ -10,7 +10,7 @@ class Effect extends Module {
 					point: this.props.refer
 				}, {
 					type: "out",
-					point: this
+					point: this.props.refer
 				}
 			]} min={this.props.min} max={this.props.max} />
 		);
