@@ -112,7 +112,7 @@ text.mark {
 }
 
 .tick {
-	stroke-width: 3;
+	stroke-width: $stroke;
 	stroke-linecap: round;
 	stroke: $fg;
 }
