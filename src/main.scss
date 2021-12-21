@@ -102,13 +102,6 @@ text.mark {
 	}
 }
 
-hr {
-	height: $stroke;
-	background-color: $fg;
-	border: none;
-	border-radius: calc(#{$stroke} / 2);
-}
-
 .sys {
 	@extend .cont;
 
@@ -122,4 +115,11 @@ hr {
 	stroke-width: 3;
 	stroke-linecap: round;
 	stroke: $fg;
+}
+
+hr {
+	height: $stroke;
+	background-color: $fg;
+	border: none;
+	border-radius: calc(#{$stroke} / 2);
 }
