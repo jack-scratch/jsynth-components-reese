@@ -8,7 +8,7 @@ import {
 	js
 } from "./col.js";
 
-const Led = props => {
+const Led = (props) => {
 	const ref = useRef(null);
 
 	let canvas;
@@ -25,9 +25,6 @@ const Led = props => {
 
 	useEffect(() => {
 		canvas = ref.current;
-
-		canvas.width = props.wd;
-		canvas.height = props.ht;
 
 		const ctx = canvas.getContext("2d");
 

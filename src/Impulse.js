@@ -18,7 +18,7 @@ class Impulse extends React.Component {
 		let req = new XMLHttpRequest();
 		req.responseType = "arraybuffer";
 
-		req.open("GET", `./${this.props.fName}.wav`, true);
+		req.open("GET", `./snd/${this.props.fName}.wav`, true);
 
 		req.onload = () => {
 			let data = req.response;
