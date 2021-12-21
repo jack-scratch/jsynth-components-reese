@@ -27,9 +27,9 @@ class Poly extends React.Component {
 
 		let serial = "";
 		for (let i = 0; i < pt.length; i++) {
-			let node = ws + ((pt[i][0] * this.props.rad)) + ws + sep + + ((pt[i][1] * this.props.rad))
+			let tok = ws + ((pt[i][0] * this.props.rad)) + ws + sep + + ((pt[i][1] * this.props.rad))
 
-			serial += node;
+			serial += tok;
 		}
 
 		return (
