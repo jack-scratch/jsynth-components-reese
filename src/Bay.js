@@ -12,13 +12,13 @@ class Bay extends React.Component {
 
 	render() {
 		return (
-			<div className="sys" onMouseDown={() => this.setState((prevState) => ({
+			<div className="sys" onMouseDown={(e) => this.setState((prevState) => ({
 				patch: [
 					...prevState.patch,
 					{
 						start: [
-							30,
-							70
+							e.nativeEvent.offsetX,
+							e.nativeEvent.offsetY
 						],
 						end: [
 							120,
