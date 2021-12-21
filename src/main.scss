@@ -104,6 +104,7 @@ text.mark {
 .sys {
 	@extend .cont;
 
+	display: flex;
 	position: relative;
 
 	.module {
