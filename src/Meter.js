@@ -1,10 +1,6 @@
-import React from "react";
-import {
-	bg,
-	js
-} from "./col";
+import Led from "Led";
 
-class Led extends React.Component {
+class Meter extends React.Component {
 	constructor(props) {
 		super(props);
 
@@ -40,13 +36,8 @@ class Led extends React.Component {
 	render() {
 		return (
 			<canvas ref={this.canvRef} />
-		);
+		)
 	}
 }
 
-Led.defaultProps = {
-	wd: 400,
-	ht: 100
-};
-
-export default Led;
+export default Meter;
