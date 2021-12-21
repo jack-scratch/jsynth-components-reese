@@ -9,11 +9,11 @@ class Poly extends React.Component {
 
 		let pt = [];
 		for (let i = 0; i < rotRad; i++) {
-			let idx = i * stride;
+			let step = i * stride;
 
 			pt.push([
-				Math.cos(idx),
-				Math.sin(idx)
+				Math.cos(step),
+				Math.sin(step)
 			]);
 		}
 
