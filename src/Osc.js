@@ -1,6 +1,6 @@
 import React from "react";
-import ctx from "./ctx";
 import Source from "./Source";
+import ctx from "./ctx";
 
 class Osc extends Source {
 	constructor(props) {
