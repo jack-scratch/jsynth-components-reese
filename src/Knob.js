@@ -95,8 +95,13 @@ class Knob extends React.Component {
 				{shape}
 
 				<line className="tick" x1={diam - lineLn} x2={diam} y1={this.props.rad} y2={this.props.rad} clip-path="url(#perim)" />
-				<text className="mark" textAnchor="end" x={-margin} y={this.props.rad}>{this.props.min}</text>
-				<text className="mark" textAnchor="start" x={diam + margin} y={this.props.rad}>{this.props.max}</text>
+
+				{this.props.mark && [...Array(this.props.mark).keys()].map((i) =>
+					<g>
+						<text className="mark" textAnchor="end" x={-margin} y={this.props.rad}>{this.props.min}</text>
+						<text className="mark" textAnchor="start" x={diam + margin} y={this.props.rad}>{this.props.max}</text>
+					</g>
+				)}
 			</svg>
 		);
 	}
