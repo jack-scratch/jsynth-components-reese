@@ -7,7 +7,7 @@ import {
 class Nut extends React.Component {
 	render() {
 		return (
-			<Poly n={6} rad={26} />
+			<Poly n={6} rad={rotRad} />
 		);
 	}
 }
