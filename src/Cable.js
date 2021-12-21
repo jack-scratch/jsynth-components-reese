@@ -12,10 +12,7 @@ class Cable extends React.Component {
 			in: null,
 			out: null,
 
-			end: [
-				0,
-				0
-			],
+			end: this.props.end,
 			mid: [
 				0,
 				0
