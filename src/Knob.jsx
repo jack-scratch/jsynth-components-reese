@@ -98,8 +98,8 @@ class Knob extends React.Component {
 
 				{this.props.mark && [...Array(this.props.mark).keys()].map((i) =>
 					<g>
-						<text className="mark" textAnchor="end" x={-margin} y={this.props.rad}>{this.props.min}</text>
-						<text className="mark" textAnchor="start" x={diam + margin} y={this.props.rad}>{this.props.max}</text>
+						<text className="mark" textAnchor="end" x={-margin} y={this.props.rad}>{this.props.min}{this.props.unit && ` ${this.props.unit}`}</text>
+						<text className="mark" textAnchor="start" x={diam + margin} y={this.props.rad}>{this.props.max}{this.props.unit && ` ${this.props.unit}`}</text>
 					</g>
 				)}
 			</svg>

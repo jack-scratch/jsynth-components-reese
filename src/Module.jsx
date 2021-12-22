@@ -25,7 +25,7 @@ class Module extends React.Component {
 								<div className="body">
 									<div className="body param">
 										<In hook={this.props.hook} />
-										<Knob refer={inst.point} min={this.props.min} max={this.props.max} />
+										<Knob refer={inst.point} min={this.props.min} max={this.props.max} mark unit="Hz" />
 									</div>
 								</div>
 							</div>

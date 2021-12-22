@@ -20,4 +20,8 @@
 	.mark {
 		alignment-baseline: middle;
 	}
+
+	tspan::after {
+		content: "asdf";
+	}
 }
