@@ -9,7 +9,10 @@ class Text extends React.Component {
 
 	render() {
 		return (
-			<div className="buff">
+			<div className="buff" style={{
+				width: this.props.wd + "ch",
+				height: this.props.ht + "ch"
+			}}>
 				{this.props.buff.map((line) =>
 					<div className="line">{line}</div>
 				)}
@@ -19,7 +22,9 @@ class Text extends React.Component {
 }
 
 Text.defaultProps = {
-	buff: []
+	buff: [],
+	wd: 20,
+	ht: 4
 };
 
 export default Text;
