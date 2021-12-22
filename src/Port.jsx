@@ -2,10 +2,6 @@ import React from "react";
 import Nut from "./Nut";
 
 class Port extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-
 	render() {
 		return (
 			<svg className="port" onMouseDown={this.props.hook}>
@@ -18,10 +14,6 @@ class Port extends React.Component {
 }
 
 class In extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-
 	render() {
 		return (
 			<Port type="in" />
@@ -30,10 +22,6 @@ class In extends React.Component {
 }
 
 class Out extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-
 	render() {
 		return (
 			<Port type="out" hook={this.props.hook} />
