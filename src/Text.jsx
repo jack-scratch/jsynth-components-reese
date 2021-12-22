@@ -3,19 +3,15 @@ import React from "react";
 import "./Text.css";
 
 class Text extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-
 	render() {
 		return (
 			<div className="buff" style={{
 				width: this.props.wd + "ch",
 				height: this.props.ht + "ch"
 			}}>
-			{[...Array(this.props.ht).keys()].map((i) =>
-				<div className="line">{i < this.props.buff.length ? this.props.buff[i] : ""}</div>
-			)}
+				{[...Array(this.props.ht).keys()].map((i) =>
+					<div className="line">{i < this.props.buff.length ? this.props.buff[i] : ""}</div>
+				)}
 			</div>
 		);
 	}
