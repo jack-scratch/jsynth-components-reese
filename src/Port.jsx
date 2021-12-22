@@ -11,10 +11,10 @@ class Port extends React.Component {
 	render() {
 		return (
 			<div ref={this.refer}>
-				<svg className="port" onMouseDown={(e) => {this.props.hook(e, this.refer)}}>
+				<svg className="port">
 				<text className="mark" x="50%">{this.props.type === "in" ? "In" : "Out"}</text>
 					<Nut />
-					<circle />
+					<circle onMouseDown={(e) => {this.props.hook(e, this.refer)}} />
 				</svg>
 			</div>
 		);
