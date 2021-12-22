@@ -16,13 +16,6 @@ class Bay extends React.Component {
 
 		this.addCable = this.addCable.bind(this);
 		this.popCable = this.popCable.bind(this);
-
-		this.referSys = React.createRef();
-	}
-
-	componentDidMount() {
-		this.offsetX = this.referSys.current.offsetLeft;
-		this.offsetY = this.referSys.current.offsetTop;
 	}
 
 	addCable(e, refer) {
@@ -31,8 +24,8 @@ class Bay extends React.Component {
 				...prevState.patch,
 				{
 					start: [
-						this.offsetX + nutRad + refer.current.offsetLeft,
-						this.offsetY + nutRad + refer.current.offsetTop
+						nutRad + 10 + refer.current.offsetLeft,
+						nutRad + 10 + refer.current.offsetTop
 					],
 					end: [
 						0,
@@ -57,7 +50,7 @@ class Bay extends React.Component {
 
 	render() {
 		return (
-			<div className="sys" ref={this.referSys}>
+			<div className="sys">
 				<Osc hookDown={this.addCable} />
 				{speaker()}
 

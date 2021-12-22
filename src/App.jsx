@@ -16,10 +16,14 @@ function App() {
 				window.ctx.resume();
 			}
 		}}>
-			<Bay module={[
-				<Osc />,
-				speaker()
-			]} />
+		<div className="body">
+		<div className="body">
+		<Bay module={[
+			<Osc />,
+			speaker()
+		]} />
+		</div>
+		</div>
 		<Board />
 		</div>
   );
