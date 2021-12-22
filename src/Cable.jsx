@@ -27,7 +27,7 @@ class Cable extends React.Component {
 		this.setState({
 			mid: [
 				Math.abs(this.state.end[0] - this.state.start[0]) / 2,
-				this.state.end[1] * 1.6
+				(this.state.end[1] > this.state.start[1] ? this.state.end[1] : this.state.start[1]) * 1.6
 			]
 		});
 	}
@@ -42,7 +42,7 @@ class Cable extends React.Component {
 			this.setState({
 				mid: [
 					Math.abs(this.state.end[0] - this.state.start[0]) / 2,
-					this.state.end[1] * 1.6
+					(this.state.end[1] > this.state.start[1] ? this.state.end[1] : this.state.start[1]) * 1.6
 				]
 			});
 		});
