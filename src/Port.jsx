@@ -8,7 +8,7 @@ class Port extends React.Component {
 
 	render() {
 		return (
-			<svg className="port" onMouseDown={this.props.call}>
+			<svg className="port" onMouseDown={this.props.hook}>
 				<text className="mark" x="50%">{this.props.type == "in" ? "In" : "Out"}</text>
 				<Nut />
 				<circle />
@@ -24,7 +24,7 @@ class In extends React.Component {
 
 	render() {
 		return (
-			<Port type="in" call={this.props.call} />
+			<Port type="in" hook={this.props.hook} />
 		);
 	}
 }
@@ -36,7 +36,7 @@ class Out extends React.Component {
 
 	render() {
 		return (
-			<Port type="out" call={this.props.call} />
+			<Port type="out" hook={this.props.hook} />
 		);
 	}
 }

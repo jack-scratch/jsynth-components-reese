@@ -35,7 +35,7 @@ class Bay extends React.Component {
 	render() {
 		return (
 			<div className="sys">
-				<Osc call={this.addCable} />
+				<Osc hook={this.addCable} />
 				{speaker()}
 
 				{this.state.patch.map((inst, i) =>
