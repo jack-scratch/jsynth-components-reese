@@ -126,12 +126,14 @@ text.mark {
 .sys {
 	@extend .cont;
 
-	display: flex;
-
 	.module {
 		margin: $margin;
 		background: $inert;
 	}
+}
+
+.bay {
+	display: flex;
 }
 
 .tick {

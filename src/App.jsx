@@ -1,7 +1,4 @@
-import Bay from "./Bay.jsx";
-import Osc from "./Osc.jsx";
-import Board from "./Board.jsx";
-import Text from "./Text.jsx";
+import Sample from "./Sample.jsx";
 import speaker from "./speaker.jsx";
 
 function App() {
@@ -17,10 +14,7 @@ function App() {
 				window.ctx.resume();
 			}
 		}}>
-		<Text buff={[
-			"asdf",
-			"hjkl"
-		]} />
+			<Sample />
 		</div>
   );
 }
