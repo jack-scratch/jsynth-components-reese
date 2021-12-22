@@ -34,24 +34,28 @@ class Cable extends React.Component {
 	}
 
 	drag(e) {
-		this.setState({
-			end: [
-				e.nativeEvent.offsetX,
-				e.nativeEvent.offsetY
-			]
-		}, () => {
+		if (this.state.active) {
 			this.setState({
-				mid: [
-					Math.abs(this.state.end[0] - this.state.start[0]) / 2,
-					(this.state.end[1] > this.state.start[1] ? this.state.end[1] : this.state.start[1]) * 1.6
+				end: [
+					e.nativeEvent.offsetX,
+					e.nativeEvent.offsetY
 				]
+			}, () => {
+				this.setState({
+					mid: [
+						Math.abs(this.state.end[0] - this.state.start[0]) / 2,
+						(this.state.end[1] > this.state.start[1] ? this.state.end[1] : this.state.start[1]) * 1.6
+					]
+				});
 			});
-		});
+		}
 	}
 
 	render() {
 		return (
-			<svg className="cable" onMouseMove={this.drag}>
+			<svg className="cable" onMouseUp={() => this.setState({
+				active: false
+			})} onMouseMove={this.drag}>
 				<path d={`M ${this.state.start[0]},${this.state.start[1]} C ${this.state.start[0]},${this.state.start[1]} ${this.state.mid[0]},${this.state.mid[1]} ${this.state.end[0]},${this.state.end[1]}`} />
 			</svg>
 		);
