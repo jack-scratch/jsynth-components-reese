@@ -20,12 +20,12 @@ class Bay extends React.Component {
 				...prevState.patch,
 				{
 					start: [
-						e.nativeEvent.offsetX,
-						e.nativeEvent.offsetY
+						e.nativeEvent.pageX,
+						e.nativeEvent.pageY
 					],
 					end: [
-						e.nativeEvent.offsetX,
-						e.nativeEvent.offsetY
+						0,
+						0
 					]
 				}
 			]
