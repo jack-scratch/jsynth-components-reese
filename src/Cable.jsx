@@ -20,6 +20,7 @@ class Cable extends React.Component {
 			active: false
 		};
 
+		this.release = this.release.bind(this);
 		this.drag = this.drag.bind(this);
 	}
 
@@ -30,6 +31,12 @@ class Cable extends React.Component {
 				(this.state.end[1] > this.state.start[1] ? this.state.end[1] : this.state.start[1]) * 1.6
 			],
 			active: true
+		});
+	}
+
+	release() {
+		this.setState({
+			active: false
 		});
 	}
 
@@ -53,9 +60,7 @@ class Cable extends React.Component {
 
 	render() {
 		return (
-			<svg className="cable" onMouseUp={() => this.setState({
-				active: false
-			})} onMouseMove={this.drag}>
+			<svg className="cable" onMouseUp={this.release} onMouseMove={this.drag}>
 				<path d={`M ${this.state.start[0]},${this.state.start[1]} C ${this.state.start[0]},${this.state.start[1]} ${this.state.mid[0]},${this.state.mid[1]} ${this.state.end[0]},${this.state.end[1]}`} />
 			</svg>
 		);
