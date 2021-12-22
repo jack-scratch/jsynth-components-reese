@@ -24,7 +24,7 @@ class Module extends React.Component {
 								</div>
 								<div className="body">
 									<div className="body param">
-										<In hook={this.props.hook} />
+										<In hookDown={this.props.hookDown} />
 										<Knob refer={inst.point} min={this.props.min} max={this.props.max} mark unit="Hz" />
 									</div>
 								</div>
@@ -34,7 +34,7 @@ class Module extends React.Component {
 					<div className="body">
 						<div className="io">
 							{this.props.port.map((inst) =>
-								inst.type === "in" ? <In key={inst.type} hook={this.props.hook} /> : <Out key={inst.type} hook={this.props.hook} />
+								inst.type === "in" ? <In key={inst.type} hookDown={this.props.hookDown} /> : <Out key={inst.type} hookDown={this.props.hookDown} />
 							)}
 						</div>
 					</div>
