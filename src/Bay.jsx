@@ -20,8 +20,8 @@ class Bay extends React.Component {
 				...prevState.patch,
 				{
 					start: [
-						refer.current.offsetLeft,
-						refer.current.offsetTop
+						26 + refer.current.offsetLeft,
+						26 + refer.current.offsetTop
 					],
 					end: [
 						0,
