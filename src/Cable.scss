@@ -2,12 +2,13 @@
 
 .cable {
 	position: absolute;
+	width: 100%;
+	height: 100%;
 	left: 0;
 	top: 0;
 	overflow: visible;
 	stroke-width: 10px;
 	stroke-linecap: round;
-	pointer-events: none;
 
 	path {
 		fill: transparent;
