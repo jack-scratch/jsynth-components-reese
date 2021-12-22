@@ -1,0 +1,16 @@
+@import "col.scss";
+
+@font-face  {
+	font-family: Terminus;
+	src: url("./TerminusTTF-4.49.1.ttf");
+}
+
+.line {
+	color: map-get($light, 'inert');
+}
+
+.buff {
+	background: map-get($light, 'active');
+	font-family: Terminus;
+	font-weight: bold;
+}
