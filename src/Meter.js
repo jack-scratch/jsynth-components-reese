@@ -11,7 +11,7 @@ class Meter extends React.Component {
 
 		this.wd = 16;
 
-		this.notch = 20;
+		this.level = 20;
 	}
 
 	draw() {
@@ -20,7 +20,7 @@ class Meter extends React.Component {
 
 	render() {
 		return (
-			<Led wd={this.wd} ht={this.notch * this.props.tick} />
+			<Led wd={this.wd} ht={this.level * this.props.tick} />
 		);
 	}
 }
