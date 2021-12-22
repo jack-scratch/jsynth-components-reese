@@ -38,8 +38,10 @@ class Board extends Module {
 						</tbody>
 					</table>
 				</div>
-				<div>
-					<Out />
+				<div className="body">
+					<div className="io">
+						<Out />
+					</div>
 				</div>
 			</div>
 		);
