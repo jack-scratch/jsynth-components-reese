@@ -94,7 +94,7 @@ class Knob extends React.Component {
 
 				{shape}
 
-				<line className="tick" x1={diam - lineLn} x2={diam} y1={this.props.rad} y2={this.props.rad} clip-path="url(#perim)" />
+				<line className="tick" x1={diam - lineLn} x2={diam} y1={this.props.rad} y2={this.props.rad} clipPath="url(#perim)" />
 
 				{this.props.mark && [...Array(this.props.mark).keys()].map((i) =>
 					<g>
