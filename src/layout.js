@@ -5,9 +5,12 @@ const rotRad = Math.PI * 2;
 
 const lineLn = 16;
 
+const nutRad = 26;
+
 export {
 	margin,
 	rotDeg,
 	rotRad,
-	lineLn
+	lineLn,
+	nutRad
 };

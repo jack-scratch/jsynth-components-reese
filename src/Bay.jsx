@@ -2,6 +2,9 @@ import React from "react";
 import Cable from "./Cable";
 import Osc from "./Osc";
 import speaker from "./speaker";
+import {
+	nutRad
+} from "./layout";
 
 class Bay extends React.Component {
 	constructor(props) {
@@ -20,8 +23,8 @@ class Bay extends React.Component {
 				...prevState.patch,
 				{
 					start: [
-						26 + refer.current.offsetLeft,
-						26 + refer.current.offsetTop
+						nutRad + refer.current.offsetLeft,
+						nutRad + refer.current.offsetTop
 					],
 					end: [
 						0,
