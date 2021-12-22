@@ -1,5 +1,6 @@
 import Bay from "./Bay.jsx";
 import Osc from "./Osc.jsx";
+import Board from "./Board.jsx";
 import speaker from "./speaker.jsx";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
 				<Osc />,
 				speaker()
 			]} />
+		<Board />
 		</div>
   );
 }

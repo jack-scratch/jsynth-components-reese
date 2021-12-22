@@ -14,33 +14,25 @@ class Board extends Module {
 	render() {
 		return (
 			<div className="board">
-				<div>
-					<table className="body white">
-						<tbody>
-							<tr>
-								{[...Array(this.props.ln).keys()].map((i) =>
-									<td key={`white-${i}`}>
-										<Key type="white" i={i} />
-									</td>
-								)}
-							</tr>
-						</tbody>
-					</table>
-					<table className="body black">
-						<tbody>
-							<tr>
-								{[...Array(this.props.ln).keys()].map((i) =>
-									<td key={`black-${i}`}>
-										<Key type="black" i={i} />
-									</td>
-								)}
-							</tr>
-						</tbody>
-					</table>
-				</div>
 				<div className="body">
-					<div className="io">
-						<Out />
+					<div className="white">
+						{[...Array(this.props.ln).keys()].map((i) =>
+							<div key={`white-${i}`}>
+								<Key type="white" i={i} />
+							</div>
+						)}
+					</div>
+					<div className="black">
+						{[...Array(this.props.ln - 1).keys()].map((i) =>
+							 <div key={`black-${i}`}>
+								<Key type="black" i={i} />
+							</div>
+						)}
+					</div>
+					<div className="body">
+						<div className="io">
+							<Out />
+						</div>
 					</div>
 				</div>
 			</div>

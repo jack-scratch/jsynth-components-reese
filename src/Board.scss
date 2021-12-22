@@ -2,24 +2,19 @@
 @import "Key.scss";
 
 .board {
-	display: inline-block;
-	height: calc(#{$keyHtWhite} + (2px * 2));
-	padding: $pad;
-	border-radius: $bevel $bevel 0px 0px;
-	background: $bg;
-	padding-top: calc(#{$markOffset} + #{$markHt});
+	@extend .cont;
 
-	> div {
-		margin: $margin;
+	display: flex;
+
+	.white,
+	.black {
+		display: flex;
+		justify-content: center;
 	}
 
-	.body {
-		display: flex;
-
-		&.black {
-			margin-top: calc((#{$keyHtWhite} + 6px) * -1);
-			align-items: center;
-			justify-content: center;
+	> div {
+		> .black {
+			position: absolute;
 		}
 	}
 }
