@@ -1,5 +1,7 @@
 import React from "react";
 import Cable from "./Cable";
+import Osc from "./Osc";
+import speaker from "./speaker";
 
 class Bay extends React.Component {
 	constructor(props) {
@@ -27,7 +29,8 @@ class Bay extends React.Component {
 					}
 				]
 			}))}>
-				{this.props.module.map((inst) => inst)}
+				<Osc />
+				{speaker()}
 
 				{this.state.patch.map((inst, i) =>
 					<Cable key={i} start={inst.start} end={inst.end} />
