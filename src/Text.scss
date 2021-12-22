@@ -6,11 +6,12 @@
 }
 
 .line {
+	background: map-get($light, 'active');
 	color: map-get($light, 'inert');
+	height: 2ch;
 }
 
 .buff {
-	background: map-get($light, 'active');
 	font-family: Terminus;
 	font-weight: bold;
 }
