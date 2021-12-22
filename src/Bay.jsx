@@ -14,14 +14,14 @@ class Bay extends React.Component {
 		this.addCable = this.addCable.bind(this);
 	}
 
-	addCable(e) {
+	addCable(e, refer) {
 		this.setState((prevState) => ({
 			patch: [
 				...prevState.patch,
 				{
 					start: [
-						e.nativeEvent.pageX,
-						e.nativeEvent.pageY
+						refer.current.offsetLeft,
+						refer.current.offsetTop
 					],
 					end: [
 						0,
