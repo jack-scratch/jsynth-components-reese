@@ -14,8 +14,6 @@ class Osc extends Source {
 			this.state.node.type = this.props.type;
 		}
 
-		this.state.node.connect(window.ctx.destination);
-
 		this.state.node.start();
 	}
 
