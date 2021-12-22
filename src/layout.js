@@ -7,6 +7,7 @@ const rotRad = Math.PI * 2;
 const lineLn = 16;
 
 const nutRad = 26;
+const portRad = 10;
 
 export {
 	margin,
@@ -14,5 +15,6 @@ export {
 	rotDeg,
 	rotRad,
 	lineLn,
-	nutRad
+	nutRad,
+	portRad
 };
