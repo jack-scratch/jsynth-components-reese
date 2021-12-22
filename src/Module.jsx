@@ -24,7 +24,7 @@ class Module extends React.Component {
 								</div>
 								<div className="body">
 									<div className="body param">
-										<In />
+										<In call={this.props.call} />
 										<Knob refer={inst.point} min={this.props.min} max={this.props.max} />
 									</div>
 								</div>
@@ -34,7 +34,7 @@ class Module extends React.Component {
 					<div className="body">
 						<div className="io">
 							{this.props.port.map((inst) =>
-								inst.type === "in" ? <In key={inst.type} /> : <Out key={inst.type} />
+								inst.type === "in" ? <In key={inst.type} call={this.props.call} /> : <Out key={inst.type} call={this.props.call} />
 							)}
 						</div>
 					</div>

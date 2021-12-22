@@ -10,26 +10,32 @@ class Bay extends React.Component {
 		this.state = {
 			patch: []
 		};
+
+		this.addCable = this.addCable.bind(this);
+	}
+
+	addCable(e) {
+		this.setState((prevState) => ({
+			patch: [
+				...prevState.patch,
+				{
+					start: [
+						e.nativeEvent.offsetX,
+						e.nativeEvent.offsetY
+					],
+					end: [
+						e.nativeEvent.offsetX,
+						e.nativeEvent.offsetY
+					]
+				}
+			]
+		}));
 	}
 
 	render() {
 		return (
-			<div className="sys" onMouseDown={(e) => this.setState((prevState) => ({
-				patch: [
-					...prevState.patch,
-					{
-						start: [
-							e.nativeEvent.offsetX,
-							e.nativeEvent.offsetY
-						],
-						end: [
-							e.nativeEvent.offsetX,
-							e.nativeEvent.offsetY
-						]
-					}
-				]
-			}))}>
-				<Osc />
+			<div className="sys">
+				<Osc call={this.addCable} />
 				{speaker()}
 
 				{this.state.patch.map((inst, i) =>

@@ -9,7 +9,7 @@ class Source extends Module {
 					type: "out",
 					point: this.props.refer
 				}
-			]} min={this.props.min} max={this.props.max} />
+			]} min={this.props.min} max={this.props.max} call={this.props.call} />
 		);
 	}
 }
