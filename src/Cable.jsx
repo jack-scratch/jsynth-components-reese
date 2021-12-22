@@ -38,6 +38,8 @@ class Cable extends React.Component {
 		this.setState({
 			active: false
 		});
+
+		this.props.hookUp();
 	}
 
 	drag(e) {

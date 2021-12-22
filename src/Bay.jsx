@@ -15,6 +15,7 @@ class Bay extends React.Component {
 		};
 
 		this.addCable = this.addCable.bind(this);
+		this.popCable = this.popCable.bind(this);
 	}
 
 	addCable(e, refer) {
@@ -35,6 +36,18 @@ class Bay extends React.Component {
 		}));
 	}
 
+	popCable(e) {
+		let ls = [
+			...this.state.patch
+		];
+
+		ls.splice(ls.length - 1, 1);
+
+		this.setState((prevState) => ({
+			patch: ls
+		}));
+	}
+
 	render() {
 		return (
 			<div className="sys">
@@ -42,7 +55,7 @@ class Bay extends React.Component {
 				{speaker()}
 
 				{this.state.patch.map((inst, i) =>
-					<Cable key={i} start={inst.start} end={inst.end} />
+					<Cable key={i} start={inst.start} end={inst.end} hookUp={this.popCable} />
 				)}
 			</div>
 		);
