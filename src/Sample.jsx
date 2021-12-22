@@ -13,7 +13,7 @@ class Sample extends React.Component {
 					]} ht={1} />
 				</div>
 				<div className="body">
-					<Impulse />
+					<Impulse name="Play" />
 				</div>
 			</div>
 		);
