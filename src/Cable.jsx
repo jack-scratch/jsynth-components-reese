@@ -28,7 +28,8 @@ class Cable extends React.Component {
 			mid: [
 				Math.abs(this.state.end[0] - this.state.start[0]) / 2,
 				(this.state.end[1] > this.state.start[1] ? this.state.end[1] : this.state.start[1]) * 1.6
-			]
+			],
+			active: true
 		});
 	}
 
