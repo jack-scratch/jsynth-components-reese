@@ -11,9 +11,10 @@ $markOffset: 12px;
 $markHt: 20px;
 
 .key {
+	@extend .raised;
+
 	width: $keyWd;
 	border-radius: 0px 0px $bevel $bevel;
-	box-shadow: 0px 0px 1px 1px $inert;
 	cursor: pointer;
 
 	&.white {
