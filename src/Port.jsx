@@ -24,7 +24,7 @@ class In extends React.Component {
 
 	render() {
 		return (
-			<Port type="in" hook={this.props.hook} />
+			<Port type="in" />
 		);
 	}
 }
