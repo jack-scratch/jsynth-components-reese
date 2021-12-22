@@ -73,7 +73,6 @@ text.mark {
 	height: calc((#{$hexRad} + #{$portRad}) * 2);
 	fill: $bg;
 	overflow: visible;
-	cursor: pointer;
 
 	text {
 		text-anchor: middle;
@@ -90,6 +89,7 @@ text.mark {
 		cx: calc(#{$hexRad} + #{$portRad});
 		cy: calc(#{$hexRad} + #{$portRad});
 		fill: $inert;
+		cursor: pointer;
 	}
 }
 
