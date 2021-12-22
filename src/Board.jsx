@@ -24,7 +24,7 @@ class Board extends Module {
 					</div>
 					<div className="black">
 						{[...Array(this.props.ln - 1).keys()].map((i) =>
-							 i % 3 && <div key={`black-${i}`}>
+							 <div key={`black-${i}`}>
 								<Key type="black" i={i} />
 							</div>
 						)}
