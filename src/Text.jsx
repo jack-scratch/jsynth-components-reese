@@ -3,6 +3,14 @@ import React from "react";
 import "./Text.css";
 
 class Text extends React.Component {
+	constructor(props) {
+		super(props);
+		
+		this.state = {
+			l: this.props.l
+		};
+	}
+
 	render() {
 		return (
 			<div className="buff" style={{
@@ -20,7 +28,8 @@ class Text extends React.Component {
 Text.defaultProps = {
 	buff: [],
 	wd: 20,
-	ht: 4
+	ht: 4,
+	l: 0
 };
 
 export default Text;
