@@ -55,8 +55,13 @@ class Sample extends React.Component {
 	render() {
 		return (
 			<div className="sys">
-				<div className="body">
-					<Text buff={this.buff} ht={1} />
+				<div className="body" style={{
+					display: "flex",
+					flexDirection: "row"
+				}}>
+					<div className="body">
+						<Text buff={this.buff} ht={1} />
+					</div>
 					<div className="body">
 						<Btn name={<FontAwesomeIcon icon={faSortUp}/>} wd={40} ht={26} call={this.dec} />
 						<Btn name={<FontAwesomeIcon icon={faSortDown}/>} wd={40} ht={26} call={this.inc} />
