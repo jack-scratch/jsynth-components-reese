@@ -25,7 +25,7 @@ class Cable extends React.Component {
 		this.drag = this.drag.bind(this);
 	}
 
-	componentDidMount() {
+	midX() {
 		let first;
 		let snd;
 		if (this.state.end[0] > this.state.start[0]) {
@@ -36,9 +36,15 @@ class Cable extends React.Component {
 			snd = this.state.start[0];
 		}
 
+		let delta = snd - first;
+
+		return first + (delta / 2);
+	}
+
+	componentDidMount() {
 		this.setState({
 			mid: [
-				first + ((snd - first) / 2),
+				this.midX(),
 				(this.state.end[1] > this.state.start[1] ? this.state.end[1] : this.state.start[1]) * 1.6
 			],
 			active: true
@@ -73,7 +79,7 @@ class Cable extends React.Component {
 
 				this.setState({
 					mid: [
-						first + ((snd - first) / 2),
+						this.midX(),
 						(this.state.end[1] > this.state.start[1] ? this.state.end[1] : this.state.start[1]) * 1.6
 					]
 				});
