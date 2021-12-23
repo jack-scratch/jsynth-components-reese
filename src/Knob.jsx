@@ -76,7 +76,7 @@ class Knob extends React.Component {
 
 		return (
 			<div>
-				<svg className="knob" width={diam} height={diam} transform={`rotate(${this.baseRot + this.state.val + this.state.deltaY})`} onMouseDown={this.grab}>
+				<svg className="knob" width={diam} height={diam} onMouseDown={this.grab}>
 					{this.props.mark && [...Array(this.props.mark).keys()].map((i) =>
 						<line x1={0} y1={0} x2={10} y2={0} transform={`translate(${this.props.rad} ${this.props.rad}) rotate(${i * stride}) translate(${this.props.rad + margin} 0)`} />
 					)}
@@ -87,9 +87,10 @@ class Knob extends React.Component {
 						</clipPath>
 					</defs>
 
-					{shape}
-
-					<line className="tick" x1={diam - lineLn} x2={diam} y1={this.props.rad} y2={this.props.rad} clipPath="url(#perim)" />
+					<g transform={`rotate(${this.baseRot + this.state.val + this.state.deltaY})`}>
+						{shape}
+						<line className="tick" x1={diam - lineLn} x2={diam} y1={this.props.rad} y2={this.props.rad} clipPath="url(#perim)" />
+					</g>
 
 					{this.props.mark && [...Array(this.props.mark).keys()].map((i) =>
 						<g>
