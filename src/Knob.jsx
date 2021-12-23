@@ -70,14 +70,14 @@ class Knob extends React.Component {
 		const diam = this.props.rad * 2;
 
 		let stride;
-		if (this.props.mark) {
-			stride = rotDeg / this.props.mark;
+		if (this.props.marked) {
+			stride = rotDeg / this.props.marked;
 		}
 
 		return (
 			<div>
-				<svg className={"knob" + (this.props.mark ? " marked" : "")} width={diam} height={diam} onMouseDown={this.grab}>
-					{this.props.mark && [...Array(this.props.mark).keys()].map((i) =>
+				<svg className={"knob" + (this.props.marked ? " marked" : "")} width={diam} height={diam} onMouseDown={this.grab}>
+					{this.props.marked && [...Array(this.props.marked).keys()].map((i) =>
 						<line x1={0} y1={0} x2={10} y2={0} transform={`translate(${this.props.rad} ${this.props.rad}) rotate(${i * stride}) translate(${this.props.rad + margin} 0)`} />
 					)}
 
@@ -92,7 +92,7 @@ class Knob extends React.Component {
 						<line className="tick" x1={this.props.rad} x2={this.props.rad - lineLn} y1={0} y2={0} clipPath="url(#perim)" />
 					</g>
 
-					{this.props.mark && [...Array(this.props.mark).keys()].map((i) =>
+					{this.props.marked && [...Array(this.props.marked).keys()].map((i) =>
 						<g>
 							<text className="mark" textAnchor="end" x={-margin} y={this.props.rad}>{this.props.min}{this.props.unit && ` ${this.props.unit}`}</text>
 							<text className="mark" textAnchor="start" x={diam + margin} y={this.props.rad}>{this.props.max}{this.props.unit && ` ${this.props.unit}`}</text>
