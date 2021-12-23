@@ -66,7 +66,7 @@ class Knob extends React.Component {
 		if (this.props.quant) {
 			shape = <Poly n={this.props.quant} rad={this.props.rad} bevel />
 		} else {
-			shape = <circle cx={this.props.rad} cy={this.props.rad} r={this.props.rad} onMouseDown={this.grab} onMouseUp={this.release} onMouseLeave={this.release} onMouseMove={this.turn} />;
+			shape = <circle cx={this.props.rad} cy={this.props.rad} r={this.props.rad} onMouseDown={this.grab} />;
 		}
 
 		const diam = this.props.rad * 2;
@@ -77,28 +77,31 @@ class Knob extends React.Component {
 		}
 
 		return (
-			<svg className="knob" width={diam} height={diam} transform={`rotate(${this.baseRot + this.state.val})`}>
-				{this.props.mark && [...Array(this.props.mark).keys()].map((i) =>
-					<line x1={0} y1={0} x2={10} y2={0} transform={`translate(${this.props.rad} ${this.props.rad}) rotate(${i * stride}) translate(${this.props.rad + margin} 0)`} />
-				)}
+			<div>
+				<svg className="knob" width={diam} height={diam} transform={`rotate(${this.baseRot + this.state.val})`}>
+					{this.props.mark && [...Array(this.props.mark).keys()].map((i) =>
+						<line x1={0} y1={0} x2={10} y2={0} transform={`translate(${this.props.rad} ${this.props.rad}) rotate(${i * stride}) translate(${this.props.rad + margin} 0)`} />
+					)}
 
-				<defs>
-					<clipPath id="perim">
-						{shape}
-					</clipPath>
-				</defs>
+					<defs>
+						<clipPath id="perim">
+							{shape}
+						</clipPath>
+					</defs>
 
-				{shape}
+					{shape}
 
-				<line className="tick" x1={diam - lineLn} x2={diam} y1={this.props.rad} y2={this.props.rad} clipPath="url(#perim)" />
+					<line className="tick" x1={diam - lineLn} x2={diam} y1={this.props.rad} y2={this.props.rad} clipPath="url(#perim)" />
 
-				{this.props.mark && [...Array(this.props.mark).keys()].map((i) =>
-					<g>
-						<text className="mark" textAnchor="end" x={-margin} y={this.props.rad}>{this.props.min}{this.props.unit && ` ${this.props.unit}`}</text>
-						<text className="mark" textAnchor="start" x={diam + margin} y={this.props.rad}>{this.props.max}{this.props.unit && ` ${this.props.unit}`}</text>
-					</g>
-				)}
-			</svg>
+					{this.props.mark && [...Array(this.props.mark).keys()].map((i) =>
+						<g>
+							<text className="mark" textAnchor="end" x={-margin} y={this.props.rad}>{this.props.min}{this.props.unit && ` ${this.props.unit}`}</text>
+							<text className="mark" textAnchor="start" x={diam + margin} y={this.props.rad}>{this.props.max}{this.props.unit && ` ${this.props.unit}`}</text>
+						</g>
+					)}
+				</svg>
+				{this.state.down && <div className="dragField" onMouseMove={this.turn} onMouseUp={this.release}></div>}
+			</div>
 		);
 	}
 }
