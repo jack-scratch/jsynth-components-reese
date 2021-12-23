@@ -17,8 +17,16 @@ class Sample extends React.Component {
 			<div className="sys">
 				<div className="body">
 					<Text buff={[
-						"asdf",
-						"hjkl"
+						"Bamboo",
+						"Bass-Drum-1",
+						"Bass-Drum-2",
+						"Bass-Drum-3",
+						"Boom-Kick",
+						"Bottle",
+						"Clap-1",
+						"Clap-2",
+						"Clap-3",
+						"Claves"
 					]} ht={1} />
 				<div className="body">
 					<Btn name={<FontAwesomeIcon icon={faSortUp}/>} wd={40} ht={26} />
