@@ -55,11 +55,13 @@ class Knob extends React.Component {
 				this.setState((prevState) => ({
 					delta: prevState.currY - prevState.startY
 				}), () => {
-					this.setState((prevState) => ({
-						val: prevState.delta
-					}), () => {
-						this.props.refer.value = this.state.val;
-					});
+					if (this.state.val < this.props.max && this.state.val > this.props.min) {
+						this.setState((prevState) => ({
+							val: prevState.delta
+						}), () => {
+							this.props.refer.value = this.state.val;
+						});
+					}
 				});
 			});
 		}
