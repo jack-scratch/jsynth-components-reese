@@ -64,7 +64,7 @@ class Knob extends React.Component {
 		if (this.props.quant) {
 			shape = <Poly n={this.props.quant} rad={this.props.rad} bevel />
 		} else {
-			shape = <circle cx={this.props.rad} cy={this.props.rad} r={this.props.rad} />;
+			shape = <circle r={this.props.rad} />;
 		}
 
 		const diam = this.props.rad * 2;
@@ -87,9 +87,9 @@ class Knob extends React.Component {
 						</clipPath>
 					</defs>
 
-					<g transform={`rotate(${this.baseRot + this.state.val + this.state.deltaY})`}>
+					<g transform={`translate(${this.props.rad} ${this.props.rad}) rotate(${this.baseRot + this.state.val + this.state.deltaY})`}>
 						{shape}
-						<line className="tick" x1={diam - lineLn} x2={diam} y1={this.props.rad} y2={this.props.rad} clipPath="url(#perim)" />
+						<line className="tick" x1={this.props.rad} x2={this.props.rad - lineLn} y1={0} y2={0} clipPath="url(#perim)" />
 					</g>
 
 					{this.props.mark && [...Array(this.props.mark).keys()].map((i) =>
