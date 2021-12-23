@@ -6,8 +6,8 @@
 	cursor: pointer;
 
 	&.marked {
-		padding-left: calc(10px + (#{$margin}));
-		padding-right: calc(10px + (#{$margin}));
+		padding-left: calc(40px + (#{$margin}));
+		padding-right: calc(40px + (#{$margin}));
 	}
 
 	circle,
