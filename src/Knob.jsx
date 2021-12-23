@@ -16,7 +16,7 @@ class Knob extends React.Component {
 			down: false,
 			startY: 0,
 			currY: 0,
-			delta: 0,
+			deltaY: 0,
 			val: this.props.refer.value
 		};
 		
@@ -29,34 +29,32 @@ class Knob extends React.Component {
 
 	grab(e) {
 		this.setState({
-			down: true,
-			startY: e.nativeEvent.offsetY
+			startY: e.nativeEvent.clientY,
+			currY: e.nativeEvent.clientY,
+			down: true
 		});
 	}
 
 	release() {
 		this.setState((prevState) => ({
-			down: false,
-			val: prevState.val + prevState.delta
+			val: prevState.val + this.state.deltaY,
+			deltaY: 0,
+			down: false
 		}));
 	}
 
 	turn(e) {
 		if (this.state.down) {
-			this.setState((prevState) => ({
-				currY: e.nativeEvent.offsetY,
+			this.setState({
+				currY: e.nativeEvent.clientY
+			}, () => this.setState({
+				deltaY: this.state.currY - this.state.startY
 			}), () => {
 				this.setState((prevState) => ({
-					delta: prevState.currY - prevState.startY
-				}), () => {
-					if (this.state.val < this.props.max && this.state.val > this.props.min) {
-						this.setState((prevState) => ({
-							val: prevState.delta
-						}), () => {
-							this.props.refer.value = this.state.val;
-						});
-					}
-				});
+					val: prevState.val + this.state.deltaY,
+					deltaY: 0,
+					down: false
+				}));
 			});
 		}
 	}
@@ -66,7 +64,7 @@ class Knob extends React.Component {
 		if (this.props.quant) {
 			shape = <Poly n={this.props.quant} rad={this.props.rad} bevel />
 		} else {
-			shape = <circle cx={this.props.rad} cy={this.props.rad} r={this.props.rad} onMouseDown={this.grab} />;
+			shape = <circle cx={this.props.rad} cy={this.props.rad} r={this.props.rad} />;
 		}
 
 		const diam = this.props.rad * 2;
@@ -78,7 +76,7 @@ class Knob extends React.Component {
 
 		return (
 			<div>
-				<svg className="knob" width={diam} height={diam} transform={`rotate(${this.baseRot + this.state.val})`}>
+				<svg className="knob" width={diam} height={diam} transform={`rotate(${this.baseRot + this.state.val + this.state.deltaY})`} onMouseDown={this.grab}>
 					{this.props.mark && [...Array(this.props.mark).keys()].map((i) =>
 						<line x1={0} y1={0} x2={10} y2={0} transform={`translate(${this.props.rad} ${this.props.rad}) rotate(${i * stride}) translate(${this.props.rad + margin} 0)`} />
 					)}
