@@ -25,9 +25,19 @@ class Cable extends React.Component {
 	}
 
 	componentDidMount() {
+		let first;
+		let snd;
+		if (this.state.end[0] > this.state.start[0]) {
+			first = this.state.start[0];
+			snd = this.state.end[0];
+		} else {
+			first = this.state.end[0];
+			snd = this.state.start[0];
+		}
+
 		this.setState({
 			mid: [
-				Math.abs(this.state.end[0] - this.state.start[0]) / 2,
+				first + ((snd - first) / 2),
 				(this.state.end[1] > this.state.start[1] ? this.state.end[1] : this.state.start[1]) * 1.6
 			],
 			active: true
@@ -50,9 +60,19 @@ class Cable extends React.Component {
 					e.nativeEvent.offsetY
 				]
 			}, () => {
+				let first;
+				let snd;
+				if (this.state.end[0] > this.state.start[0]) {
+					first = this.state.start[0];
+					snd = this.state.end[0];
+				} else {
+					first = this.state.end[0];
+					snd = this.state.start[0];
+				}
+
 				this.setState({
 					mid: [
-						Math.abs(this.state.end[0] - this.state.start[0]) / 2,
+						first + ((snd - first) / 2),
 						(this.state.end[1] > this.state.start[1] ? this.state.end[1] : this.state.start[1]) * 1.6
 					]
 				});
