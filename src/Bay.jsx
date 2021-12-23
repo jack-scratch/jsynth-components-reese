@@ -38,9 +38,7 @@ class Bay extends React.Component {
 	}
 
 	popCable(e) {
-		let ls = [
-			...this.state.patch
-		];
+		let ls = [...this.state.patch];
 
 		ls.splice(ls.length - 1, 1);
 
