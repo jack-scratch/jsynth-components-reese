@@ -29,20 +29,14 @@ class Knob extends React.Component {
 
 	grab(e) {
 		this.setState({
-			down: true
-		});
-
-		this.setState({
+			down: true,
 			startY: e.nativeEvent.offsetY
 		});
 	}
 
 	release() {
-		this.setState({
-			down: false
-		});
-
 		this.setState((prevState) => ({
+			down: false,
 			val: prevState.val + prevState.delta
 		}));
 	}
