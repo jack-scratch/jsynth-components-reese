@@ -126,11 +126,17 @@ text.mark {
 .sys {
 	@extend .cont;
 
-	display: flex;
-
 	.module {
 		margin: $margin;
 		background: $inert;
+	}
+
+	> div {
+		display: flex;
+
+		.module {
+			flex-grow: 1;
+		}
 	}
 }
 

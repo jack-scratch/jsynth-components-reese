@@ -52,8 +52,9 @@ class Bay extends React.Component {
 	render() {
 		return (
 			<div className="sys">
-				<Osc hookDown={this.addCable} />
-				{speaker()}
+				{this.props.module.map((inst) =>
+					inst
+				)}
 
 				{this.state.patch.map((inst, i) =>
 					<Cable key={i} start={inst.start} end={inst.end} hookUp={this.popCable} />

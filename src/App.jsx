@@ -1,5 +1,7 @@
 import Sample from "./Sample.jsx";
 import Bay from "./Bay.jsx";
+import Osc from "./Osc.jsx";
+import Lowpass from "./Lowpass.jsx";
 import speaker from "./speaker.jsx";
 
 function App() {
@@ -15,8 +17,17 @@ function App() {
 				window.ctx.resume();
 			}
 		}}>
-			<Sample />
-		<Bay />
+			<Bay module={[
+				<div>
+					<Osc />,
+					<Osc />,
+					<Osc />
+				</div>, <div>
+					<Lowpass />
+				</div>, <div>
+					{speaker()}
+				</div>
+			]} />
 		</div>
   );
 }
