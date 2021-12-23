@@ -9,14 +9,15 @@ class Cable extends React.Component {
 		this.state = {
 			start: this.props.start,
 
-			in: null,
-			out: null,
-
 			end: this.props.end,
 			mid: [
 				0,
 				0
 			],
+
+			in: null,
+			out: null,
+
 			active: false
 		};
 
