@@ -31,6 +31,25 @@ class Sample extends React.Component {
 		this.state = {
 			l: 0
 		};
+
+		this.inc = this.inc.bind(this);
+		this.dec = this.dec.bind(this);
+	}
+
+	inc() {
+		if (this.state.l < this.buff.length) {
+			this.setState((prevState) => ({
+				l: prevState.l + 1
+			}));
+		}
+	}
+
+	dec() {
+		if (this.state.l > 0) {
+			this.setState((prevState) => ({
+				l: prevState.l - 1
+			}));
+		}
 	}
 
 	render() {
@@ -39,12 +58,8 @@ class Sample extends React.Component {
 				<div className="body">
 					<Text buff={this.buff} ht={1} />
 				<div className="body">
-					<Btn name={<FontAwesomeIcon icon={faSortUp}/>} wd={40} ht={26} call={() => this.setState((prevState) => ({
-						l: prevState.l - 1
-					}))} />
-					<Btn name={<FontAwesomeIcon icon={faSortDown}/>} wd={40} ht={26} call={() => this.setState((prevState) => ({
-						l: prevState.l + 1
-					}))} />
+					<Btn name={<FontAwesomeIcon icon={faSortUp}/>} wd={40} ht={26} call={this.dec} />
+					<Btn name={<FontAwesomeIcon icon={faSortDown}/>} wd={40} ht={26} call={this.inc} />
 				</div>
 				</div>
 				<div className="body">
