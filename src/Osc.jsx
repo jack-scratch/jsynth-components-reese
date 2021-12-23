@@ -42,7 +42,7 @@ class Osc extends Source {
 
 Osc.defaultProps = {
 	name: "Oscillator",
-	min: 0,
+	min: 1,
 	max: 1000
 };
 
