@@ -12,6 +12,14 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 class Sample extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			l: 0
+		};
+	}
+
 	render() {
 		return (
 			<div className="sys">
@@ -29,8 +37,12 @@ class Sample extends React.Component {
 						"Claves"
 					]} ht={1} />
 				<div className="body">
-					<Btn name={<FontAwesomeIcon icon={faSortUp}/>} wd={40} ht={26} />
-					<Btn name={<FontAwesomeIcon icon={faSortDown}/>} wd={40} ht={26} />
+					<Btn name={<FontAwesomeIcon icon={faSortUp}/>} wd={40} ht={26} call={() => this.setState((prevState) => ({
+						l: prevState.l - 1
+					}))} />
+					<Btn name={<FontAwesomeIcon icon={faSortDown}/>} wd={40} ht={26} call={() => this.setState((prevState) => ({
+						l: prevState.l + 1
+					}))} />
 				</div>
 				</div>
 				<div className="body">
