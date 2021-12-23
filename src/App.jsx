@@ -1,4 +1,5 @@
 import Sample from "./Sample.jsx";
+import Bay from "./Bay.jsx";
 import speaker from "./speaker.jsx";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
 			}
 		}}>
 			<Sample />
+		<Bay />
 		</div>
   );
 }

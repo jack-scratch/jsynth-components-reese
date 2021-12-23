@@ -54,7 +54,7 @@ class Sample extends React.Component {
 
 	render() {
 		return (
-			<div className="sys">
+			<div className="cont">
 				<div className="body" style={{
 					display: "flex",
 					flexDirection: "row"
