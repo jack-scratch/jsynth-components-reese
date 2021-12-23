@@ -29,8 +29,8 @@ class Bay extends React.Component {
 						refer.current.offsetTop + nutRad + portRad
 					],
 					end: [
-						0,
-						0
+						refer.current.offsetLeft + nutRad + portRad,
+						refer.current.offsetTop + nutRad + portRad
 					]
 				}
 			]
