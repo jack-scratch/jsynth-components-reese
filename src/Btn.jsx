@@ -1,4 +1,11 @@
 import React from "react";
+import {
+	FontAwesomeIcon
+} from '@fortawesome/react-fontawesome'
+import {
+	faStop,
+	faPlay
+} from '@fortawesome/free-solid-svg-icons'
 
 import "./Btn.css";
 
@@ -92,9 +99,26 @@ Btn.defaultProps = {
 	ht: 50
 };
 
+class Toggle extends Btn {
+	constructor(props) {
+		super(props);
+	}
+
+	render() {
+		return (
+			<Btn name={
+				<span>
+				<FontAwesomeIcon icon={faStop} /> / <FontAwesomeIcon icon={faPlay} />
+				</span>
+			} wd={80} />
+		);
+	}
+}
+
 export {
 	Btn,
 	S,
 	M,
-	L
+	L,
+	Toggle
 };
