@@ -3,7 +3,8 @@
 .module {
 	@extend .cont;
 
-	display: inline-block;
+	display: inline-flex;
+	flex-direction: column;
 
 	> * {
 		margin: $margin;
@@ -18,5 +19,13 @@
 		display: flex;
 		flex-direction: row;
 		padding-top: calc(12px + #{$margin});
+	}
+
+	.body {
+		flex-grow: 1;
+	}
+
+	.io {
+		margin-top: auto;
 	}
 }
