@@ -51,9 +51,50 @@ class Btn extends React.Component {
 	}
 }
 
+class S extends Btn {
+	constructor(props) {
+		super(props);
+	}
+
+	render() {
+		return (
+			<Btn wd={50} ht={50} />
+		);
+	}
+}
+
+class M extends Btn {
+	constructor(props) {
+		super(props);
+	}
+
+	render() {
+		return (
+			<Btn wd={65} ht={65} />
+		);
+	}
+}
+
+class L extends Btn {
+	constructor(props) {
+		super(props);
+	}
+
+	render() {
+		return (
+			<Btn wd={100} ht={100} />
+		);
+	}
+}
+
 Btn.defaultProps = {
 	wd: 50,
 	ht: 50
 };
 
-export default Btn;
+export {
+	Btn,
+	S,
+	M,
+	L
+};
