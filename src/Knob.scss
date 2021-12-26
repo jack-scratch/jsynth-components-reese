@@ -13,9 +13,9 @@
 	circle,
 	polygon
 	{
-		fill: $bg;
-
 		@extend .raised;
+
+		fill: $bg;
 	}
 
 	.mark {
