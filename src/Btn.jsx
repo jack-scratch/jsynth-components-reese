@@ -58,6 +58,11 @@ class Btn extends React.Component {
 	}
 }
 
+Btn.defaultProps = {
+	wd: 50,
+	ht: 50
+};
+
 class S extends Btn {
 	constructor(props) {
 		super(props);
@@ -93,11 +98,6 @@ class L extends Btn {
 		);
 	}
 }
-
-Btn.defaultProps = {
-	wd: 50,
-	ht: 50
-};
 
 class Toggle extends Btn {
 	constructor(props) {
