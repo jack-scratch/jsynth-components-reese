@@ -1,5 +1,7 @@
 import React from "react";
-import Btn from "./Btn";
+import {
+	Btn
+} from "./Btn";
 import Light from "./Light";
 
 import "./Launch.css";

@@ -1,7 +1,9 @@
 import React from "react";
 import Text from "./Text";
 import Impulse from "./Impulse";
-import Btn from "./Btn";
+import {
+	Btn
+} from "./Btn";
 import {
 	FontAwesomeIcon
 } from "@fortawesome/react-fontawesome";
