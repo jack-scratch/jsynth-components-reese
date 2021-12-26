@@ -1,6 +1,10 @@
 const unit = {
 	"freq": "Hz",
-	"level": "dB"
+	"level": "dB",
+	"time": [
+		"ms",
+		"s"
+	]
 };
 
 export {
