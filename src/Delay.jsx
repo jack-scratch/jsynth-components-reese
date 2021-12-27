@@ -26,7 +26,9 @@ class Delay extends Effect {
 }
 
 Delay.defaultProps = {
-	name: "Delay"
+	name: "Delay",
+	min: 0.01,
+	max: 10.0
 };
 
 export default Delay;
