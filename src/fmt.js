@@ -7,6 +7,12 @@ const unit = {
 	]
 };
 
+const chord = [ 
+	"Maj",
+	"Min",
+	"Dim"
+];
+
 export {
 	unit
 };
