@@ -1,11 +1,11 @@
 import React from "react";
-import Bay from "./Bay";
-import Osc from "./Osc";
+import Bay from "./Bay.jsx";
+import Osc from "./Osc.jsx";
 import {
 	Lowpass,
 	Highpass
-} from "./Filter";
-import speaker from "./speaker";
+} from "./Filter.jsx";
+import speaker from "./speaker.jsx";
 
 const synth = () => {
 	return (
