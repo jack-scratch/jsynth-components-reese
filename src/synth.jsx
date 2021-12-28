@@ -1,8 +1,10 @@
 import React from "react";
 import Bay from "./Bay";
 import Osc from "./Osc";
-import Lowpass from "./Lowpass";
-import Highpass from "./Highpass";
+import {
+	Lowpass,
+	Highpass
+} from "./Filter";
 import speaker from "./speaker";
 
 const synth = () => {

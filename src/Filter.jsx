@@ -25,4 +25,34 @@ Filter.defaultProps = {
 	name: "Frequency"
 };
 
-export default Filter;
+class Lowpass extends Filter {
+	render() {
+		return (
+			<Filter name="Lowpass" type="lowpass" refer={[
+				{
+					name: "Frequency",
+					point: this.state.node.frequency
+				}
+			]} />
+		);
+	}
+}
+
+class Highpass extends Filter {
+	render() {
+		return (
+			<Filter name="Highpass" type="highpass" refer={[
+				{
+					name: "Frequency",
+					point: this.state.node.frequency
+				}
+			]} />
+		);
+	}
+}
+
+export {
+	Filter,
+	Lowpass,
+	Highpass
+};
