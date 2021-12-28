@@ -19,6 +19,10 @@ class Fader extends React.Component {
 
 	scrub(e) {
 		if (this.state.down) {
+			if (this.props.scrub) {
+				this.props.scrub();
+			}
+
 			this.setState({
 				val: e.nativeEvent.offsetY
 			});
