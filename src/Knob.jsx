@@ -85,7 +85,7 @@ class Knob extends React.Component {
 						</clipPath>
 					</defs>
 
-					<g transform={`translate(${this.props.rad} ${this.props.rad}) rotate(${this.baseRot + this.state.val + (this.state.deltaY - (this.state.deltaY % (this.props.quant ? (360 / this.props.quant) : 1)))})`}>
+					<g transform={`translate(${this.props.rad} ${this.props.rad}) rotate(${this.baseRot + this.state.val + (this.state.deltaY - (this.state.deltaY % (this.props.quant ? (rotDeg / this.props.quant) : 1)))})`}>
 						{shape}
 						<line className="tick" x1={this.props.rad} x2={this.props.rad - lineLn} y1={0} y2={0} clipPath="url(#perim)" />
 					</g>
