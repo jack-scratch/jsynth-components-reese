@@ -27,7 +27,7 @@ class Module extends React.Component {
 								</div>
 								<div className="body">
 									<div className="body param">
-										<In hookDown={this.props.hookDown} />
+										<In refer={this.props.refer} hookDown={this.props.hookDown} />
 										<Knob refer={inst.point} min={this.props.min} max={this.props.max} marked={this.props.marked} unit={unit["freq"]} />
 									</div>
 								</div>
@@ -37,7 +37,7 @@ class Module extends React.Component {
 					<div className="body asdf">
 						<div className="io">
 							{this.props.port.map((inst) =>
-								inst.type === "in" ? <In key={inst.type} hookDown={this.props.hookDown} /> : <Out key={inst.type} hookDown={this.props.hookDown} />
+								inst.type === "in" ? <In refer={this.props.refer} key={inst.type} hookDown={this.props.hookDown} /> : <Out refer={this.props.refer} key={inst.type} hookDown={this.props.hookDown} />
 							)}
 						</div>
 					</div>

@@ -14,7 +14,7 @@ class Port extends React.Component {
 				<svg className="port">
 				<text className="mark" x="50%">{this.props.type === "in" ? "In" : "Out"}</text>
 					<Nut />
-					<circle onMouseDown={(e) => {this.props.hookDown(e, this.refer)}} onMouseUp={(e) => {this.props.hookUp(e, this.refer)}} />
+					<circle onMouseDown={(e) => {this.props.hookDown(e, this.refer, 3)}} onMouseUp={(e) => {this.props.hookUp(e, this.refer)}} />
 				</svg>
 			</div>
 		);

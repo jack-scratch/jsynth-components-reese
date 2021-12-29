@@ -19,7 +19,7 @@ class Bay extends React.Component {
 		this.popCable = this.popCable.bind(this);
 	}
 
-	addCable(e, refer) {
+	addCable(e, refer, asdf) {
 		this.setState((prevState) => ({
 			patch: [
 				...prevState.patch,
