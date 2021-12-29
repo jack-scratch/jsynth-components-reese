@@ -5,7 +5,7 @@ class White extends AudioWorkletProcessor {
 		this.isPlaying = true;
 	}
 
-	process(inputs, outputs, parameters) {
+	process(inputs, outputs, param) {
 		const output = outputs[0];
 
 		for (let c = 0; c < output.length; ++c) {
