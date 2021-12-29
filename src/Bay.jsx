@@ -19,7 +19,7 @@ class Bay extends React.Component {
 		this.popCable = this.popCable.bind(this);
 	}
 
-	addCable(e, refer, param) {
+	addCable(e, refer, node) {
 		this.setState((prevState) => ({
 			patch: [
 				...prevState.patch,
@@ -34,7 +34,9 @@ class Bay extends React.Component {
 					]
 				}
 			]
-		}));
+		}), () => {
+			node.connect(window.ctx.destination);
+		});
 	}
 
 	popCable(e) {
