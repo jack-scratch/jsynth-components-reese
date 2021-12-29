@@ -19,10 +19,9 @@ class White extends AudioWorkletProcessor {
 		const amplitude = parameters.amplitude;
 		const isAmplitudeConstant = amplitude.length === 1;
 
-		for (let chan = 0; chan < output.length; ++chan) {
-			const outputChan = output[chan];
-			for (let i = 0; i < outputChan.length; ++i) {
-				outputChan[i] = 2 * (Math.random() - 0.5) * (isAmplitudeConstant ? amplitude[0] : amplitude[i]);
+		for (let c = 0; c < output.length; ++c) {
+			for (let i = 0; i < output[c].length; ++i) {
+				output[c][i] = 2 * (Math.random() - 0.5) * (isAmplitudeConstant ? amplitude[0] : amplitude[i]);
 			}
 		}
 
