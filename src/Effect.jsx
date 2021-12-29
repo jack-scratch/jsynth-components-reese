@@ -4,13 +4,13 @@ import Module from "./Module";
 class Effect extends Module {
 	render() {
 		return (
-			<Module name={this.props.name} refer={this.props.refer} port={[
+			<Module name={this.props.name} node={this.props.node} port={[
 				{
 					type: "in",
-					point: this.props.refer
+					point: this.props.node
 				}, {
 					type: "out",
-					point: this.props.refer
+					point: this.props.node
 				}
 			]} min={this.props.min} max={this.props.max} />
 		);

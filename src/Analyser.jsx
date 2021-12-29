@@ -13,7 +13,7 @@ class Analyser extends React.Component {
 					<Led />
 				</div>
 				<div className="io">
-					<In refer={this.props.refer} />
+					<In node={this.props.node} />
 				</div>
 			</div>
 		);

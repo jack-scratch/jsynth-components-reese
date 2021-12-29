@@ -16,7 +16,7 @@ class Filter extends Effect {
 
 	render() {
 		return (
-			<Effect name={this.props.name} refer={this.props.refer} min={this.props.min} max={this.props.max} />
+			<Effect name={this.props.name} node={this.props.node} min={this.props.min} max={this.props.max} />
 		);
 	}
 }
@@ -28,7 +28,7 @@ Filter.defaultProps = {
 class Lowpass extends Filter {
 	render() {
 		return (
-			<Filter name="Lowpass" type="lowpass" refer={[
+			<Filter name="Lowpass" type="lowpass" node={[
 				{
 					name: "Frequency",
 					point: this.state.node.frequency
@@ -41,7 +41,7 @@ class Lowpass extends Filter {
 class Highpass extends Filter {
 	render() {
 		return (
-			<Filter name="Highpass" type="highpass" refer={[
+			<Filter name="Highpass" type="highpass" node={[
 				{
 					name: "Frequency",
 					point: this.state.node.frequency

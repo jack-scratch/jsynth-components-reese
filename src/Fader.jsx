@@ -27,7 +27,7 @@ class Fader extends React.Component {
 				val: e.nativeEvent.offsetY
 			});
 
-			this.props.refer.value = this.state.val;
+			this.props.node.value = this.state.val;
 		}
 	}
 

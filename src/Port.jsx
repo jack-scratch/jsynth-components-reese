@@ -5,16 +5,16 @@ class Port extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this.refer = React.createRef();
+		this.node = React.createRef();
 	}
 
 	render() {
 		return (
-			<div ref={this.refer}>
+			<div ref={this.node}>
 				<svg className="port">
 				<text className="mark" x="50%">{this.props.type === "in" ? "In" : "Out"}</text>
 					<Nut />
-					<circle onMouseDown={(e) => {this.props.hookDown(e, this.refer, this.props.point)}} onMouseUp={(e) => {this.props.hookUp(e, this.refer)}} />
+					<circle onMouseDown={(e) => {this.props.hookDown(e, this.node, this.props.point)}} onMouseUp={(e) => {this.props.hookUp(e, this.node)}} />
 				</svg>
 			</div>
 		);

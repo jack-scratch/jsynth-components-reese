@@ -24,15 +24,15 @@ class Module extends React.Component {
 				</div>
 				<div className="body">
 					<div className="ctrl">
-						{this.props.refer && this.props.refer.map((inst) =>
+						{this.props.node && this.props.node.map((inst) =>
 							<div key={inst.name}>
 								<div className="head">
 									<Label text={inst.name} />
 								</div>
 								<div className="body">
 									<div className="body param">
-										<In refer={this.props.refer} hookDown={this.props.hookDown} />
-										<Knob refer={inst.point} min={this.props.min} max={this.props.max} marked={this.props.marked} unit={unit["freq"]} />
+										<In node={this.props.node} hookDown={this.props.hookDown} />
+										<Knob node={inst.point} min={this.props.min} max={this.props.max} marked={this.props.marked} unit={unit["freq"]} />
 									</div>
 								</div>
 							</div>

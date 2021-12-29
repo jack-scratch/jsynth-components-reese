@@ -25,7 +25,7 @@ class Osc extends Source {
 
 	render() {
 		return (
-			<Source name={this.props.name} min={this.props.min} max={this.props.max} refer={[
+			<Source name={this.props.name} min={this.props.min} max={this.props.max} node={[
 				{
 					name: "Frequency",
 					point: this.state.node.frequency
