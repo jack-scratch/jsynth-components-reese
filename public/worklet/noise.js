@@ -10,7 +10,7 @@ class White extends AudioWorkletProcessor {
 
 		for (let c = 0; c < output.length; ++c) {
 			for (let i = 0; i < output[c].length; ++i) {
-				output[c][i] = Math.random();
+				output[c][i] = -1 + (2 * Math.random());
 			}
 		}
 
