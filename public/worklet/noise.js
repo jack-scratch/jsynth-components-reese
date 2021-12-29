@@ -1,4 +1,4 @@
-class Noise extends AudioWorkletProcessor {
+class White extends AudioWorkletProcessor {
 	constructor() {
 		super();
 
@@ -30,4 +30,4 @@ class Noise extends AudioWorkletProcessor {
 	}
 }
 
-registerProcessor("noise", Noise);
+registerProcessor("white", White);
