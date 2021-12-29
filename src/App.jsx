@@ -3,8 +3,8 @@ import synth from "./synth.jsx";
 window.ctx = new window.AudioContext() || window.webkitAudioContext();
 
 function App() {
-	window.ctx.audioWorklet.addModule("worklet/asdf.js").then(() => {
-		let node = new AudioWorkletNode(window.ctx, "noise");
+	window.ctx.audioWorklet.addModule("worklet/noise.js").then(() => {
+		let node = new AudioWorkletNode(window.ctx, "white");
 
 		// route
 		node.connect(window.ctx.destination);
