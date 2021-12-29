@@ -12,6 +12,10 @@ import {
 import "./Module.css";
 
 class Module extends React.Component {
+	constructor(props) {
+		super(props);
+	}
+
 	render() {
 		return (
 			<div className="module">
@@ -37,7 +41,7 @@ class Module extends React.Component {
 					<div className="body asdf">
 						<div className="io">
 							{this.props.port.map((inst) =>
-								inst.type === "in" ? <In refer={this.props.refer} key={inst.type} hookDown={this.props.hookDown} /> : <Out refer={this.props.refer} key={inst.type} hookDown={this.props.hookDown} />
+								inst.type === "in" ? <In refer={inst.point} key={inst.type} hookDown={this.props.hookDown} /> : <Out refer={inst.point} key={inst.type} hookDown={this.props.hookDown} />
 							)}
 						</div>
 					</div>

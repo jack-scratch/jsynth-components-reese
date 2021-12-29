@@ -14,7 +14,7 @@ class Port extends React.Component {
 				<svg className="port">
 				<text className="mark" x="50%">{this.props.type === "in" ? "In" : "Out"}</text>
 					<Nut />
-					<circle onMouseDown={(e) => {this.props.hookDown(e, this.refer, 3)}} onMouseUp={(e) => {this.props.hookUp(e, this.refer)}} />
+					<circle onMouseDown={(e) => {this.props.hookDown(e, this.refer, this.props.refer[0].point)}} onMouseUp={(e) => {this.props.hookUp(e, this.refer)}} />
 				</svg>
 			</div>
 		);
@@ -22,17 +22,25 @@ class Port extends React.Component {
 }
 
 class In extends React.Component {
+	constructor(props) {
+		super(props);
+	}
+
 	render() {
 		return (
-			<Port type="in" hookUp={this.props.hookUp} />
+			<Port type="in" refer={this.props.refer} hookUp={this.props.hookUp} />
 		);
 	}
 }
 
 class Out extends React.Component {
+	constructor(props) {
+		super(props);
+	}
+
 	render() {
 		return (
-			<Port type="out" hookDown={this.props.hookDown} />
+			<Port type="out" refer={this.props.refer} hookDown={this.props.hookDown} />
 		);
 	}
 }
