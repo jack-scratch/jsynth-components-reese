@@ -8,9 +8,9 @@ import {
 	oct
 } from "./math";
 
-import "./Board.css";
+import "./Piano.css";
 
-class Board extends Module {
+class Piano extends Module {
 	render() {
 		return (
 			<div className="board">
@@ -40,8 +40,8 @@ class Board extends Module {
 	}
 }
 
-Board.defaultProps = {
+Piano.defaultProps = {
 	ln: oct
 };
 
-export default Board;
+export default Piano;
