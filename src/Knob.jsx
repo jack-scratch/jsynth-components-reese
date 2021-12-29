@@ -72,6 +72,9 @@ class Knob extends React.Component {
 			stride = rotDeg / this.props.marked;
 		}
 
+		const delta = this.props.max - this.props.min;
+		const rotStride = rotDeg / delta;
+
 		return (
 			<div>
 				<svg className={"knob" + (this.props.marked ? " marked" : "")} width={diam} height={diam} onMouseDown={this.grab}>
@@ -85,7 +88,7 @@ class Knob extends React.Component {
 						</clipPath>
 					</defs>
 
-					<g transform={`translate(${this.props.rad} ${this.props.rad}) rotate(${this.baseRot + this.state.val + (this.state.deltaY - (this.state.deltaY % (this.props.quant ? (rotDeg / this.props.quant) : 1)))})`}>
+					<g transform={`translate(${this.props.rad} ${this.props.rad}) rotate(${this.baseRot + (this.state.val * rotStride) + (this.state.deltaY - (this.state.deltaY % (this.props.quant ? (rotDeg / this.props.quant) : 1)))})`}>
 						{shape}
 						<line className="tick" x1={this.props.rad} x2={this.props.rad - lineLn} y1={0} y2={0} clipPath="url(#perim)" />
 					</g>
