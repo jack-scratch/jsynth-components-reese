@@ -1,10 +1,17 @@
 import synth from "./synth.jsx";
 
+window.ctx = new window.AudioContext() || window.webkitAudioContext();
+
 function App() {
-	window.ctx = new window.AudioContext() || window.webkitAudioContext();
+	window.ctx.audioWorklet.addModule("worklet/asdf.js").then(() => {
+		let node = new AudioWorkletNode(window.ctx, "noise");
+
+		// route
+		node.connect(window.ctx.destination);
+	});
 
   return (
-		<div id="app" onClick={() => {
+		<div id="app" onMouseDown={() => {
 			if (window.ctx.state === "running") {
 				window.ctx.suspend();
 			}
@@ -12,7 +19,9 @@ function App() {
 			if (window.ctx.state === "suspended") {
 				window.ctx.resume();
 			}
-		}}>{synth()}</div>
+		}}>
+			{synth()}
+		</div>
   );
 }
 
