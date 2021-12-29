@@ -2,7 +2,7 @@ class White extends AudioWorkletProcessor {
 	constructor() {
 		super();
 
-		this.isPlaying = true;
+		this.playing = true;
 	}
 
 	process(inputs, outputs, param) {
@@ -14,7 +14,7 @@ class White extends AudioWorkletProcessor {
 			}
 		}
 
-		return this.isPlaying;
+		return this.playing;
 	}
 }
 
