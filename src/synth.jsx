@@ -19,7 +19,9 @@ const synth = () => {
 				<Lowpass />
 				<Highpass />
 			</div>, <div>
-				{speaker()}
+				{speaker({
+					hookUp: () => alert("asdf")
+				})}
 			</div>
 		]} />
 	);
