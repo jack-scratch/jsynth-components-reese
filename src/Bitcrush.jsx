@@ -19,7 +19,7 @@ class Bitcrush extends Effect {
 
 		this.state = {
 			hz: 100.0,
-			node: window.ctx.createBiquadFilter()
+			node: window.ctx.createOscillator()
 		};
 
 		this.state.node.type = this.props.type;
@@ -28,7 +28,12 @@ class Bitcrush extends Effect {
 
 	render() {
 		return (
-			<Effect name={this.props.name} node={this.props.node} min={this.props.min} max={this.props.max} />
+			<Effect name={this.props.name} node={[
+				{
+					name: "Fidelity",
+					point: this.state.node.frequency
+				}
+			]} min={this.props.min} max={this.props.max} />
 		);
 	}
 }
