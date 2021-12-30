@@ -31,7 +31,8 @@ class Bitcrush extends Effect {
 			<Effect name={this.props.name} node={[
 				{
 					name: "Fidelity",
-					point: this.state.node.frequency
+					point: this.state.node.frequency,
+					quant: 6
 				}
 			]} min={this.props.min} max={this.props.max} />
 		);
