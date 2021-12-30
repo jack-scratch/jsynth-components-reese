@@ -1,5 +1,3 @@
-import synth from "./synth.jsx";
-
 window.ctx = new window.AudioContext() || window.webkitAudioContext();
 
 function App() {
@@ -12,9 +10,7 @@ function App() {
 			if (window.ctx.state === "suspended") {
 				window.ctx.resume();
 			}
-		}}>
-			{synth()}
-		</div>
+		}}></div>
   );
 }
 
