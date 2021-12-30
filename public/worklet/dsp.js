@@ -74,13 +74,13 @@ class SnH extends AudioWorkletProcessor {
   process(ins, outs, param) {
     outs[0].forEach((chan) => {
       for (let i = 0; i < chan.length; i++) {
-				if (!(i % 3)) {
+				if (!(this.i % 3)) {
 					this.samp = ins[0][0][i];
 				}
 
-				chan[i] = this.samp;
+				chan[this.i] = this.samp;
 
-				i++;
+				this.i++;
       }
     });
 
