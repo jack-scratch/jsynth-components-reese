@@ -89,5 +89,4 @@ class SnH extends AudioWorkletProcessor {
 }
 
 registerProcessor("bitcrush", Bitcrush);
-
 registerProcessor("snh", SnH);
