@@ -26,6 +26,7 @@ class Bay extends React.Component {
 			patch: [
 				...prevState.patch,
 				{
+					inPoint: node,
 					start: [
 						refer.current.offsetLeft + nutRad + portRad,
 						refer.current.offsetTop + nutRad + portRad
@@ -66,7 +67,7 @@ class Bay extends React.Component {
 				</div>
 
 				{this.state.patch.map((inst, i) =>
-					<Cable start={inst.start} end={inst.end} hookUp={this.release} key={i} />
+					<Cable start={inst.start} end={inst.end} hookUp={this.release} inPoint={inst.inPoint} key={i} />
 				)}
 			</div>
 		);
