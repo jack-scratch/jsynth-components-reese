@@ -6,12 +6,12 @@ class Bitcrush extends Effect {
 		super(props);
 
 		window.ctx.audioWorklet.addModule("worklet/dsp.js").then(() => {
-			let bitCrusherNode = new AudioWorkletNode(window.ctx, "bitcrush");
+			let node = new AudioWorkletNode(window.ctx, "bitcrush");
 
-			let paramBitDepth = bitCrusherNode.parameters.get("bitDepth");
+			let paramBitDepth = node.parameters.get("bitDepth");
 			paramBitDepth.setValueAtTime(1.0, 0.0);
 
-			let paramReduction = bitCrusherNode.parameters.get("frequencyReduction");
+			let paramReduction = node.parameters.get("frequencyReduction");
 
 			paramReduction.setValueAtTime(0.01, window.ctx.currentTime);
 			paramReduction.linearRampToValueAtTime(0.1, window.ctx.currentTime + 4.0);
