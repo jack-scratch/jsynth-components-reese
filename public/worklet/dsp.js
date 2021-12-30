@@ -61,4 +61,31 @@ class Bitcrush extends AudioWorkletProcessor {
 	}
 }
 
+class SnH extends AudioWorkletProcessor {
+	constructor() {
+		super();
+
+		this.i = 0;
+		this.samp = 0;
+	}
+
+  process(ins, outs, param) {
+    outs[0].forEach((chan) => {
+      for (let i = 0; i < chan.length; i++) {
+				if (!(i % 3)) {
+					this.samp = ins[0][0][i];
+				}
+
+				chan[i] = this.samp;
+
+				i++;
+      }
+    });
+
+    return true;
+  }
+}
+
 registerProcessor("bitcrush", Bitcrush);
+
+registerProcessor("snh", SnH);
