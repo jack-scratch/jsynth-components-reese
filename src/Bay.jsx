@@ -17,6 +17,8 @@ class Bay extends React.Component {
 
 		this.addCable = this.addCable.bind(this);
 		this.popCable = this.popCable.bind(this);
+
+		this.release = this.release.bind(this);
 	}
 
 	addCable(e, refer, node) {
@@ -49,6 +51,10 @@ class Bay extends React.Component {
 		}));
 	}
 
+	release(e) {
+		this.popCable(e);
+	}
+
 	render() {
 		return (
 			<div className="sys">
@@ -60,7 +66,7 @@ class Bay extends React.Component {
 				</div>
 
 				{this.state.patch.map((inst, i) =>
-					<Cable key={i} start={inst.start} end={inst.end} hookUp={this.popCable} />
+					<Cable key={i} start={inst.start} end={inst.end} hookUp={this.release} />
 				)}
 			</div>
 		);
