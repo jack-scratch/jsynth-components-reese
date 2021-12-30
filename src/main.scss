@@ -28,6 +28,8 @@ hr {
 
 #app {
 	> * {
+		display: inline-block;
+		float: left;
 		margin: $margin;
 	}
 }
