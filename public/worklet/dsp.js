@@ -1,3 +1,19 @@
+class Feedback extends AudioWorkletProcessor {
+	constructor() {
+		super();
+	}
+
+	process(ins, outs, param) {
+		outs[0].forEach((chan) => {
+			for (let i = 0; i < chan.length; i++) {
+				chan[i] = ins[0][0][i] * ins[0][0][i];
+			}
+		});
+
+		return true;
+	}
+}
+
 class Bitcrush extends AudioWorkletProcessor {
 	static get parameterDescriptors() {
 		return [{
@@ -71,9 +87,9 @@ class SnH extends AudioWorkletProcessor {
 		this.samp = 0;
 	}
 
-  process(ins, outs, param) {
-    outs[0].forEach((chan) => {
-      for (let i = 0; i < chan.length; i++) {
+	process(ins, outs, param) {
+		outs[0].forEach((chan) => {
+			for (let i = 0; i < chan.length; i++) {
 				if (!(this.i % 3)) {
 					this.samp = ins[0][0][i];
 				}
@@ -81,12 +97,13 @@ class SnH extends AudioWorkletProcessor {
 				chan[this.i] = this.samp;
 
 				this.i++;
-      }
-    });
+			}
+		});
 
-    return true;
-  }
+		return true;
+	}
 }
 
+registerProcessor("feedback", Feedback);
 registerProcessor("bitcrush", Bitcrush);
 registerProcessor("snh", SnH);

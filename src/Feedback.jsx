@@ -1,46 +1,34 @@
 import React from "react";
 import Effect from "./Effect";
 
-class Bitcrush extends Effect {
+class Feedback extends Effect {
 	constructor(props) {
 		super(props);
 
 		window.ctx.audioWorklet.addModule("worklet/dsp.js").then(() => {
-			let bitCrusherNode = new AudioWorkletNode(window.ctx, "bitcrush");
-
-			let paramBitDepth = bitCrusherNode.parameters.get("bitDepth");
-			paramBitDepth.setValueAtTime(1.0, 0.0);
-
-			let paramReduction = bitCrusherNode.parameters.get("frequencyReduction");
-
-			paramReduction.setValueAtTime(0.01, window.ctx.currentTime);
-			paramReduction.linearRampToValueAtTime(0.1, window.ctx.currentTime + 4.0);
+			let node = new AudioWorkletNode(window.ctx, "feedback");
 		});
 
 		this.state = {
 			hz: 100.0,
 			node: window.ctx.createOscillator()
 		};
-
-		this.state.node.type = this.props.type;
-		this.state.node.frequency.value = this.state.hz;
 	}
 
 	render() {
 		return (
 			<Effect name={this.props.name} node={[
 				{
-					name: "Fidelity",
-					point: this.state.node.frequency,
-					quant: 6
+					name: "Iterations",
+					point: this.state.node.frequency
 				}
 			]} min={this.props.min} max={this.props.max} />
 		);
 	}
 }
 
-Bitcrush.defaultProps = {
-	name: "Bitcrush"
+Feedback.defaultProps = {
+	name: "Feedback"
 };
 
-export default Bitcrush;
+export default Feedback;
