@@ -4,7 +4,11 @@ const unit = {
 	"time": [
 		"ms",
 		"s"
-	]
+	],
+	"sign": {
+		"sharp": "&#9839",
+		"flat": "&#9837"
+	}
 };
 
 const chord = [ 
