@@ -23,7 +23,10 @@ class Bitcrush extends AudioWorkletProcessor {
 	}
 
 	onmessage(event) {
-		const { data } = event;
+		const {
+			data
+		} = event;
+
 		this.isPlaying = data;
 	}
 
@@ -49,8 +52,7 @@ class Bitcrush extends AudioWorkletProcessor {
 
 				if (this.phase_ >= 1.0) {
 					this.phase_ -= 1.0;
-					this.lastSampleValue_ =
-						step * Math.floor(inputChannel[i] / step + 0.5);
+					this.lastSampleValue_ = step * Math.floor(inputChannel[i] / step + 0.5);
 				}
 
 				outputChannel[i] = this.lastSampleValue_;
