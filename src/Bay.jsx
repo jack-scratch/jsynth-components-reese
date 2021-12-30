@@ -66,7 +66,7 @@ class Bay extends React.Component {
 				</div>
 
 				{this.state.patch.map((inst, i) =>
-					<Cable key={i} start={inst.start} end={inst.end} hookUp={this.release} />
+					<Cable start={inst.start} end={inst.end} hookUp={this.release} key={i} />
 				)}
 			</div>
 		);

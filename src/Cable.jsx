@@ -15,7 +15,7 @@ class Cable extends React.Component {
 				0
 			],
 
-			inPoint: null,
+			inPoint: this.props.inPoint,
 			outPoint: null,
 
 			active: false
