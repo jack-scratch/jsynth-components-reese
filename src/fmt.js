@@ -1,5 +1,6 @@
 const unit = {
 	"freq": "Hz",
+	"cents": "Cents",
 	"level": "dB",
 	"time": [
 		"ms",
@@ -8,7 +9,7 @@ const unit = {
 	"sign": {
 		"sharp": "&#9839",
 		"flat": "&#9837"
-	}
+	},
 };
 
 const chord = [ 
