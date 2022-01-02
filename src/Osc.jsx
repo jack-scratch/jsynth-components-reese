@@ -29,13 +29,16 @@ class Osc extends Source {
 				{
 					name: "Frequency",
 					point: this.state.node.frequency
+				}, {
+					name: "Detune",
+					point: this.state.node.detune
 				}
 			]} port={[
 				{
 					type: "out",
 					point: this.state.node
 				}
-			]} hookDown={this.props.hookDown} marked />
+			]} hookDown={this.props.hookDown} />
 		);
 	}
 }
