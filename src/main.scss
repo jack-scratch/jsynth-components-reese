@@ -19,6 +19,18 @@ h6, {
 	color: $fg;
 }
 
+table {
+	padding: $pad;
+	background: $fg;
+	color: $bg;
+
+	td {
+		padding: $pad;
+		background: $bg;
+		color: $fg;
+	}
+}
+
 hr {
 	height: $stroke;
 	background-color: $fg;
