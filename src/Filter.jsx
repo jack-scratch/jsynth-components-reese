@@ -1,4 +1,4 @@
-import Effect from "./Effect";
+import Effect from "./Effect.jsx";
 
 class Filter extends Effect {
 	constructor(props) {
