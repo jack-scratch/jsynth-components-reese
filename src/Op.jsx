@@ -1,4 +1,3 @@
-import React from "react";
 import Source from "./Source";
 
 class Op extends Source {

@@ -1,4 +1,3 @@
-import React from "react";
 import Effect from "./Effect";
 
 class Flanger extends Effect {

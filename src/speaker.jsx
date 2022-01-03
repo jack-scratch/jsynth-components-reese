@@ -1,4 +1,3 @@
-import React from "react";
 import Out from "./Out";
 
 const speaker = (props) => {
