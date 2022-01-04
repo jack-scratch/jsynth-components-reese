@@ -1,4 +1,4 @@
-import Osc from "./Osc.jsx";
+import "./main.css";
 
 window.ctx = new window.AudioContext() || window.webkitAudioContext();
 
@@ -12,9 +12,7 @@ function App() {
 			if (window.ctx.state === "suspended") {
 				window.ctx.resume();
 			}
-		}}>
-			<Osc />
-		</div>
+		}}></div>
   );
 }
 
