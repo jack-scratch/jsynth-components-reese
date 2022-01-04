@@ -1,11 +1,11 @@
 import React from "react";
 import {
 	FontAwesomeIcon
-} from '@fortawesome/react-fontawesome'
+} from "@fortawesome/react-fontawesome"
 import {
 	faStop,
 	faPlay
-} from '@fortawesome/free-solid-svg-icons'
+} from "@fortawesome/free-solid-svg-icons"
 
 import "./Btn.css";
 
