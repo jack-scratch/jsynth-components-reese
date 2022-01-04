@@ -20,7 +20,7 @@ class Bay extends React.Component {
 
 		this.release = this.release.bind(this);
 
-		this.asdf = this.asdf.bind(this);
+		this.setDest = this.setDest.bind(this);
 	}
 
 	addCable(e, refer, node) {
@@ -61,7 +61,7 @@ class Bay extends React.Component {
 		}
 	}
 
-	asdf(e, refer, node) {
+	setDest(e, refer, node) {
 		alert(node);
 	}
 
@@ -71,7 +71,7 @@ class Bay extends React.Component {
 				<div>
 					<Osc hookDown={this.addCable} />
 					{speaker({
-						hookEnter: this.asdf
+						hookEnter: this.setDest
 					})}
 				</div>
 
