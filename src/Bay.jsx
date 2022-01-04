@@ -19,6 +19,8 @@ class Bay extends React.Component {
 		this.popCable = this.popCable.bind(this);
 
 		this.release = this.release.bind(this);
+
+		this.asdf = this.asdf.bind(this);
 	}
 
 	addCable(e, refer, node) {
@@ -59,12 +61,18 @@ class Bay extends React.Component {
 		}
 	}
 
+	asdf() {
+		alert("asdf");
+	}
+
 	render() {
 		return (
 			<div className="sys">
 				<div>
 					<Osc hookDown={this.addCable} />
-					{speaker()}
+					{speaker({
+						hookEnter: () => alert("asdf")
+					})}
 				</div>
 
 				{this.state.patch.map((inst, i) =>
