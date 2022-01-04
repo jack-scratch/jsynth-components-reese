@@ -1,4 +1,4 @@
-import Effect from "./Effect.jsx";
+import Effect from "./Effect";
 
 class Env extends Effect {
 	constructor(props) {

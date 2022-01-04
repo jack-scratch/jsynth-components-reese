@@ -1,9 +1,9 @@
 import React from "react";
-import Text from "./Text.jsx";
-import Impulse from "./Impulse.jsx";
+import Text from "./Text";
+import Impulse from "./Impulse";
 import {
 	Btn
-} from "./Btn.jsx";
+} from "./Btn";
 import {
 	FontAwesomeIcon
 } from "@fortawesome/react-fontawesome";
