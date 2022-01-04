@@ -27,6 +27,7 @@ class Bay extends React.Component {
 				...prevState.patch,
 				{
 					inPoint: node,
+					endPoint: null,
 					start: [
 						refer.current.offsetLeft + nutRad + portRad,
 						refer.current.offsetTop + nutRad + portRad
@@ -38,7 +39,7 @@ class Bay extends React.Component {
 				}
 			]
 		}), () => {
-			node.connect(window.ctx.destination);
+			node.connect(this.state.patch[this.state.patch.length - 1].endPoint);
 		});
 	}
 
