@@ -1,6 +1,6 @@
 import Source from "./Source";
 
-class Osc extends Source {
+class Chorus extends Source {
 	constructor(props) {
 		super(props);
 
@@ -54,10 +54,10 @@ class Osc extends Source {
 	}
 }
 
-Osc.defaultProps = {
+Chorus.defaultProps = {
 	name: "Chorus",
 	min: 1.0,
 	max: 100.0
 };
 
-export default Osc;
+export default Chorus;
