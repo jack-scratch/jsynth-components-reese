@@ -71,7 +71,7 @@ class Bay extends React.Component {
 				<div>
 					<Osc hookDown={this.addCable} />
 					{speaker({
-						hookEnter: () => alert("asdf")
+						hookEnter: this.asdf
 					})}
 				</div>
 
