@@ -61,8 +61,8 @@ class Bay extends React.Component {
 		}
 	}
 
-	asdf() {
-		alert("asdf");
+	asdf(e, refer, node) {
+		alert(node);
 	}
 
 	render() {
