@@ -64,9 +64,7 @@ class Bay extends React.Component {
 			<div className="sys">
 				<div>
 					<Osc hookDown={this.addCable} />
-					{speaker({
-						hookUp: () => alert("asdf")
-					})}
+					{speaker()}
 				</div>
 
 				{this.state.patch.map((inst, i) =>
