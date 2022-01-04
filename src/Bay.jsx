@@ -27,7 +27,7 @@ class Bay extends React.Component {
 				...prevState.patch,
 				{
 					inPoint: node,
-					endPoint: null,
+					endPoint: window.ctx.destination,
 					start: [
 						refer.current.offsetLeft + nutRad + portRad,
 						refer.current.offsetTop + nutRad + portRad
@@ -38,9 +38,7 @@ class Bay extends React.Component {
 					]
 				}
 			]
-		}), () => {
-			node.connect(this.state.patch[this.state.patch.length - 1].endPoint);
-		});
+		}));
 	}
 
 	popCable(e) {
@@ -54,7 +52,11 @@ class Bay extends React.Component {
 	}
 
 	release(e) {
-		this.popCable(e);
+		if (this.state.patch[this.state.patch.length - 1].inPoint && this.state.patch[this.state.patch.length - 1].endPoint) {
+			this.state.patch[this.state.patch.length - 1].inPoint.connect(this.state.patch[this.state.patch.length - 1].endPoint);
+		} else {
+			this.popCable(e);
+		}
 	}
 
 	render() {
