@@ -62,7 +62,9 @@ class Bay extends React.Component {
 	}
 
 	setDest(e, refer, node) {
-		alert(node);
+		this.state.patch[this.state.patch.length - 1].endPoint = node;
+
+		this.state.patch[this.state.patch.length - 1].inPoint.connect(this.state.patch[this.state.patch.length - 1].endPoint);
 	}
 
 	render() {
