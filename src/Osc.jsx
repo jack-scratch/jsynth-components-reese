@@ -5,22 +5,13 @@ class Osc extends Source {
 	constructor(props) {
 		super(props);
 
-		this.state = {
-			node: window.ctx.createOscillator(),
-			hz: 0.0
-		};
+		this.node = window.ctx.createOscillator();
 
 		if (this.props.type) {
-			this.state.node.type = this.props.type;
+			this.node.type = this.props.type;
 		}
 
-		this.state.node.start();
-	}
-
-	componentDidMount() {
-		this.setState({
-			hz: this.state.node.frequency.value
-		});
+		this.node.start();
 	}
 
 	render() {
@@ -28,15 +19,15 @@ class Osc extends Source {
 			<Source name={this.props.name} min={this.props.min} max={this.props.max} node={[
 				{
 					name: "Frequency",
-					point: this.state.node.frequency
+					point: this.node.frequency
 				}, {
 					name: "Detune",
-					point: this.state.node.detune
+					point: this.node.detune
 				}
 			]} port={[
 				{
 					type: "out",
-					point: this.state.node
+					point: this.node
 				}
 			]} hookDown={this.props.hookDown} />
 		);
