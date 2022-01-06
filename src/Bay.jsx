@@ -12,7 +12,8 @@ class Bay extends React.Component {
 		super(props);
 
 		this.state = {
-			patch: []
+			patch: [],
+			active: true
 		};
 
 		this.addCable = this.addCable.bind(this);
@@ -70,12 +71,14 @@ class Bay extends React.Component {
 	}
 
 	drag(e) {
-		this.setState({
-			end: [
-				e.nativeEvent.clientX,
-				e.nativeEvent.clientY
-			]
-		});
+		if (this.state.active) {
+			this.setState({
+				end: [
+					e.nativeEvent.clientX,
+					e.nativeEvent.clientY
+				]
+			});
+		}
 	}
 
 	render() {
