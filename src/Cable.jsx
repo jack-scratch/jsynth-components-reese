@@ -8,7 +8,6 @@ class Cable extends React.Component {
 
 		this.state = {
 			start: this.props.start,
-			end: this.props.end,
 			mid: [
 				0,
 				0
@@ -25,11 +24,11 @@ class Cable extends React.Component {
 	midX() {
 		let first;
 		let snd;
-		if (this.state.end[0] > this.state.start[0]) {
+		if (this.props.end[0] > this.state.start[0]) {
 			first = this.state.start[0];
-			snd = this.state.end[0];
+			snd = this.props.end[0];
 		} else {
-			first = this.state.end[0];
+			first = this.props.end[0];
 			snd = this.state.start[0];
 		}
 
@@ -42,7 +41,7 @@ class Cable extends React.Component {
 		this.setState({
 			mid: [
 				this.midX(),
-				(this.state.end[1] > this.state.start[1] ? this.state.end[1] : this.state.start[1]) * 1.6
+				(this.props.end[1] > this.state.start[1] ? this.props.end[1] : this.state.start[1]) * 1.6
 			],
 			active: true
 		});
@@ -66,18 +65,18 @@ class Cable extends React.Component {
 			}, () => {
 				let first;
 				let snd;
-				if (this.state.end[0] > this.state.start[0]) {
+				if (this.props.end[0] > this.state.start[0]) {
 					first = this.state.start[0];
-					snd = this.state.end[0];
+					snd = this.props.end[0];
 				} else {
-					first = this.state.end[0];
+					first = this.props.end[0];
 					snd = this.state.start[0];
 				}
 
 				this.setState({
 					mid: [
 						this.midX(),
-						(this.state.end[1] > this.state.start[1] ? this.state.end[1] : this.state.start[1]) * 1.6
+						(this.props.end[1] > this.state.start[1] ? this.props.end[1] : this.state.start[1]) * 1.6
 					]
 				});
 			});
@@ -87,7 +86,7 @@ class Cable extends React.Component {
 	render() {
 		return (
 			<svg className="cable" onMouseUp={this.release} onMouseMove={this.drag}>
-				<path d={`M ${this.state.start[0]},${this.state.start[1]} C ${this.state.start[0]},${this.state.start[1]} ${this.state.mid[0]},${this.state.mid[1]} ${this.state.end[0]},${this.state.end[1]}`} />
+				<path d={`M ${this.state.start[0]},${this.state.start[1]} C ${this.state.start[0]},${this.state.start[1]} ${this.state.mid[0]},${this.state.mid[1]} ${this.props.end[0]},${this.props.end[1]}`} />
 			</svg>
 		);
 	}
