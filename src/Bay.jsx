@@ -71,7 +71,6 @@ class Bay extends React.Component {
 		return (
 			<div className="sys">
 				<div>
-					<Osc hookDown={this.addCable} />
 					{speaker({
 						hookUp: this.setDest
 					})}
