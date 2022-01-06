@@ -21,6 +21,8 @@ class Bay extends React.Component {
 		this.release = this.release.bind(this);
 
 		this.setDest = this.setDest.bind(this);
+
+		this.drag = this.drag.bind(this);
 	}
 
 	addCable(e, ref, node) {
@@ -67,17 +69,27 @@ class Bay extends React.Component {
 		this.state.patch[this.state.patch.length - 1].inPoint.connect(this.state.patch[this.state.patch.length - 1].endPoint);
 	}
 
+	drag(e) {
+		this.setState({
+			pos: [
+				e.nativeEvent.clientX,
+				e.nativeEvent.clientY
+			]
+		});
+	}
+
 	render() {
 		return (
-			<div className="sys">
+			<div className="sys" onMouseMove={(e) => this.drag(e)}>
 				<div>
+					<Osc hookDown={this.addCable} />
 					{speaker({
 						hookUp: this.setDest
 					})}
 				</div>
 
 				{this.state.patch.map((inst, i) =>
-					<Cable start={inst.start} end={inst.end} hookUp={this.release} inPoint={inst.inPoint} key={i} />
+					<Cable start={inst.start} end={this.state.pos} hookUp={this.release} inPoint={inst.inPoint} key={i} />
 				)}
 			</div>
 		);
