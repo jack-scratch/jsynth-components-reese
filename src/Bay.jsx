@@ -69,11 +69,7 @@ class Bay extends React.Component {
 			this.state.patch[this.state.patch.length - 1].inPoint.connect(this.state.patch[this.state.patch.length - 1].endPoint);
 
 			this.setState({
-				active: false,
-				end: [
-					200,
-					300
-				]
+				active: false
 			});
 		} else {
 			this.popCable(e);
@@ -84,6 +80,13 @@ class Bay extends React.Component {
 		this.state.patch[this.state.patch.length - 1].endPoint = node;
 
 		this.state.patch[this.state.patch.length - 1].inPoint.connect(this.state.patch[this.state.patch.length - 1].endPoint);
+
+		this.setState({
+			end: [
+				ref.current.offsetLeft + nutRad + portRad,
+				ref.current.offsetTop + nutRad + portRad
+			]
+		});
 	}
 
 	midX() {
