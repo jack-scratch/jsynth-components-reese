@@ -13,7 +13,15 @@ class Bay extends React.Component {
 
 		this.state = {
 			patch: [],
-			active: true
+			active: true,
+			start: [
+				0,
+				0
+			],
+			end: [
+				0,
+				0
+			]
 		};
 
 		this.addCable = this.addCable.bind(this);
@@ -70,6 +78,22 @@ class Bay extends React.Component {
 		this.state.patch[this.state.patch.length - 1].inPoint.connect(this.state.patch[this.state.patch.length - 1].endPoint);
 	}
 
+	midX() {
+		let first;
+		let snd;
+		if (this.state.end[0] > this.state.start[0]) {
+			first = this.state.start[0];
+			snd = this.state.end[0];
+		} else {
+			first = this.state.end[0];
+			snd = this.state.start[0];
+		}
+
+		let delta = snd - first;
+
+		return first + (delta / 2);
+	}
+
 	drag(e) {
 		if (this.state.active) {
 			this.setState({
@@ -77,6 +101,13 @@ class Bay extends React.Component {
 					e.nativeEvent.clientX,
 					e.nativeEvent.clientY
 				]
+			}, () => {
+				this.setState({
+					mid: [
+						this.midX(),
+						(this.state.end[1] > this.state.start[1] ? this.state.end[1] : this.state.start[1]) * 1.6
+					]
+				});
 			});
 		}
 	}
@@ -92,7 +123,7 @@ class Bay extends React.Component {
 				</div>
 
 				{this.state.patch.map((inst, i) =>
-					<Cable start={inst.start} end={this.state.end} hookUp={this.release} inPoint={inst.inPoint} key={i} />
+					<Cable start={inst.start} end={this.state.end} mid={this.state.mid} hookUp={this.release} inPoint={inst.inPoint} key={i} />
 				)}
 			</div>
 		);
