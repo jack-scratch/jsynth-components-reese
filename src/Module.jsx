@@ -37,7 +37,7 @@ class Module extends React.Component {
 					<div className="body">
 						<div className="io">
 							{this.props.port.map((inst) =>
-								inst.type === "in" ? <In point={inst.point} hookUp={this.props.hookUp} hookEnter={this.props.hookEnter} /> : <Out point={inst.point} hookDown={this.props.hookDown} hookEnter={this.props.hookEnter} key={inst.type} />
+								inst.type === "in" ? <In point={inst.point} hookUp={this.props.hookUp} hookEnter={this.props.hookEnter} key={inst.type} /> : <Out point={inst.point} hookDown={this.props.hookDown} hookEnter={this.props.hookEnter} key={inst.type} />
 							)}
 						</div>
 					</div>
