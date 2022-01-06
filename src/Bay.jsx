@@ -23,7 +23,7 @@ class Bay extends React.Component {
 		this.setDest = this.setDest.bind(this);
 	}
 
-	addCable(e, refer, node) {
+	addCable(e, ref, node) {
 		this.setState((prevState) => ({
 			patch: [
 				...prevState.patch,
@@ -31,12 +31,12 @@ class Bay extends React.Component {
 					inPoint: node,
 					endPoint: null,
 					start: [
-						refer.current.offsetLeft + nutRad + portRad,
-						refer.current.offsetTop + nutRad + portRad
+						ref.current.offsetLeft + nutRad + portRad,
+						ref.current.offsetTop + nutRad + portRad
 					],
 					end: [
-						refer.current.offsetLeft + nutRad + portRad,
-						refer.current.offsetTop + nutRad + portRad
+						ref.current.offsetLeft + nutRad + portRad,
+						ref.current.offsetTop + nutRad + portRad
 					]
 				}
 			]
@@ -61,7 +61,7 @@ class Bay extends React.Component {
 		}
 	}
 
-	setDest(e, refer, node) {
+	setDest(e, ref, node) {
 		this.state.patch[this.state.patch.length - 1].endPoint = node;
 
 		this.state.patch[this.state.patch.length - 1].inPoint.connect(this.state.patch[this.state.patch.length - 1].endPoint);
