@@ -71,7 +71,7 @@ class Bay extends React.Component {
 
 	drag(e) {
 		this.setState({
-			pos: [
+			end: [
 				e.nativeEvent.clientX,
 				e.nativeEvent.clientY
 			]
@@ -89,7 +89,7 @@ class Bay extends React.Component {
 				</div>
 
 				{this.state.patch.map((inst, i) =>
-					<Cable start={inst.start} end={this.state.pos} hookUp={this.release} inPoint={inst.inPoint} key={i} />
+					<Cable start={inst.start} end={this.state.end} hookUp={this.release} inPoint={inst.inPoint} key={i} />
 				)}
 			</div>
 		);
