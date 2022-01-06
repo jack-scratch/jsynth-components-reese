@@ -69,7 +69,11 @@ class Bay extends React.Component {
 			this.state.patch[this.state.patch.length - 1].inPoint.connect(this.state.patch[this.state.patch.length - 1].endPoint);
 
 			this.setState({
-				active: false
+				active: false,
+				end: [
+					200,
+					300
+				]
 			});
 		} else {
 			this.popCable(e);
