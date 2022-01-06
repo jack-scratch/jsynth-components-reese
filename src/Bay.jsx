@@ -67,6 +67,10 @@ class Bay extends React.Component {
 	release(e) {
 		if (this.state.patch[this.state.patch.length - 1].inPoint && this.state.patch[this.state.patch.length - 1].endPoint) {
 			this.state.patch[this.state.patch.length - 1].inPoint.connect(this.state.patch[this.state.patch.length - 1].endPoint);
+
+			this.setState({
+				active: false
+			});
 		} else {
 			this.popCable(e);
 		}
@@ -114,7 +118,7 @@ class Bay extends React.Component {
 
 	render() {
 		return (
-			<div className="sys" onMouseMove={(e) => this.drag(e)}>
+			<div className="sys" onMouseMove={(e) => this.drag(e)} onMouseUp={this.release}>
 				<div>
 					<Osc hookDown={this.addCable} />
 					{speaker({
@@ -123,7 +127,7 @@ class Bay extends React.Component {
 				</div>
 
 				{this.state.patch.map((inst, i) =>
-					<Cable start={inst.start} end={this.state.end} mid={this.state.mid} hookUp={this.release} inPoint={inst.inPoint} key={i} />
+					<Cable start={inst.start} end={this.state.end} mid={this.state.mid} inPoint={inst.inPoint} key={i} />
 				)}
 			</div>
 		);
