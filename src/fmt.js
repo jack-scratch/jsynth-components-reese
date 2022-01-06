@@ -19,5 +19,6 @@ const chord = [
 ];
 
 export {
-	unit
+	unit,
+	chord
 };
