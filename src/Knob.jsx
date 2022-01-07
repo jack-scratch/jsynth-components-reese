@@ -18,7 +18,7 @@ class Knob extends React.Component {
 			currY: 0,
 			deltaY: 0,
 			prevVal: 0,
-			val: this.props.node.value
+			val: this.props.param.value
 		};
 		
 		this.baseRot = 90;

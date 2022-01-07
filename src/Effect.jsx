@@ -3,13 +3,13 @@ import Module from "./Module";
 class Effect extends Module {
 	render() {
 		return (
-			<Module name={this.props.name} node={this.props.node} port={[
+			<Module name={this.props.name} param={this.props.param} port={[
 				{
 					type: "in",
-					point: this.props.node
+					point: this.props.param
 				}, {
 					type: "out",
-					point: this.props.node
+					point: this.props.param
 				}
 			]} min={this.props.min} max={this.props.max} />
 		);

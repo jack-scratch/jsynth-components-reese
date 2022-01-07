@@ -16,7 +16,7 @@ class Osc extends Source {
 
 	render() {
 		return (
-			<Source name={this.props.name} node={[
+			<Source name={this.props.name} param={[
 				{
 					name: "Frequency",
 					point: this.node.frequency,

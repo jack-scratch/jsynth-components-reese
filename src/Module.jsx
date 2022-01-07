@@ -20,15 +20,15 @@ class Module extends React.Component {
 				</div>
 				<div className="body">
 					<div className="ctrl">
-						{this.props.node && this.props.node.map((inst) =>
+						{this.props.param && this.props.param.map((inst) =>
 							<div key={inst.name}>
 								<div className="head">
 									<Label text={inst.name} />
 								</div>
 								<div className="body">
 									<div className="body param">
-										<In node={this.props.node} hookDown={this.props.hookDown} hookEnter={this.props.hookEnter} />
-										<Knob node={inst.point} min={inst.min ? inst.min : inst.point.minValue} max={inst.max ? inst.max : inst.point.maxValue} marked={this.props.marked} unit={unit["freq"]} quant={inst.quant ? inst.quant : null} />
+										<In param={this.props.param} hookDown={this.props.hookDown} hookEnter={this.props.hookEnter} />
+										<Knob param={inst.point} min={inst.min ? inst.min : inst.point.minValue} max={inst.max ? inst.max : inst.point.maxValue} marked={this.props.marked} unit={unit["freq"]} quant={inst.quant ? inst.quant : null} />
 									</div>
 								</div>
 							</div>

@@ -13,7 +13,7 @@ class Gain extends Effect {
 
 	render() {
 		return (
-			<Effect name="Gain" node={[
+			<Effect name="Gain" param={[
 				{
 					name: "Level",
 					point: this.state.node.gain,

@@ -13,7 +13,7 @@ class Env extends Effect {
 
 	render() {
 		return (
-			<Effect name={this.props.name} node={[
+			<Effect name={this.props.name} param={[
 				{
 					name: "Attack",
 					point: this.state.node.frequency

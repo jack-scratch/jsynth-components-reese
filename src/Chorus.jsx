@@ -24,7 +24,7 @@ class Chorus extends Source {
 
 	render() {
 		return (
-			<Source name={this.props.name} min={this.props.min} max={this.props.max} node={[
+			<Source name={this.props.name} min={this.props.min} max={this.props.max} param={[
 				{
 					name: "Spread",
 					point: this.state.node.frequency,

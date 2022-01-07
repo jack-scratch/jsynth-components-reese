@@ -17,7 +17,7 @@ class Feedback extends Effect {
 
 	render() {
 		return (
-			<Effect name={this.props.name} node={[
+			<Effect name={this.props.name} param={[
 				{
 					name: "Iterations",
 					point: this.state.node.frequency

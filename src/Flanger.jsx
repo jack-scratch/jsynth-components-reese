@@ -24,7 +24,7 @@ class Flanger extends Effect {
 
 	render() {
 		return (
-			<Effect name={this.props.name} min={this.props.min} max={this.props.max} node={[
+			<Effect name={this.props.name} min={this.props.min} max={this.props.max} param={[
 				{
 					name: "Delay",
 					point: this.state.node.frequency,

@@ -14,7 +14,7 @@ class Delay extends Effect {
 
 	render() {
 		return (
-			<Effect name={this.props.name} node={[
+			<Effect name={this.props.name} param={[
 				{
 					name: "Time",
 					point: this.state.node.delayTime,

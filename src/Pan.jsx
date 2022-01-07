@@ -14,7 +14,7 @@ class Pan extends Effect {
 
 	render() {
 		return (
-			<Effect name={this.props.name} node={[
+			<Effect name={this.props.name} param={[
 				{
 					name: "Rate",
 					point: this.state.node.pan

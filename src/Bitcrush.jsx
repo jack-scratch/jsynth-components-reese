@@ -27,7 +27,7 @@ class Bitcrush extends Effect {
 
 	render() {
 		return (
-			<Effect name={this.props.name} node={[
+			<Effect name={this.props.name} param={[
 				{
 					name: "Fidelity",
 					point: this.state.node.frequency,
