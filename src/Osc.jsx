@@ -24,7 +24,9 @@ class Osc extends Source {
 					max: 1000.0
 				}, {
 					name: "Detune",
-					point: this.node.detune
+					point: this.node.detune,
+					min: -100.0,
+					max: 100.0
 				}
 			]} port={[
 				{
