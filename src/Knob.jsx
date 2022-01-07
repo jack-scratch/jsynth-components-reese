@@ -31,7 +31,7 @@ class Knob extends React.Component {
 		this.setState((prevState) => this.setState({
 			startY: e.nativeEvent.clientY,
 			currY: e.nativeEvent.clientY,
-			prevVal: this.state.val,
+			prevVal: prevState.val,
 			down: true
 		}));
 	}
