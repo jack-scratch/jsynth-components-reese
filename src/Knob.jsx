@@ -37,8 +37,6 @@ class Knob extends React.Component {
 
 	release() {
 		this.setState((prevState) => ({
-			val: prevState.val + this.state.deltaY,
-			deltaY: 0,
 			down: false
 		}));
 	}
