@@ -13,12 +13,16 @@ class Bay extends React.Component {
 
 		this.state = {
 			patch: [],
-			active: true,
+			active: false,
 			start: [
 				0,
 				0
 			],
 			end: [
+				0,
+				0
+			],
+			mid: [
 				0,
 				0
 			]
@@ -36,19 +40,20 @@ class Bay extends React.Component {
 
 	addCable(e, ref, node) {
 		this.setState((prevState) => ({
+			active: true,
+			start: [
+				ref.current.offsetLeft + nutRad + portRad,
+				ref.current.offsetTop + nutRad + portRad
+			],
+			end: [
+				e.nativeEvent.clientX,
+				e.nativeEvent.clientY
+			],
 			patch: [
 				...prevState.patch,
 				{
 					inPoint: node,
-					endPoint: null,
-					start: [
-						ref.current.offsetLeft + nutRad + portRad,
-						ref.current.offsetTop + nutRad + portRad
-					],
-					end: [
-						ref.current.offsetLeft + nutRad + portRad,
-						ref.current.offsetTop + nutRad + portRad
-					]
+					endPoint: null
 				}
 			]
 		}));
@@ -134,7 +139,7 @@ class Bay extends React.Component {
 				</div>
 
 				{this.state.patch.map((inst, i) =>
-					<Cable start={inst.start} end={this.state.end} mid={this.state.mid} inPoint={inst.inPoint} key={i} />
+					<Cable start={this.state.start} end={this.state.end} mid={this.state.mid} inPoint={inst.inPoint} key={i} />
 				)}
 			</div>
 		);
