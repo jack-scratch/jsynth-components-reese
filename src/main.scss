@@ -151,6 +151,11 @@ text.mark {
 			flex-grow: 1;
 		}
 	}
+
+	.label,
+	.mark {
+		text-align: center;
+	}
 }
 
 .tick {
