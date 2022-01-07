@@ -136,7 +136,10 @@ class Bay extends React.Component {
 		return (
 			<div className="sys" onMouseMove={(e) => this.drag(e)} onMouseUp={this.release}>
 				{this.props.body && this.props.body.map((el) =>
-					el
+					React.cloneElement(el, {
+						hookDown: this.addCable,
+						hookUp: this.setDest
+					})
 				)}
 
 				{this.state.patch.map((el, i) =>
