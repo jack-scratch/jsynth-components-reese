@@ -142,8 +142,8 @@ class Bay extends React.Component {
 					})}
 				</div>
 
-				{this.state.patch.map((inst, i) =>
-					<Cable start={this.state.start} end={this.state.end} mid={this.state.mid} inPoint={inst.inPoint} key={i} />
+				{this.state.patch.map((el, i) =>
+					<Cable start={this.state.start} end={this.state.end} mid={this.state.mid} inPoint={el.inPoint} key={i} />
 				)}
 			</div>
 		);

@@ -20,15 +20,15 @@ class Module extends React.Component {
 				</div>
 				<div className="body">
 					<div className="ctrl">
-						{this.props.param && this.props.param.map((inst) =>
-							<div key={inst.name}>
+						{this.props.param && this.props.param.map((el) =>
+							<div key={el.name}>
 								<div className="head">
-									<Label text={inst.name} />
+									<Label text={el.name} />
 								</div>
 								<div className="body">
 									<div className="body param">
 										<In param={this.props.param} hookDown={this.props.hookDown} hookEnter={this.props.hookEnter} />
-										<Knob param={inst.point} min={inst.min ? inst.min : inst.point.minValue} max={inst.max ? inst.max : inst.point.maxValue} marked={this.props.marked} unit={unit["freq"]} quant={inst.quant ? inst.quant : null} />
+										<Knob param={el.point} min={el.min ? el.min : el.point.minValue} max={el.max ? el.max : el.point.maxValue} marked={this.props.marked} unit={unit["freq"]} quant={el.quant ? el.quant : null} />
 									</div>
 								</div>
 							</div>
@@ -36,8 +36,8 @@ class Module extends React.Component {
 					</div>
 					<div className="body">
 						<div className="io">
-							{this.props.port.map((inst) =>
-								inst.type === "in" ? <In point={inst.point} hookUp={this.props.hookUp} hookEnter={this.props.hookEnter} key={inst.type} /> : <Out point={inst.point} hookDown={this.props.hookDown} hookEnter={this.props.hookEnter} key={inst.type} />
+							{this.props.port.map((el) =>
+								el.type === "in" ? <In point={el.point} hookUp={this.props.hookUp} hookEnter={this.props.hookEnter} key={el.type} /> : <Out point={el.point} hookDown={this.props.hookDown} hookEnter={this.props.hookEnter} key={el.type} />
 							)}
 						</div>
 					</div>
