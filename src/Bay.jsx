@@ -1,7 +1,5 @@
 import React from "react";
 import Cable from "./Cable";
-import Osc from "./Osc";
-import speaker from "./speaker";
 import {
 	nutRad,
 	portRad

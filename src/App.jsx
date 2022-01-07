@@ -1,7 +1,4 @@
 import synth from "./synth";
-import Bay from "./Bay";
-import Osc from "./Osc";
-import speaker from "./speaker";
 
 import "./main.css";
 
