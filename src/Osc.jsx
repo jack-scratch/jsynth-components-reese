@@ -16,10 +16,12 @@ class Osc extends Source {
 
 	render() {
 		return (
-			<Source name={this.props.name} min={this.props.min} max={this.props.max} node={[
+			<Source name={this.props.name} node={[
 				{
 					name: "Frequency",
-					point: this.node.frequency
+					point: this.node.frequency,
+					min: 1.0,
+					max: 1000.0
 				}, {
 					name: "Detune",
 					point: this.node.detune
@@ -35,9 +37,7 @@ class Osc extends Source {
 }
 
 Osc.defaultProps = {
-	name: "Oscillator",
-	min: 1.0,
-	max: 1000.0
+	name: "Oscillator"
 };
 
 export default Osc;
