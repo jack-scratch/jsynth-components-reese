@@ -136,7 +136,10 @@ class Bay extends React.Component {
 		return (
 			<div className="sys" onMouseMove={(e) => this.drag(e)} onMouseUp={this.release}>
 				<div>
-					<Osc hookDown={this.addCable} />
+					{this.props.module && this.props.module.map((el) =>
+						el
+					)}
+
 					{speaker({
 						hookUp: this.setDest
 					})}
