@@ -135,11 +135,9 @@ class Bay extends React.Component {
 	render() {
 		return (
 			<div className="sys" onMouseMove={(e) => this.drag(e)} onMouseUp={this.release}>
-				<div>
-					{this.props.module && this.props.module.map((el) =>
-						el
-					)}
-				</div>
+				{this.props.module && this.props.module.map((el) =>
+					el
+				)}
 
 				{this.state.patch.map((el, i) =>
 					<Cable start={this.state.start} end={this.state.end} mid={this.state.mid} inPoint={el.inPoint} key={i} />
