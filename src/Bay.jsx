@@ -135,7 +135,7 @@ class Bay extends React.Component {
 	render() {
 		return (
 			<div className="sys" onMouseMove={(e) => this.drag(e)} onMouseUp={this.release}>
-				{this.props.module && this.props.module.map((el) =>
+				{this.props.body && this.props.body.map((el) =>
 					el
 				)}
 
