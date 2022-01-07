@@ -1,3 +1,8 @@
+import synth from "./synth";
+import Bay from "./Bay";
+import Osc from "./Osc";
+import speaker from "./speaker";
+
 import "./main.css";
 
 window.ctx = new window.AudioContext() || window.webkitAudioContext();
@@ -12,7 +17,9 @@ function App() {
 			if (window.ctx.state === "suspended") {
 				window.ctx.resume();
 			}
-		}}></div>
+		}}>
+			{synth()}
+		</div>
   );
 }
 
