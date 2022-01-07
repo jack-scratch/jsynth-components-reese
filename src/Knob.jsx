@@ -17,8 +17,7 @@ class Knob extends React.Component {
 			startY: 0,
 			currY: 0,
 			deltaY: 0,
-			prevVal: 0,
-			val: this.props.param.value
+			prevVal: 0
 		};
 		
 		this.baseRot = 90;
@@ -29,12 +28,12 @@ class Knob extends React.Component {
 	}
 
 	grab(e) {
-		this.setState({
+		this.setState((prevState) => this.setState({
 			startY: e.nativeEvent.clientY,
 			currY: e.nativeEvent.clientY,
 			prevVal: this.state.val,
 			down: true
-		});
+		}));
 	}
 
 	release() {
@@ -50,9 +49,9 @@ class Knob extends React.Component {
 				currY: e.nativeEvent.clientY
 			}, () => this.setState({
 				deltaY: this.state.currY - this.state.startY
-			}, () => this.setState({
-				val: this.state.prevVal + this.state.deltaY
-			})));
+			}, () => {
+				this.props.param.value = this.state.prevVal + this.state.deltaY;
+			}));
 		}
 	}
 
@@ -87,7 +86,7 @@ class Knob extends React.Component {
 						</clipPath>
 					</defs>
 
-					<g transform={`translate(${this.props.rad} ${this.props.rad}) rotate(${this.baseRot + (this.state.val * rotStride)})`}>
+					<g transform={`translate(${this.props.rad} ${this.props.rad}) rotate(${this.baseRot + (this.props.param.value * rotStride)})`}>
 						{shape}
 						<line className="tick" x1={this.props.rad} x2={this.props.rad - lineLn} y1={0} y2={0} clipPath="url(#perim)" />
 					</g>
