@@ -139,10 +139,6 @@ class Bay extends React.Component {
 					{this.props.module && this.props.module.map((el) =>
 						el
 					)}
-
-					{speaker({
-						hookUp: this.setDest
-					})}
 				</div>
 
 				{this.state.patch.map((el, i) =>
