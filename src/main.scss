@@ -49,7 +49,10 @@ hr {
 .body {
 	display: flex;
 	flex-direction: column;
+}
 
+.head,
+.body {
 	> * {
 		margin: $margin;
 	}
@@ -142,8 +145,6 @@ text.mark {
 	}
 
 	> div {
-		display: flex;
-
 		.module {
 			flex-grow: 1;
 		}
