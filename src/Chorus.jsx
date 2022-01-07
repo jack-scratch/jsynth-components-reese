@@ -27,7 +27,9 @@ class Chorus extends Source {
 			<Source name={this.props.name} min={this.props.min} max={this.props.max} node={[
 				{
 					name: "Spread",
-					point: this.state.node.frequency
+					point: this.state.node.frequency,
+					min: 1.0,
+					max: 100.0
 				}
 			]} port={[
 				{
@@ -55,9 +57,7 @@ class Chorus extends Source {
 }
 
 Chorus.defaultProps = {
-	name: "Chorus",
-	min: 1.0,
-	max: 100.0
+	name: "Chorus"
 };
 
 export default Chorus;

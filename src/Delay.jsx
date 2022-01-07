@@ -17,7 +17,9 @@ class Delay extends Effect {
 			<Effect name={this.props.name} node={[
 				{
 					name: "Time",
-					point: this.state.node.delayTime
+					point: this.state.node.delayTime,
+					min: 0.01,
+					max: 10.0
 				}
 			]} min={this.props.min} max={this.props.max} />
 		);
@@ -25,9 +27,7 @@ class Delay extends Effect {
 }
 
 Delay.defaultProps = {
-	name: "Delay",
-	min: 0.01,
-	max: 10.0
+	name: "Delay"
 };
 
 export default Delay;

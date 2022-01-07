@@ -27,7 +27,9 @@ class Flanger extends Effect {
 			<Effect name={this.props.name} min={this.props.min} max={this.props.max} node={[
 				{
 					name: "Delay",
-					point: this.state.node.frequency
+					point: this.state.node.frequency,
+					min: 1.0,
+					max: 50.0
 				}
 			]} port={[
 				{
@@ -43,9 +45,7 @@ class Flanger extends Effect {
 }
 
 Flanger.defaultProps = {
-	name: "Flanger",
-	min: 1.0,
-	max: 50.0
+	name: "Flanger"
 };
 
 export default Flanger;

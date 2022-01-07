@@ -16,7 +16,9 @@ class Gain extends Effect {
 			<Effect name="Gain" node={[
 				{
 					name: "Level",
-					point: this.state.node.gain
+					point: this.state.node.gain,
+					min: -12.0,
+					max: 12.0
 				}
 			]} min={this.props.min} max={this.props.max} />
 		);
@@ -24,9 +26,7 @@ class Gain extends Effect {
 }
 
 Gain.defaultProps = {
-	level: 0,
-	min: -12.0,
-	max: 12.0
+	level: 0
 };
 
 export default Gain;
