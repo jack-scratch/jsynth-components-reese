@@ -28,7 +28,8 @@ const synth = () => {
 							<Osc name="Sawtooth" type="sawtooth" />
 							<Osc name="Triangle" type="triangle" />
 						</div>
-					</div>, <div>
+					</div>
+					<div>
 						<div className="head">
 							<Label text="Filter" />
 						</div>
@@ -36,7 +37,8 @@ const synth = () => {
 							<Lowpass />
 							<Highpass />
 						</div>
-					</div>, <div>
+					</div>
+					<div>
 						<div className="head">
 							<Label text="Output" />
 						</div>
