@@ -60,6 +60,8 @@ class Bay extends React.Component {
 	}
 
 	popCable(e) {
+		this.state.patch[this.state.patch.length - 1].inPoint.disconnect();
+
 		let ls = [...this.state.patch];
 
 		ls.splice(ls.length - 1, 1);
