@@ -28,9 +28,22 @@ const synth = () => {
 		osc[i].type = infoSrc[i].type;
 	}
 
+	const infoFx = [
+		{
+			name: "Lowpass",
+			type: "lowpass"
+		}, {
+			name: "Highpass",
+			type: "highpass"
+		}
+	];
+
 	let fx = [];
-	fx.push(window.ctx.createBiquadFilter());
-	fx.push(window.ctx.createBiquadFilter());
+	for (let i = 0; i < 2; i++) {
+		fx.push(window.ctx.createBiquadFilter());
+
+		fx[i].type = infoFx[i].type;
+	}
 
 	return (
 		<div className="sys">
