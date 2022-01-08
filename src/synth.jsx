@@ -77,22 +77,14 @@ const synth = () => {
 						<Label text="Filter" />
 					</div>
 					<div className="body row">
-						<div>
+						{fx.map((el, i) => <div>
 							<div className="head">
-								<Label text="Lowpass" />
+								<Label text={infoFx[i]["name"]} />
 							</div>
 							<div className="body">
-								<Knob param={fx[0].frequency} />
+								<Knob param={el.frequency} key={i} />
 							</div>
-						</div>
-						<div>
-							<div className="head">
-								<Label text="Highpass" />
-							</div>
-							<div className="body">
-								<Knob param={fx[1].frequency} />
-							</div>
-						</div>
+						</div>)}
 					</div>
 				</div>
 			</div>
