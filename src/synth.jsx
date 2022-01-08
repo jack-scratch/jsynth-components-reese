@@ -24,7 +24,7 @@ const synth = () => {
 					<div className="head">
 						<Label text="Bank" />
 					</div>
-					<div className="body row">
+					<div className="row">
 						{bank.map((el, i) => <div>
 							<div className="head">
 								<Label text={el} />
@@ -39,14 +39,14 @@ const synth = () => {
 					<div className="head">
 						<Label text="Filter" />
 					</div>
-					<div className="body row">
+					<div className="row">
 					</div>
 				</div>
 				<div>
 					<div className="head">
 						<Label text="Output" />
 					</div>
-					<div className="body row">
+					<div className="row">
 					</div>
 				</div>
 			</div>
