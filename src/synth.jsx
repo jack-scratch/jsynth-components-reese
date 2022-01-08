@@ -76,7 +76,7 @@ const synth = () => {
 					<div className="head">
 						<Label text="Filter" />
 					</div>
-					<div className="row">
+					<div className="body row">
 						<div>
 							<div className="head">
 								<Label text="Lowpass" />
