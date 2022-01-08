@@ -78,7 +78,7 @@ class Bay extends React.Component {
 	}
 
 	popCable() {
-		this.rmCable(this.state.ls.length - 1);
+		this.rmCable(this.state.patch.length - 1);
 	}
 
 	release(e) {
