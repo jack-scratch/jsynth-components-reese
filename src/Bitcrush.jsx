@@ -17,12 +17,10 @@ class Bitcrush extends Effect {
 		});
 
 		this.state = {
-			hz: 100.0,
 			node: window.ctx.createOscillator()
 		};
 
 		this.state.node.type = this.props.type;
-		this.state.node.frequency.value = this.state.hz;
 	}
 
 	render() {
