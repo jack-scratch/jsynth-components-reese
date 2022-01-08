@@ -15,12 +15,10 @@ class Worklet extends Module {
 
 	render() {
 		return (
-			<Module name={this.props.name} param={[
-				{
-					name: "asdf",
-					point: this.node
-				}
-			]} port={[
+			<Module name={this.props.name} param={this.node.parameters.map((el) => ({
+				name: "asdf",
+				value: el
+			}))} port={[
 				{
 					type: "out",
 					point: this.node
