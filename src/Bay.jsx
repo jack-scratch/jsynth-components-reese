@@ -54,7 +54,14 @@ class Bay extends React.Component {
 					endPoint: null
 				}
 			]
-		}));
+		}), () => {
+			this.setState({
+				mid: [
+					this.midX(),
+					(this.state.end[1] > this.state.start[1] ? this.state.end[1] : this.state.start[1]) * 1.6
+				]
+			});
+		});
 	}
 
 	popCable(e) {
