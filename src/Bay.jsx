@@ -64,7 +64,7 @@ class Bay extends React.Component {
 		});
 	}
 
-	popCable(e) {
+	popCable() {
 		this.state.patch[this.state.patch.length - 1].inPoint.disconnect();
 
 		let ls = [...this.state.patch];
@@ -85,7 +85,7 @@ class Bay extends React.Component {
 					active: false
 				});
 			} else {
-				this.popCable(e);
+				this.popCable();
 			}
 		}
 	}
