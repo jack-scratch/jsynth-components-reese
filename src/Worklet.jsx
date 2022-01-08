@@ -23,7 +23,7 @@ class Worklet extends Module {
 					type: "out",
 					point: this.state.node
 				}
-			]} hookOut={this.props.hookOut} />
+			]} hookOutDown={this.props.hookOutDown} />
 		);
 	}
 }
