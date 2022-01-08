@@ -30,6 +30,8 @@ class Bay extends React.Component {
 		this.rmCable = this.rmCable.bind(this);
 		this.popCable = this.popCable.bind(this);
 
+		this.detachCable = this.detachCable.bind(this);
+
 		this.release = this.release.bind(this);
 
 		this.setDest = this.setDest.bind(this);
@@ -79,6 +81,16 @@ class Bay extends React.Component {
 
 	popCable() {
 		this.rmCable(this.state.patch.length - 1);
+	}
+
+	detachCable(e, ref, node) {
+		this.popCable();
+
+		this.pushCable(e, ref, node);
+
+		this.setState({
+			active: true
+		});
 	}
 
 	release(e) {
@@ -148,7 +160,7 @@ class Bay extends React.Component {
 				{this.props.module && this.props.module.map((el, i) =>
 					React.cloneElement(el, {
 						hookOutDown: this.pushCable,
-						hookInDown: this.popCable,
+						hookInDown: this.detachCable,
 						hookInUp: this.setDest,
 						key: i
 					})
