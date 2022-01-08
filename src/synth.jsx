@@ -21,11 +21,13 @@ const synth = () => {
 		}
 	];
 
-	let osc = [];
-	for (let i = 0; i < 4; i++) {
-		osc.push(window.ctx.createOscillator());
+	let bank = [];
+	for (let i = 0; i < infoSrc.length; i++) {
+		let osc = window.ctx.createOscillator();
 
-		osc[i].type = infoSrc[i].type;
+		osc.type = infoSrc[i].type;
+
+		bank.push(osc);
 	}
 
 	const infoFx = [
@@ -39,10 +41,12 @@ const synth = () => {
 	];
 
 	let fx = [];
-	for (let i = 0; i < 2; i++) {
-		fx.push(window.ctx.createBiquadFilter());
+	for (let i = 0; i < infoFx.length; i++) {
+		let filter = window.ctx.createBiquadFilter();
 
-		fx[i].type = infoFx[i].type;
+		filter.type = infoFx[i].type;
+
+		fx.push(filter);
 	}
 
 	return (
@@ -57,7 +61,7 @@ const synth = () => {
 							<Label text="Bank" />
 						</div>
 						<div className="row">
-							{osc.map((el, i) => <div>
+							{bank.map((el, i) => <div>
 								<div className="head">
 									<Label text={infoSrc[i]["name"]} />
 								</div>
