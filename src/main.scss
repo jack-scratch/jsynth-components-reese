@@ -41,6 +41,7 @@ hr {
 	height: $stroke;
 	background-color: $fg;
 	border: none;
+	border-radius: calc(#{$stroke} / 2);
 }
 
 #app {
