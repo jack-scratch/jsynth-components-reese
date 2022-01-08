@@ -4,16 +4,12 @@ class Worklet extends Module {
 	constructor(props) {
 		super(props);
 
-		this.state = {
-			node: null
-		};
+		this.node = null;
 	}
 
 	componentDidMount() {
 		window.ctx.audioWorklet.addModule('dsp.js').then(() => {
-			this.setState({
-				node: new AudioWorkletNode(window.ctx, "sin")
-			});
+			this.node = new AudioWorkletNode(window.ctx, "sin");
 		});
 	}
 
@@ -22,12 +18,12 @@ class Worklet extends Module {
 			<Module name={this.props.name} param={[
 				{
 					name: "asdf",
-					point: this.state.node
+					point: this.node
 				}
 			]} port={[
 				{
 					type: "out",
-					point: this.state.node
+					point: this.node
 				}
 			]} hookOutDown={this.props.hookOutDown} />
 		);
