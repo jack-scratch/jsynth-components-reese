@@ -24,7 +24,7 @@ class Port extends React.Component {
 class In extends React.Component {
 	render() {
 		return (
-			<Port type="in" point={this.props.point} hookDown={this.props.hookOutDown} hookUp={this.props.hookInUp} hookEnter={this.props.hookEnter} />
+			<Port type="in" point={this.props.point} hookDown={this.props.hookOutDown} hookUp={this.props.hookInUp} hookEnter={this.props.hookInEnter} />
 		);
 	}
 }
@@ -32,7 +32,7 @@ class In extends React.Component {
 class Out extends React.Component {
 	render() {
 		return (
-			<Port type="out" point={this.props.point} hookDown={this.props.hookOutDown} hookEnter={this.props.hookEnter} />
+			<Port type="out" point={this.props.point} hookDown={this.props.hookOutDown} hookInEnter={this.props.hookInEnter} />
 		);
 	}
 }
