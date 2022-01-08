@@ -60,7 +60,7 @@ const synth = () => {
 						<div className="head">
 							<Label text="Bank" />
 						</div>
-						<div className="row">
+						<div className="body row">
 							{bank.map((el, i) => <div>
 								<div className="head">
 									<Label text={infoSrc[i]["name"]} />
