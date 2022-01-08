@@ -10,7 +10,7 @@ import speaker from "./speaker";
 
 const synth = () => {
 	return (
-		<Bay body={[
+		<Bay module={[
 			<div>
 				<div className="head">
 					<div className="body">
