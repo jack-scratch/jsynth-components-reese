@@ -8,7 +8,7 @@ class Worklet extends Module {
 	}
 
 	componentDidMount() {
-		window.ctx.audioWorklet.addModule('dsp.js').then(() => {
+		window.ctx.audioWorklet.addModule("dsp.js").then(() => {
 			this.node = new AudioWorkletNode(window.ctx, "sin");
 		});
 	}
