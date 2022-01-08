@@ -142,8 +142,8 @@ class Bay extends React.Component {
 			<div className="sys" onMouseMove={(e) => this.drag(e)} onMouseUp={this.release}>
 				{this.props.module && this.props.module.map((el, i) =>
 					React.cloneElement(el, {
-						hookDown: this.addCable,
-						hookUp: this.setDest,
+						hookOut: this.addCable,
+						hookIn: this.setDest,
 						key: i
 					})
 				)}

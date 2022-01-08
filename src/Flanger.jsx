@@ -39,7 +39,7 @@ class Flanger extends Effect {
 					type: "out",
 					point: this.state.node
 				}
-			]} hookDown={this.props.hookDown} marked />
+			]} hookOut={this.props.hookOut} marked />
 		);
 	}
 }

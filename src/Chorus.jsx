@@ -51,7 +51,7 @@ class Chorus extends Source {
 					type: "out",
 					point: this.state.node
 				}
-			]} hookDown={this.props.hookDown} marked />
+			]} hookOut={this.props.hookOut} marked />
 		);
 	}
 }

@@ -20,7 +20,7 @@ class Cable extends React.Component {
 			active: false
 		});
 
-		this.props.hookUp();
+		this.props.hookIn();
 	}
 
 	render() {
