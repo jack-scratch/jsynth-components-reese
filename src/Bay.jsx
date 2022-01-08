@@ -27,6 +27,7 @@ class Bay extends React.Component {
 		};
 
 		this.pushCable = this.pushCable.bind(this);
+		this.rmCable = this.rmCable.bind(this);
 		this.popCable = this.popCable.bind(this);
 
 		this.release = this.release.bind(this);
@@ -64,16 +65,20 @@ class Bay extends React.Component {
 		});
 	}
 
-	popCable() {
+	rmCable(i) {
 		this.state.patch[this.state.patch.length - 1].inPoint.disconnect();
 
 		let ls = [...this.state.patch];
 
-		ls.splice(ls.length - 1, 1);
+		ls.splice(i, 1);
 
 		this.setState((prevState) => ({
 			patch: ls
 		}));
+	}
+
+	popCable() {
+		this.rmCable(this.state.ls.length - 1);
 	}
 
 	release(e) {
