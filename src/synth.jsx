@@ -21,15 +21,6 @@ const synth = () => {
 		}
 	];
 
-	let bank = [];
-	for (let i = 0; i < infoSrc.length; i++) {
-		let osc = window.ctx.createOscillator();
-
-		osc.type = infoSrc[i].type;
-
-		bank.push(osc);
-	}
-
 	const infoFx = [
 		{
 			name: "Lowpass",
@@ -39,6 +30,15 @@ const synth = () => {
 			type: "highpass"
 		}
 	];
+
+	let bank = [];
+	for (let i = 0; i < infoSrc.length; i++) {
+		let osc = window.ctx.createOscillator();
+
+		osc.type = infoSrc[i].type;
+
+		bank.push(osc);
+	}
 
 	let fx = [];
 	for (let i = 0; i < infoFx.length; i++) {
