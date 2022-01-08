@@ -45,13 +45,6 @@ const synth = () => {
 					<div className="row">
 					</div>
 				</div>
-				<div>
-					<div className="head">
-						<Label text="Output" />
-					</div>
-					<div className="row">
-					</div>
-				</div>
 			</div>
 		</div>
 	);
