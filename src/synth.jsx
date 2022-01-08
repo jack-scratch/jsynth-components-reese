@@ -28,12 +28,12 @@ const synth = () => {
 						<Label text="Bank" />
 					</div>
 					<div className="row">
-						{name.map((el, i) => <div>
+						{osc.map((el, i) => <div>
 							<div className="head">
-								<Label text={el} />
+								<Label text={name[i]} />
 							</div>
 							<div className="body">
-								<Knob param={osc[i].frequency} key={i} />
+								<Knob param={el.frequency} key={i} />
 							</div>
 						</div>)}
 					</div>
