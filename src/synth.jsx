@@ -5,16 +5,27 @@ import Label from "./Label";
 import speaker from "./speaker";
 
 const synth = () => {
-	const name = [
-		"Sine",
-		"Square",
-		"Sawtooth",
-		"Triangle"
+	const infoSrc = [
+		{
+			name: "Sine",
+			type: "sine"
+		}, {
+			name: "Square",
+			type: "square"
+		}, {
+			name: "Sawtooth",
+			type: "sawtooth"
+		}, {
+			name: "Triangle",
+			type: "triangle"
+		}
 	];
 
 	let osc = [];
 	for (let i = 0; i < 4; i++) {
 		osc.push(window.ctx.createOscillator());
+
+		osc[i].type = infoSrc[i].type;
 	}
 
 	let fx = [];
@@ -35,7 +46,7 @@ const synth = () => {
 						<div className="row">
 							{osc.map((el, i) => <div>
 								<div className="head">
-									<Label text={name[i]} />
+									<Label text={infoSrc[i]["name"]} />
 								</div>
 								<div className="body">
 									<Knob param={el.frequency} key={i} />
