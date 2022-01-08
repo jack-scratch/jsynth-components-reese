@@ -17,6 +17,9 @@ const synth = () => {
 		osc.push(window.ctx.createOscillator());
 	}
 
+	let lp = window.ctx.createBiquadFilter();
+	let hp = window.ctx.createBiquadFilter();
+
 	return (
 		<div className="sys">
 			<div className="head">
@@ -43,6 +46,22 @@ const synth = () => {
 						<Label text="Filter" />
 					</div>
 					<div className="row">
+						<div>
+							<div className="head">
+								<Label text="Lowpass" />
+							</div>
+							<div className="body">
+								<Knob param={lp.frequency} />
+							</div>
+						</div>
+						<div>
+							<div className="head">
+								<Label text="Highpass" />
+							</div>
+							<div className="body">
+								<Knob param={hp.frequency} />
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
