@@ -21,7 +21,7 @@ class Delay extends Effect {
 					min: 0.01,
 					max: 10.0
 				}
-			]} min={this.props.min} max={this.props.max} />
+			]} />
 		);
 	}
 }

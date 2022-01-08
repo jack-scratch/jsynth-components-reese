@@ -33,7 +33,7 @@ class Bitcrush extends Effect {
 					point: this.state.node.frequency,
 					quant: 6
 				}
-			]} min={this.props.min} max={this.props.max} />
+			]} />
 		);
 	}
 }

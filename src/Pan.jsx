@@ -19,7 +19,7 @@ class Pan extends Effect {
 					name: "Rate",
 					point: this.state.node.pan
 				}
-			]} min={this.props.min} max={this.props.max} />
+			]} />
 		);
 	}
 }

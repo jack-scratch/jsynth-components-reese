@@ -13,7 +13,7 @@ class Worklet extends Module {
 
 	render() {
 		return (
-			<Module name={this.props.name} min={this.props.min} max={this.props.max} param={[
+			<Module name={this.props.name} param={[
 				{
 					name: "asdf",
 					point: this.state.node

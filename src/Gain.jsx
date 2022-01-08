@@ -20,7 +20,7 @@ class Gain extends Effect {
 					min: -12.0,
 					max: 12.0
 				}
-			]} min={this.props.min} max={this.props.max} />
+			]} />
 		);
 	}
 }

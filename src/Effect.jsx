@@ -11,7 +11,7 @@ class Effect extends Module {
 					type: "out",
 					point: this.props.param
 				}
-			]} min={this.props.min} max={this.props.max} />
+			]} />
 		);
 	}
 }

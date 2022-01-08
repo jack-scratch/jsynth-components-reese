@@ -27,7 +27,7 @@ class Env extends Effect {
 					name: "Release",
 					point: this.state.node.frequency
 				}
-			]} min={this.props.min} max={this.props.max} />
+			]} />
 		);
 	}
 }

@@ -13,7 +13,7 @@ class Filter extends Effect {
 
 	render() {
 		return (
-			<Effect name={this.props.name} param={this.props.param} min={this.props.min} max={this.props.max} />
+			<Effect name={this.props.name} param={this.props.param} />
 		);
 	}
 }

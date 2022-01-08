@@ -22,7 +22,7 @@ class Feedback extends Effect {
 					name: "Iterations",
 					point: this.state.node.frequency
 				}
-			]} min={this.props.min} max={this.props.max} />
+			]} />
 		);
 	}
 }
