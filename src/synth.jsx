@@ -5,14 +5,17 @@ import Label from "./Label";
 import speaker from "./speaker";
 
 const synth = () => {
-	let osc = window.ctx.createOscillator();
-
 	const bank = [
 		"Sine",
 		"Square",
 		"Sawtooth",
 		"Triangle"
 	];
+
+	let osc = [];
+	for (let i = 0; i < 4; i++) {
+		osc.push(window.ctx.createOscillator());
+	}
 
 	return (
 		<div className="sys">
@@ -30,7 +33,7 @@ const synth = () => {
 								<Label text={el} />
 							</div>
 							<div className="body">
-								<Knob param={osc.frequency} key={i} />
+								<Knob param={osc[i].frequency} key={i} />
 							</div>
 						</div>)}
 					</div>
