@@ -1,14 +1,19 @@
 import React from "react";
-import Bay from "./Bay";
 import Osc from "./Osc";
+import Knob from "./Knob";
 import Label from "./Label";
-import {
-	Lowpass,
-	Highpass
-} from "./Filter";
 import speaker from "./speaker";
 
 const synth = () => {
+	let osc = window.ctx.createOscillator();
+
+	const bank = [
+		"Sine",
+		"Square",
+		"Sawtooth",
+		"Triangle"
+	];
+
 	return (
 		<div className="sys">
 			<div className="head">
@@ -20,12 +25,14 @@ const synth = () => {
 						<Label text="Bank" />
 					</div>
 					<div className="body row">
-						<Bay module={[
-							<Osc name="Sine" type="sine" />,
-							<Osc name="Square" type="square" />,
-							<Osc name="Sawtooth" type="sawtooth" />,
-							<Osc name="Triangle" type="triangle" />
-						]} />
+						{bank.map((el, i) => <div>
+							<div className="head">
+								<Label text={el} />
+							</div>
+							<div className="body">
+								<Knob param={osc.frequency} key={i} />
+							</div>
+						</div>)}
 					</div>
 				</div>
 				<div>
@@ -33,10 +40,6 @@ const synth = () => {
 						<Label text="Filter" />
 					</div>
 					<div className="body row">
-						<Bay module={[
-							<Lowpass />,
-							<Highpass />
-						]} />
 					</div>
 				</div>
 				<div>
@@ -44,9 +47,6 @@ const synth = () => {
 						<Label text="Output" />
 					</div>
 					<div className="body row">
-						<Bay module={[
-							speaker()
-						]} />
 					</div>
 				</div>
 			</div>
