@@ -29,9 +29,7 @@ class Worklet extends Module {
 }
 
 Worklet.defaultProps = {
-	name: "Oscillator",
-	min: 1.0,
-	max: 1000.0
+	name: "Oscillator"
 };
 
 export default Worklet;
