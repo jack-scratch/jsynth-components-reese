@@ -27,18 +27,20 @@ const synth = () => {
 			</div>
 			<div className="body">
 				<div>
-					<div className="head">
-						<Label text="Bank" />
-					</div>
-					<div className="row">
-						{osc.map((el, i) => <div>
-							<div className="head">
-								<Label text={name[i]} />
-							</div>
-							<div className="body">
-								<Knob param={el.frequency} key={i} />
-							</div>
-						</div>)}
+					<div className="group">
+						<div className="head">
+							<Label text="Bank" />
+						</div>
+						<div className="row">
+							{osc.map((el, i) => <div>
+								<div className="head">
+									<Label text={name[i]} />
+								</div>
+								<div className="body">
+									<Knob param={el.frequency} key={i} />
+								</div>
+							</div>)}
+						</div>
 					</div>
 				</div>
 				<div>
