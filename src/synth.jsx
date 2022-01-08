@@ -5,7 +5,7 @@ import Label from "./Label";
 import speaker from "./speaker";
 
 const synth = () => {
-	const bank = [
+	const name = [
 		"Sine",
 		"Square",
 		"Sawtooth",
@@ -28,7 +28,7 @@ const synth = () => {
 						<Label text="Bank" />
 					</div>
 					<div className="row">
-						{bank.map((el, i) => <div>
+						{name.map((el, i) => <div>
 							<div className="head">
 								<Label text={el} />
 							</div>
