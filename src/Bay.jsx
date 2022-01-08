@@ -148,6 +148,7 @@ class Bay extends React.Component {
 				{this.props.module && this.props.module.map((el, i) =>
 					React.cloneElement(el, {
 						hookOutDown: this.pushCable,
+						hookInDown: this.popCable,
 						hookInUp: this.setDest,
 						key: i
 					})

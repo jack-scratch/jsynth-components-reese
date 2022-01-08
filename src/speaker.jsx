@@ -7,7 +7,7 @@ const speaker = (props) => {
 				type: "in",
 				point: window.ctx.destination
 			}
-		]} hookInUp={props ? props.hookInUp : null} />
+		]} hookInDown={props ? props.hookinDown : null} hookInUp={props ? props.hookInUp : null} />
 	);
 }
 
