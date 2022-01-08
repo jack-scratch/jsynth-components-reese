@@ -8,6 +8,7 @@ class Bitcrush extends Effect {
 			let node = new AudioWorkletNode(window.ctx, "bitcrush");
 
 			let paramBitDepth = node.parameters.get("bitDepth");
+
 			paramBitDepth.setValueAtTime(1.0, 0.0);
 
 			let paramReduction = node.parameters.get("frequencyReduction");
