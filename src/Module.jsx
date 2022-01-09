@@ -24,7 +24,7 @@ class Module extends React.Component {
 								</div>
 								<div className="body">
 									<div className="body param">
-										<In param={el.point} hookInDown={this.props.hookInDown} hookOutDown={this.props.hookOutDown} hookInEnter={this.props.hookInEnter} />
+										<In param={el.point} hookInDown={this.props.hookInDown} hookOutDown={this.props.hookOutDown} />
 										<Knob param={el.point} min={el.min ? el.min : el.point.minValue} max={el.max ? el.max : el.point.maxValue} marked={this.props.marked} unit={el.unit} quant={el.quant ? el.quant : null} />
 									</div>
 								</div>
@@ -34,7 +34,7 @@ class Module extends React.Component {
 					<div className="body">
 						<div className="io">
 							{this.props.port.map((el) =>
-								el.type === "in" ? <In point={el.point} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookInEnter={this.props.hookInEnter} key={el.type} /> : <Out point={el.point} hookOutDown={this.props.hookOutDown} hookInEnter={this.props.hookInEnter} key={el.type} />
+								el.type === "in" ? <In point={el.point} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} key={el.type} /> : <Out point={el.point} hookOutDown={this.props.hookOutDown} key={el.type} />
 							)}
 						</div>
 					</div>
