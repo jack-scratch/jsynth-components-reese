@@ -1,7 +1,7 @@
 const unit = {
-	"freq": "Hz",
+	"freq": " Hz",
 	"cents": "%",
-	"level": "dB",
+	"level": " dB",
 	"time": [
 		"ms",
 		"s"
@@ -13,9 +13,9 @@ const unit = {
 };
 
 const chord = [ 
-	"Maj",
-	"Min",
-	"Dim"
+	" Maj",
+	" Min",
+	" Dim"
 ];
 
 export {
