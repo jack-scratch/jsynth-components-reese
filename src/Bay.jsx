@@ -96,8 +96,6 @@ class Bay extends React.Component {
 	release(e) {
 		if (this.state.active) {
 			if (this.state.patch[this.state.patch.length - 1].inPoint && this.state.patch[this.state.patch.length - 1].endPoint) {
-				this.state.patch[this.state.patch.length - 1].inPoint.connect(this.state.patch[this.state.patch.length - 1].endPoint);
-
 				this.setState({
 					active: false
 				});
