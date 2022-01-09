@@ -5,9 +5,6 @@ import {
 } from "./Port";
 import Label from "./Label";
 import Knob from "./Knob";
-import {
-	unit
-} from "./fmt";
 
 import "./Module.css";
 
