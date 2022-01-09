@@ -1,6 +1,6 @@
 const unit = {
 	"freq": "Hz",
-	"cents": "Cents",
+	"cents": "%",
 	"level": "dB",
 	"time": [
 		"ms",

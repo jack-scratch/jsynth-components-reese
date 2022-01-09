@@ -5,6 +5,9 @@ import {
 	rotDeg,
 	lineLn
 } from "./layout";
+import {
+	unit
+} from "./fmt";
 
 import "./Knob.css";
 
@@ -93,8 +96,8 @@ class Knob extends React.Component {
 
 					{this.props.marked && [...Array(this.props.marked).keys()].map((i) =>
 						<g>
-							<text className="mark" textAnchor="end" x={-(margin * 2) + this.props.rad} y={(margin * 2) + diam}>{this.props.min}{this.props.unit && ` ${this.props.unit}`}</text>
-							<text className="mark" textAnchor="start" x={(margin * 2) + this.props.rad} y={(margin * 2) + diam}>{this.props.max}{this.props.unit && ` ${this.props.unit}`}</text>
+							<text className="mark" textAnchor="end" x={-(margin * 2) + this.props.rad} y={(margin * 2) + diam}>{this.props.min}{this.props.unit && ` ${unit[this.props.unit]}`}</text>
+							<text className="mark" textAnchor="start" x={(margin * 2) + this.props.rad} y={(margin * 2) + diam}>{this.props.max}{this.props.unit && ` ${unit[this.props.unit]}`}</text>
 						</g>
 					)}
 				</svg>

@@ -21,12 +21,14 @@ class Osc extends Source {
 					name: "Frequency",
 					point: this.node.frequency,
 					min: 1.0,
-					max: 1000.0
+					max: 1000.0,
+					unit: "freq"
 				}, {
 					name: "Detune",
 					point: this.node.detune,
 					min: -100.0,
-					max: 100.0
+					max: 100.0,
+					unit: "cents"
 				}
 			]} port={[
 				{
