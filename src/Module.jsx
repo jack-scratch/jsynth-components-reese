@@ -27,7 +27,7 @@ class Module extends React.Component {
 								</div>
 								<div className="body">
 									<div className="body param">
-										<In param={this.props.param} hookInDown={this.props.hookInDown} hookOutDown={this.props.hookOutDown} hookInEnter={this.props.hookInEnter} />
+										<In param={el.point} hookInDown={this.props.hookInDown} hookOutDown={this.props.hookOutDown} hookInEnter={this.props.hookInEnter} />
 										<Knob param={el.point} min={el.min ? el.min : el.point.minValue} max={el.max ? el.max : el.point.maxValue} marked={this.props.marked} unit={unit["freq"]} quant={el.quant ? el.quant : null} />
 									</div>
 								</div>
