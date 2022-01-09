@@ -31,12 +31,12 @@ class Knob extends React.Component {
 	}
 
 	grab(e) {
-		this.setState((prevState) => this.setState({
+		this.setState(this.setState((prevState) => ({
 			startY: e.nativeEvent.clientY,
 			currY: e.nativeEvent.clientY,
 			prevVal: this.props.param.value,
 			down: true
-		}));
+		})));
 	}
 
 	release() {
