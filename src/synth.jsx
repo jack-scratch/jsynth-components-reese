@@ -1,8 +1,6 @@
 import React from "react";
-import Osc from "./Osc";
 import Knob from "./Knob";
 import Label from "./Label";
-import speaker from "./speaker";
 
 const synth = () => {
 	const infoSrc = [
