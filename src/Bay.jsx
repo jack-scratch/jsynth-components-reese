@@ -39,12 +39,12 @@ class Bay extends React.Component {
 		this.drag = this.drag.bind(this);
 	}
 
-	pushCable(e, ref, node) {
+	pushCable(e, refer, node) {
 		this.setState((prevState) => ({
 			active: true,
 			start: [
-				ref.current.offsetLeft + nutRad + portRad,
-				ref.current.offsetTop + nutRad + portRad
+				refer.current.offsetLeft + nutRad + portRad,
+				refer.current.offsetTop + nutRad + portRad
 			],
 			end: [
 				e.nativeEvent.clientX,
@@ -83,7 +83,7 @@ class Bay extends React.Component {
 		this.rmCable(this.state.patch.length - 1);
 	}
 
-	detachCable(e, ref, node) {
+	detachCable(e, refer, node) {
 		this.state.patch[this.state.patch.length - 1].inPoint.disconnect();
 
 		this.state.patch[this.state.patch.length - 1].endPoint = null;
@@ -107,15 +107,15 @@ class Bay extends React.Component {
 		}
 	}
 
-	setDest(e, ref, node) {
+	setDest(e, refer, node) {
 		this.state.patch[this.state.patch.length - 1].endPoint = node;
 
 		this.state.patch[this.state.patch.length - 1].inPoint.connect(this.state.patch[this.state.patch.length - 1].endPoint);
 
 		this.setState({
 			end: [
-				ref.current.offsetLeft + nutRad + portRad,
-				ref.current.offsetTop + nutRad + portRad
+				refer.current.offsetLeft + nutRad + portRad,
+				refer.current.offsetTop + nutRad + portRad
 			]
 		});
 	}
