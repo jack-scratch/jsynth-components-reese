@@ -8,24 +8,13 @@ class Cable extends React.Component {
 
 		this.state = {
 			inPoint: this.props.inPoint,
-			outPoint: null,
-			active: false
+			outPoint: null
 		};
-
-		this.release = this.release.bind(this);
-	}
-
-	release() {
-		this.setState({
-			active: false
-		});
-
-		this.props.hookInUp();
 	}
 
 	render() {
 		return (
-			<svg className="cable" onMouseUp={this.release}>
+			<svg className="cable">
 				<path d={`M ${this.props.start[0]},${this.props.start[1]} C ${this.props.start[0]},${this.props.start[1]} ${this.props.mid[0]},${this.props.mid[1]} ${this.props.end[0]},${this.props.end[1]}`} />
 			</svg>
 		);
