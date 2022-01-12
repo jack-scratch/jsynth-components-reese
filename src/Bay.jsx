@@ -119,19 +119,9 @@ class Bay extends React.Component {
 	}
 
 	midX() {
-		let first;
-		let snd;
-		if (this.state.end[0] > this.state.start[0]) {
-			first = this.state.start[0];
-			snd = this.state.end[0];
-		} else {
-			first = this.state.end[0];
-			snd = this.state.start[0];
-		}
+		let delta = this.state.end[0] - this.state.start[0];
 
-		let delta = snd - first;
-
-		return first + (delta / 2);
+		return this.state.start[0] + (delta / 2);
 	}
 
 	drag(e) {
