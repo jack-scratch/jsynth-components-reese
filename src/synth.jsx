@@ -63,8 +63,10 @@ const synth = () => {
 								<div className="head">
 									<Label text={infoSrc[i]["name"]} />
 								</div>
-								<div className="body">
-									<Knob param={el.frequency} key={i} />
+								<div className="ctrl">
+									<div className="body">
+										<Knob param={el.frequency} key={i} />
+									</div>
 								</div>
 							</div>)}
 						</div>
@@ -79,8 +81,10 @@ const synth = () => {
 							<div className="head">
 								<Label text={infoFx[i]["name"]} />
 							</div>
-							<div className="body">
-								<Knob param={el.frequency} key={i} />
+							<div className="ctrl">
+								<div className="body">
+									<Knob param={el.frequency} key={i} />
+								</div>
 							</div>
 						</div>)}
 					</div>
