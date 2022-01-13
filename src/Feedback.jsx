@@ -10,7 +10,6 @@ class Feedback extends Effect {
 		});
 
 		this.state = {
-			hz: 100.0,
 			node: window.ctx.createOscillator()
 		};
 	}
