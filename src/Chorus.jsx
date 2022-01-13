@@ -9,7 +9,9 @@ class Chorus extends Source {
 		if (this.props.type) {
 			this.node.type = this.props.type;
 		}
+	}
 
+	componentDidMount() {
 		this.node.start();
 	}
 

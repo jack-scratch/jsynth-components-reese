@@ -8,7 +8,9 @@ class Op extends Source {
 		this.amp = window.ctx.createGain();
 
 		this.osc.type = this.props.type;
+	}
 
+	componentDidMount() {
 		this.osc.connect(this.amp);
 
 		this.osc.start();
