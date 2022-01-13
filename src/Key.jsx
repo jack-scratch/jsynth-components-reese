@@ -8,7 +8,7 @@ import {
 
 import "./Key.css";
 
-class Key extends Module {
+class Key extends React.Component {
 	constructor(props) {
 		super(props);
 
