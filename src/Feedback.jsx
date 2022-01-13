@@ -6,7 +6,7 @@ class Feedback extends Effect {
 		super(props);
 
 		window.ctx.audioWorklet.addModule("worklet/dsp.js").then(() => {
-			let node = new AudioWorkletNode(window.ctx, "feedback");
+			this.node = new AudioWorkletNode(window.ctx, "feedback");
 		});
 
 		this.state = {
