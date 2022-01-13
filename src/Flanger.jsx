@@ -5,8 +5,7 @@ class Flanger extends Effect {
 		super(props);
 
 		this.state = {
-			node: window.ctx.createOscillator(),
-			hz: 0.0
+			node: window.ctx.createOscillator()
 		};
 
 		if (this.props.type) {
@@ -14,12 +13,6 @@ class Flanger extends Effect {
 		}
 
 		this.state.node.start();
-	}
-
-	componentDidMount() {
-		this.setState({
-			hz: this.state.node.frequency.value
-		});
 	}
 
 	render() {
