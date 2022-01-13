@@ -7,17 +7,17 @@ class Led extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this.canvRef = React.createRef();
+		this.refer = React.createRef();
 
 		this.clear = this.clear.bind(this);
 		this.draw = this.draw.bind(this);
 	}
 
 	componentDidMount() {
-		this.canvRef.current.width = this.props.wd;
-		this.canvRef.current.height = this.props.ht;
+		this.refer.current.width = this.props.wd;
+		this.refer.current.height = this.props.ht;
 
-		this.window.ctx = this.canvRef.current.getContext("2d");
+		this.window.ctx = this.refer.current.getContext("2d");
 
 		this.clear();
 
@@ -27,7 +27,7 @@ class Led extends React.Component {
 	clear() {
 		this.window.ctx.fillStyle = light["inert"];
 
-		this.window.ctx.fillRect(0, 0, this.canvRef.current.width, this.canvRef.current.height);
+		this.window.ctx.fillRect(0, 0, this.refer.current.width, this.refer.current.height);
 	}
 
 	draw() {
@@ -36,7 +36,7 @@ class Led extends React.Component {
 
 	render() {
 		return (
-			<canvas ref={this.canvRef} />
+			<canvas ref={this.refer} />
 		);
 	}
 }
