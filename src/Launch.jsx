@@ -22,7 +22,7 @@ class Launch extends React.Component {
 									<tr key={`"row-${j}"`}>
 										{[...Array(this.props.x).keys()].map((i) =>
 											<td>
-												<Btn wd="80" ht="80" name={1 + ((j * this.props.y) + i)} key={`btn-${i}`} />
+												<Btn wd={80} ht={80} name={1 + ((j * this.props.y) + i)} key={`btn-${i}`} />
 											</td>
 										)}
 									</tr>
