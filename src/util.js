@@ -1,13 +1,12 @@
 import {
 	oct
 } from "./math";
+import {
+	sign
+} from "./fmt";
 
 function fmt(i, off) {
 	const base = 'A';
-	const sign = {
-		'sharp': '&#9839',
-		'flat': '&#9837'
-	};
 
 	const mark = {
 		'sharp': false,
