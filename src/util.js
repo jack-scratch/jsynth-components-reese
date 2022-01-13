@@ -6,29 +6,29 @@ import {
 } from "./fmt";
 
 function fmt(i, off) {
-	const base = 'A';
+	const base = "A";
 
 	const mark = {
-		'sharp': false,
-		'flat': true
+		"sharp": false,
+		"flat": true
 	};
 
-	const ws = ' ';
-	const sep = '/';
+	const ws = " ";
+	const sep = "/";
 
-	let c = '';
+	let c = "";
 	if (off) {
 		let relFlat = (i + 1) % (oct - 1);
 		let relSharp = i % (oct - 1);
 
 		let note = [];
 
-		if (mark['flat']) {
-			note.push(String.fromCharCode(base.charCodeAt() + relFlat) + '<sub>' + sign['flat'] + '</sub>');
+		if (mark["flat"]) {
+			note.push(String.fromCharCode(base.charCodeAt() + relFlat) + "<sub>" + sign["flat"] + "</sub>");
 		}
 
-		if (mark['sharp']) {
-			note.push(String.fromCharCode(base.charCodeAt() + relSharp) + sign['sharp']);
+		if (mark["sharp"]) {
+			note.push(String.fromCharCode(base.charCodeAt() + relSharp) + sign["sharp"]);
 		}
 
 		let tok = [];
@@ -40,7 +40,7 @@ function fmt(i, off) {
 			}
 		}
 
-		let serial = '';
+		let serial = "";
 		for (let i = 0; i < tok.length; i++) {
 			serial += tok[i];
 
