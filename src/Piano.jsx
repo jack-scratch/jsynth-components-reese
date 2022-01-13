@@ -1,4 +1,4 @@
-import Module from "./Module";
+import React from "react";
 import Key from "./Key";
 import {
 	Out
@@ -9,7 +9,7 @@ import {
 
 import "./Piano.css";
 
-class Piano extends Module {
+class Piano extends React.Component {
 	render() {
 		return (
 			<div className="board">
