@@ -3,7 +3,7 @@ import Nut from "./Nut";
 
 class Port extends React.Component {
 	constructor(props) {
-		super(props);
+		super();
 
 		this.refer = React.createRef();
 	}

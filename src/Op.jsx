@@ -2,7 +2,7 @@ import Source from "./Source";
 
 class Op extends Source {
 	constructor(props) {
-		super(props);
+		super();
 
 		this.node.osc = window.ctx.createOscillator();
 		this.node.amp = window.ctx.createGain();

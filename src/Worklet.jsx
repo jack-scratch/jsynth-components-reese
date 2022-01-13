@@ -2,7 +2,7 @@ import Module from "./Module";
 
 class Worklet extends Module {
 	constructor(props) {
-		super(props);
+		super();
 
 		this.node = null;
 	}

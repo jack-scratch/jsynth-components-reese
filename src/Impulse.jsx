@@ -8,7 +8,7 @@ import {
 
 class Impulse extends React.Component {
 	constructor(props) {
-		super(props);
+		super();
 
 		this.state = {
 			buff: null

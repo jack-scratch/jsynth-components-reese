@@ -3,7 +3,7 @@ import Effect from "./Effect";
 
 class Feedback extends Effect {
 	constructor(props) {
-		super(props);
+		super();
 
 		window.ctx.audioWorklet.addModule("worklet/dsp.js").then(() => {
 			this.node.worklet = new AudioWorkletNode(window.ctx, "feedback");

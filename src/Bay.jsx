@@ -7,7 +7,7 @@ import {
 
 class Bay extends React.Component {
 	constructor(props) {
-		super(props);
+		super();
 
 		this.state = {
 			patch: [],

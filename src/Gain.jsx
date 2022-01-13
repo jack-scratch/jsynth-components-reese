@@ -2,7 +2,7 @@ import Effect from "./Effect";
 
 class Gain extends Effect {
 	constructor(props) {
-		super(props);
+		super();
 
 		this.node.main = window.ctx.createGain();
 

@@ -13,7 +13,7 @@ import "./Knob.css";
 
 class Knob extends React.Component {
 	constructor(props) {
-		super(props);
+		super();
 
 		this.baseRot = 90;
 

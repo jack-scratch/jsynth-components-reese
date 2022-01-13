@@ -15,7 +15,7 @@ import {
 
 class Sample extends React.Component {
 	constructor(props) {
-		super(props);
+		super();
 
 		this.buff = [
 			"Bamboo",

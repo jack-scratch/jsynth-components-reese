@@ -7,7 +7,7 @@ import {
 
 class Meter extends React.Component {
 	constructor(props) {
-		super(props);
+		super();
 
 		this.wd = 16;
 	}

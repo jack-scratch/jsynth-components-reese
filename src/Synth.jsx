@@ -4,7 +4,7 @@ import Label from "./Label";
 
 class Synth extends React.Component {
 	constructor(props) {
-		super(props);
+		super();
 
 		this.infoSrc = [
 			{

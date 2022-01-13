@@ -7,7 +7,7 @@ import "./Fader.css";
 
 class Fader extends React.Component {
 	constructor(props) {
-		super(props);
+		super();
 
 		this.state = {
 			down: false

@@ -2,7 +2,7 @@ import Effect from "./Effect";
 
 class Bitcrush extends Effect {
 	constructor(props) {
-		super(props);
+		super();
 
 		this.node.worklet = null;
 	}
