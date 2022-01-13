@@ -25,6 +25,7 @@ class Key extends Module {
 		this.props.node.type = 'sine';
 		this.props.node.frequency.value = trans(a, this.props.i * (1 / (oct - 1)));
 
+		// start
 		this.props.node.start();
 
 		this.setState({

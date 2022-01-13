@@ -11,8 +11,10 @@ class Op extends Source {
 	}
 
 	componentDidMount() {
+		// route
 		this.osc.connect(this.amp);
 
+		// start
 		this.osc.start();
 	}
 

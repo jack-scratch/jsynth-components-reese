@@ -12,6 +12,7 @@ class Flanger extends Effect {
 	}
 
 	componentDidMount() {
+		// start
 		this.node.start();
 	}
 

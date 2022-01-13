@@ -12,6 +12,7 @@ class Chorus extends Source {
 	}
 
 	componentDidMount() {
+		// start
 		this.node.start();
 	}
 

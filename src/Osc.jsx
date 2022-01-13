@@ -13,6 +13,7 @@ class Osc extends Source {
 	}
 
 	componentDidMount() {
+		// start
 		this.node.start();
 	}
 
