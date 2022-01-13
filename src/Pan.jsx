@@ -5,11 +5,12 @@ class Pan extends Effect {
 		super(props);
 
 		this.state = {
-			time: 100.0,
 			node: window.ctx.createStereoPanner()
 		};
 
-		this.state.node.pan.value = this.state.time;
+		if (this.props.time) {
+			this.state.node.pan.value = this.props.time;
+		}
 	}
 
 	render() {
