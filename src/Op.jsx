@@ -9,9 +9,9 @@ class Op extends Source {
 
 		this.osc.type = this.props.type;
 
-		this.osc.start();
-
 		this.osc.connect(this.amp);
+
+		this.osc.start();
 	}
 
 	render() {
