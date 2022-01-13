@@ -23,8 +23,4 @@ class Gain extends Effect {
 	}
 }
 
-Gain.defaultProps = {
-	level: 0
-};
-
 export default Gain;
