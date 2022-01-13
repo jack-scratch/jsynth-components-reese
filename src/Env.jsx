@@ -8,7 +8,9 @@ class Env extends Effect {
 			node: window.ctx.createBiquadFilter()
 		};
 
-		this.state.node.type = this.props.type;
+		if (this.props.type) {
+			this.state.node.type = this.props.type;
+		}
 	}
 
 	render() {
