@@ -6,9 +6,7 @@ class Op extends Source {
 
 		this.state = {
 			osc: window.ctx.createOscillator(),
-			amp: window.ctx.createGain(),
-			hz: 0,
-			level: 0
+			amp: window.ctx.createGain()
 		};
 
 		this.state.osc.type = this.props.type;
@@ -16,13 +14,6 @@ class Op extends Source {
 		this.state.osc.start();
 
 		this.state.osc.connect(this.state.amp);
-	}
-
-	componentDidMount() {
-		this.setState({
-			hz: this.state.osc.frequency.value,
-			level: this.state.amp.gain.value
-		});
 	}
 
 	render() {
