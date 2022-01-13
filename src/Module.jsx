@@ -9,6 +9,12 @@ import Knob from "./Knob";
 import "./Module.css";
 
 class Module extends React.Component {
+	constructor(props) {
+		super(props);
+		
+		this.node = [];
+	}
+
 	render() {
 		return (
 			<div className="module">
