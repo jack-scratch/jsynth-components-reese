@@ -10,7 +10,6 @@ class Fader extends React.Component {
 		super(props);
 
 		this.state = {
-			val: 0,
 			down: false
 		};
 
@@ -26,8 +25,6 @@ class Fader extends React.Component {
 			this.setState({
 				val: e.nativeEvent.offsetY
 			});
-
-			this.props.param.value = this.state.val;
 		}
 	}
 
@@ -49,7 +46,7 @@ class Fader extends React.Component {
 			})} onMouseMove={this.scrub}>
 				<div className="groove">
 					<div className="thumb" style={{
-						marginTop: this.state.val
+						marginTop: this.props.param.value
 					}}>
 						<div className="mark"></div>
 					</div>
