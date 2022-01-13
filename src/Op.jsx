@@ -4,18 +4,18 @@ class Op extends Source {
 	constructor(props) {
 		super(props);
 
-		this.osc = window.ctx.createOscillator();
-		this.amp = window.ctx.createGain();
+		this.node.osc = window.ctx.createOscillator();
+		this.node.amp = window.ctx.createGain();
 
-		this.osc.type = this.props.type;
+		this.node.osc.type = this.props.type;
 	}
 
 	componentDidMount() {
 		// route
-		this.osc.connect(this.amp);
+		this.node.osc.connect(this.node.amp);
 
 		// start
-		this.osc.start();
+		this.node.osc.start();
 	}
 
 	render() {
@@ -23,15 +23,15 @@ class Op extends Source {
 			<Source name="Operator" param={[
 				{
 					name: "Frequency",
-					point: this.osc.frequency
+					point: this.node.osc.frequency
 				}, {
 					name: "Volume",
-					point: this.amp.gain
+					point: this.node.amp.gain
 				}
 			]} port={[
 				{
 					type: "out",
-					point: this.osc
+					point: this.node.osc
 				}
 			]} />
 		);
