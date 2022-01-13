@@ -4,10 +4,10 @@ class Delay extends Effect {
 	constructor(props) {
 		super(props);
 
-		this.node = window.ctx.createDelay();
+		this.node.worklet = window.ctx.createDelay();
 
 		if (this.props.time) {
-			this.node.delayTime.value = this.props.time;
+			this.node.worklet.delayTime.value = this.props.time;
 		}
 	}
 
@@ -16,7 +16,7 @@ class Delay extends Effect {
 			<Effect name={this.props.name} param={[
 				{
 					name: "Time",
-					point: this.node.delayTime,
+					point: this.node.worklet.delayTime,
 					min: 0.01,
 					max: 10.0
 				}

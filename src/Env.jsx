@@ -4,10 +4,10 @@ class Env extends Effect {
 	constructor(props) {
 		super(props);
 
-		this.node = window.ctx.createBiquadFilter();
+		this.node.main = window.ctx.createBiquadFilter();
 
 		if (this.props.type) {
-			this.node.type = this.props.type;
+			this.node.main.type = this.props.type;
 		}
 	}
 
@@ -16,16 +16,16 @@ class Env extends Effect {
 			<Effect name={this.props.name} param={[
 				{
 					name: "Attack",
-					point: this.node.frequency
+					point: this.node.main.frequency
 				}, {
 					name: "Decay",
-					point: this.node.frequency
+					point: this.node.main.frequency
 				}, {
 					name: "Sustain",
-					point: this.node.frequency
+					point: this.node.main.frequency
 				}, {
 					name: "Release",
-					point: this.node.frequency
+					point: this.node.main.frequency
 				}
 			]} />
 		);

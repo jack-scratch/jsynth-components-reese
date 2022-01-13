@@ -4,16 +4,16 @@ class Flanger extends Effect {
 	constructor(props) {
 		super(props);
 
-		this.node = window.ctx.createOscillator();
+		this.node.main = window.ctx.createOscillator();
 
 		if (this.props.type) {
-			this.node.type = this.props.type;
+			this.node.main.type = this.props.type;
 		}
 	}
 
 	componentDidMount() {
 		// start
-		this.node.start();
+		this.node.main.start();
 	}
 
 	render() {
@@ -21,17 +21,17 @@ class Flanger extends Effect {
 			<Effect name={this.props.name} param={[
 				{
 					name: "Delay",
-					point: this.node.frequency,
+					point: this.node.main.frequency,
 					min: 1.0,
 					max: 50.0
 				}
 			]} port={[
 				{
 					type: "in",
-					point: this.node
+					point: this.node.main
 				}, {
 					type: "out",
-					point: this.node
+					point: this.node.main
 				}
 			]} hookOutDown={this.props.hookOutDown} marked />
 		);

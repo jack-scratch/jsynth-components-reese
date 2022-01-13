@@ -6,7 +6,7 @@ class Feedback extends Effect {
 		super(props);
 
 		window.ctx.audioWorklet.addModule("worklet/dsp.js").then(() => {
-			this.node = new AudioWorkletNode(window.ctx, "feedback");
+			this.node.worklet = new AudioWorkletNode(window.ctx, "feedback");
 		});
 
 		this.state = {
@@ -19,7 +19,7 @@ class Feedback extends Effect {
 			<Effect name={this.props.name} param={[
 				{
 					name: "Iterations",
-					point: this.state.node.frequency
+					point: this.state.node.worklet.frequency
 				}
 			]} />
 		);

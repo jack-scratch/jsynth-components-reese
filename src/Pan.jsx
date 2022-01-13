@@ -4,10 +4,10 @@ class Pan extends Effect {
 	constructor(props) {
 		super(props);
 
-		this.node = window.ctx.createStereoPanner();
+		this.node.main = window.ctx.createStereoPanner();
 
 		if (this.props.time) {
-			this.node.pan.value = this.props.time;
+			this.node.main.pan.value = this.props.time;
 		}
 	}
 
@@ -16,7 +16,7 @@ class Pan extends Effect {
 			<Effect name={this.props.name} param={[
 				{
 					name: "Rate",
-					point: this.node.pan
+					point: this.node.main.pan
 				}
 			]} />
 		);
