@@ -16,7 +16,7 @@ class Worklet extends Module {
 	render() {
 		return (
 			<Module name={this.props.name} param={this.node.parameters.map((el) => ({
-				name: "asdf",
+				name: this.props.name,
 				value: el
 			}))} port={[
 				{
