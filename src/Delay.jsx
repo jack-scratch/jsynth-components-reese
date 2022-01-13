@@ -5,11 +5,12 @@ class Delay extends Effect {
 		super(props);
 
 		this.state = {
-			time: 100.0,
 			node: window.ctx.createDelay()
 		};
 
-		this.state.node.delayTime.value = this.state.time;
+		if (this.props.time) {
+			this.state.node.delayTime.value = this.props.time;
+		}
 	}
 
 	render() {
