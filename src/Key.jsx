@@ -13,8 +13,7 @@ class Key extends Module {
 		super(props);
 
 		this.state = {
-			down: false,
-			osc: null
+			down: false
 		};
 
 		this.play = this.play.bind(this);
@@ -22,11 +21,11 @@ class Key extends Module {
 	}
 
 	play() {
-		this.state.osc = window.ctx.createOscillator();
-		this.state.osc.type = 'sine';
-		this.state.osc.frequency.value = trans(a, this.props.i * (1 / (oct - 1)));
+		this.props.node = window.ctx.createOscillator();
+		this.props.node.type = 'sine';
+		this.props.node.frequency.value = trans(a, this.props.i * (1 / (oct - 1)));
 
-		this.state.osc.start();
+		this.props.node.start();
 
 		this.setState({
 			down: true
@@ -34,10 +33,10 @@ class Key extends Module {
 	}
 
 	release() {
-		if (this.state.osc) {
-			this.state.osc.stop();
+		if (this.props.node) {
+			this.props.node.stop();
 
-			this.state.osc = null;
+			this.props.node = null;
 		}
 
 		this.setState({
