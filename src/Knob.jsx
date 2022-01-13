@@ -15,6 +15,8 @@ class Knob extends React.Component {
 	constructor(props) {
 		super(props);
 
+		this.baseRot = 90;
+
 		this.state = {
 			down: false,
 			startY: 0,
@@ -23,8 +25,6 @@ class Knob extends React.Component {
 			prevVal: 0
 		};
 		
-		this.baseRot = 90;
-
 		this.grab = this.grab.bind(this);
 		this.release = this.release.bind(this);
 		this.turn = this.turn.bind(this);
