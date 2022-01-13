@@ -10,8 +10,6 @@ class Meter extends React.Component {
 		super(props);
 
 		this.wd = 16;
-
-		this.level = 20;
 	}
 
 	draw() {
