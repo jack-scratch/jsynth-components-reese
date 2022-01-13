@@ -8,10 +8,6 @@ class Feedback extends Effect {
 		window.ctx.audioWorklet.addModule("worklet/dsp.js").then(() => {
 			this.node.worklet = new AudioWorkletNode(window.ctx, "feedback");
 		});
-
-		this.state = {
-			node: window.ctx.createOscillator()
-		};
 	}
 
 	render() {
