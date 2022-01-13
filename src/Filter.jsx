@@ -4,11 +4,9 @@ class Filter extends Effect {
 	constructor(props) {
 		super(props);
 
-		this.state = {
-			node: window.ctx.createBiquadFilter()
-		};
+		this.node = window.ctx.createBiquadFilter();
 
-		this.state.node.type = this.props.type;
+		this.node.type = this.props.type;
 	}
 
 	render() {
@@ -28,7 +26,7 @@ class Lowpass extends Filter {
 			<Filter name="Lowpass" type="lowpass" param={[
 				{
 					name: "Frequency",
-					point: this.state.node.frequency
+					point: this.node.frequency
 				}
 			]} />
 		);
@@ -41,7 +39,7 @@ class Highpass extends Filter {
 			<Filter name="Highpass" type="highpass" param={[
 				{
 					name: "Frequency",
-					point: this.state.node.frequency
+					point: this.node.frequency
 				}
 			]} />
 		);
