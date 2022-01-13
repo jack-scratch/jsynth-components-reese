@@ -9,7 +9,7 @@ class Pulse extends React.Component {
 		return (
 			<div className="cont">
 				<div className="body">
-					<Btn wd="50" ht="50" />
+					<Btn wd={50} ht={50} />
 					<Out />
 				</div>
 			</div>
