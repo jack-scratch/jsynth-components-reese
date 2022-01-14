@@ -47,6 +47,17 @@ class Synth extends React.Component {
 
 			this.fx[i].type = this.infoFx[i].type;
 		}
+
+		// route
+		for (let i = 0; i < this.bank.length; i++) {
+			for (let j = 0; j < this.fx.length; j++) {
+				this.bank[i].connect(this.fx[j]);
+			}
+		}
+
+		for (let i = 0; i < this.fx.length; i++) {
+			this.fx[i].connect(window.ctx.destination);
+		}
 	}
 
 	render() {
