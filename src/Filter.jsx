@@ -6,7 +6,9 @@ class Filter extends Effect {
 
 		this.node.main = window.ctx.createBiquadFilter();
 
-		this.node.main.type = this.props.type;
+		if (this.props.type) {
+			this.node.main.type = this.props.type;
+		}
 	}
 
 	render() {
