@@ -15,7 +15,7 @@ class Cable extends React.Component {
 	render() {
 		return (
 			<svg className="cable">
-				<path d={`M ${this.props.start[0]},${this.props.start[1]} C ${this.props.start[0]},${this.props.start[1]} ${this.props.mid[0]},${this.props.mid[1]} ${this.props.end[0]},${this.props.end[1]}`} />
+				<path d={`M ${this.props.startCurr[0]},${this.props.startCurr[1]} C ${this.props.startCurr[0]},${this.props.startCurr[1]} ${this.props.mid[0]},${this.props.mid[1]} ${this.props.endCurr[0]},${this.props.endCurr[1]}`} />
 			</svg>
 		);
 	}

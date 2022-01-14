@@ -12,11 +12,11 @@ class Bay extends React.Component {
 		this.state = {
 			patch: [],
 			active: false,
-			start: [
+			startCurr: [
 				0,
 				0
 			],
-			end: [
+			endCurr: [
 				0,
 				0
 			],
@@ -42,11 +42,11 @@ class Bay extends React.Component {
 	pushCable(e, refer, node) {
 		this.setState((prevState) => ({
 			active: true,
-			start: [
+			startCurr: [
 				refer.current.offsetLeft + nutRad + portRad,
 				refer.current.offsetTop + nutRad + portRad
 			],
-			end: [
+			endCurr: [
 				e.nativeEvent.clientX,
 				e.nativeEvent.clientY
 			],
@@ -61,7 +61,7 @@ class Bay extends React.Component {
 			this.setState({
 				mid: [
 					this.midX(),
-					(this.state.end[1] > this.state.start[1] ? this.state.end[1] : this.state.start[1]) * 1.6
+					(this.state.endCurr[1] > this.state.startCurr[1] ? this.state.endCurr[1] : this.state.startCurr[1]) * 1.6
 				]
 			});
 		});
@@ -111,7 +111,7 @@ class Bay extends React.Component {
 		this.state.patch[this.state.patch.length - 1].inPoint.connect(this.state.patch[this.state.patch.length - 1].endPoint);
 
 		this.setState({
-			end: [
+			endCurr: [
 				refer.current.offsetLeft + nutRad + portRad,
 				refer.current.offsetTop + nutRad + portRad
 			]
@@ -119,15 +119,15 @@ class Bay extends React.Component {
 	}
 
 	midX() {
-		let delta = this.state.end[0] - this.state.start[0];
+		let delta = this.state.endCurr[0] - this.state.startCurr[0];
 
-		return this.state.start[0] + (delta / 2);
+		return this.state.startCurr[0] + (delta / 2);
 	}
 
 	drag(e) {
 		if (this.state.active) {
 			this.setState({
-				end: [
+				endCurr: [
 					e.nativeEvent.clientX,
 					e.nativeEvent.clientY
 				]
@@ -135,7 +135,7 @@ class Bay extends React.Component {
 				this.setState({
 					mid: [
 						this.midX(),
-						(this.state.end[1] > this.state.start[1] ? this.state.end[1] : this.state.start[1]) * 1.6
+						(this.state.endCurr[1] > this.state.startCurr[1] ? this.state.endCurr[1] : this.state.startCurr[1]) * 1.6
 					]
 				});
 			});
@@ -155,7 +155,7 @@ class Bay extends React.Component {
 				)}
 
 				{this.state.patch.map((el, i) =>
-					<Cable start={this.state.start} end={this.state.end} mid={this.state.mid} inPoint={el.inPoint} key={i} />
+					<Cable startCurr={this.state.startCurr} endCurr={this.state.endCurr} mid={this.state.mid} inPoint={el.inPoint} key={i} />
 				)}
 			</div>
 		);
