@@ -6,10 +6,10 @@ class Effect extends Module {
 			<Module name={this.props.name} param={this.props.param} port={[
 				{
 					type: "in",
-					point: this.node.main
+					point: this.props.point
 				}, {
 					type: "out",
-					point: this.node.main
+					point: this.props.point
 				}
 			]} hookOutDown={this.props.hookOutDown} hookInUp={this.props.hookInUp} />
 		);

@@ -13,7 +13,7 @@ class Filter extends Effect {
 
 	render() {
 		return (
-			<Effect name={this.props.name} param={this.props.param} hookOutDown={this.props.hookOutDown} hookInUp={this.props.hookInUp} marked={this.props.marked} />
+			<Effect name={this.props.name} param={this.props.param} point={this.node.main} hookOutDown={this.props.hookOutDown} hookInUp={this.props.hookInUp} marked={this.props.marked} />
 		);
 	}
 }
