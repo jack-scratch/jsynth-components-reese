@@ -6,6 +6,8 @@ class Synth extends React.Component {
 	constructor(props) {
 		super();
 
+		this.osc = window.ctx.createOscillator();
+
 		this.infoSrc = [
 			{
 				name: "Sine",
@@ -66,7 +68,7 @@ class Synth extends React.Component {
 									</div>
 									<div className="ctrl">
 										<div className="body">
-											<Knob param={el.frequency} key={i} />
+											<Knob param={el.frequency} min={1.0} max={1000.0} key={i} />
 										</div>
 									</div>
 								</div>)}
@@ -84,7 +86,7 @@ class Synth extends React.Component {
 								</div>
 								<div className="ctrl">
 									<div className="body">
-										<Knob param={el.frequency} key={i} />
+										<Knob param={this.osc.frequency} min={1.0} max={3000.0} key={i} />
 									</div>
 								</div>
 							</div>)}
