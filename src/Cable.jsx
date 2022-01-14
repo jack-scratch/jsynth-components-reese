@@ -4,12 +4,7 @@ import "./Cable.css";
 
 class Cable extends React.Component {
 	constructor(props) {
-		super(props);
-
-		this.state = {
-			inPoint: this.props.inPoint,
-			outPoint: null
-		};
+		super();
 
 		this.midX = this.midX.bind(this);
 		this.midY = this.midY.bind(this);
