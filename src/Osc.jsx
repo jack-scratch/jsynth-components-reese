@@ -22,14 +22,14 @@ class Osc extends Source {
 				{
 					name: "Frequency",
 					point: this.node.main.frequency,
-					min: 1.0,
-					max: 1000.0,
+					min: this.props.rngFreq[0],
+					max: this.props.rngFreq[1],
 					unit: "freq"
 				}, {
 					name: "Detune",
 					point: this.node.main.detune,
-					min: -100.0,
-					max: 100.0,
+					min: this.props.rngDetune[0],
+					max: this.props.rngDetune[1],
 					unit: "cents"
 				}
 			]} port={[
@@ -43,7 +43,15 @@ class Osc extends Source {
 }
 
 Osc.defaultProps = {
-	name: "Oscillator"
+	name: "Oscillator",
+	rngFreq: [
+		1.0,
+		1000.0
+	],
+	rngDetune: [
+		-100.0,
+		100.0
+	]
 };
 
 export default Osc;
