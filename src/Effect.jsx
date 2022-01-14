@@ -11,7 +11,7 @@ class Effect extends Module {
 					type: "out",
 					point: this.props.param
 				}
-			]} />
+			]} hookOutDown={this.props.hookOutDown} hookInUp={this.props.hookInUp} />
 		);
 	}
 }
