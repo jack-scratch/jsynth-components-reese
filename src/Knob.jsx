@@ -72,8 +72,8 @@ class Knob extends React.Component {
 			stride = rotDeg / this.props.marked;
 		}
 
-		const delta = -(this.props.max - this.props.min);
-		const rotStride = rotDeg / delta;
+		const delta = this.props.max - this.props.min;
+		const rotStride = rotDeg / -delta;
 
 		return (
 			<div>
