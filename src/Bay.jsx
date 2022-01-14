@@ -19,10 +19,6 @@ class Bay extends React.Component {
 			endCurr: [
 				0,
 				0
-			],
-			mid: [
-				0,
-				0
 			]
 		};
 
@@ -57,14 +53,7 @@ class Bay extends React.Component {
 					endPoint: null
 				}
 			]
-		}), () => {
-			this.setState({
-				mid: [
-					this.midX(),
-					(this.state.endCurr[1] > this.state.startCurr[1] ? this.state.endCurr[1] : this.state.startCurr[1]) * 1.6
-				]
-			});
-		});
+		}));
 	}
 
 	rmCable(i) {
@@ -118,12 +107,6 @@ class Bay extends React.Component {
 		});
 	}
 
-	midX() {
-		let delta = this.state.endCurr[0] - this.state.startCurr[0];
-
-		return this.state.startCurr[0] + (delta / 2);
-	}
-
 	drag(e) {
 		if (this.state.active) {
 			this.setState({
@@ -131,13 +114,6 @@ class Bay extends React.Component {
 					e.nativeEvent.clientX,
 					e.nativeEvent.clientY
 				]
-			}, () => {
-				this.setState({
-					mid: [
-						this.midX(),
-						(this.state.endCurr[1] > this.state.startCurr[1] ? this.state.endCurr[1] : this.state.startCurr[1]) * 1.6
-					]
-				});
 			});
 		}
 	}
@@ -155,7 +131,7 @@ class Bay extends React.Component {
 				)}
 
 				{this.state.patch.map((el, i) =>
-					<Cable startCurr={this.state.startCurr} endCurr={this.state.endCurr} mid={this.state.mid} inPoint={el.inPoint} key={i} />
+					<Cable startCurr={this.state.startCurr} endCurr={this.state.endCurr} inPoint={el.inPoint} key={i} />
 				)}
 			</div>
 		);
