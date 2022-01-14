@@ -21,7 +21,6 @@ class Knob extends React.Component {
 			down: false,
 			startY: 0,
 			currY: 0,
-			deltaY: 0,
 			prevVal: 0
 		};
 		
@@ -50,11 +49,11 @@ class Knob extends React.Component {
 		if (this.state.down) {
 			this.setState({
 				currY: e.nativeEvent.clientY
-			}, () => this.setState({
-				deltaY: this.state.currY - this.state.startY
 			}, () => {
-				this.props.param.value = this.state.prevVal + this.state.deltaY;
-			}));
+				let deltaY = this.state.currY - this.state.startY;
+
+				this.props.param.value = this.state.prevVal + deltaY;
+			});
 		}
 	}
 
