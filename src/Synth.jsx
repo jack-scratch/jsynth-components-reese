@@ -73,13 +73,13 @@ class Synth extends React.Component {
 								<Label text="Bank" />
 							</div>
 							<div className="body row">
-								{this.bank.map((el, i) => <div>
+								{this.bank.map((el, i) => <div key={i}>
 									<div className="head">
 										<Label text={this.infoSrc[i]["name"]} />
 									</div>
 									<div className="ctrl">
 										<div className="body">
-											<Knob param={el.frequency} min={1.0} max={1000.0} key={i} />
+											<Knob param={el.frequency} min={1.0} max={1000.0} />
 										</div>
 									</div>
 								</div>)}
@@ -91,13 +91,13 @@ class Synth extends React.Component {
 							<Label text="Filter" />
 						</div>
 						<div className="body row">
-							{this.fx.map((el, i) => <div>
+							{this.fx.map((el, i) => <div key={i}>
 								<div className="head">
 									<Label text={this.infoFx[i]["name"]} />
 								</div>
 								<div className="ctrl">
 									<div className="body">
-										<Knob param={this.osc.frequency} min={1.0} max={3000.0} key={i} />
+										<Knob param={this.osc.frequency} min={1.0} max={3000.0} />
 									</div>
 								</div>
 							</div>)}
