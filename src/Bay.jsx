@@ -50,7 +50,9 @@ class Bay extends React.Component {
 				...prevState.patch,
 				{
 					inPoint: node,
-					endPoint: null
+					endPoint: null,
+					inRefer: refer,
+					outRefer: null
 				}
 			]
 		}));
@@ -76,6 +78,7 @@ class Bay extends React.Component {
 		this.state.patch[this.state.patch.length - 1].inPoint.disconnect();
 
 		this.state.patch[this.state.patch.length - 1].endPoint = null;
+		this.state.patch[this.state.patch.length - 1].outRefer = null;
 
 		this.setState({
 			active: true
@@ -96,6 +99,7 @@ class Bay extends React.Component {
 
 	setDest(e, refer, node) {
 		this.state.patch[this.state.patch.length - 1].endPoint = node;
+		this.state.patch[this.state.patch.length - 1].endRefer = refer;
 
 		this.state.patch[this.state.patch.length - 1].inPoint.connect(this.state.patch[this.state.patch.length - 1].endPoint);
 
@@ -103,7 +107,8 @@ class Bay extends React.Component {
 			endCurr: [
 				refer.current.offsetLeft + nutRad + portRad,
 				refer.current.offsetTop + nutRad + portRad
-			]
+			],
+			endRefer: refer
 		});
 	}
 
@@ -130,7 +135,7 @@ class Bay extends React.Component {
 					})
 				)}
 
-				{this.state.patch.map((el, i) => <Cable startCurr={this.state.startCurr} endCurr={this.state.endCurr} inPoint={el.inPoint} endPoint={el.endPoint} key={i} />)}
+				{this.state.patch.map((el, i) => <Cable startCurr={this.state.startCurr} endCurr={this.state.endCurr} inPoint={el.inPoint} endPoint={el.endPoint} inRefer={el.inRefer} endPoint={el.outRefer} key={i} />)}
 			</div>
 		);
 	}
