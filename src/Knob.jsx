@@ -101,7 +101,7 @@ class Knob extends React.Component {
 						</g>
 					)}
 				</svg>
-				{this.state.down && <div className="dragField" onMouseMove={this.turn} onMouseUp={this.release}></div>}
+				{this.state.down && <div className="dragField" onMouseMove={this.turn} onMouseUp={this.release} onMouseLeave={this.release}></div>}
 			</div>
 		);
 	}
