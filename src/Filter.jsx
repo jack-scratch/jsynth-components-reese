@@ -28,7 +28,8 @@ class Lowpass extends Filter {
 			<Filter name="Lowpass" type="lowpass" param={[
 				{
 					name: "Frequency",
-					point: this.node.main.frequency
+					point: this.node.main.frequency,
+					unit: "freq"
 				}
 			]} hookOutDown={this.props.hookOutDown} hookInUp={this.props.hookInUp} marked={this.props.marked} />
 		);
