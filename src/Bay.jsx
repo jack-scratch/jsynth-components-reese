@@ -30,7 +30,7 @@ class Bay extends React.Component {
 
 		this.release = this.release.bind(this);
 
-		this.setDest = this.setDest.bind(this);
+		this.conn = this.conn.bind(this);
 
 		this.drag = this.drag.bind(this);
 	}
@@ -99,7 +99,7 @@ class Bay extends React.Component {
 		}
 	}
 
-	setDest(e, refer, node) {
+	conn(e, refer, node) {
 		let i = this.state.patch.length - 1;
 
 		this.state.patch[i].endPoint = node;
@@ -133,7 +133,7 @@ class Bay extends React.Component {
 					React.cloneElement(el, {
 						hookOutDown: this.pushCable,
 						hookInDown: this.detachCable,
-						hookInUp: this.setDest,
+						hookInUp: this.conn,
 						key: i
 					})
 				)}
