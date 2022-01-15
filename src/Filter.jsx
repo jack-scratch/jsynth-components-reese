@@ -13,7 +13,7 @@ class Filter extends Effect {
 
 	render() {
 		return (
-			<Effect name={this.props.name} param={this.props.param} point={this.node.main} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} marked={this.props.marked} />
+			<Effect name={this.props.name} param={this.props.param} point={this.node.main} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} marked={this.props.marked} />
 		);
 	}
 }
@@ -33,7 +33,7 @@ class Lowpass extends Filter {
 					max: this.props.rngFreq[1],
 					unit: "freq"
 				}
-			]} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} marked={this.props.marked} />
+			]} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} marked={this.props.marked} />
 		);
 	}
 }
@@ -49,7 +49,7 @@ class Highpass extends Filter {
 					max: this.props.rngFreq[1],
 					unit: "freq"
 				}
-			]} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} marked={this.props.marked} />
+			]} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} marked={this.props.marked} />
 		);
 	}
 }
