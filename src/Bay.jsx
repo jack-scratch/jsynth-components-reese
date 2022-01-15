@@ -96,7 +96,7 @@ class Bay extends React.Component {
 					active: false
 				});
 			} else {
-				this.popCable();
+				this.rmCable(i);
 			}
 		}
 	}
