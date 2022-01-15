@@ -107,8 +107,7 @@ class Bay extends React.Component {
 			endCurr: [
 				refer.current.offsetLeft + nutRad + portRad,
 				refer.current.offsetTop + nutRad + portRad
-			],
-			endRefer: refer
+			]
 		});
 	}
 
