@@ -37,7 +37,6 @@ class Bay extends React.Component {
 
 	pushCable(e, refer, node) {
 		this.setState((prevState) => ({
-			active: true,
 			startCurr: [
 				refer.current.offsetLeft + nutRad + portRad,
 				refer.current.offsetTop + nutRad + portRad
@@ -54,7 +53,8 @@ class Bay extends React.Component {
 					inRefer: refer,
 					outRefer: null
 				}
-			]
+			],
+			active: true
 		}));
 	}
 
