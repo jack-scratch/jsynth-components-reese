@@ -37,7 +37,7 @@ class Osc extends Source {
 					type: "out",
 					point: this.node.main
 				}
-			]} hookOutDown={this.props.hookOutDown} hookInUp={this.props.hookInUp} marked={this.props.marked} />
+			]} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} marked={this.props.marked} />
 		);
 	}
 }
