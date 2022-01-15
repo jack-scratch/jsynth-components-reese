@@ -87,9 +87,7 @@ class Bay extends React.Component {
 		});
 	}
 
-	release(e) {
-		let i = this.state.patch.length - 1;
-
+	release(e, i) {
 		if (this.state.active) {
 			if (this.state.patch[i].inPoint && this.state.patch[i].outPoint) {
 				this.setState({
@@ -123,7 +121,7 @@ class Bay extends React.Component {
 
 	render() {
 		return (
-			<div className="sys" onMouseMove={(e) => this.drag(e)} onMouseUp={this.release}>
+			<div className="sys" onMouseMove={(e) => this.drag(e)} onMouseUp={(e) => this.release(e, this.state.patch.length - 1)}>
 				{this.props.module && this.props.module.map((el, i) =>
 					React.cloneElement(el, {
 						hookOutDown: this.pushCable,
