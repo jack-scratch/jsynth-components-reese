@@ -41,6 +41,8 @@ class Synth extends React.Component {
 			this.bank[i].type = this.infoSrc[i].type;
 		}
 
+		this.lfo = window.ctx.createOscillator();
+
 		this.fx = [];
 		for (let i = 0; i < this.infoFx.length; i++) {
 			this.fx.push(window.ctx.createBiquadFilter());
@@ -72,17 +74,34 @@ class Synth extends React.Component {
 							<div className="head">
 								<Label text="Bank" />
 							</div>
-							<div className="body row">
-								{this.bank.map((el, i) => <div key={i}>
+							<div className="body">
+								<div>
 									<div className="head">
-										<Label text={this.infoSrc[i]["name"]} />
+										<Label text="Oscillators" />
+									</div>
+									<div className="body row">
+										{this.bank.map((el, i) => <div key={i}>
+											<div className="head">
+												<Label text={this.infoSrc[i]["name"]} />
+											</div>
+											<div className="ctrl">
+												<div className="body">
+													<Knob param={el.frequency} min={1.0} max={1000.0} />
+												</div>
+											</div>
+										</div>)}
+									</div>
+								</div>
+								<div>
+									<div className="head">
+										<Label text="LFO" />
 									</div>
 									<div className="ctrl">
 										<div className="body">
-											<Knob param={el.frequency} min={1.0} max={1000.0} />
+											<Knob param={this.lfo.frequency} min={1.0} max={30.0} />
 										</div>
 									</div>
-								</div>)}
+								</div>
 							</div>
 						</div>
 					</div>
