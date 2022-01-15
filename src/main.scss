@@ -179,3 +179,14 @@ text.mark {
 	top: 0;
 	z-index: 1000;
 }
+
+#bay {
+	display: flex;
+	flex-wrap: wrap;
+
+	.module {
+		flex-grow: 1;
+		margin: $margin;
+		background: $inert;
+	}
+}
