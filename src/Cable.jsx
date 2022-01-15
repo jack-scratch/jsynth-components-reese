@@ -15,13 +15,53 @@ class Cable extends React.Component {
 	}
 
 	midX() {
-		let delta = this.props.endCurr[0] - this.props.startCurr[0];
+		let start = [];
+		if (this.props.inPoint) {
+			start = [
+				this.props.inRefer.current.offsetLeft + nutRad + portRad,
+				this.props.inRefer.current.offsetTop + nutRad + portRad
+			];
+		} else {
+			start = this.props.startCurr;
+		}
 
-		return this.props.startCurr[0] + (delta / 2);
+		let end = [];
+		if (this.props.outPoint) {
+			end = [
+				this.props.outRefer.current.offsetLeft + nutRad + portRad,
+				this.props.outRefer.current.offsetTop + nutRad + portRad
+			];
+		} else {
+			end = this.props.endCurr;
+		}
+
+		let delta = end[0] - start[0];
+
+		return start[0] + (delta / 2);
 	}
 
 	midY() {
-		return (this.props.endCurr[1] > this.props.startCurr[1] ? this.props.endCurr[1] : this.props.startCurr[1]) * 1.6;
+		let start = [];
+		if (this.props.inPoint) {
+			start = [
+				this.props.inRefer.current.offsetLeft + nutRad + portRad,
+				this.props.inRefer.current.offsetTop + nutRad + portRad
+			];
+		} else {
+			start = this.props.startCurr;
+		}
+
+		let end = [];
+		if (this.props.outPoint) {
+			end = [
+				this.props.outRefer.current.offsetLeft + nutRad + portRad,
+				this.props.outRefer.current.offsetTop + nutRad + portRad
+			];
+		} else {
+			end = this.props.endCurr;
+		}
+
+		return (end[1] > start[1] ? end[1] : start[1]) * 1.6;
 	}
 
 	render() {
