@@ -86,8 +86,10 @@ class Bay extends React.Component {
 	}
 
 	release(e) {
+		let i = this.state.patch.length - 1;
+
 		if (this.state.active) {
-			if (this.state.patch[this.state.patch.length - 1].inPoint && this.state.patch[this.state.patch.length - 1].endPoint) {
+			if (this.state.patch[i].inPoint && this.state.patch[i].endPoint) {
 				this.setState({
 					active: false
 				});
@@ -98,10 +100,12 @@ class Bay extends React.Component {
 	}
 
 	setDest(e, refer, node) {
-		this.state.patch[this.state.patch.length - 1].endPoint = node;
-		this.state.patch[this.state.patch.length - 1].endRefer = refer;
+		let i = this.state.patch.length - 1;
 
-		this.state.patch[this.state.patch.length - 1].inPoint.connect(this.state.patch[this.state.patch.length - 1].endPoint);
+		this.state.patch[i].endPoint = node;
+		this.state.patch[i].endRefer = refer;
+
+		this.state.patch[i].inPoint.connect(this.state.patch[i].endPoint);
 
 		this.setState({
 			endCurr: [
