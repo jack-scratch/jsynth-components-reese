@@ -77,10 +77,10 @@ class Bay extends React.Component {
 	detachCable(e, refer, node) {
 		let i = this.state.patch.length - 1;
 
-		this.state.patch[i].inPoint.disconnect();
-
 		this.state.patch[i].outPoint = null;
 		this.state.patch[i].outRefer = null;
+
+		this.state.patch[i].inPoint.disconnect();
 
 		this.setState({
 			active: true
