@@ -11,14 +11,14 @@ class Bitcrush extends Worklet {
 		window.ctx.audioWorklet.addModule("worklet/dsp.js").then(() => {
 			this.node.main = new AudioWorkletNode(window.ctx, "bitcrush");
 
-			let paramBitDepth = this.node.main.parameters.get("bitDepth");
+			this.param.bitDepth = this.node.main.parameters.get("bitDepth");
 
-			paramBitDepth.setValueAtTime(1.0, 0.0);
+			this.param.bitDepth.setValueAtTime(1.0, 0.0);
 
-			let paramReduction = this.node.main.parameters.get("frequencyReduction");
+			this.param.reduction = this.node.main.parameters.get("frequencyReduction");
 
-			paramReduction.setValueAtTime(0.01, window.ctx.currentTime);
-			paramReduction.linearRampToValueAtTime(0.1, window.ctx.currentTime + 4.0);
+			this.param.reduction.setValueAtTime(0.01, window.ctx.currentTime);
+			this.param.reduction.linearRampToValueAtTime(0.1, window.ctx.currentTime + 4.0);
 
 			this.node.main.type = this.props.type;
 		});
