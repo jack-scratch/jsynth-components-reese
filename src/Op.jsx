@@ -33,7 +33,7 @@ class Op extends Source {
 			]} port={[
 				{
 					type: "out",
-					point: this.node.osc
+					point: this.node.amp
 				}
 			]} />
 		);
