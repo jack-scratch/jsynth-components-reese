@@ -1,12 +1,6 @@
 import Module from "./Module";
 
 class Worklet extends Module {
-	constructor(props) {
-		super();
-
-		this.node = null;
-	}
-
 	componentDidMount() {
 		window.ctx.audioWorklet.addModule("worklet/dsp.js").then(() => {
 			this.node = new AudioWorkletNode(window.ctx, this.props.name);
