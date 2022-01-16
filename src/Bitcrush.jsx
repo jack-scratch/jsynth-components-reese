@@ -4,23 +4,23 @@ class Bitcrush extends Worklet {
 	constructor(props) {
 		super();
 
-		this.node.worklet = null;
+		this.node.main = null;
 	}
 
 	componentDidMount() {
 		window.ctx.audioWorklet.addModule("worklet/dsp.js").then(() => {
-			this.node.worklet = new AudioWorkletNode(window.ctx, "bitcrush");
+			this.node.main = new AudioWorkletNode(window.ctx, "bitcrush");
 
-			let paramBitDepth = this.node.worklet.parameters.get("bitDepth");
+			let paramBitDepth = this.node.main.parameters.get("bitDepth");
 
 			paramBitDepth.setValueAtTime(1.0, 0.0);
 
-			let paramReduction = this.node.worklet.parameters.get("frequencyReduction");
+			let paramReduction = this.node.main.parameters.get("frequencyReduction");
 
 			paramReduction.setValueAtTime(0.01, window.ctx.currentTime);
 			paramReduction.linearRampToValueAtTime(0.1, window.ctx.currentTime + 4.0);
 
-			this.node.worklet.type = this.props.type;
+			this.node.main.type = this.props.type;
 		});
 	}
 
@@ -29,7 +29,7 @@ class Bitcrush extends Worklet {
 			<Worklet name={this.props.name} param={[
 				{
 					name: "Fidelity",
-					point: this.node.worklet.parameters.get("bitDepth"),
+					point: this.node.main.parameters.get("bitDepth"),
 					quant: 6
 				}
 			]} />
