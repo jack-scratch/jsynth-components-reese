@@ -19,8 +19,6 @@ class Bitcrush extends Worklet {
 
 			this.param.reduction.setValueAtTime(0.01, window.ctx.currentTime);
 			this.param.reduction.linearRampToValueAtTime(0.1, window.ctx.currentTime + 4.0);
-
-			this.node.main.type = this.props.type;
 		});
 	}
 
