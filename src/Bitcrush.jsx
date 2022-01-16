@@ -3,8 +3,6 @@ import Worklet from "./Worklet";
 class Bitcrush extends Worklet {
 	constructor(props) {
 		super();
-
-		this.node.main = null;
 	}
 
 	componentDidMount() {
