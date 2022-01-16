@@ -1,6 +1,6 @@
-import Effect from "./Effect";
+import Worklet from "./Worklet";
 
-class Bitcrush extends Effect {
+class Bitcrush extends Worklet {
 	constructor(props) {
 		super();
 
@@ -26,7 +26,7 @@ class Bitcrush extends Effect {
 
 	render() {
 		return (
-			<Effect name={this.props.name} param={[
+			<Worklet name={this.props.name} param={[
 				{
 					name: "Fidelity",
 					point: this.node.worklet.parameters.get("bitDepth"),
