@@ -79,18 +79,6 @@ class Bay extends React.Component {
 		});
 	}
 
-	release(e, i) {
-		if (this.state.active) {
-			if (this.state.patch[i].inPoint && this.state.patch[i].outPoint) {
-				this.setState({
-					active: false
-				});
-			} else {
-				this.rmCable(i);
-			}
-		}
-	}
-
 	connCable(e, refer, node) {
 		let i = this.state.patch.length - 1;
 
@@ -108,6 +96,18 @@ class Bay extends React.Component {
 					e.nativeEvent.clientY
 				]
 			});
+		}
+	}
+
+	release(e, i) {
+		if (this.state.active) {
+			if (this.state.patch[i].inPoint && this.state.patch[i].outPoint) {
+				this.setState({
+					active: false
+				});
+			} else {
+				this.rmCable(i);
+			}
 		}
 	}
 
