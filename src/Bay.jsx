@@ -63,7 +63,9 @@ class Bay extends React.Component {
 	}
 
 	popCable() {
-		this.rmCable(this.state.patch.length - 1);
+		let i = this.state.patch.length - 1;
+
+		this.rmCable(i);
 	}
 
 	detachCable(e, refer, node) {
