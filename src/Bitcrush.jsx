@@ -10,13 +10,7 @@ class Bitcrush extends Worklet {
 			this.node.main = new AudioWorkletNode(window.ctx, "bitcrush");
 
 			this.param.bitDepth = this.node.main.parameters.get("bitDepth");
-
-			this.param.bitDepth.setValueAtTime(1.0, 0.0);
-
 			this.param.reduction = this.node.main.parameters.get("frequencyReduction");
-
-			this.param.reduction.setValueAtTime(0.01, window.ctx.currentTime);
-			this.param.reduction.linearRampToValueAtTime(0.1, window.ctx.currentTime + 4.0);
 		});
 	}
 
