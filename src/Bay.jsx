@@ -51,7 +51,7 @@ class Bay extends React.Component {
 	}
 
 	rmCable(i) {
-		this.state.patch[this.state.patch.length - 1].inPoint.disconnect();
+		this.state.patch[i].inPoint.disconnect();
 
 		let ls = [...this.state.patch];
 
