@@ -15,15 +15,10 @@ class Cable extends React.Component {
 	}
 
 	midX() {
-		let start = [];
-		if (this.props.inPoint) {
-			start = [
-				this.props.inRefer.current.offsetLeft + nutRad + portRad,
-				this.props.inRefer.current.offsetTop + nutRad + portRad
-			];
-		} else {
-			start = this.props.startCurr;
-		}
+		let start = [
+			this.props.inRefer.current.offsetLeft + nutRad + portRad,
+			this.props.inRefer.current.offsetTop + nutRad + portRad
+		];
 
 		let end = [];
 		if (this.props.outPoint) {
@@ -32,7 +27,7 @@ class Cable extends React.Component {
 				this.props.outRefer.current.offsetTop + nutRad + portRad
 			];
 		} else {
-			end = this.props.endCurr;
+			end = this.props.curr;
 		}
 
 		let delta = end[0] - start[0];
@@ -58,7 +53,7 @@ class Cable extends React.Component {
 				this.props.outRefer.current.offsetTop + nutRad + portRad
 			];
 		} else {
-			end = this.props.endCurr;
+			end = this.props.curr;
 		}
 
 		return (end[1] > start[1] ? end[1] : start[1]) * 1.6;
@@ -82,7 +77,7 @@ class Cable extends React.Component {
 				this.props.outRefer.current.offsetTop + nutRad + portRad
 			];
 		} else {
-			end = this.props.endCurr;
+			end = this.props.curr;
 		}
 
 		return (

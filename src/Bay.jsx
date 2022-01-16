@@ -12,11 +12,7 @@ class Bay extends React.Component {
 		this.state = {
 			patch: [],
 			active: false,
-			startCurr: [
-				0,
-				0
-			],
-			endCurr: [
+			curr: [
 				0,
 				0
 			]
@@ -37,11 +33,7 @@ class Bay extends React.Component {
 
 	pushCable(e, refer, node) {
 		this.setState((prevState) => ({
-			startCurr: [
-				refer.current.offsetLeft + nutRad + portRad,
-				refer.current.offsetTop + nutRad + portRad
-			],
-			endCurr: [
+			curr: [
 				e.nativeEvent.clientX,
 				e.nativeEvent.clientY
 			],
@@ -111,7 +103,7 @@ class Bay extends React.Component {
 	drag(e) {
 		if (this.state.active) {
 			this.setState({
-				endCurr: [
+				curr: [
 					e.nativeEvent.clientX,
 					e.nativeEvent.clientY
 				]
@@ -131,7 +123,7 @@ class Bay extends React.Component {
 					})
 				)}
 
-				{this.state.patch.map((el, i) => <Cable startCurr={this.state.startCurr} endCurr={this.state.endCurr} inPoint={el.inPoint} outPoint={el.outPoint} inRefer={el.inRefer} outRefer={el.outRefer} key={i} />)}
+				{this.state.patch.map((el, i) => <Cable curr={this.state.curr} inPoint={el.inPoint} outPoint={el.outPoint} inRefer={el.inRefer} outRefer={el.outRefer} key={i} />)}
 			</div>
 		);
 	}
