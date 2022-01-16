@@ -35,7 +35,7 @@ class Op extends Source {
 					type: "out",
 					point: this.node.amp
 				}
-			]} />
+			]} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} />
 		);
 	}
 }
