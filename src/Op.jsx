@@ -22,13 +22,17 @@ class Op extends Source {
 
 	render() {
 		return (
-			<Source name="Operator" param={[
+			<Source name={this.props.name} param={[
 				{
 					name: "Frequency",
-					point: this.node.osc.frequency
+					point: this.node.osc.frequency,
+					min: this.props.rngFreq[0],
+					max: this.props.rngFreq[1]
 				}, {
 					name: "Volume",
-					point: this.node.amp.gain
+					point: this.node.amp.gain,
+					min: this.props.rngVol[0],
+					max: this.props.rngVol[1]
 				}
 			]} port={[
 				{
@@ -39,5 +43,17 @@ class Op extends Source {
 		);
 	}
 }
+
+Op.defaultProps = {
+	name: "Operator",
+	rngFreq: [
+		1.0,
+		1000.0
+	],
+	rngVol: [
+		-12.0,
+		12.0
+	]
+};
 
 export default Op;
