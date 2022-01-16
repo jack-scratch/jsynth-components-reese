@@ -2,12 +2,14 @@ import Source from "./Source";
 
 class Op extends Source {
 	constructor(props) {
-		super();
+		super(props);
 
 		this.node.osc = window.ctx.createOscillator();
 		this.node.amp = window.ctx.createGain();
 
-		this.node.osc.type = this.props.type;
+		if (this.props.type) {
+			this.node.osc.type = this.props.type;
+		}
 	}
 
 	componentDidMount() {
