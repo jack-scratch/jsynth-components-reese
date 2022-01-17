@@ -48,6 +48,7 @@ Detune - `.detune`
 Frequency - `.freq` 
 Gain - `.vol` 
 
+# Filter
 ## `Filter`
 Frequency - `.freq` 
 
