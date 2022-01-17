@@ -8,15 +8,15 @@ class Worklet extends Module {
 	}
 
 	componentDidMount() {
-		window.ctx.audioWorklet.addModule(`worklet/{this.props,name}.js`).then(() => {
-			this.node = new AudioWorkletNode(window.ctx, this.props.name);
+		window.ctx.audioWorklet.addModule(`worklet/{this.props.fName}.js`).then(() => {
+			this.node = new AudioWorkletNode(window.ctx, this.props.fName);
 		});
 	}
 
 	render() {
 		return (
-			<Module name={this.props.name} param={this.node.parameters.map((el) => ({
-				name: this.props.name,
+			<Module name={this.props.fName} param={this.node.parameters.map((el) => ({
+				name: this.props.fName,
 				value: el
 			}))} port={[
 				{
