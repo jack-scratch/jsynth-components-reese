@@ -86,6 +86,14 @@ Frequency - `.freq`
 ## `<speaker />`
 Audio output.
 
+# Resources
+Resources are situated in the "public" directory.
+
+Dedicated directories for specific file types exist depending on the usage.
+
+"/snd" - Samples
+"/worklet" - Worklet files, may contain multiple definitions
+
 # Format
 Formats for various integer values are provided in "fmt.js".
 
