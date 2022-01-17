@@ -29,7 +29,7 @@ class Op extends Source {
 					min: this.props.rngFreq[0],
 					max: this.props.rngFreq[1]
 				}, {
-					name: "Volume",
+					name: "Gain",
 					point: this.node.amp.gain,
 					min: this.props.rngVol[0],
 					max: this.props.rngVol[1]
