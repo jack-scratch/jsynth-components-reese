@@ -7,10 +7,10 @@ At all points, the Web Audio API's context is available within the window object
 
 # Component
 ## Control
-### `Btn`
+### `<Btn />`
 Takes a function as a prop in `hook`, and calls this function upon mouse down.
 
-### `Knob`
+### `<Knob />`
 Updates a numeric value upon being turned.
 
 #### Quantized
@@ -18,40 +18,40 @@ For numeric values specifically meant to be integral, the `quant` prop can be pa
 
 This will snap the knob and its values to specific increments.
 
-### `Fader`
+### `<Fader />`
 Updates a numeric value upon being dragged.
 
 Limited to a range.
 
-### `Key`
+### `<Key />`
 Takes a function as a prop in `hook`, and calls this function upon mouse down.
 
-### `Port`
+### `<Port />`
 "CV port", contains a reference to an audio node or parameter.
 
 Connected via cable when appropriate event fires.
 
-#### `In`
+#### `<In />`
 Audio node's input or audio parameter.
 
-#### `Out`
+#### `<Out />`
 Strictly regards audio node's output.
 
 ## Display
-### `Light`
+### `<Light />`
 Binary light.
 
 On upon the presence of the `on` prop, and off otherwise.
 
-### `Meter`
+### `<Meter />`
 Displays signal strength.
 
-## `Bay`
+## `<Bay />`
 Patch bay.
 
 Contains modules and offers an interface to connect their CV ports via cables. 
 
-### `Module`
+### `<Module />`
 Contains an internal node.
 
 Ports are provided for the node itself, depending on the type of its node.
@@ -63,20 +63,20 @@ Destinations - One in
 For the node's specified parameters, one in port is provided.
 
 # Source
-## `Osc`
+## `<Osc />`
 Frequency - `.freq` 
 Detune - `.detune` 
 
-## `Op`
+## `<Op />`
 Frequency - `.freq` 
 Gain - `.vol` 
 
 # Filter
-## `Filter`
+## `<Filter />`
 Frequency - `.freq` 
 
 # Destination
-## `speaker`
+## `<speaker />`
 Audio output.
 
 # Format
