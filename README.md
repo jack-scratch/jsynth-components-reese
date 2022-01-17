@@ -21,3 +21,20 @@ Effects - One in, one out
 Destinations - One in
 
 For the node's specified parameters, one in port is provided.
+
+#### `Osc`
+Oscillator.
+
+Frequency - `freq` 
+Detune - `detune` 
+
+#### `Op`
+Operator.
+
+Frequency - `freq` 
+Gain - `vol` 
+
+#### `Filter`
+Filter.
+
+Frequency - `freq` 
