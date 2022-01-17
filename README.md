@@ -97,6 +97,9 @@ Internal is a basic sine wave.
 ## `Launch`
 Grid of buttons all hooked to various samples.
 
+## `Synth`
+Synthesizer containing oscillators assigned to the basic waveforms, an LFO and both high and low-pass filters.
+
 # Resources
 Resources are situated in the "public" directory.
 
