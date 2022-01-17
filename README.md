@@ -25,19 +25,19 @@ For the node's specified parameters, one in port is provided.
 #### `Osc`
 Oscillator.
 
-Frequency - `freq` 
-Detune - `detune` 
+Frequency - `.freq` 
+Detune - `.detune` 
 
 #### `Op`
 Operator.
 
-Frequency - `freq` 
-Gain - `vol` 
+Frequency - `.freq` 
+Gain - `.vol` 
 
 #### `Filter`
 Filter.
 
-Frequency - `freq` 
+Frequency - `.freq` 
 
 # Format
 Formats for various integer values are provided in "fmt.js".
