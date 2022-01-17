@@ -53,7 +53,7 @@ On upon the presence of the `on` prop, and off otherwise.
 ### `<Meter />`
 Displays signal strength.
 
-## `<Bay />`
+## `<Bay></Bay>`
 Patch bay.
 
 Contains modules and offers an interface to connect their CV ports via cables. 
