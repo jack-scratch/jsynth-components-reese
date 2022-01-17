@@ -78,9 +78,24 @@ Detune - `.detune`
 Frequency - `.freq` 
 Gain - `.vol` 
 
-# Filter
+# Effect
+## `<Gain />`
+Increases or decreases signal.
+
 ## `<Filter />`
 Frequency - `.freq` 
+
+## `<Chorus />`
+Splits input into multiple outputs.
+
+## `Flanger`
+Produces delayed copy.
+
+## `Pan`
+Fades between left and right channels.
+
+## `Delay`
+Outputs unfiltrered input after a time interval has passed.
 
 # Destination
 ## `speaker()`
