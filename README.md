@@ -78,6 +78,18 @@ Destinations - One in
 
 For the node's specified parameters, one in port is provided.
 
+The following examplifies creation of a module.
+
+```
+class Osc extends Source {
+	constructor(props) {
+		super(props);
+
+		this.node.main = window.ctx.createOscillator();
+	}
+}
+```
+
 # Source
 ## `<Osc />`
 Frequency - `.freq` 
