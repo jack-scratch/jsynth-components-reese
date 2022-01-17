@@ -53,8 +53,8 @@ On upon the presence of the `on` prop, and off otherwise.
 ### Text
 2D Text display.
 
-### `<Led />`
-Base LED.
+### `<Lcd />`
+Base LCD.
 
 #### `<Meter />`
 Displays signal strength.

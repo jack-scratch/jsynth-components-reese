@@ -1,5 +1,5 @@
 import React from "react";
-import Led from "./Led";
+import Lcd from "./Lcd";
 import {
 	bg,
 	js
@@ -18,7 +18,7 @@ class Meter extends React.Component {
 
 	render() {
 		return (
-			<Led wd={this.wd} ht={this.level * this.props.tick} />
+			<Lcd wd={this.wd} ht={this.level * this.props.tick} />
 		);
 	}
 }
