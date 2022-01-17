@@ -13,6 +13,11 @@ Takes a function as a prop in `hook`, and calls this function upon mouse down.
 ### `Knob`
 Updates a numeric value upon being turned.
 
+#### Quantized
+For numeric values specifically meant to be integral, the `quant` prop can be passed.
+
+This will snap the knob and its values to specific increments.
+
 ### `Fader`
 Updates a numeric value upon being dragged.
 
