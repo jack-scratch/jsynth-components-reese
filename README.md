@@ -37,6 +37,12 @@ Audio node's input or audio parameter.
 #### `Out`
 Strictly regards audio node's output.
 
+## Display
+### `Light`
+Binary light.
+
+On upon the presence of the `on` prop, and off otherwise.
+
 ## `Bay`
 Patch bay.
 
