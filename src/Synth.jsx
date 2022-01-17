@@ -80,7 +80,7 @@ class Synth extends React.Component {
 										<Label text="Oscillators" />
 									</div>
 									<div className="body row">
-										{this.bank.map((el, i) => <div key={i}>
+										{this.bank.map((el, i) => <div key={el.type}>
 											<div className="head">
 												<Label text={this.infoSrc[i]["name"]} />
 											</div>
@@ -110,7 +110,7 @@ class Synth extends React.Component {
 							<Label text="Filter" />
 						</div>
 						<div className="body row">
-							{this.fx.map((el, i) => <div key={i}>
+							{this.fx.map((el, i) => <div key={el.type}>
 								<div className="head">
 									<Label text={this.infoFx[i]["name"]} />
 								</div>
