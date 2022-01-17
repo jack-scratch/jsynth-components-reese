@@ -43,6 +43,9 @@ Binary light.
 
 On upon the presence of the `on` prop, and off otherwise.
 
+### `Meter`
+Displays signal strength.
+
 ## `Bay`
 Patch bay.
 
