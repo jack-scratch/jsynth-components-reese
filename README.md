@@ -94,6 +94,26 @@ Dedicated directories for specific file types exist depending on the usage.
 "/snd" - Samples
 "/worklet" - Worklet files, may contain multiple definitions
 
+# Math
+Various musical constants and utilities.
+
+`a` - Middle A
+`oct` - Number of full steps in octave
+`semi` - Number of full, half steps in octave
+
+`note` - Integral note, based off middle A
+`trans` - Transpose pitch up or down from original
+
+## Classes
+### `Chord`
+Base chord.
+
+#### `Triad`
+Triad.
+
+`Maj` - Major
+`Min` - Minor
+
 # Format
 Formats for various integer values are provided in "fmt.js".
 

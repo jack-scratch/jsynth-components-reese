@@ -51,7 +51,5 @@ export {
 	Chord,
 	Triad,
 	Maj,
-	Min,
-
-	fmt
+	Min
 };
