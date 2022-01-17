@@ -50,6 +50,9 @@ Binary light.
 
 On upon the presence of the `on` prop, and off otherwise.
 
+### Text
+2D Text display.
+
 ### `<Led />`
 Base LED.
 
