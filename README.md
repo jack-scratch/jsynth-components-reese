@@ -23,6 +23,9 @@ Updates a numeric value upon being dragged.
 
 Limited to a range.
 
+### `Key`
+Takes a function as a prop in `hook`, and calls this function upon mouse down.
+
 ### `Port`
 "CV port", contains a reference to an audio node or parameter.
 
