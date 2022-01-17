@@ -1,7 +1,3 @@
-import {
-	fmt
-} from "./util";
-
 const a = 440.0;
 
 const oct = 8;
