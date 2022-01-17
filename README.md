@@ -83,7 +83,7 @@ Gain - `.vol`
 Frequency - `.freq` 
 
 # Destination
-## `<speaker />`
+## `speaker()`
 Audio output.
 
 # Resources
