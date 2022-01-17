@@ -95,7 +95,7 @@ Takes a file name containing declarations.
 Examples simply extending lower-level components are provided.
 
 ## `Piano`
-Array of white and black keys laid out according to the harmonic scale.
+Arrays of white and black keys laid out according to the harmonic scale.
 
 Internal is a basic sine wave.
 
