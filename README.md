@@ -94,16 +94,21 @@ Takes a file name containing declarations.
 # Examples
 Examples simply extending lower-level components are provided.
 
-## `Piano`
-Arrays of white and black keys laid out according to the harmonic scale.
+## Components
+### `Piano`
+Array of white and black keys laid out according to the harmonic scale.
 
 Internal is a basic sine wave.
 
-## `Launch`
+### `Launch`
 Grid of buttons all hooked to various samples.
 
-## `Synth`
+### `Synth`
 Synthesizer containing oscillators assigned to the basic waveforms, an LFO and both high and low-pass filters.
+
+## Worklets
+### Bitcrush
+Reduces fidelity.
 
 # Resources
 Resources are situated in the "public" directory.
