@@ -121,6 +121,9 @@ Grid of buttons all hooked to various samples.
 ### `Synth`
 Synthesizer containing oscillators assigned to the basic waveforms, an LFO and both high and low-pass filters.
 
+### `<Impulse />`
+Takes a button and hooks it to a sample.
+
 ## Worklets
 ### Bitcrush
 Reduces fidelity.
