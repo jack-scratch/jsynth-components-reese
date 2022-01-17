@@ -41,20 +41,14 @@ For the node's specified parameters, one in port is provided.
 
 # Source
 ## `Osc`
-Oscillator.
-
 Frequency - `.freq` 
 Detune - `.detune` 
 
 ## `Op`
-Operator.
-
 Frequency - `.freq` 
 Gain - `.vol` 
 
 ## `Filter`
-Filter.
-
 Frequency - `.freq` 
 
 # Format
