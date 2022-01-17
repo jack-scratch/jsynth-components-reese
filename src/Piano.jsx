@@ -13,14 +13,14 @@ class Piano extends React.Component {
 				<div className="body">
 					<div className="white">
 						{[...Array(this.props.ln).keys()].map((i) =>
-							<div key={`white-${i}`}>
+							<div key={i}>
 								<Key type="white" i={i} />
 							</div>
 						)}
 					</div>
 					<div className="black">
 						{[...Array(this.props.ln - 1).keys()].map((i) =>
-							 <div key={`black-${i}`}>
+							 <div key={i}>
 								<Key type="black" i={i} />
 							</div>
 						)}
