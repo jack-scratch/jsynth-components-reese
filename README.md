@@ -162,6 +162,11 @@ Triad.
 `Maj` - Major
 `Min` - Minor
 
+# Utilities
+Miscellaneous utilities.
+
+`fmt(i, off)` - Conversion of tone to formatted note on the harmonic scale
+
 # Formatting
 Formats for various integer values are provided in "fmt.js".
 
