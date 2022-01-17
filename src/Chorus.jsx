@@ -1,6 +1,6 @@
-import Source from "./Source";
+import Effect from "./Effect";
 
-class Chorus extends Source {
+class Chorus extends Effect {
 	constructor(props) {
 		super(props);
 
@@ -18,7 +18,7 @@ class Chorus extends Source {
 
 	render() {
 		return (
-			<Source name={this.props.name} param={[
+			<Effect name={this.props.name} param={[
 				{
 					name: "Spread",
 					point: this.node.main.frequency,
