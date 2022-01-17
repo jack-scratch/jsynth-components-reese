@@ -1,9 +1,6 @@
 import React from "react";
 import Key from "./Key";
 import {
-	Out
-} from "./Port";
-import {
 	oct
 } from "./math";
 
@@ -27,11 +24,6 @@ class Piano extends React.Component {
 								<Key type="black" i={i} />
 							</div>
 						)}
-					</div>
-					<div className="body">
-						<div className="io">
-							<Out />
-						</div>
 					</div>
 				</div>
 			</div>
