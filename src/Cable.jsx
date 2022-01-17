@@ -43,7 +43,7 @@ class Cable extends React.Component {
 				this.props.inRefer.current.offsetTop + nutRad + portRad
 			];
 		} else {
-			start = this.props.startCurr;
+			start = this.props.curr;
 		}
 
 		let end = [];
@@ -67,7 +67,7 @@ class Cable extends React.Component {
 				this.props.inRefer.current.offsetTop + nutRad + portRad
 			];
 		} else {
-			start = this.props.startCurr;
+			start = this.props.curr;
 		}
 
 		let end = [];
