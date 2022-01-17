@@ -52,6 +52,10 @@ Gain - `.vol`
 ## `Filter`
 Frequency - `.freq` 
 
+# Destination
+## `speaker`
+Audio output.
+
 # Format
 Formats for various integer values are provided in "fmt.js".
 
