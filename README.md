@@ -114,7 +114,7 @@ Triad.
 `Maj` - Major
 `Min` - Minor
 
-# Format
+# Formatting
 Formats for various integer values are provided in "fmt.js".
 
 For control elements, when the `marked` prop exists, the appropriate will suffix the numeric values.
