@@ -39,19 +39,20 @@ Destinations - One in
 
 For the node's specified parameters, one in port is provided.
 
-#### `Osc`
+# Source
+## `Osc`
 Oscillator.
 
 Frequency - `.freq` 
 Detune - `.detune` 
 
-#### `Op`
+## `Op`
 Operator.
 
 Frequency - `.freq` 
 Gain - `.vol` 
 
-#### `Filter`
+## `Filter`
 Filter.
 
 Frequency - `.freq` 
