@@ -86,6 +86,11 @@ Frequency - `.freq`
 ## `speaker()`
 Audio output.
 
+# Worklet
+Base worklet.
+
+Takes a file name containing declarations.
+
 # Examples
 Examples simply extending lower-level components are provided.
 
