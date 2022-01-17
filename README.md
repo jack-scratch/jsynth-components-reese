@@ -23,6 +23,17 @@ Updates a numeric value upon being dragged.
 
 Limited to a range.
 
+### `Port`
+"CV port", contains a reference to an audio node or parameter.
+
+Connected via cable when appropriate event fires.
+
+#### `In`
+Audio node's input or audio parameter.
+
+#### `Out`
+Strictly regards audio node's output.
+
 ## `Bay`
 Patch bay.
 
