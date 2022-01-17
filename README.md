@@ -6,6 +6,18 @@ Offers a basic wrapper around the Web Audio API and its built-in utilities.
 At all points, the Web Audio API's context is available within the window -- `window.ctx`.
 
 # Component
+## Control
+### `Btn`
+Takes a function as a prop in `hook`, and calls this function upon mouse down.
+
+### `Knob`
+Updates a numeric value upon being turned.
+
+### `Fader`
+Updates a numeric value upon being dragged.
+
+Limited to a range.
+
 ## `Bay`
 Patch bay.
 
