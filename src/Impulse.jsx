@@ -2,9 +2,6 @@ import React from "react";
 import {
 	Btn
 } from "./Btn";
-import {
-	Out
-} from "./Port";
 
 class Impulse extends React.Component {
 	constructor(props) {
@@ -46,10 +43,6 @@ class Impulse extends React.Component {
 			<div className="sys" onClick={this.play}>
 				<div className="body">
 					<Btn buff={this.state.buff} name={this.props.name} />
-
-					<div className="io">
-						<Out />
-					</div>
 				</div>
 			</div>
 		);
