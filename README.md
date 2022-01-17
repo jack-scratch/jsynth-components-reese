@@ -86,6 +86,17 @@ Frequency - `.freq`
 ## `speaker()`
 Audio output.
 
+# Examples
+Examples simply extending lower-level components are provided.
+
+## `Piano`
+Array of white and black keys laid out according to the harmonic scale.
+
+Internal is a basic sine wave.
+
+## `Launch`
+Grid of buttons all hooked to various samples.
+
 # Resources
 Resources are situated in the "public" directory.
 
