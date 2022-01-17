@@ -2,12 +2,16 @@ React components for JSynth.
 
 Offers a basic wrapper around the Web Audio API and its built-in utilities.
 
-# `Bay`
+# Context
+At all points, the Web Audio API's context is available within the window -- `window.ctx`.
+
+# Component
+## `Bay`
 Patch bay.
 
 Contains modules and offers an interface to connect their CV ports via cables. 
 
-## `Module`
+### `Module`
 Contains an internal node.
 
 Ports are provided for the node itself, and for the node's specified parameters.
