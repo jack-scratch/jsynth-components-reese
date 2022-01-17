@@ -38,3 +38,6 @@ Gain - `vol`
 Filter.
 
 Frequency - `freq` 
+
+# Format
+Formats for various integer values are provided in "fmt.js".
