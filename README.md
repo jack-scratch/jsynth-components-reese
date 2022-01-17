@@ -50,8 +50,14 @@ Binary light.
 
 On upon the presence of the `on` prop, and off otherwise.
 
-### `<Meter />`
+### `<Led />`
+Base LED.
+
+#### `<Meter />`
 Displays signal strength.
+
+#### `<Analyzer />`
+Displays frequency.
 
 ## `<Bay></Bay>`
 Patch bay.
