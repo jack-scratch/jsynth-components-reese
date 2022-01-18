@@ -1,9 +1,5 @@
 import React from "react";
 import Cable from "./Cable";
-import {
-	nutRad,
-	portRad
-} from "./layout";
 
 class Bay extends React.Component {
 	constructor(props) {
