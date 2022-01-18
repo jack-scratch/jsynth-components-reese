@@ -3,7 +3,7 @@ import {
 	light
 } from "./col";
 
-class Lcd extends React.Component {
+class LCD extends React.Component {
 	constructor(props) {
 		super();
 
@@ -41,9 +41,9 @@ class Lcd extends React.Component {
 	}
 }
 
-Lcd.defaultProps = {
+LCD.defaultProps = {
 	wd: 400,
 	ht: 100
 };
 
-export default Lcd;
+export default LCD;
