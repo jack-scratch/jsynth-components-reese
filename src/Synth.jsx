@@ -43,6 +43,9 @@ class Synth extends React.Component {
 
 		this.lfo = window.ctx.createOscillator();
 
+		this.lfoGain = window.ctx.createGain();
+		this.lfoGain.gain.value = 30.0;
+
 		this.fx = [];
 		for (let i = 0; i < this.infoFx.length; i++) {
 			this.fx.push(window.ctx.createBiquadFilter());
@@ -51,6 +54,10 @@ class Synth extends React.Component {
 		}
 
 		// route
+		for (let i = 0; i < this.bank.length; i++) {
+			this.lfoGain.connect(this.bank[i].frequency);
+		}
+
 		for (let i = 0; i < this.bank.length; i++) {
 			for (let j = 0; j < this.fx.length; j++) {
 				this.bank[i].connect(this.fx[j]);
