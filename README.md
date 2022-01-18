@@ -94,31 +94,43 @@ class Osc extends Source {
 
 # Source
 ## `<Osc />`
-Frequency - `.freq` 
-Detune - `.detune` 
+`.freq` - Frequency
+`.detune` - Detune
 
 ## `<Op />`
-Frequency - `.freq` 
-Gain - `.vol` 
+`.freq` - Frequency
+`.vol` - Gain
 
 # Effect
 ## `<Gain />`
 Increases or decreases signal.
 
+`.level` - Level
+
 ## `<Filter />`
-Frequency - `.freq` 
+Attenuates.
+
+`.freq` - Frequency
 
 ## `<Chorus />`
 Splits input into multiple outputs.
 
+`.spread` - Phase shift
+
 ## `Flanger`
 Produces delayed copy.
+
+Delay - `.delay`
 
 ## `Pan`
 Fades between left and right channels.
 
+Rate - `.rate`
+
 ## `Delay`
 Outputs unfiltrered input after a time interval has passed.
+
+Time - `.delayTime`
 
 # Destination
 ## `speaker()`
