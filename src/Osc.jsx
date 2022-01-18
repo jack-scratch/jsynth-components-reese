@@ -12,10 +12,6 @@ class Osc extends Source {
 		}
 	}
 
-	componentDidMount() {
-		this.node.main.start();
-	}
-
 	render() {
 		return (
 			<Source name={this.props.name} param={[
