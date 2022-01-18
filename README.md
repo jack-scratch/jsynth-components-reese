@@ -70,7 +70,7 @@ Patch bay.
 Contains modules and offers an interface to connect their CV ports via cables. 
 
 ### `<Module />`
-Contains an internal node.
+Contains internal nodes.
 
 Ports are provided for the node itself, depending on the type of its node.
 
