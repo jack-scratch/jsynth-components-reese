@@ -38,11 +38,13 @@ Out can have an effectively infinite number of outputs.
 Audio node's input or audio parameter.
 
 Connects cable when present on mouse up.
+Detaches cable when present on mouse down.
 
 #### `<Out />`
 Strictly regards audio node's output.
 
 Creates cable with the in-point being the port's output.
+Detaches cable when present on mouse down.
 
 ## Display
 ### `<Light />`
