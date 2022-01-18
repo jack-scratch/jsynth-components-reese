@@ -60,6 +60,11 @@ class Synth extends React.Component {
 		for (let i = 0; i < this.fx.length; i++) {
 			this.fx[i].connect(window.ctx.destination);
 		}
+
+		// start
+		for (let i = 0; i < this.bank.length; i++) {
+			this.bank[i].start();
+		}
 	}
 
 	render() {
