@@ -108,7 +108,7 @@ class Toggle extends Btn {
 		return (
 			<Btn name={
 				<span>
-				<FontAwesomeIcon icon={faStop} /> / <FontAwesomeIcon icon={faPlay} />
+					<FontAwesomeIcon icon={faStop} /> / <FontAwesomeIcon icon={faPlay} />
 				</span>
 			} wd={80} />
 		);
