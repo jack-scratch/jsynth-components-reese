@@ -12,27 +12,15 @@ class Analyser extends LCD {
 
 		this.sz = Math.pow(2, 10);
 
-		this.clear = this.clear.bind(this);
-
-		this.draw = this.draw.bind(this);
-	}
-
-	componentDidMount() {
-		this.refer.current.width = this.props.wd;
-		this.refer.current.height = this.props.ht;
-
-		// source
-		this.src = window.ctx.createOscillator();
-
-		// output
 		this.analyser = window.ctx.createAnalyser();
 		this.proc = window.ctx.createScriptProcessor(this.sz, 1, 1);
-
-		this.ctxCanv = this.refer.current.getContext("2d");
 
 		this.analyser.fftSize = this.sz;
 
 		this.data = new Uint8Array(this.analyser.frequencyBinCount);
+
+		// source
+		this.src = window.ctx.createOscillator();
 
 		// route
 		this.src.connect(this.analyser);
@@ -44,6 +32,17 @@ class Analyser extends LCD {
 
 		// start
 		this.src.start();
+
+		this.clear = this.clear.bind(this);
+
+		this.draw = this.draw.bind(this);
+	}
+
+	componentDidMount() {
+		this.refer.current.width = this.props.wd;
+		this.refer.current.height = this.props.ht;
+
+		this.ctxCanv = this.refer.current.getContext("2d");
 
 		this.proc.onaudioprocess = this.draw;
 	}
