@@ -10,6 +10,8 @@ class Analyzer extends LCD {
 
 		this.refer = React.createRef();
 
+		this.sz = Math.pow(2, 10);
+
 		this.clear = this.clear.bind(this);
 
 		this.draw = this.draw.bind(this);
@@ -21,14 +23,12 @@ class Analyzer extends LCD {
 
 		this.src = window.ctx.createOscillator();
 
-		const sz = Math.pow(2, 10);
-
 		this.analyser = window.ctx.createAnalyser();
-		this.proc = window.ctx.createScriptProcessor(sz, 1, 1);
+		this.proc = window.ctx.createScriptProcessor(this.sz, 1, 1);
 
 		this.ctxCanv = this.refer.current.getContext("2d");
 
-		this.analyser.fftSize = sz;
+		this.analyser.fftSize = this.sz;
 
 		this.data = new Uint8Array(this.analyser.frequencyBinCount);
 
