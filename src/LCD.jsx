@@ -31,6 +31,8 @@ class LCD extends React.Component {
 	}
 
 	draw() {
+		this.clear();
+
 		window.ctx.fillStyle = light["active"];
 
 		window.requestAnimationFrame(this.draw);
