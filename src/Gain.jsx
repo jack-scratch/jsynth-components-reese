@@ -18,7 +18,8 @@ class Gain extends Effect {
 					name: "Level",
 					point: this.node.main.gain,
 					min: -12.0,
-					max: 12.0
+					max: 12.0,
+					unit: "db"
 				}
 			]} />
 		);
