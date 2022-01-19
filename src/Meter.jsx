@@ -6,6 +6,9 @@ import {
 	light,
 	js
 } from "./col";
+import {
+	margin
+} from "./layout";
 
 class Meter extends React.Component {
 	sz = Math.pow(2, 10);
@@ -55,7 +58,7 @@ class Meter extends React.Component {
 
 		this.analyser.getByteFrequencyData(this.data);
 
-		this.ctxCanv.fillRect(0, 0, 100, 10);
+		this.ctxCanv.fillRect(margin, margin, 14, 10);
 	}
 
 	render() {
