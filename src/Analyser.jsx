@@ -5,7 +5,6 @@ class Analyser extends React.Component {
 	render() {
 		return (
 			<div className="cont">
-				<div className="head"></div>
 				<div className="body">
 					<LCD />
 				</div>
