@@ -4,7 +4,7 @@ import {
 	light
 } from "./col";
 
-class Analyzer extends React.Component {
+class Analyzer extends LCD {
 	constructor(props) {
 		super();
 
