@@ -1,7 +1,7 @@
 import React from "react";
 import LCD from "./LCD";
 
-class Analyser extends React.Component {
+class Analyzer extends React.Component {
 	constructor(props) {
 		super();
 
@@ -25,4 +25,4 @@ class Analyser extends React.Component {
 	}
 }
 
-export default Analyser;
+export default Analyzer;
