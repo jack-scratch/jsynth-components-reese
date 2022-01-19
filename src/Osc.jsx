@@ -10,6 +10,14 @@ class Osc extends Source {
 		if (this.props.type) {
 			this.node.main.type = this.props.type;
 		}
+
+		if (this.props.hz) {
+			this.node.main.frequency.value = this.props.hz;
+		}
+
+		if (this.props.detune) {
+			this.node.main.detune.value = this.props.detune;
+		}
 	}
 
 	render() {
