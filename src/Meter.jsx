@@ -58,7 +58,14 @@ class Meter extends React.Component {
 
 		this.analyser.getByteFrequencyData(this.data);
 
-		this.ctxCanv.fillRect(margin, margin, 14, 10);
+		let wd = 14;
+		let ht = 10;
+
+		let stride = ht + (margin * 2);
+
+		for (let i = 0; i < 3; i++) {
+			this.ctxCanv.fillRect(margin * 2, (margin * 2) + (i * stride), wd, ht);
+		}
 	}
 
 	render() {
