@@ -46,6 +46,8 @@ class Analyser extends LCD {
 
 		this.ctxCanv = this.refer.current.getContext("2d");
 
+		this.clear();
+
 		this.proc.onaudioprocess = this.draw;
 	}
 
