@@ -21,7 +21,7 @@ class LCD extends React.Component {
 
 		this.clear();
 
-		this.draw();
+		window.requestAnimationFrame(this.draw);
 	}
 
 	clear() {
