@@ -1,24 +1,20 @@
 import React from "react";
 import LCD from "./LCD";
-import {
-	bg,
-	js
-} from "./col";
 
 class Meter extends React.Component {
 	constructor(props) {
-		super();
+		super(props);
 
 		this.wd = 16;
 	}
 
-	draw() {
-		this.window.ctx.fillStyle = js;
-	}
-
 	render() {
 		return (
-			<LCD wd={this.wd} ht={this.level * this.props.tick} />
+			<div className="cont">
+				<div className="body">
+					<canvas width={this.wd} ref={this.refer} />
+				</div>
+			</div>
 		);
 	}
 }
