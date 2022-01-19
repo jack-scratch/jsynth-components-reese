@@ -60,7 +60,7 @@ class Meter extends React.Component {
 
 		let stride = this.ht + (this.margin * 2);
 
-		for (let i = 0; i < 3; i++) {
+		for (let i = 0; i < this.props.tick; i++) {
 			this.ctxCanv.fillRect(this.margin * 2, (this.margin * 2) + (i * stride), this.wd, this.ht);
 		}
 	}
