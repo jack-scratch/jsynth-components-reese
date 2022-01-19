@@ -1,5 +1,8 @@
 import React from "react";
 import LCD from "./LCD";
+import {
+	light
+} from "./col";
 
 class Analyzer extends React.Component {
 	constructor(props) {
@@ -12,6 +15,18 @@ class Analyzer extends React.Component {
 
 		// start
 		this.src.start();
+
+		this.draw = this.draw.bind(this);
+	}
+
+	componentDidMount() {
+		window.requestAnimationFrame(this.draw);
+	}
+
+	draw() {
+		window.ctx.fillStyle = light["active"];
+
+		window.requestAnimationFrame(this.draw);
 	}
 
 	render() {
