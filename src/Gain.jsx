@@ -19,7 +19,7 @@ class Gain extends Effect {
 					point: this.node.main.gain,
 					min: -12.0,
 					max: 12.0,
-					unit: "db"
+					unit: "level"
 				}
 			]} point={this.node.main} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} marked={this.props.marked} />
 		);
