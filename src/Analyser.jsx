@@ -4,6 +4,7 @@ import {
 	In
 } from "./Port";
 import {
+	bg,
 	light
 } from "./col";
 
@@ -51,7 +52,7 @@ class Analyser extends LCD {
 	}
 
 	clear() {
-		this.ctxCanv.fillStyle = "#000";
+		this.ctxCanv.fillStyle = bg;
 		this.ctxCanv.fillRect(0, 0, this.refer.current.width, this.refer.current.height);
 
 		this.ctxCanv.fillStyle = light["inert"];
