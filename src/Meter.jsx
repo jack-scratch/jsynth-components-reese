@@ -6,15 +6,14 @@ import {
 	light,
 	js
 } from "./col";
-import {
-	margin
-} from "./layout";
 
 class Meter extends React.Component {
 	sz = Math.pow(2, 10);
 
 	wd = 14;
 	ht = 10;
+
+	margin = 2;
 
 	constructor(props) {
 		super(props);
@@ -59,10 +58,10 @@ class Meter extends React.Component {
 
 		this.analyser.getByteFrequencyData(this.data);
 
-		let stride = this.ht + (margin * 2);
+		let stride = this.ht + (this.margin * 2);
 
 		for (let i = 0; i < 3; i++) {
-			this.ctxCanv.fillRect(margin * 2, (margin * 2) + (i * stride), this.wd, this.ht);
+			this.ctxCanv.fillRect(this.margin * 2, (this.margin * 2) + (i * stride), this.wd, this.ht);
 		}
 	}
 
