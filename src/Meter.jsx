@@ -1,5 +1,4 @@
 import React from "react";
-import LCD from "./LCD";
 import {
 	In
 } from "./Port";
@@ -15,6 +14,8 @@ class Meter extends React.Component {
 	constructor(props) {
 		super(props);
 
+		this.src = window.ctx.createOscillator();
+
 		this.refer = React.createRef();
 
 		this.analyser = window.ctx.createAnalyser();
@@ -22,11 +23,16 @@ class Meter extends React.Component {
 
 		this.analyser.fftSize = this.sz;
 
+		// route
+		this.src.connect(this.analyser);
+
+		this.analyser.connect(this.proc);
+		this.proc.connect(window.ctx.destination);
+
 		this.data = new Uint8Array(this.analyser.frequencyBinCount);
 
 		this.clear = this.clear.bind(this);
-
-		this.proc.onaudioprocess = this.draw;
+		this.draw = this.draw.bind(this);
 	}
 
 	componentDidMount() {
@@ -49,15 +55,8 @@ class Meter extends React.Component {
 		this.ctxCanv.fillStyle = light["active"];
 
 		this.analyser.getByteFrequencyData(this.data);
-		for (let x = 0; x < this.refer.current.width; x++) {
-			if (x < this.data.length) {
-				for (let y = 0; y < this.refer.current.height; y++) {
-					if (y < this.data[x] / 2) {
-						this.ctxCanv.fillRect(x, this.refer.current.height - y, 1, 1);
-					}
-				}
-			}
-		}
+
+		this.ctxCanv.fillRect(0, 0, 50, 50);
 	}
 
 	render() {
@@ -67,7 +66,7 @@ class Meter extends React.Component {
 					<canvas ref={this.refer} width={this.wd} ref={this.refer} />
 				</div>
 				<div className="io">
-					<In point={this.props.point} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} />
+					<In point={this.src} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} />
 				</div>
 			</div>
 		);
