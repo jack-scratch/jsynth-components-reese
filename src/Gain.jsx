@@ -21,7 +21,7 @@ class Gain extends Effect {
 					max: 12.0,
 					unit: "db"
 				}
-			]} />
+			]} point={this.node.main} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} marked={this.props.marked} />
 		);
 	}
 }
