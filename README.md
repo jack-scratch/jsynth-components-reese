@@ -61,7 +61,7 @@ Base LCD.
 #### `<Meter />`
 Displays signal strength.
 
-#### `<Analyzer />`
+#### `<Analyser />`
 Displays frequency.
 
 ## `<Bay></Bay>`
