@@ -1,6 +1,9 @@
 import React from "react";
 import LCD from "./LCD";
 import {
+	In
+} from "./Port";
+import {
 	light
 } from "./col";
 
@@ -74,6 +77,9 @@ class Analyser extends LCD {
 			<div className="cont">
 				<div className="body">
 					<canvas ref={this.refer} />
+				</div>
+				<div className="io">
+					<In point={this.src} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} />
 				</div>
 			</div>
 		);
