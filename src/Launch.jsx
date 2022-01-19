@@ -11,7 +11,7 @@ class Launch extends React.Component {
 		return (
 			<div className="launch">
 				<div className="head">
-					<div className="mark">{this.props.name}</div>
+					<h1>Launchpad</h1>
 					<Light />
 				</div>
 				<div className="body">
