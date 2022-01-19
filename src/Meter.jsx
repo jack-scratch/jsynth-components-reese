@@ -3,7 +3,7 @@ import {
 	In
 } from "./Port";
 import {
-	light,
+	bg,
 	js
 } from "./col";
 
@@ -54,13 +54,17 @@ class Meter extends React.Component {
 	draw() {
 		this.clear();
 
-		this.ctxCanv.fillStyle = js;
-
 		this.analyser.getByteFrequencyData(this.data);
 
 		let stride = this.ht + (this.margin * 2);
 
+		this.ctxCanv.fillStyle = bg;
 		for (let i = 0; i < this.props.tick; i++) {
+			this.ctxCanv.fillRect(this.margin * 2, (this.margin * 2) + (i * stride), this.wd, this.ht);
+		}
+
+		this.ctxCanv.fillStyle = js;
+		for (let i = 0; i < 3; i++) {
 			this.ctxCanv.fillRect(this.margin * 2, (this.margin * 2) + (i * stride), this.wd, this.ht);
 		}
 	}
