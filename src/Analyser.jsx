@@ -34,7 +34,6 @@ class Analyser extends LCD {
 		this.src.start();
 
 		this.clear = this.clear.bind(this);
-
 		this.draw = this.draw.bind(this);
 	}
 
