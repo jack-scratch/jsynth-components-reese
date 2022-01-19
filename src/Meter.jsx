@@ -3,7 +3,8 @@ import {
 	In
 } from "./Port";
 import {
-	light
+	light,
+	js
 } from "./col";
 
 class Meter extends React.Component {
@@ -44,7 +45,7 @@ class Meter extends React.Component {
 	}
 
 	clear() {
-		this.ctxCanv.fillStyle = light["inert"];
+		this.ctxCanv.fillStyle = "#111";
 
 		this.ctxCanv.fillRect(0, 0, this.refer.current.width, this.refer.current.height);
 	}
@@ -52,11 +53,11 @@ class Meter extends React.Component {
 	draw() {
 		this.clear();
 
-		this.ctxCanv.fillStyle = light["active"];
+		this.ctxCanv.fillStyle = js;
 
 		this.analyser.getByteFrequencyData(this.data);
 
-		this.ctxCanv.fillRect(0, 0, 50, 50);
+		this.ctxCanv.fillRect(0, 0, 100, 100);
 	}
 
 	render() {
