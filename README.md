@@ -58,11 +58,11 @@ On upon the presence of the `on` prop, and off otherwise.
 ### `<Lcd />`
 Base LCD.
 
-#### `<Meter />`
-Displays signal strength.
-
 #### `<Analyser />`
 Displays frequency.
+
+#### `<Meter />`
+Displays signal strength.
 
 ## `<Bay></Bay>`
 Patch bay.
