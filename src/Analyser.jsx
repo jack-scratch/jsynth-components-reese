@@ -4,7 +4,7 @@ import {
 	light
 } from "./col";
 
-class Analyzer extends LCD {
+class Analyser extends LCD {
 	constructor(props) {
 		super();
 
@@ -21,8 +21,10 @@ class Analyzer extends LCD {
 		this.refer.current.width = this.props.wd;
 		this.refer.current.height = this.props.ht;
 
+		// source
 		this.src = window.ctx.createOscillator();
 
+		// output
 		this.analyser = window.ctx.createAnalyser();
 		this.proc = window.ctx.createScriptProcessor(this.sz, 1, 1);
 
@@ -80,4 +82,4 @@ class Analyzer extends LCD {
 	}
 }
 
-export default Analyzer;
+export default Analyser;
