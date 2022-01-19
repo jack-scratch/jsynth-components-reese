@@ -15,8 +15,6 @@ class Meter extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this.src = window.ctx.createOscillator();
-
 		this.refer = React.createRef();
 
 		this.analyser = window.ctx.createAnalyser();
@@ -25,7 +23,7 @@ class Meter extends React.Component {
 		this.analyser.fftSize = this.sz;
 
 		// route
-		this.src.connect(this.analyser);
+		this.props.point.connect(this.analyser);
 
 		this.analyser.connect(this.proc);
 		this.proc.connect(window.ctx.destination);
@@ -57,7 +55,7 @@ class Meter extends React.Component {
 
 		this.analyser.getByteFrequencyData(this.data);
 
-		this.ctxCanv.fillRect(0, 0, 100, 100);
+		this.ctxCanv.fillRect(0, 0, 100, 10);
 	}
 
 	render() {
@@ -70,7 +68,7 @@ class Meter extends React.Component {
 					}} ref={this.refer} />
 				</div>
 				<div className="io">
-					<In point={this.src} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} />
+					<In point={this.props.point} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} />
 				</div>
 			</div>
 		);
