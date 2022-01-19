@@ -35,8 +35,13 @@ class Analyser extends LCD {
 	}
 
 	componentDidMount() {
-		this.refer.current.width = this.props.wd;
-		this.refer.current.height = this.props.ht;
+		if (this.props.wd) {
+			this.refer.current.width = this.props.wd;
+		}
+
+		if (this.props.ht) {
+			this.refer.current.height = this.props.ht;
+		}
 
 		this.ctxCanv = this.refer.current.getContext("2d");
 
