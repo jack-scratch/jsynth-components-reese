@@ -17,7 +17,7 @@ class LCD extends React.Component {
 		this.refer.current.width = this.props.wd;
 		this.refer.current.height = this.props.ht;
 
-		this.window.ctx = this.refer.current.getContext("2d");
+		window.ctx = this.refer.current.getContext("2d");
 
 		this.clear();
 
@@ -25,13 +25,13 @@ class LCD extends React.Component {
 	}
 
 	clear() {
-		this.window.ctx.fillStyle = light["inert"];
+		window.ctx.fillStyle = light["inert"];
 
-		this.window.ctx.fillRect(0, 0, this.refer.current.width, this.refer.current.height);
+		window.ctx.fillRect(0, 0, this.refer.current.width, this.refer.current.height);
 	}
 
 	draw() {
-		this.window.ctx.fillStyle = light["active"];
+		window.ctx.fillStyle = light["active"];
 	}
 
 	render() {
