@@ -9,7 +9,7 @@ import {
 
 class Analyser extends LCD {
 	constructor(props) {
-		super();
+		super(props);
 
 		this.refer = React.createRef();
 
@@ -22,19 +22,13 @@ class Analyser extends LCD {
 
 		this.data = new Uint8Array(this.analyser.frequencyBinCount);
 
-		// source
-		this.src = window.ctx.createOscillator();
-
 		// route
-		this.src.connect(this.analyser);
+		this.props.point.connect(this.analyser);
 
 		this.analyser.connect(this.proc);
 		this.proc.connect(window.ctx.destination);
 
-		this.src.connect(window.ctx.destination);
-
-		// start
-		this.src.start();
+		this.props.point.connect(window.ctx.destination);
 
 		this.clear = this.clear.bind(this);
 		this.draw = this.draw.bind(this);
@@ -81,7 +75,7 @@ class Analyser extends LCD {
 					<canvas ref={this.refer} />
 				</div>
 				<div className="io">
-					<In point={this.src} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} />
+					<In point={this.props.point} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} />
 				</div>
 			</div>
 		);
