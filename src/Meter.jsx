@@ -64,7 +64,8 @@ class Meter extends React.Component {
 			<div className="cont">
 				<div className="body">
 					<canvas ref={this.refer} style={{
-						width: this.wd
+						width: this.wd,
+						height: 200
 					}} ref={this.refer} />
 				</div>
 				<div className="io">
