@@ -63,7 +63,9 @@ class Meter extends React.Component {
 		return (
 			<div className="cont">
 				<div className="body">
-					<canvas ref={this.refer} width={this.wd} ref={this.refer} />
+					<canvas ref={this.refer} style={{
+						width: this.wd
+					}} ref={this.refer} />
 				</div>
 				<div className="io">
 					<In point={this.src} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} />
