@@ -8,12 +8,12 @@ import {
 } from "./col";
 
 class Analyser extends LCD {
+	sz = Math.pow(2, 10);
+
 	constructor(props) {
 		super(props);
 
 		this.refer = React.createRef();
-
-		this.sz = Math.pow(2, 10);
 
 		this.analyser = window.ctx.createAnalyser();
 		this.proc = window.ctx.createScriptProcessor(this.sz, 1, 1);
