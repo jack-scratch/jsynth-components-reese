@@ -4,7 +4,8 @@ import {
 } from "./Port";
 import {
 	bg,
-	js
+	js,
+	light
 } from "./col";
 
 class Meter extends React.Component {
@@ -46,8 +47,10 @@ class Meter extends React.Component {
 	}
 
 	clear() {
-		this.ctxCanv.fillStyle = "#111";
+		this.ctxCanv.fillStyle = "#000";
+		this.ctxCanv.fillRect(0, 0, this.refer.current.width, this.refer.current.height);
 
+		this.ctxCanv.fillStyle = light["inert"];
 		this.ctxCanv.fillRect(0, 0, this.refer.current.width, this.refer.current.height);
 	}
 
@@ -58,12 +61,12 @@ class Meter extends React.Component {
 
 		let stride = this.ht + (this.margin * 2);
 
-		this.ctxCanv.fillStyle = bg;
+		this.ctxCanv.fillStyle = light["active"];
 		for (let i = 0; i < this.props.tick; i++) {
 			this.ctxCanv.fillRect(this.margin * 2, (this.margin * 2) + (i * stride), this.wd, this.ht);
 		}
 
-		this.ctxCanv.fillStyle = js;
+		this.ctxCanv.fillStyle = light["active"];
 		for (let i = 0; i < 3; i++) {
 			this.ctxCanv.fillRect(this.margin * 2, (this.margin * 2) + (i * stride), this.wd, this.ht);
 		}

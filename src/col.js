@@ -6,8 +6,8 @@ const fg = "grey";
 const inert = "#111";
 
 const light = {
-	'inert': "rgba(240, 219, 79, 0.8)",
-	'active': "rgba(0, 0, 0, 0.2)"
+	"inert": "rgba(240, 219, 79, 0.8)",
+	"active": "rgba(0, 0, 0, 0.2)"
 };
 
 export {

@@ -51,8 +51,10 @@ class Analyser extends LCD {
 	}
 
 	clear() {
-		this.ctxCanv.fillStyle = light["inert"];
+		this.ctxCanv.fillStyle = "#000";
+		this.ctxCanv.fillRect(0, 0, this.refer.current.width, this.refer.current.height);
 
+		this.ctxCanv.fillStyle = light["inert"];
 		this.ctxCanv.fillRect(0, 0, this.refer.current.width, this.refer.current.height);
 	}
 
