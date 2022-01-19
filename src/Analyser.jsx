@@ -2,6 +2,18 @@ import React from "react";
 import LCD from "./LCD";
 
 class Analyser extends React.Component {
+	constructor(props) {
+		super();
+
+		this.src = window.ctx.createOscillator();
+
+		// route
+		this.src.connect(window.ctx.destination);
+
+		// start
+		this.src.start();
+	}
+
 	render() {
 		return (
 			<div className="cont">
