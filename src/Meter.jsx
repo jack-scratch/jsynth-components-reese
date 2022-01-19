@@ -13,7 +13,8 @@ import {
 class Meter extends React.Component {
 	sz = Math.pow(2, 10);
 
-	wd = 16;
+	wd = 14;
+	ht = 10;
 
 	constructor(props) {
 		super(props);
@@ -58,13 +59,10 @@ class Meter extends React.Component {
 
 		this.analyser.getByteFrequencyData(this.data);
 
-		let wd = 14;
-		let ht = 10;
-
-		let stride = ht + (margin * 2);
+		let stride = this.ht + (margin * 2);
 
 		for (let i = 0; i < 3; i++) {
-			this.ctxCanv.fillRect(margin * 2, (margin * 2) + (i * stride), wd, ht);
+			this.ctxCanv.fillRect(margin * 2, (margin * 2) + (i * stride), this.wd, this.ht);
 		}
 	}
 
