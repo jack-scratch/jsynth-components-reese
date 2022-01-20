@@ -58,7 +58,7 @@ On upon the presence of the `on` prop, and off otherwise.
 ### `<Lcd />`
 Base LCD.
 
-#### `<Analyser />`
+#### `<Spectrum />`
 Displays frequency.
 
 #### `<Meter />`

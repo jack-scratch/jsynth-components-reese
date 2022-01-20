@@ -8,7 +8,7 @@ import {
 	light
 } from "./col";
 
-class Analyser extends LCD {
+class Spectrum extends LCD {
 	sz = Math.pow(2, 10);
 
 	constructor(props) {
@@ -90,4 +90,4 @@ class Analyser extends LCD {
 	}
 }
 
-export default Analyser;
+export default Spectrum;
