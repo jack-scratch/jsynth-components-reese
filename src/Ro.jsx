@@ -57,7 +57,7 @@ class Ro extends React.Component {
 		return (
 			<div className="cont">
 				<div className="body">
-					<canvas ref={this.refer} />
+					<canvas ref={this.refer} height={this.props.ht * this.lineHt} />
 				</div>
 			</div>
 		);
