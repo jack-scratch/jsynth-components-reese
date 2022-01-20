@@ -12,9 +12,9 @@ class Meter extends React.Component {
 	sz = Math.pow(2, 10);
 
 	wd = 14;
-	ht = 10;
+	ht = 6;
 
-	margin = 2;
+	margin = 1;
 
 	constructor(props) {
 		super(props);
@@ -92,7 +92,7 @@ class Meter extends React.Component {
 }
 
 Meter.defaultProps = {
-	tick: 10
+	tick: 20
 };
 
 export default Meter;
