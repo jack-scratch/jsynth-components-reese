@@ -13,6 +13,14 @@ class Ro extends React.Component {
 
 		this.clear = this.clear.bind(this);
 		this.draw = this.draw.bind(this);
+
+		this.state = {
+			buff: []
+		};
+
+		if (this.props.buff) {
+			this.state.buff = this.props.buff;
+		}
 	}
 
 	componentDidMount() {
@@ -36,7 +44,9 @@ class Ro extends React.Component {
 
 		this.ctxCanv.fillStyle = light["active"];
 
-		this.ctxCanv.fillText("asdf", 0, 10);
+		for (let i = 0; i < this.state.buff.length; i++) {
+			this.ctxCanv.fillText(this.state.buff[i], 0, (i + 1) * 10);
+		}
 	}
 
 	render() {
