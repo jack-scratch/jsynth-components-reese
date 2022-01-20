@@ -1,25 +1,64 @@
 import React from "react";
 
-import "./Text.css";
+import {
+	bg,
+	light
+} from "./col";
 
 class Text extends React.Component {
 	constructor(props) {
 		super(props);
-		
+
+		this.lineHt = 14;
+
+		this.refer = React.createRef();
+
+		this.clear = this.clear.bind(this);
+		this.draw = this.draw.bind(this);
+
 		this.state = {
-			l: this.props.l
+			buff: []
 		};
+
+		if (this.props.buff) {
+			this.state.buff = this.props.buff;
+		}
+	}
+
+	componentDidMount() {
+		this.ctxCanv = this.refer.current.getContext("2d");
+
+		this.clear();
+
+		this.draw();
+	}
+
+	clear() {
+		this.ctxCanv.fillStyle = bg;
+		this.ctxCanv.fillRect(0, 0, this.refer.current.width, this.refer.current.height);
+
+		this.ctxCanv.fillStyle = light["inert"];
+		this.ctxCanv.fillRect(0, 0, this.refer.current.width, this.refer.current.height);
+
+		this.ctxCanv.font = `${this.lineHt}px Arial`;
+	}
+
+	draw() {
+		this.clear();
+
+		this.ctxCanv.fillStyle = light["active"];
+
+		for (let i = 0; i < this.state.buff.length; i++) {
+			this.ctxCanv.fillText(this.state.buff[i], 0, (i + 1) * this.lineHt);
+		}
 	}
 
 	render() {
 		return (
-			<div className="buff" style={{
-				width: `${this.props.wd}ch`,
-				height: `${this.props.ht}ch`
-			}}>
-				{[...Array(this.props.ht).keys()].map((i) =>
-					<div className="line" key={i}>{this.state.l + i < this.props.buff.length ? this.props.buff[this.state.l + i] : ""}</div>
-				)}
+			<div className="cont">
+				<div className="body">
+					<canvas ref={this.refer} height={this.props.ht * this.lineHt} />
+				</div>
 			</div>
 		);
 	}
