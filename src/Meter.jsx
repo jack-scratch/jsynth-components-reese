@@ -47,7 +47,7 @@ class Meter extends React.Component {
 	}
 
 	clear() {
-		this.canvCtx.fillStyle = "#000";
+		this.canvCtx.fillStyle = bg;
 		this.canvCtx.fillRect(0, 0, this.refer.current.width, this.refer.current.height);
 
 		this.canvCtx.fillStyle = light["inert"];
