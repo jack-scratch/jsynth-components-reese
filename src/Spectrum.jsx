@@ -79,7 +79,7 @@ class Spectrum extends LCD {
 	render() {
 		return (
 			<div className="cont">
-				<div className="body">
+				<div className="cont">
 					<canvas ref={this.refer} />
 				</div>
 				<div className="io">
@@ -89,5 +89,11 @@ class Spectrum extends LCD {
 		);
 	}
 }
+
+Spectrum.defaultProps = {
+	wd: 800,
+	ht: 300
+};
+
 
 export default Spectrum;
