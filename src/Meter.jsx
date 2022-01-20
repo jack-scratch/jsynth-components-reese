@@ -11,6 +11,7 @@ import {
 class Meter extends React.Component {
 	sz = Math.pow(2, 10);
 
+	// layout
 	wd = 14;
 	ht = 6;
 
