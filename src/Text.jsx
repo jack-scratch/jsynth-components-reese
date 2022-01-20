@@ -33,6 +33,10 @@ class Text extends React.Component {
 		this.draw();
 	}
 
+	componentDidUpdate() {
+		this.draw();
+	}
+
 	clear() {
 		this.canvCtx.fillStyle = bg;
 		this.canvCtx.fillRect(0, 0, this.refer.current.width, this.refer.current.height);
