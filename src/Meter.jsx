@@ -41,6 +41,9 @@ class Meter extends React.Component {
 	componentDidMount() {
 		this.canvCtx = this.refer.current.getContext("2d");
 
+		this.canvCtx.canvas.width = this.wd + (this.margin * 2 * 2);
+		this.canvCtx.canvas.height = (this.props.tick * (this.ht + (this.margin * 2))) + (this.margin * 2);
+
 		this.clear();
 
 		this.proc.onaudioprocess = this.draw;
@@ -75,7 +78,7 @@ class Meter extends React.Component {
 	render() {
 		return (
 			<div className="cont">
-				<div className="body">
+				<div className="cont">
 					<canvas ref={this.refer} />
 				</div>
 				<div className="io">
