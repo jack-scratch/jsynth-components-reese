@@ -39,7 +39,7 @@ class Meter extends React.Component {
 	}
 
 	componentDidMount() {
-		this.ctxCanv = this.refer.current.getContext("2d");
+		this.canvCtx = this.refer.current.getContext("2d");
 
 		this.clear();
 
@@ -47,11 +47,11 @@ class Meter extends React.Component {
 	}
 
 	clear() {
-		this.ctxCanv.fillStyle = "#000";
-		this.ctxCanv.fillRect(0, 0, this.refer.current.width, this.refer.current.height);
+		this.canvCtx.fillStyle = "#000";
+		this.canvCtx.fillRect(0, 0, this.refer.current.width, this.refer.current.height);
 
-		this.ctxCanv.fillStyle = light["inert"];
-		this.ctxCanv.fillRect(0, 0, this.refer.current.width, this.refer.current.height);
+		this.canvCtx.fillStyle = light["inert"];
+		this.canvCtx.fillRect(0, 0, this.refer.current.width, this.refer.current.height);
 	}
 
 	draw() {
@@ -61,14 +61,14 @@ class Meter extends React.Component {
 
 		let stride = this.ht + (this.margin * 2);
 
-		this.ctxCanv.fillStyle = light["active"];
+		this.canvCtx.fillStyle = light["active"];
 		for (let i = 0; i < this.props.tick; i++) {
-			this.ctxCanv.fillRect(this.margin * 2, (this.margin * 2) + (i * stride), this.wd, this.ht);
+			this.canvCtx.fillRect(this.margin * 2, (this.margin * 2) + (i * stride), this.wd, this.ht);
 		}
 
-		this.ctxCanv.fillStyle = light["active"];
+		this.canvCtx.fillStyle = light["active"];
 		for (let i = 0; i < 3; i++) {
-			this.ctxCanv.fillRect(this.margin * 2, (this.margin * 2) + (i * stride), this.wd, this.ht);
+			this.canvCtx.fillRect(this.margin * 2, (this.margin * 2) + (i * stride), this.wd, this.ht);
 		}
 	}
 

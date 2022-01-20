@@ -26,7 +26,7 @@ class Text extends React.Component {
 	}
 
 	componentDidMount() {
-		this.ctxCanv = this.refer.current.getContext("2d");
+		this.canvCtx = this.refer.current.getContext("2d");
 
 		this.clear();
 
@@ -34,22 +34,22 @@ class Text extends React.Component {
 	}
 
 	clear() {
-		this.ctxCanv.fillStyle = bg;
-		this.ctxCanv.fillRect(0, 0, this.refer.current.width, this.refer.current.height);
+		this.canvCtx.fillStyle = bg;
+		this.canvCtx.fillRect(0, 0, this.refer.current.width, this.refer.current.height);
 
-		this.ctxCanv.fillStyle = light["inert"];
-		this.ctxCanv.fillRect(0, 0, this.refer.current.width, this.refer.current.height);
+		this.canvCtx.fillStyle = light["inert"];
+		this.canvCtx.fillRect(0, 0, this.refer.current.width, this.refer.current.height);
 
-		this.ctxCanv.font = `${this.lineHt}px Arial`;
+		this.canvCtx.font = `${this.lineHt}px Arial`;
 	}
 
 	draw() {
 		this.clear();
 
-		this.ctxCanv.fillStyle = light["active"];
+		this.canvCtx.fillStyle = light["active"];
 
 		for (let i = 0; i < this.state.buff.length; i++) {
-			this.ctxCanv.fillText(this.state.buff[i], 0, (i + 1) * this.lineHt);
+			this.canvCtx.fillText(this.state.buff[i], 0, (i + 1) * this.lineHt);
 		}
 	}
 

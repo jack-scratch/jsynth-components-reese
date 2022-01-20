@@ -44,7 +44,7 @@ class Spectrum extends LCD {
 			this.refer.current.height = this.props.ht;
 		}
 
-		this.ctxCanv = this.refer.current.getContext("2d");
+		this.canvCtx = this.refer.current.getContext("2d");
 
 		this.clear();
 
@@ -52,24 +52,24 @@ class Spectrum extends LCD {
 	}
 
 	clear() {
-		this.ctxCanv.fillStyle = bg;
-		this.ctxCanv.fillRect(0, 0, this.refer.current.width, this.refer.current.height);
+		this.canvCtx.fillStyle = bg;
+		this.canvCtx.fillRect(0, 0, this.refer.current.width, this.refer.current.height);
 
-		this.ctxCanv.fillStyle = light["inert"];
-		this.ctxCanv.fillRect(0, 0, this.refer.current.width, this.refer.current.height);
+		this.canvCtx.fillStyle = light["inert"];
+		this.canvCtx.fillRect(0, 0, this.refer.current.width, this.refer.current.height);
 	}
 
 	draw() {
 		this.clear();
 
-		this.ctxCanv.fillStyle = light["active"];
+		this.canvCtx.fillStyle = light["active"];
 
 		this.analyser.getByteFrequencyData(this.data);
 		for (let x = 0; x < this.refer.current.width; x++) {
 			if (x < this.data.length) {
 				for (let y = 0; y < this.refer.current.height; y++) {
 					if (y < this.data[x] / 2) {
-						this.ctxCanv.fillRect(x, this.refer.current.height - y, 1, 1);
+						this.canvCtx.fillRect(x, this.refer.current.height - y, 1, 1);
 					}
 				}
 			}
