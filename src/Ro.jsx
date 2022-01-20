@@ -9,6 +9,8 @@ class Ro extends React.Component {
 	constructor(props) {
 		super(props);
 
+		this.lineHt = 14;
+
 		this.refer = React.createRef();
 
 		this.clear = this.clear.bind(this);
@@ -37,6 +39,8 @@ class Ro extends React.Component {
 
 		this.ctxCanv.fillStyle = light["inert"];
 		this.ctxCanv.fillRect(0, 0, this.refer.current.width, this.refer.current.height);
+
+		this.ctxCanv.font = `${this.lineHt}px Arial`;
 	}
 
 	draw() {
@@ -45,7 +49,7 @@ class Ro extends React.Component {
 		this.ctxCanv.fillStyle = light["active"];
 
 		for (let i = 0; i < this.state.buff.length; i++) {
-			this.ctxCanv.fillText(this.state.buff[i], 0, (i + 1) * 10);
+			this.ctxCanv.fillText(this.state.buff[i], 0, (i + 1) * this.lineHt);
 		}
 	}
 
