@@ -14,8 +14,8 @@ class Text extends React.Component {
 	render() {
 		return (
 			<div className="buff" style={{
-				width: this.props.wd + "ch",
-				height: this.props.ht + "ch"
+				width: `${this.props.wd}ch`,
+				height: `${this.props.ht}ch`
 			}}>
 				{[...Array(this.props.ht).keys()].map((i) =>
 					<div className="line" key={i}>{this.state.l + i < this.props.buff.length ? this.props.buff[this.state.l + i] : ""}</div>
