@@ -71,7 +71,9 @@ class Meter extends React.Component {
 
 		this.canvCtx.fillStyle = light["active"];
 		for (let i = 0; i < 3; i++) {
-			this.canvCtx.fillRect(this.margin * 2, (this.margin * 2) + (i * stride), this.wd, this.ht);
+			let inv = this.props.tick - (i + 1);
+
+			this.canvCtx.fillRect(this.margin * 2, (this.margin * 2) + (inv * stride), this.wd, this.ht);
 		}
 	}
 
