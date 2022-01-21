@@ -30,8 +30,8 @@ class Fader extends React.Component {
 
 	render() {
 		let markStride;
-		if (this.props.mark) {
-			markStride = this.props.ln / (this.props.mark - 1);
+		if (this.props.marked) {
+			markStride = this.props.ln / (this.props.marked - 1);
 		}
 
 		return (
@@ -52,7 +52,7 @@ class Fader extends React.Component {
 					</div>
 				</div>
 				<svg xmlns="http://www.w3.org/2000/svg" className="inc">
-					{this.props.mark && [...Array(this.props.mark).keys()].map((i) =>
+					{this.props.marked && [...Array(this.props.mark).keys()].map((i) =>
 						<line x1={margin * 2} y1={i * markStride} x2={(margin * 2) + 20} y2={i * markStride} className="tick" key={i} />
 					)}
 				</svg>
