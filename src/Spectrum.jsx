@@ -95,5 +95,4 @@ Spectrum.defaultProps = {
 	ht: 300
 };
 
-
 export default Spectrum;
