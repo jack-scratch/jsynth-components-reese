@@ -1,4 +1,7 @@
 import Effect from "./Effect";
+import {
+	unit
+} from "./fmt";
 
 class Filter extends Effect {
 	constructor(props) {
@@ -31,7 +34,7 @@ class Lowpass extends Filter {
 					point: this.node.main.frequency,
 					min: this.props.rngFreq[0],
 					max: this.props.rngFreq[1],
-					unit: "freq"
+					unit: unit["freq"]
 				}
 			]} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} marked={this.props.marked} />
 		);
@@ -47,7 +50,7 @@ class Highpass extends Filter {
 					point: this.node.main.frequency,
 					min: this.props.rngFreq[0],
 					max: this.props.rngFreq[1],
-					unit: "freq"
+					unit: unit["freq"]
 				}
 			]} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} marked={this.props.marked} />
 		);

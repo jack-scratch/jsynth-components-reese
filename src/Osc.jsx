@@ -1,5 +1,8 @@
 import React from "react";
 import Source from "./Source";
+import {
+	unit
+} from "./fmt";
 
 class Osc extends Source {
 	constructor(props) {
@@ -28,13 +31,13 @@ class Osc extends Source {
 					point: this.node.main.frequency,
 					min: this.props.rngFreq[0],
 					max: this.props.rngFreq[1],
-					unit: "freq"
+					unit: unit["time"][0]
 				}, {
 					name: "Detune",
 					point: this.node.main.detune,
 					min: this.props.rngDetune[0],
 					max: this.props.rngDetune[1],
-					unit: "cents"
+					unit: unit["cents"]
 				}
 			]} port={[
 				{

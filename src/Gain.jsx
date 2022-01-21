@@ -1,4 +1,7 @@
 import Effect from "./Effect";
+import {
+	unit
+} from "./fmt";
 
 class Gain extends Effect {
 	constructor(props) {
@@ -19,7 +22,7 @@ class Gain extends Effect {
 					point: this.node.main.gain,
 					min: -12.0,
 					max: 12.0,
-					unit: "level"
+					unit: unit["freq"]
 				}
 			]} point={this.node.main} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} marked={this.props.marked} />
 		);

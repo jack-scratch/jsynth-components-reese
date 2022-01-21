@@ -1,4 +1,7 @@
 import Effect from "./Effect";
+import {
+	unit
+} from "./fmt";
 
 class Chorus extends Effect {
 	constructor(props) {
@@ -14,7 +17,8 @@ class Chorus extends Effect {
 					name: "Spread",
 					point: this.node.main.frequency,
 					min: 1.0,
-					max: 100.0
+					max: 100.0,
+					unit: unit["time"][0]
 				}
 			]} port={[
 				{
