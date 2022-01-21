@@ -16,6 +16,14 @@ Takes a function as a prop in `hook`, and calls this function upon mouse down.
 ### `<Knob />`
 Updates a numeric value upon being turned.
 
+#### Props
+`param` - Audio parameter
+`rad` - Radius
+`min` - Range minimum
+`max` - Range maximum
+`quant` - Quantize
+`marked` - Mark range
+
 #### Quantized
 For numeric values specifically meant to be integral, the `quant` prop can be passed.
 
@@ -26,8 +34,16 @@ Updates a numeric value upon being dragged.
 
 Limited to a range.
 
+#### Props
+`param` - Audio parameter
+`ln` - Height
+`marked` - Mark range
+
 ### `<Key />`
 Takes a function as a prop in `hook`, and calls this function upon mouse down.
+
+#### Props
+`node` - Source
 
 ### `<Port />`
 "CV port", contains a reference to an audio node or parameter.
@@ -42,6 +58,10 @@ Detaches cable when present on mouse down.
 
 Can have at most one input.
 
+#### Props
+`hookInDown` - Function to call upon mouse down
+`hookInUp` - Function to call upon mouse up
+
 #### `<Out />`
 Strictly regards audio node's output.
 
@@ -49,6 +69,9 @@ Creates cable with the in-point being the port's output.
 Detaches cable when present on mouse down.
 
 Can have an effectively infinite number of outputs.
+
+#### Props
+`hookUpDown` - Function to call upon mouse up
 
 ## Display
 ### `<Light />`
