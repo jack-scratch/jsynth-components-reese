@@ -120,12 +120,12 @@ Splits input into multiple outputs.
 ## `<Flanger />`
 Produces delayed copy.
 
-Delay - `.delay`
+`.delay` - Delay
 
 ## `<Pan />`
 Fades between left and right channels.
 
-Rate - `.rate`
+`.rate` - Rate
 
 ## `<Delay />`
 Outputs unfiltrered input after a time interval has passed.
