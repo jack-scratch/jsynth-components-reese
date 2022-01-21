@@ -16,8 +16,8 @@ class Chorus extends Effect {
 				{
 					name: "Spread",
 					point: this.node.main.frequency,
-					min: 1.0,
-					max: 100.0,
+					min: 1,
+					max: 100,
 					unit: unit["time"][0]
 				}
 			]} port={[
