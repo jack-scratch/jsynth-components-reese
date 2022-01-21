@@ -229,8 +229,6 @@ Various musical constants and utilities.
 Base chord.
 
 #### `Triad`
-Triad.
-
 `Maj` - Major
 `Min` - Minor
 
