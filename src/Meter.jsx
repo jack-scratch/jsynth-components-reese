@@ -6,6 +6,12 @@ import {
 	bg,
 	light
 } from "./col";
+import {
+	margin
+} from "./layout";
+import {
+	unit
+} from "./fmt";
 
 class Meter extends React.Component {
 	sz = Math.pow(2, 10);
@@ -78,10 +84,21 @@ class Meter extends React.Component {
 	}
 
 	render() {
+		let ht = this.props.tick * (this.ht + (this.margin * 2));
+
 		return (
 			<div className="cont">
 				<div className="cont">
 					<canvas ref={this.refer} />
+					{this.props.marked && <svg overflow="visible" width={60} height={ht} style={{
+						marginLeft: margin
+					}}>
+						<line className="tick" x1={0} y1={0} x2={10} y2={0} />
+						<text className="mark" x={10 + margin} alignmentBaseline="middle">{this.props.max}{unit["level"]}</text>
+
+						<line className="tick" x1={0} y1={ht} x2={10} y2={this.props.tick * (this.ht + (this.margin * 2))} />
+						<text className="mark" x={10 + margin} y={this.props.tick * (this.ht + (this.margin * 2))} alignmentBaseline="middle">{this.props.min}{unit["level"]}</text>
+					</svg>}
 				</div>
 				<div className="io">
 					<In point={this.props.point} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} />
@@ -92,7 +109,9 @@ class Meter extends React.Component {
 }
 
 Meter.defaultProps = {
-	tick: 20
+	tick: 20,
+	min: 0,
+	max: 12
 };
 
 export default Meter;
