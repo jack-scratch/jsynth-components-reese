@@ -114,6 +114,13 @@ class Osc extends Source {
 }
 ```
 
+### Props
+`name` - Title
+`param` - List of parameters
+`hookInDown` - Function to call on in port's mouse down event
+`hookInUp` - Function to call on in port's mouse up event
+`hookOutDown` - Function to call on in port's mouse up event
+
 # Source
 ## `<Osc />`
 Oscillator.
