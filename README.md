@@ -59,8 +59,8 @@ On upon the presence of the `on` prop, and off otherwise.
 2D Text display.
 
 #### Props
-`wd` - Width in characters
-`ht` - Height in lines
+`wd` - Width (characters)
+`ht` - Height (lines)
 `l` - Line index
 
 ### `<LCD />`
@@ -68,19 +68,22 @@ Base LCD.
 
 `.clear()` - Clear display
 
-#### Props
-`wd` - Width in pixels
-`ht` - Height in pixels
-
 #### `<Spectrum />`
 Displays frequency.
 
 `.draw()` - Draw
 
+#### Props
+`wd` - Width (pixels)
+`ht` - Height (pixels)
+
 #### `<Meter />`
 Displays signal strength.
 
 `.draw()` - Draw
+
+#### Props
+`tick` - Height
 
 ## `<Bay></Bay>`
 Patch bay.
@@ -114,14 +117,16 @@ class Osc extends Source {
 ## `<Osc />`
 Oscillator.
 
-`.freq` - Frequency
-`.detune` - Detune
+### Props
+`hz` - Frequency
+`detune` - Detune
 
 ## `<Op />`
 Operator.
 
-`.freq` - Frequency
-`.vol` - Gain
+### Props
+`hz` - Frequency
+`vol` - Gain
 
 # Effect
 ## `<Gain />`
