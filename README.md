@@ -117,20 +117,28 @@ Splits input into multiple outputs.
 
 `.spread` - Phase shift
 
-## `Flanger`
+## `<Flanger />`
 Produces delayed copy.
 
 Delay - `.delay`
 
-## `Pan`
+## `<Pan />`
 Fades between left and right channels.
 
 Rate - `.rate`
 
-## `Delay`
+## `<Delay />`
 Outputs unfiltrered input after a time interval has passed.
 
 Time - `.delayTime`
+
+## `<Env />`
+ADSR envelope.
+
+`.atk` - Attack
+`.decay` - Decay
+`.sust` - Sustain
+`.rel` - Release
 
 # Destination
 ## `speaker()`
