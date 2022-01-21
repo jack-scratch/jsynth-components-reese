@@ -31,20 +31,21 @@ Takes a function as a prop in `hook`, and calls this function upon mouse down.
 
 Connected via cable when appropriate event fires.
 
-In can have at most one input.
-Out can have an effectively infinite number of outputs.
-
 #### `<In />`
 Audio node's input or audio parameter.
 
 Connects cable when present on mouse up.
 Detaches cable when present on mouse down.
 
+Can have at most one input.
+
 #### `<Out />`
 Strictly regards audio node's output.
 
 Creates cable with the in-point being the port's output.
 Detaches cable when present on mouse down.
+
+Can have an effectively infinite number of outputs.
 
 ## Display
 ### `<Light />`
