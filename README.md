@@ -97,7 +97,7 @@ Base LCD.
 `.clear()` - Clear display
 
 #### `<Spectrum />`
-Displays frequency.
+Plots frequency.
 
 `.draw()` - Draw
 
