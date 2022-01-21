@@ -2,8 +2,12 @@ import {
 	oct
 } from "./math";
 import {
-	sign
+	unit
 } from "./fmt";
+
+function clamp(no, min, max) {
+	return Math.min(Math.max(no, min), max);
+}
 
 function fmt(i, off) {
 	const base = "A";
@@ -24,11 +28,11 @@ function fmt(i, off) {
 		let note = [];
 
 		if (mark["flat"]) {
-			note.push(String.fromCharCode(base.charCodeAt() + relFlat) + "<sub>" + sign["flat"] + "</sub>");
+			note.push(String.fromCharCode(base.charCodeAt() + relFlat) + "<sub>" + unit["sign"]["flat"] + "</sub>");
 		}
 
 		if (mark["sharp"]) {
-			note.push(String.fromCharCode(base.charCodeAt() + relSharp) + sign["sharp"]);
+			note.push(String.fromCharCode(base.charCodeAt() + relSharp) + unit["sign"]["sharp"]);
 		}
 
 		let tok = [];
@@ -60,5 +64,6 @@ function fmt(i, off) {
 }
 
 export {
+	clamp,
 	fmt
 };
