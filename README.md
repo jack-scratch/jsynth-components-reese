@@ -68,6 +68,10 @@ Base LCD.
 
 `.clear()` - Clear display
 
+#### Props
+`wd` - Width in pixels
+`ht` - Height in pixels
+
 #### `<Spectrum />`
 Displays frequency.
 
