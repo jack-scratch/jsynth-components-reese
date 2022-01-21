@@ -134,7 +134,7 @@ Fades between left and right channels.
 ## `<Delay />`
 Outputs unfiltrered input after a time interval has passed.
 
-Time - `.time`
+`.time` - Time
 
 ## `<Env />`
 ADSR envelope.
