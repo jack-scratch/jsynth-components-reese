@@ -64,10 +64,6 @@ Btn.defaultProps = {
 };
 
 class S extends Btn {
-	constructor(props) {
-		super(props);
-	}
-
 	render() {
 		return (
 			<Btn wd={50} ht={50} />
@@ -76,10 +72,6 @@ class S extends Btn {
 }
 
 class M extends Btn {
-	constructor(props) {
-		super(props);
-	}
-
 	render() {
 		return (
 			<Btn wd={65} ht={65} />
@@ -88,10 +80,6 @@ class M extends Btn {
 }
 
 class L extends Btn {
-	constructor(props) {
-		super(props);
-	}
-
 	render() {
 		return (
 			<Btn wd={100} ht={100} />
@@ -100,10 +88,6 @@ class L extends Btn {
 }
 
 class Toggle extends Btn {
-	constructor(props) {
-		super(props);
-	}
-
 	render() {
 		return (
 			<Btn name={
