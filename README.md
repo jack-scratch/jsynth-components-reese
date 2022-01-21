@@ -52,10 +52,10 @@ Binary light.
 
 On upon the presence of the `on` prop, and off otherwise.
 
-### Text
+### `<Text />`
 2D Text display.
 
-### `<Lcd />`
+### `<LCD />`
 Base LCD.
 
 #### `<Spectrum />`
