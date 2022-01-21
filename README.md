@@ -173,7 +173,16 @@ Increases or decreases signal.
 `level` - Level
 
 ## `<Filter />`
-Attenuates.
+Attenuates frequencies.
+
+### Props
+`type` - ["lowpass", "highpass", "bandpass"]
+
+### `<Lowpass />`
+`rngFreq` - Frequency range
+
+### `<Highpass />`
+`rngFreq` - Frequency range
 
 ### Props
 `hz` - Frequency
