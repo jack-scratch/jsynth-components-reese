@@ -20,36 +20,20 @@ class Chorus extends Effect {
 					max: 100,
 					unit: unit["time"][0]
 				}
-			]} port={[
-				{
-					type: "in",
-					point: this.node.main
-				}, {
-					type: "out",
-					point: this.node.main
-				}, {
-					type: "out",
-					point: this.node.main
-				}, {
-					type: "out",
-					point: this.node.main
-				}, {
-					type: "out",
-					point: this.node.main
-				}, {
-					type: "out",
-					point: this.node.main
-				}, {
-					type: "out",
-					point: this.node.main
-				}
-			]} hookOutDown={this.props.hookOutDown} marked />
+			]} port={[{
+				type: "in",
+				point: this.node.main
+			}, ...[...Array(this.props.cnt).keys()].map((i) => ({
+				type: "out",
+				point: this.node.main
+			}))]} hookOutDown={this.props.hookOutDown} marked />
 		);
 	}
 }
 
 Chorus.defaultProps = {
-	name: "Chorus"
+	name: "Chorus",
+	cnt: 6
 };
 
 export default Chorus;
