@@ -118,6 +118,7 @@ class Osc extends Source {
 Oscillator.
 
 ### Props
+`type` - ["sine", "square", "sawtooth", "triangle", "custom"]
 `hz` - Frequency
 `detune` - Detune
 
@@ -125,6 +126,7 @@ Oscillator.
 Operator.
 
 ### Props
+`type` - ["sine", "square", "sawtooth", "triangle", "custom"]
 `hz` - Frequency
 `vol` - Gain
 
