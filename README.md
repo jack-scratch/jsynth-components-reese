@@ -94,10 +94,14 @@ class Osc extends Source {
 
 # Source
 ## `<Osc />`
+Oscillator.
+
 `.freq` - Frequency
 `.detune` - Detune
 
 ## `<Op />`
+Operator.
+
 `.freq` - Frequency
 `.vol` - Gain
 
