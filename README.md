@@ -52,8 +52,16 @@ Binary light.
 
 On upon the presence of the `on` prop, and off otherwise.
 
+#### Props
+- `on`
+
 ### `<Text />`
 2D Text display.
+
+#### Props
+`wd` - Width in characters
+`ht` - Height in lines
+`l` - Line index
 
 ### `<LCD />`
 Base LCD.
