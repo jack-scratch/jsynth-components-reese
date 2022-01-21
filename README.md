@@ -134,22 +134,26 @@ Operator.
 ## `<Gain />`
 Increases or decreases signal.
 
-`.level` - Level
+### Props
+`level` - Level
 
 ## `<Filter />`
 Attenuates.
 
-`.freq` - Frequency
+### Props
+`hz` - Frequency
 
 ## `<Chorus />`
 Splits input into multiple outputs.
 
-`.spread` - Phase shift
+### Props
+`spread` - Phase shift
 
 ## `<Flanger />`
 Produces delayed copy.
 
-`.delay` - Delay
+### Props
+`delay` - Delay
 
 ## `<Pan />`
 Fades between left and right channels.
@@ -159,15 +163,17 @@ Fades between left and right channels.
 ## `<Delay />`
 Outputs unfiltrered input after a time interval has passed.
 
-`.time` - Time in seconds
+### Props
+`time` - Time in seconds
 
 ## `<Env />`
 ADSR envelope.
 
-`.atk` - Attack
-`.decay` - Decay
-`.sust` - Sustain
-`.rel` - Release
+### Props
+`atk` - Attack
+`decay` - Decay
+`sust` - Sustain
+`rel` - Release
 
 # Destination
 ## `speaker()`
