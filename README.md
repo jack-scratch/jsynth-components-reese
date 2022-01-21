@@ -63,8 +63,12 @@ Base LCD.
 #### `<Spectrum />`
 Displays frequency.
 
+`.draw()` - Draw
+
 #### `<Meter />`
 Displays signal strength.
+
+`.draw()` - Draw
 
 ## `<Bay></Bay>`
 Patch bay.
