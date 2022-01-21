@@ -58,6 +58,8 @@ On upon the presence of the `on` prop, and off otherwise.
 ### `<LCD />`
 Base LCD.
 
+`.clear()` - Clear display
+
 #### `<Spectrum />`
 Displays frequency.
 
