@@ -22,6 +22,9 @@ class Chorus extends Effect {
 				}
 			]} port={[
 				{
+					type: "in",
+					point: this.node.main
+				}, {
 					type: "out",
 					point: this.node.main
 				}, {
