@@ -5,7 +5,7 @@ import {
 
 class Chorus extends Effect {
 	constructor(props) {
-		super(props);
+		super();
 
 		this.node.main = window.ctx.createOscillator();
 	}
