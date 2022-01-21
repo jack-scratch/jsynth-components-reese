@@ -1,8 +1,5 @@
 import React from "react";
 import {
-	In
-} from "./Port";
-import {
 	bg,
 	light
 } from "./col";
@@ -99,9 +96,6 @@ class Meter extends React.Component {
 						<line className="tick" x1={0} y1={ht} x2={10} y2={this.props.tick * (this.ht + (this.margin * 2))} />
 						<text className="mark" x={10 + margin} y={this.props.tick * (this.ht + (this.margin * 2))} alignmentBaseline="middle">{this.props.min}{unit["level"]}</text>
 					</svg>}
-				</div>
-				<div className="io">
-					<In point={this.props.point} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} />
 				</div>
 			</div>
 		);

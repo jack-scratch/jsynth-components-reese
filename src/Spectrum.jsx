@@ -1,9 +1,6 @@
 import React from "react";
 import LCD from "./LCD";
 import {
-	In
-} from "./Port";
-import {
 	bg,
 	light
 } from "./col";
@@ -81,9 +78,6 @@ class Spectrum extends LCD {
 			<div className="cont">
 				<div className="cont">
 					<canvas ref={this.refer} />
-				</div>
-				<div className="io">
-					<In point={this.props.point} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} />
 				</div>
 			</div>
 		);
