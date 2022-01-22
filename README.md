@@ -161,7 +161,9 @@ Oscillator.
 `detune` - Detune
 
 ## `<Op />`
-Operator.
+Basic operator.
+
+Contains an oscillator, and a gain.
 
 ### Props
 `type` - "sine" / "square" / "sawtooth" / "triangle" / "custom"
