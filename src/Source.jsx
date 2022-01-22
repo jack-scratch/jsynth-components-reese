@@ -1,6 +1,10 @@
 import Module from "./Module";
 
 class Source extends Module {
+	constructor(props) {
+		super(props);
+	}
+
 	componentDidMount() {
 		for (let src in this.node) {
 			this.node[src].start();
@@ -9,7 +13,7 @@ class Source extends Module {
 
 	render() {
 		return (
-			<Module {...this.props} />
+			<Module {...this.props} activeCable={this.props.activeCable} />
 		);
 	}
 }

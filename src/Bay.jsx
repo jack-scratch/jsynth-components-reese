@@ -11,7 +11,8 @@ class Bay extends React.Component {
 			curr: [
 				0,
 				0
-			]
+			],
+			activeCable: null
 		};
 
 		this.pushCable = this.pushCable.bind(this);
@@ -43,7 +44,11 @@ class Bay extends React.Component {
 				}
 			],
 			active: true
-		}));
+		}), () => {
+			this.setState({
+				activeCable: this.state.patch.length - 1
+			});
+		});
 	}
 
 	rmCable(i) {
@@ -64,9 +69,7 @@ class Bay extends React.Component {
 		this.rmCable(i);
 	}
 
-	detachCable(e, refer, node) {
-		let i = this.state.patch.length - 1;
-
+	detachCable(e, refer, node, i) {
 		this.state.patch[i].outPoint = null;
 		this.state.patch[i].outRefer = null;
 
@@ -77,9 +80,7 @@ class Bay extends React.Component {
 		});
 	}
 
-	connCable(e, refer, node) {
-		let i = this.state.patch.length - 1;
-
+	connCable(e, refer, node, i) {
 		this.state.patch[i].outPoint = node;
 		this.state.patch[i].outRefer = refer;
 
@@ -117,7 +118,8 @@ class Bay extends React.Component {
 						hookOutDown: this.pushCable,
 						hookInDown: this.detachCable,
 						hookInUp: this.connCable,
-						key: i
+						key: i,
+						activeCable: this.state.activeCable
 					})
 				)}
 
