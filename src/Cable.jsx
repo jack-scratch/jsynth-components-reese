@@ -1,6 +1,5 @@
 import React from "react";
 import {
-	nutRad,
 	portRad
 } from "./layout";
 
@@ -16,15 +15,15 @@ class Cable extends React.Component {
 
 	midX() {
 		let start = [
-			this.props.inRefer.current.offsetLeft + nutRad + portRad,
-			this.props.inRefer.current.offsetTop + nutRad + portRad
+			this.props.inRefer.current.offsetLeft + 26 + portRad,
+			this.props.inRefer.current.offsetTop + 26 + portRad
 		];
 
 		let end = [];
 		if (this.props.outPoint) {
 			end = [
-				this.props.outRefer.current.offsetLeft + nutRad + portRad,
-				this.props.outRefer.current.offsetTop + nutRad + portRad
+				this.props.outRefer.current.offsetLeft + 26 + portRad,
+				this.props.outRefer.current.offsetTop + 26 + portRad
 			];
 		} else {
 			end = this.props.curr;
@@ -39,8 +38,8 @@ class Cable extends React.Component {
 		let start = [];
 		if (this.props.inPoint) {
 			start = [
-				this.props.inRefer.current.offsetLeft + nutRad + portRad,
-				this.props.inRefer.current.offsetTop + nutRad + portRad
+				this.props.inRefer.current.offsetLeft + 26 + portRad,
+				this.props.inRefer.current.offsetTop + 26 + portRad
 			];
 		} else {
 			start = this.props.curr;
@@ -49,8 +48,8 @@ class Cable extends React.Component {
 		let end = [];
 		if (this.props.outPoint) {
 			end = [
-				this.props.outRefer.current.offsetLeft + nutRad + portRad,
-				this.props.outRefer.current.offsetTop + nutRad + portRad
+				this.props.outRefer.current.offsetLeft + 26 + portRad,
+				this.props.outRefer.current.offsetTop + 26 + portRad
 			];
 		} else {
 			end = this.props.curr;
@@ -63,8 +62,8 @@ class Cable extends React.Component {
 		let start = [];
 		if (this.props.inPoint) {
 			start = [
-				this.props.inRefer.current.offsetLeft + nutRad + portRad,
-				this.props.inRefer.current.offsetTop + nutRad + portRad
+				this.props.inRefer.current.offsetLeft + 26 + portRad,
+				this.props.inRefer.current.offsetTop + 26 + portRad
 			];
 		} else {
 			start = this.props.curr;
@@ -73,8 +72,8 @@ class Cable extends React.Component {
 		let end = [];
 		if (this.props.outPoint) {
 			end = [
-				this.props.outRefer.current.offsetLeft + nutRad + portRad,
-				this.props.outRefer.current.offsetTop + nutRad + portRad
+				this.props.outRefer.current.offsetLeft + 26 + portRad,
+				this.props.outRefer.current.offsetTop + 26 + portRad
 			];
 		} else {
 			end = this.props.curr;

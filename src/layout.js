@@ -6,7 +6,7 @@ const rotRad = Math.PI * 2;
 
 const lineLn = 16;
 
-const nutRad = 26;
+const nutRad = 22;
 const portRad = 10;
 
 export {
