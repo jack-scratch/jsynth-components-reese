@@ -5,11 +5,6 @@
 	overflow: visible;
 	cursor: pointer;
 
-	&.marked {
-		padding-left: calc(40px + (#{$margin}));
-		padding-right: calc(40px + (#{$margin}));
-	}
-
 	circle,
 	polygon
 	{
