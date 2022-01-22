@@ -6,6 +6,18 @@ class Port extends React.Component {
 		super();
 
 		this.refer = React.createRef();
+
+		this.state = {
+			activeCable: 0
+		};
+
+		this.hookSetActive = this.hookSetActive.bind(this);
+	}
+
+	hookSetActive(i) {
+		this.setState({
+			activeCable: i
+		});
 	}
 
 	render() {
@@ -14,7 +26,7 @@ class Port extends React.Component {
 				<svg className="port">
 				<text className="mark" x="50%">{this.props.type === "in" ? "In" : "Out"}</text>
 					<Nut />
-					<circle onMouseDown={this.props.hookDown ? (e) => {this.props.hookDown(e, this.refer, this.props.point, this.props.activeCable)} : null} onMouseUp={this.props.hookUp ? (e) => {this.props.hookUp(e, this.refer, this.props.point, this.props.activeCable)} : null} />
+					<circle onMouseDown={this.props.hookDown ? (e) => {this.props.hookDown(e, this.refer, this.props.point, this.state.activeCable)} : null} onMouseUp={this.props.hookUp ? (e) => {this.props.hookUp(e, this.refer, this.props.point, this.state.activeCable, this.hookSetActive)} : null} />
 				</svg>
 			</div>
 		);

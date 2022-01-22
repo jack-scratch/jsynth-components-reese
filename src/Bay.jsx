@@ -69,11 +69,13 @@ class Bay extends React.Component {
 		this.rmCable(i);
 	}
 
-	connCable(e, refer, node, i) {
+	connCable(e, refer, node, i, hook) {
 		this.state.patch[i].outPoint = node;
 		this.state.patch[i].outRefer = refer;
 
 		this.state.patch[i].inPoint.connect(this.state.patch[i].outPoint);
+
+		hook(i);
 	}
 
 	detachCable(e, refer, node, i) {
