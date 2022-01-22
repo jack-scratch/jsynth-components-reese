@@ -6,9 +6,6 @@ import {
 	lineLn
 } from "./layout";
 import {
-	unit
-} from "./fmt";
-import {
 	clamp
 } from "./util";
 
