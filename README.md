@@ -153,7 +153,7 @@ class Osc extends Source {
 Oscillator.
 
 ### Props
-`type` - ["sine", "square", "sawtooth", "triangle", "custom"]
+`type` - "sine" / "square" / "sawtooth" / "triangle" / "custom"
 `hz` - Frequency
 `detune` - Detune
 
@@ -161,7 +161,7 @@ Oscillator.
 Operator.
 
 ### Props
-`type` - ["sine", "square", "sawtooth", "triangle", "custom"]
+`type` - "sine" / "square" / "sawtooth" / "triangle" / "custom"
 `hz` - Frequency
 `vol` - Gain
 
@@ -176,7 +176,7 @@ Increases or decreases signal.
 Attenuates frequencies.
 
 ### Props
-`type` - ["lowpass", "highpass", "bandpass"]
+`type` - "lowpass" / "highpass" / "bandpass"
 
 ### `<Lowpass />`
 `rngFreq` - Frequency range
