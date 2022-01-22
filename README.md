@@ -8,6 +8,9 @@ Offers a basic wrapper around the Web Audio API and its built-in utilities.
 # Context
 At all points, the Web Audio API's context is available within the window object -- `window.ctx`.
 
+Upon page instantiation, the context is halted as a default.
+Upon any kind of mouse down event within the document, the context will be resumed and any audio will begin playing.
+
 # Component
 ## Control
 ### `<Btn />`
