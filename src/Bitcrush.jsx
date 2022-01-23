@@ -1,28 +1,42 @@
-import Worklet from "./Worklet";
+import Module from "./Module";
 
-class Bitcrush extends Worklet {
+class Bitcrush extends Module {
 	constructor(props) {
 		super();
+
+		this.state = {
+			bitDepth: null,
+			reduction: null
+		};
 	}
 
 	async componentDidMount() {
-		await window.ctx.audioWorklet.addModule("worklet/dsp.js").then(() => {
-			this.node.main = new AudioWorkletNode(window.ctx, "bitcrush");
+		await window.ctx.audioWorklet.addModule("worklet/dsp.js");
 
-			this.param.bitDepth = this.node.main.parameters.get("bitDepth");
-			this.param.reduction = this.node.main.parameters.get("frequencyReduction");
+		this.node.main = await new AudioWorkletNode(window.ctx, "bitcrush");
+
+		this.setState({
+			bitDepth: this.node.main.parameters.get("bitDepth"),
+			reduction: this.node.main.parameters.get("frequencyReduction")
 		});
 	}
 
 	render() {
 		return (
-			<Worklet name={this.props.name} param={[
+			<Module name={this.props.name} param={[
 				{
 					name: "Fidelity",
-					point: this.node.main.parameters.get("bitDepth"),
+					point: this.state.bitDepth,
+					min: 1,
+					max: 6,
 					quant: 6
 				}
-			]} />
+			]} port={[
+				{
+					type: "out",
+					point: this.node.main
+				}
+			]} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} activeCable={this.props.activeCable} marked={this.props.marked} />
 		);
 	}
 }
