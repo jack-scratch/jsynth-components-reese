@@ -18,7 +18,7 @@ class Text extends React.Component {
 		this.draw = this.draw.bind(this);
 	}
 
-	componentDidMount() {
+	async componentDidMount() {
 		this.canvCtx = this.refer.current.getContext("2d");
 
 		this.refer.current.width = this.props.wd * this.charWd;
