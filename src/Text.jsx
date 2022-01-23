@@ -20,6 +20,8 @@ class Text extends React.Component {
 	componentDidMount() {
 		this.canvCtx = this.refer.current.getContext("2d");
 
+		this.canvCtx.font = `${this.lineHt}px Arial`;
+
 		this.clear();
 
 		this.draw();
@@ -35,8 +37,6 @@ class Text extends React.Component {
 
 		this.canvCtx.fillStyle = light["inert"];
 		this.canvCtx.fillRect(0, 0, this.refer.current.width, this.refer.current.height);
-
-		this.canvCtx.font = `${this.lineHt}px Arial`;
 	}
 
 	draw() {
