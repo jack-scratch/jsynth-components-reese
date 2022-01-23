@@ -52,8 +52,9 @@ class Text extends React.Component {
 		return (
 			<div className="cont">
 				<canvas ref={this.refer} style={{
-					width: `${this.props.wd}ch`
-				}} height={this.props.ht * this.lineHt} />
+					width: `${this.props.wd}ch`,
+					height: `${this.props.ht * this.lineHt}ch`
+				}} />
 			</div>
 		);
 	}
