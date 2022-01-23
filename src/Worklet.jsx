@@ -7,7 +7,7 @@ class Worklet extends Module {
 		this.param = {};
 	}
 
-	componentDidMount() {
+	async componentDidMount() {
 		window.ctx.audioWorklet.addModule(`worklet/{this.props.fName}.js`).then(() => {
 			this.node = new AudioWorkletNode(window.ctx, this.props.fName);
 		});
