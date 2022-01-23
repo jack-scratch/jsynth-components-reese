@@ -1,10 +1,6 @@
 import Module from "./Module";
 
 class Source extends Module {
-	constructor(props) {
-		super(props);
-	}
-
 	componentDidMount() {
 		for (let src in this.node) {
 			this.node[src].start();
