@@ -1,5 +1,4 @@
 import React from "react";
-import Module from "./Module";
 import {
 	a,
 	oct,
