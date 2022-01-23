@@ -1,4 +1,5 @@
 import React from "react";
+import Module from "./Module";
 import Bay from "./Bay";
 import Osc from "./Osc";
 import speaker from "./speaker";
@@ -9,7 +10,7 @@ import "./main.css";
 
 window.ctx = new window.AudioContext() || window.webkitAudioContext();
 
-class Worklet extends React.Component {
+class Worklet extends Module {
 	async componentDidMount() {
 		await window.ctx.audioWorklet.addModule(`worklet/${this.props.name}.js`);
 
