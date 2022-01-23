@@ -24,7 +24,7 @@ class Text extends React.Component {
 		this.refer.current.width = this.props.wd * this.charWd;
 		this.refer.current.height = this.props.ht * this.lineHt;
 
-		this.canvCtx.font = `${this.lineHt}px Terminus`;
+		this.canvCtx.font = `${this.lineHt}px VT323`;
 
 		this.clear();
 		this.draw();
