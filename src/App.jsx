@@ -46,7 +46,7 @@ function App() {
 			<Bay>
 				<Osc />
 				{speaker()}
-				<Worklet name="dsp" />
+				<Worklet fName="dsp" />
 			</Bay>
 		</div>
   );
