@@ -12,7 +12,7 @@ window.ctx = new window.AudioContext() || window.webkitAudioContext();
 
 class Worklet extends Module {
 	async componentDidMount() {
-		await window.ctx.audioWorklet.addModule(`worklet/${this.props.name}.js`);
+		await window.ctx.audioWorklet.addModule(`worklet/${this.props.fName}.js`);
 
 		// source
 		this.node = new AudioWorkletNode(window.ctx, "sin");
