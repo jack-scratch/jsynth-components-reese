@@ -9,6 +9,7 @@ class Text extends React.Component {
 	constructor(props) {
 		super(props);
 
+		this.charWd = 8;
 		this.lineHt = 16;
 
 		this.refer = React.createRef();
@@ -19,6 +20,9 @@ class Text extends React.Component {
 
 	componentDidMount() {
 		this.canvCtx = this.refer.current.getContext("2d");
+
+		this.refer.current.width = this.props.wd * this.charWd;
+		this.refer.current.height = this.props.ht * this.lineHt;
 
 		this.canvCtx.font = `${this.lineHt}px Terminus`;
 
@@ -51,10 +55,7 @@ class Text extends React.Component {
 	render() {
 		return (
 			<div className="cont">
-				<canvas ref={this.refer} style={{
-					width: `${this.props.wd}ch`,
-					height: `${this.props.ht}ch`
-				}} />
+				<canvas ref={this.refer} />
 			</div>
 		);
 	}
