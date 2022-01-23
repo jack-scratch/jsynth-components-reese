@@ -20,6 +20,7 @@ Takes a function as a prop in `hook`, and calls this function upon mouse down.
 Updates a numeric value upon being turned.
 
 #### Props
+---
 `param` - Audio parameter
 `rad` - Radius
 `min` - Range minimum
@@ -38,6 +39,7 @@ Updates a numeric value upon being dragged.
 Limited to a range.
 
 #### Props
+---
 `param` - Audio parameter
 `ln` - Height
 `marked` - Mark range
@@ -46,6 +48,7 @@ Limited to a range.
 Takes a function as a prop in `hook`, and calls this function upon mouse down.
 
 #### Props
+---
 `node` - Source
 
 ### `<Port />`
@@ -62,6 +65,7 @@ Detaches cable when present on mouse down.
 Can have at most one input.
 
 #### Props
+---
 `hookInDown` - Function to call upon mouse down
 `hookInUp` - Function to call upon mouse up
 
@@ -74,6 +78,7 @@ Detaches cable when present on mouse down.
 Can have an effectively infinite number of outputs.
 
 #### Props
+---
 `hookUpDown` - Function to call upon mouse up
 
 ## Display
@@ -83,12 +88,14 @@ Binary light.
 On upon the presence of the `on` prop, and off otherwise.
 
 #### Props
+---
 `on` - On / off status
 
 ### `<Text />`
 2D Text display.
 
 #### Props
+---
 `wd` - Width (characters)
 `ht` - Height (lines)
 `l` - Line index
@@ -105,6 +112,7 @@ Plots frequency.
 `.draw()` - Draw
 
 #### Props
+---
 `wd` - Width (pixels)
 `ht` - Height (pixels)
 
@@ -114,6 +122,7 @@ Displays signal strength.
 `.draw()` - Draw
 
 #### Props
+---
 `tick` - Height
 
 ## `<Bay></Bay>`
