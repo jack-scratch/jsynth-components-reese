@@ -23,7 +23,6 @@ class Text extends React.Component {
 		this.canvCtx.font = `${this.lineHt}px Arial`;
 
 		this.clear();
-
 		this.draw();
 	}
 
