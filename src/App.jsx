@@ -23,7 +23,15 @@ class Worklet extends Module {
 
 	render() {
 		return (
-			<div>asdf</div>
+			<Module name="asdf" port={[
+				{
+					type: "in",
+					point: this.node.main
+				}, {
+					type: "out",
+					point: this.node.main
+				}
+			]} />
 		);
 	}
 }
