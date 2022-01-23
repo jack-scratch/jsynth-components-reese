@@ -20,7 +20,7 @@ class Text extends React.Component {
 	componentDidMount() {
 		this.canvCtx = this.refer.current.getContext("2d");
 
-		this.canvCtx.font = `${this.lineHt}px Arial`;
+		this.canvCtx.font = `${this.lineHt}px Terminus`;
 
 		this.clear();
 		this.draw();
