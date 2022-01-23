@@ -17,6 +17,11 @@ class Worklet extends Module {
 		// source
 		this.node = new AudioWorkletNode(window.ctx, "sin");
 
+		this.node.parameters.forEach((param) => {
+			alert(param.minValue);
+			alert(param.maxValue);
+		});
+
 		// route
 		this.node.connect(window.ctx.destination);
 	}
