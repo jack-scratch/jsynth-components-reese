@@ -15,14 +15,6 @@ class Text extends React.Component {
 
 		this.clear = this.clear.bind(this);
 		this.draw = this.draw.bind(this);
-
-		this.state = {
-			buff: []
-		};
-
-		if (this.props.buff) {
-			this.state.buff = this.props.buff;
-		}
 	}
 
 	componentDidMount() {
@@ -52,8 +44,8 @@ class Text extends React.Component {
 
 		this.canvCtx.fillStyle = light["active"];
 
-		for (let i = 0; i < this.state.buff.length; i++) {
-			this.canvCtx.fillText(this.state.buff[i], 0, (i + 1) * this.lineHt);
+		for (let i = 0; i < this.props.buff.length; i++) {
+			this.canvCtx.fillText(this.props.buff[i], 0, (i + 1) * this.lineHt);
 		}
 	}
 
