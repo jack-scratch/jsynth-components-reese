@@ -54,9 +54,7 @@ class Text extends React.Component {
 
 	render() {
 		return (
-			<div className="cont">
-				<canvas ref={this.refer} />
-			</div>
+			<canvas ref={this.refer} />
 		);
 	}
 }
