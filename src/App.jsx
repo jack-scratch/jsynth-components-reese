@@ -50,7 +50,7 @@ class Worklet extends Module {
 
 	render() {
 		return (
-			<Module name="asdf" param={Object.keys(this.state.map).map((key) => (
+			<Module name={this.props.name} param={Object.keys(this.state.map).map((key) => (
 				{
 					name: key,
 					point: this.node,
@@ -69,6 +69,10 @@ class Worklet extends Module {
 		);
 	}
 }
+
+Worklet.defaultProps = {
+	name: "Worklet"
+};
 
 function App() {
   return (
