@@ -13,7 +13,7 @@ class Sin extends AudioWorkletProcessor {
       minValue: 0.0,
       maxValue: 1000.0,
 			defaultValue: a
-    }]
+    }];
   }
 
   process(inPut, outPut, param) {
