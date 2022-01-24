@@ -1,3 +1,36 @@
+class Sin extends AudioWorkletProcessor {
+	static get parameterDescriptors() {
+    return [{
+      name: "freq",
+      defaultValue: 30.0,
+      minValue: 0.0,
+      maxValue: 100.0
+    }]
+  }
+
+	constructor() {
+		super();
+
+		const a = 440.0;
+
+		this.hz = a;
+
+		this.i = 0;
+	}
+
+  process(ins, outs, param) {
+    outs[0].forEach((chan) => {
+      for (let i = 0; i < chan.length; i++) {
+        chan[i] = Math.sin((this.i * this.hz * Math.PI) / 44100);
+
+				this.i++;
+      }
+    });
+
+    return true;
+  }
+}
+
 class Feedback extends AudioWorkletProcessor {
 	constructor() {
 		super();
@@ -104,41 +137,7 @@ class SnH extends AudioWorkletProcessor {
 	}
 }
 
+registerProcessor('sin', Sin);
 registerProcessor("feedback", Feedback);
 registerProcessor("bitcrush", Bitcrush);
 registerProcessor("snh", SnH);
-
-class Sin extends AudioWorkletProcessor {
-	static get parameterDescriptors() {
-    return [{
-      name: "freq",
-      defaultValue: 30.0,
-      minValue: 0.0,
-      maxValue: 100.0
-    }]
-  }
-
-	constructor() {
-		super();
-
-		const a = 440.0;
-
-		this.hz = a;
-
-		this.i = 0;
-	}
-
-  process(ins, outs, param) {
-    outs[0].forEach((chan) => {
-      for (let i = 0; i < chan.length; i++) {
-        chan[i] = Math.sin((this.i * this.hz * Math.PI) / 44100);
-
-				this.i++;
-      }
-    });
-
-    return true;
-  }
-}
-
-registerProcessor('sin', Sin);
