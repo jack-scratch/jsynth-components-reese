@@ -1,6 +1,14 @@
 const a = 440.0;
 
 class Sin extends AudioWorkletProcessor {
+	constructor() {
+		super();
+
+		this.hz = a;
+
+		this.i = 0;
+	}
+
 	static get parameterDescriptors() {
     return [{
       name: "Frequency",
@@ -9,14 +17,6 @@ class Sin extends AudioWorkletProcessor {
 			defaultValue: a
     }]
   }
-
-	constructor() {
-		super();
-
-		this.hz = a;
-
-		this.i = 0;
-	}
 
   process(ins, outs, param) {
     outs[0].forEach((chan) => {
