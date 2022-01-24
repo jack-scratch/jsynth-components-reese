@@ -16,8 +16,8 @@ class Sin extends AudioWorkletProcessor {
     }]
   }
 
-  process(ins, outs, param) {
-    outs[0].forEach((chan) => {
+  process(inPut, outPut, param) {
+    outPut[0].forEach((chan) => {
       for (let i = 0; i < chan.length; i++) {
         chan[i] = Math.sin((this.i * param["Frequency"] * Math.PI) / 44100);
 
@@ -36,11 +36,11 @@ class Feedback extends AudioWorkletProcessor {
 		this.it = 3;
 	}
 
-	process(ins, outs, param) {
-		outs[0].forEach((chan) => {
+	process(inPut, outPut, param) {
+		outPut[0].forEach((chan) => {
 			for (let i = 0; i < chan.length; i++) {
 				for (let f = 0; f < this.it; f++) {
-					chan[i] = ins[0][0][i] * ins[0][0][i];
+					chan[i] = inPut[0][0][i] * inPut[0][0][i];
 				}
 			}
 		});
@@ -122,11 +122,11 @@ class SnH extends AudioWorkletProcessor {
 		this.samp = 0;
 	}
 
-	process(ins, outs, param) {
-		outs[0].forEach((chan) => {
+	process(inPut, outPut, param) {
+		outPut[0].forEach((chan) => {
 			for (let i = 0; i < chan.length; i++) {
 				if (!(this.i % 3)) {
-					this.samp = ins[0][0][i];
+					this.samp = inPut[0][0][i];
 				}
 
 				chan[this.i] = this.samp;
