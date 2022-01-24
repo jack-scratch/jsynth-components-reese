@@ -4,8 +4,6 @@ class Sin extends AudioWorkletProcessor {
 	constructor() {
 		super();
 
-		this.hz = a;
-
 		this.i = 0;
 	}
 
@@ -21,7 +19,7 @@ class Sin extends AudioWorkletProcessor {
   process(ins, outs, param) {
     outs[0].forEach((chan) => {
       for (let i = 0; i < chan.length; i++) {
-        chan[i] = Math.sin((this.i * this.hz * Math.PI) / 44100);
+        chan[i] = Math.sin((this.i * param["Frequency"] * Math.PI) / 44100);
 
 				this.i++;
       }
