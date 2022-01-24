@@ -60,14 +60,14 @@ class Bitcrush extends AudioWorkletProcessor {
 	static get parameterDescriptors() {
 		return [{
 			name: "bitDepth",
-			defaultValue: 12,
 			minValue: 1,
-			maxValue: 16
+			maxValue: 16,
+			defaultValue: 12
 		}, {
 			name: "reduction",
-			defaultValue: 0.5,
 			minValue: 0,
-			maxValue: 1
+			maxValue: 1,
+			defaultValue: 0.5
 		}];
 	}
 
@@ -88,12 +88,12 @@ class Bitcrush extends AudioWorkletProcessor {
 		this.play = data;
 	}
 
-	process(inputs, outputs, parameters) {
-		const input = inputs[0];
-		const output = outputs[0];
+	process(inPut, outPut, param) {
+		const input = inPut[0];
+		const output = outPut[0];
 
-		const bitDepth = parameters.bitDepth;
-		const reduction = parameters.reduction;
+		const bitDepth = param.bitDepth;
+		const reduction = param.reduction;
 		const depthConst = bitDepth.length === 1;
 
 		for (let channel = 0; channel < input.length; ++channel) {
