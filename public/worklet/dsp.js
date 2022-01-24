@@ -75,7 +75,7 @@ class Bitcrush extends AudioWorkletProcessor {
 		super();
 
 		this.phase = 0;
-		this.lastSampleValue = 0;
+		this.samp = 0;
 	}
 
 	process(inPut, outPut, param) {
@@ -101,10 +101,10 @@ class Bitcrush extends AudioWorkletProcessor {
 
 				if (this.phase >= 1.0) {
 					this.phase -= 1.0;
-					this.lastSampleValue = step * Math.floor(inChan[i] / step + 0.5);
+					this.samp = step * Math.floor(inChan[i] / step + 0.5);
 				}
 
-				outChan[i] = this.lastSampleValue;
+				outChan[i] = this.samp;
 			}
 		}
 
