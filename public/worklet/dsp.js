@@ -59,12 +59,12 @@ class Feedback extends AudioWorkletProcessor {
 class Bitcrush extends AudioWorkletProcessor {
 	static get parameterDescriptors() {
 		return [{
-			name: "bitDepth",
+			name: "Bit Depth",
 			minValue: 1,
 			maxValue: 16,
 			defaultValue: 12
 		}, {
-			name: "reduction",
+			name: "Reduction",
 			minValue: 0,
 			maxValue: 1,
 			defaultValue: 0.5
@@ -92,8 +92,8 @@ class Bitcrush extends AudioWorkletProcessor {
 		const input = inPut[0];
 		const output = outPut[0];
 
-		const bitDepth = param.bitDepth;
-		const reduction = param.reduction;
+		const bitDepth = param["Bit Depth"];
+		const reduction = param["Reduction"];
 
 		const depthConst = bitDepth.length === 1;
 
