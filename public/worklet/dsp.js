@@ -65,7 +65,7 @@ class Bitcrush extends AudioWorkletProcessor {
 
 		this.phase_ = 0;
 		this.lastSampleValue_ = 0;
-		this.isPlaying = true;
+		this.play = true;
 		this.port.onmessage = this.onmessage.bind(this)
 	}
 
@@ -74,7 +74,7 @@ class Bitcrush extends AudioWorkletProcessor {
 			data
 		} = event;
 
-		this.isPlaying = data;
+		this.play = data;
 	}
 
 	process(inputs, outputs, parameters) {
@@ -106,7 +106,7 @@ class Bitcrush extends AudioWorkletProcessor {
 			}
 		}
 
-		return this.isPlaying;
+		return this.play;
 	}
 }
 
