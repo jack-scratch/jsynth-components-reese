@@ -3,7 +3,7 @@ const a = 440.0;
 class Sin extends AudioWorkletProcessor {
 	static get parameterDescriptors() {
     return [{
-      name: "freq",
+      name: "Frequency",
       defaultValue: 30.0,
       minValue: 0.0,
       maxValue: 100.0
