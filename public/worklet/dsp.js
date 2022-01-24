@@ -53,7 +53,7 @@ class Bitcrush extends AudioWorkletProcessor {
 			minValue: 1,
 			maxValue: 16
 		}, {
-			name: "frequencyReduction",
+			name: "reduction",
 			defaultValue: 0.5,
 			minValue: 0,
 			maxValue: 1
@@ -82,27 +82,27 @@ class Bitcrush extends AudioWorkletProcessor {
 		const output = outputs[0];
 
 		const bitDepth = parameters.bitDepth;
-		const frequencyReduction = parameters.frequencyReduction;
-		const isBitDepthConstant = bitDepth.length === 1;
+		const reduction = parameters.reduction;
+		const depthConst = bitDepth.length === 1;
 
 		for (let channel = 0; channel < input.length; ++channel) {
-			const inputChannel = input[channel];
-			const outputChannel = output[channel];
+			const inChan = input[channel];
+			const outChan = output[channel];
 
 			let step = Math.pow(0.5, bitDepth[0]);
-			for (let i = 0; i < inputChannel.length; ++i) {
-				if (!isBitDepthConstant) {
+			for (let i = 0; i < inChan.length; ++i) {
+				if (!depthConst) {
 					step = Math.pow(0.5, bitDepth[i]);
 				}
 
-				this.phase_ += frequencyReduction[i];
+				this.phase_ += reduction[i];
 
 				if (this.phase_ >= 1.0) {
 					this.phase_ -= 1.0;
-					this.lastSampleValue_ = step * Math.floor(inputChannel[i] / step + 0.5);
+					this.lastSampleValue_ = step * Math.floor(inChan[i] / step + 0.5);
 				}
 
-				outputChannel[i] = this.lastSampleValue_;
+				outChan[i] = this.lastSampleValue_;
 			}
 		}
 
