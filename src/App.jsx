@@ -22,7 +22,6 @@ class Worklet extends Module {
 	async componentDidMount() {
 		await window.ctx.audioWorklet.addModule(`worklet/${this.props.fName}.js`);
 
-		// source
 		this.node = new AudioWorkletNode(window.ctx, "sin");
 
 		for (let key of this.node.parameters.keys()) {
