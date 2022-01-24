@@ -94,6 +94,7 @@ class Bitcrush extends AudioWorkletProcessor {
 
 		const bitDepth = param.bitDepth;
 		const reduction = param.reduction;
+
 		const depthConst = bitDepth.length === 1;
 
 		for (let channel = 0; channel < input.length; ++channel) {
