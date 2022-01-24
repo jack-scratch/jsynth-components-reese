@@ -5,8 +5,8 @@ class Sin extends AudioWorkletProcessor {
     return [{
       name: "Frequency",
       minValue: 0.0,
-      maxValue: 100.0,
-			defaultValue: 30.0
+      maxValue: 1000.0,
+			defaultValue: a
     }]
   }
 
