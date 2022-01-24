@@ -37,7 +37,8 @@ class Feedback extends AudioWorkletProcessor {
 			{
 				name: "Iterations",
 				minValue: 1,
-				maxValue: 8
+				maxValue: 8,
+				defaultValue: 1
 			}
 		];
 	}
