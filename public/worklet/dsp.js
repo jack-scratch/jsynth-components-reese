@@ -74,8 +74,8 @@ class Bitcrush extends AudioWorkletProcessor {
 	constructor() {
 		super();
 
-		this.phase_ = 0;
-		this.lastSampleValue_ = 0;
+		this.phase = 0;
+		this.lastSampleValue = 0;
 		this.play = true;
 		this.port.onmessage = this.onmessage.bind(this)
 	}
@@ -107,14 +107,14 @@ class Bitcrush extends AudioWorkletProcessor {
 					step = Math.pow(0.5, bitDepth[i]);
 				}
 
-				this.phase_ += reduction[i];
+				this.phase += reduction[i];
 
-				if (this.phase_ >= 1.0) {
-					this.phase_ -= 1.0;
-					this.lastSampleValue_ = step * Math.floor(inChan[i] / step + 0.5);
+				if (this.phase >= 1.0) {
+					this.phase -= 1.0;
+					this.lastSampleValue = step * Math.floor(inChan[i] / step + 0.5);
 				}
 
-				outChan[i] = this.lastSampleValue_;
+				outChan[i] = this.lastSampleValue;
 			}
 		}
 
