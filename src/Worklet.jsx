@@ -32,9 +32,6 @@ class Worklet extends Module {
 
 		this.setState({
 		});
-
-		// route
-		this.node.worklet.connect(window.ctx.destination);
 	}
 
 	render() {
@@ -54,7 +51,7 @@ class Worklet extends Module {
 					type: "out",
 					point: this.node.worklet
 				}
-			]} />
+			]} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} activeCable={this.props.activeCable} marked={this.props.marked} />
 		);
 	}
 }
