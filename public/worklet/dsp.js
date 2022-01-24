@@ -4,9 +4,9 @@ class Sin extends AudioWorkletProcessor {
 	static get parameterDescriptors() {
     return [{
       name: "Frequency",
-      defaultValue: 30.0,
       minValue: 0.0,
-      maxValue: 100.0
+      maxValue: 100.0,
+			defaultValue: 30.0
     }]
   }
 
