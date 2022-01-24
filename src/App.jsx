@@ -11,23 +11,29 @@ import "./main.css";
 window.ctx = new window.AudioContext() || window.webkitAudioContext();
 
 class Worklet extends Module {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			map: {}
+		};
+	}
+
 	async componentDidMount() {
 		await window.ctx.audioWorklet.addModule(`worklet/${this.props.fName}.js`);
 
 		// source
 		this.node = new AudioWorkletNode(window.ctx, "sin");
 
-		this.map = {};
-
 		for (let key of this.node.parameters.keys()) {
-			this.map[key] = null;
+			this.state.map[key] = null;
 		}
 
 		let i = 0;
 		for (let val of this.node.parameters.values()) {
-			let key = Object.keys(this.map)[i];
+			let key = Object.keys(this.state.map)[i];
 
-			this.map[key] = {
+			this.state.map[key] = {
 				min: val.minValue,
 				max: val.maxValue
 			};
@@ -35,11 +41,14 @@ class Worklet extends Module {
 			i++;
 		}
 
-		for (let asdf of Object.keys(this.map)) {
-			alert(asdf);
-			alert(this.map[asdf].max);
-			alert(this.map[asdf].min);
-		}
+// 		for (let asdf of Object.keys(this.state.map)) {
+// 			alert(asdf);
+// 			alert(this.state.map[asdf].max);
+// 			alert(this.state.map[asdf].min);
+// 		}
+
+		this.setState({
+		});
 
 		// route
 		this.node.connect(window.ctx.destination);
@@ -47,15 +56,9 @@ class Worklet extends Module {
 
 	render() {
 		return (
-			<Module name="asdf" port={[
-				{
-					type: "in",
-					point: this.node.main
-				}, {
-					type: "out",
-					point: this.node.main
-				}
-			]} />
+			<div>
+				{Object.keys(this.state.map).map((key, val) => <div>{key}</div>)}
+			</div>
 		);
 	}
 }
