@@ -1,3 +1,5 @@
+const a = 440.0;
+
 class Sin extends AudioWorkletProcessor {
 	static get parameterDescriptors() {
     return [{
@@ -10,8 +12,6 @@ class Sin extends AudioWorkletProcessor {
 
 	constructor() {
 		super();
-
-		const a = 440.0;
 
 		this.hz = a;
 
