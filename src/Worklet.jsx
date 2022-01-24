@@ -42,7 +42,7 @@ class Worklet extends Module {
 			<Module name={this.props.name} param={Object.keys(this.state.param).map((key) => (
 				{
 					name: key,
-					point: this.node.worklet,
+					point: this.node.worklet.parameters.get(key),
 					min: this.state.param[key].min,
 					max: this.state.param[key].max
 				}
