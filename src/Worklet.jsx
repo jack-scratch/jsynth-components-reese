@@ -12,14 +12,14 @@ class Worklet extends Module {
 	async componentDidMount() {
 		await window.ctx.audioWorklet.addModule(`worklet/${this.props.fName}.js`);
 
-		this.node = new AudioWorkletNode(window.ctx, this.props.name);
+		this.node.worklet = new AudioWorkletNode(window.ctx, this.props.name);
 
-		for (let key of this.node.parameters.keys()) {
+		for (let key of this.node.worklet.parameters.keys()) {
 			this.state.param[key] = null;
 		}
 
 		let i = 0;
-		for (let val of this.node.parameters.values()) {
+		for (let val of this.node.worklet.parameters.values()) {
 			let key = Object.keys(this.state.param)[i];
 
 			this.state.param[key] = {
@@ -34,7 +34,7 @@ class Worklet extends Module {
 		});
 
 		// route
-		this.node.connect(window.ctx.destination);
+		this.node.worklet.connect(window.ctx.destination);
 	}
 
 	render() {
@@ -42,17 +42,17 @@ class Worklet extends Module {
 			<Module name={this.props.name} param={Object.keys(this.state.param).map((key) => (
 				{
 					name: key,
-					point: this.node,
+					point: this.node.worklet,
 					min: this.state.param[key].min,
 					max: this.state.param[key].max
 				}
 			))} port={[
 				{
 					type: "in",
-					point: this.node.main
+					point: this.node.worklet
 				}, {
 					type: "out",
-					point: this.node.main
+					point: this.node.worklet
 				}
 			]} />
 		);
