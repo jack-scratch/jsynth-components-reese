@@ -15,7 +15,7 @@ class Worklet extends Module {
 		super(props);
 
 		this.state = {
-			map: {}
+			param: {}
 		};
 	}
 
@@ -26,14 +26,14 @@ class Worklet extends Module {
 		this.node = new AudioWorkletNode(window.ctx, "sin");
 
 		for (let key of this.node.parameters.keys()) {
-			this.state.map[key] = null;
+			this.state.param[key] = null;
 		}
 
 		let i = 0;
 		for (let val of this.node.parameters.values()) {
-			let key = Object.keys(this.state.map)[i];
+			let key = Object.keys(this.state.param)[i];
 
-			this.state.map[key] = {
+			this.state.param[key] = {
 				min: val.minValue,
 				max: val.maxValue
 			};
@@ -50,12 +50,12 @@ class Worklet extends Module {
 
 	render() {
 		return (
-			<Module name={this.props.name} param={Object.keys(this.state.map).map((key) => (
+			<Module name={this.props.name} param={Object.keys(this.state.param).map((key) => (
 				{
 					name: key,
 					point: this.node,
-					min: this.state.map[key].min,
-					max: this.state.map[key].max
+					min: this.state.param[key].min,
+					max: this.state.param[key].max
 				}
 			))} port={[
 				{
