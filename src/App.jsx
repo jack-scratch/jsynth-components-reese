@@ -41,12 +41,6 @@ class Worklet extends Module {
 			i++;
 		}
 
-// 		for (let asdf of Object.keys(this.state.map)) {
-// 			alert(asdf);
-// 			alert(this.state.map[asdf].max);
-// 			alert(this.state.map[asdf].min);
-// 		}
-
 		this.setState({
 		});
 
@@ -56,9 +50,22 @@ class Worklet extends Module {
 
 	render() {
 		return (
-			<div>
-				{Object.keys(this.state.map).map((key, val) => <div>{key}</div>)}
-			</div>
+			<Module name="asdf" param={Object.keys(this.state.map).map((key) => (
+				{
+					name: key,
+					point: this.node,
+					min: this.state.map[key].min,
+					max: this.state.map[key].max
+				}
+			))} port={[
+				{
+					type: "in",
+					point: this.node.main
+				}, {
+					type: "out",
+					point: this.node.main
+				}
+			]} />
 		);
 	}
 }
