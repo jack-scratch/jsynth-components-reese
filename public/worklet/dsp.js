@@ -137,7 +137,7 @@ class SnH extends AudioWorkletProcessor {
 	}
 }
 
-registerProcessor('sin', Sin);
+registerProcessor("sin", Sin);
 registerProcessor("feedback", Feedback);
 registerProcessor("bitcrush", Bitcrush);
 registerProcessor("snh", SnH);
