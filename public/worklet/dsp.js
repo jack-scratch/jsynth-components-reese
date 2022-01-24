@@ -83,7 +83,7 @@ class Bitcrush extends AudioWorkletProcessor {
 		const output = outPut[0];
 
 		const bitDepth = param["Bit Depth"];
-		const reduction = param["Reduction"];
+		const reduct = param["Reduction"];
 
 		const depthConst = bitDepth.length === 1;
 
@@ -97,7 +97,7 @@ class Bitcrush extends AudioWorkletProcessor {
 					step = Math.pow(0.5, bitDepth[i]);
 				}
 
-				this.phase += reduction[i];
+				this.phase += reduct[i];
 
 				if (this.phase >= 1.0) {
 					this.phase -= 1.0;
