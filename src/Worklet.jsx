@@ -12,7 +12,7 @@ class Worklet extends Module {
 	async componentDidMount() {
 		await window.ctx.audioWorklet.addModule(`worklet/${this.props.fName}.js`);
 
-		this.node = new AudioWorkletNode(window.ctx, this.props.workName);
+		this.node = new AudioWorkletNode(window.ctx, this.props.name);
 
 		for (let key of this.node.parameters.keys()) {
 			this.state.param[key] = null;
@@ -39,7 +39,7 @@ class Worklet extends Module {
 
 	render() {
 		return (
-			<Module name={this.props.workName} param={Object.keys(this.state.param).map((key) => (
+			<Module name={this.props.name} param={Object.keys(this.state.param).map((key) => (
 				{
 					name: key,
 					point: this.node,
