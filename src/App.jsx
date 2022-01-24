@@ -17,10 +17,29 @@ class Worklet extends Module {
 		// source
 		this.node = new AudioWorkletNode(window.ctx, "sin");
 
-		this.node.parameters.forEach((param) => {
-			alert(param.minValue);
-			alert(param.maxValue);
-		});
+		this.map = {};
+
+		for (let key of this.node.parameters.keys()) {
+			this.map[key] = null;
+		}
+
+		let i = 0;
+		for (let val of this.node.parameters.values()) {
+			let key = Object.keys(this.map)[i];
+
+			this.map[key] = {
+				min: val.minValue,
+				max: val.maxValue
+			};
+
+			i++;
+		}
+
+		for (let asdf of Object.keys(this.map)) {
+			alert(asdf);
+			alert(this.map[asdf].max);
+			alert(this.map[asdf].min);
+		}
 
 		// route
 		this.node.connect(window.ctx.destination);
