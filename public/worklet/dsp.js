@@ -30,10 +30,18 @@ class Sin extends AudioWorkletProcessor {
 }
 
 class Feedback extends AudioWorkletProcessor {
+	constructor() {
+		super();
+
+		this.it = 3;
+	}
+
 	process(ins, outs, param) {
 		outs[0].forEach((chan) => {
 			for (let i = 0; i < chan.length; i++) {
-				chan[i] = ins[0][0][i] * ins[0][0][i];
+				for (let f = 0; f < this.it; f++) {
+					chan[i] = ins[0][0][i] * ins[0][0][i];
+				}
 			}
 		});
 
