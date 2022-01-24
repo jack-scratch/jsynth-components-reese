@@ -11,9 +11,9 @@ class Sin extends AudioWorkletProcessor {
 		return [
 			{
 				name: "Frequency",
+				defaultValue: a,
 				minValue: 0.0,
-				maxValue: 1000.0,
-				defaultValue: a
+				maxValue: 1000.0
 			}
 		];
   }
@@ -36,9 +36,9 @@ class Feedback extends AudioWorkletProcessor {
 		return [
 			{
 				name: "Iterations",
+				defaultValue: 1,
 				minValue: 1,
-				maxValue: 8,
-				defaultValue: 1
+				maxValue: 8
 			}
 		];
 	}
@@ -60,14 +60,14 @@ class Bitcrush extends AudioWorkletProcessor {
 	static get parameterDescriptors() {
 		return [{
 			name: "Bit Depth",
+			defaultValue: 12,
 			minValue: 1,
-			maxValue: 16,
-			defaultValue: 12
+			maxValue: 16
 		}, {
 			name: "Reduction",
+			defaultValue: 0.5,
 			minValue: 0,
-			maxValue: 1,
-			defaultValue: 0.5
+			maxValue: 1
 		}];
 	}
 
