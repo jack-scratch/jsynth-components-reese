@@ -30,8 +30,8 @@ $ht: 100px;
 		.mark {
 			width: calc(#{$wd} - (#{$margin} * 2));
 			margin-left: $margin;
-			border-top: 2px solid $inert;
-			border-bottom: 2px solid $inert;
+			border-top: 2px solid $fg;
+			border-bottom: 2px solid $fg;
 		}
 	}
 
