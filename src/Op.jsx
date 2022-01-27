@@ -41,7 +41,9 @@ class Op extends Source {
 		if (this.state.l < this.type.length - 1) {
 			this.setState((prevState) => ({
 				l: prevState.l + 1
-			}));
+			}), () => {
+				this.node.osc.type = this.type[this.state.l];
+			});
 		}
 	}
 
@@ -49,7 +51,9 @@ class Op extends Source {
 		if (this.state.l) {
 			this.setState((prevState) => ({
 				l: prevState.l - 1
-			}));
+			}), () => {
+				this.node.osc.type = this.type[this.state.l];
+			});
 		}
 	}
 
