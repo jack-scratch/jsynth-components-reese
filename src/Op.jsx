@@ -67,37 +67,34 @@ class Op extends Source {
 
 	render() {
 		return (
-			<div className="module">
-				<div>
-					<div className="head">
-						<Text buff={[
-							this.type[this.state.l]
+			<Source name={this.props.name} param={[
+				{
+					name: "Frequency",
+					point: this.node.osc.frequency,
+					min: this.props.rngFreq[0],
+					max: this.props.rngFreq[1]
+				}, {
+					name: "Gain",
+					point: this.node.amp.gain,
+					min: this.props.rngVol[0],
+					max: this.props.rngVol[1]
+				}
+			]} port={[
+				{
+					type: "out",
+					point: this.node.amp
+				}
+			]} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown}>
+				<div className="head">
+					<Text buff={[
+						this.type[this.state.l]
 						]} wd={10} ht={1} />
-					</div>
-					<div className="body">
-						<Btn ht={26} name={<FontAwesomeIcon icon={faSortUp} />} hookDown={this.inc} />
-						<Btn ht={26} name={<FontAwesomeIcon icon={faSortDown} />} hookDown={this.dec} />
-					</div>
 				</div>
-				<Source name={this.props.name} param={[
-					{
-						name: "Frequency",
-						point: this.node.osc.frequency,
-						min: this.props.rngFreq[0],
-						max: this.props.rngFreq[1]
-					}, {
-						name: "Gain",
-						point: this.node.amp.gain,
-						min: this.props.rngVol[0],
-						max: this.props.rngVol[1]
-					}
-				]} port={[
-					{
-						type: "out",
-						point: this.node.amp
-					}
-				]} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} />
-			</div>
+				<div className="body">
+					<Btn ht={26} name={<FontAwesomeIcon icon={faSortUp} />} hookDown={this.inc} />
+					<Btn ht={26} name={<FontAwesomeIcon icon={faSortDown} />} hookDown={this.dec} />
+				</div>
+			</Source>
 		);
 	}
 }
