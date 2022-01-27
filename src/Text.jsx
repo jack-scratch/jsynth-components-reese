@@ -60,6 +60,7 @@ class Text extends React.Component {
 }
 
 Text.defaultProps = {
+	buff: [],
 	wd: 20,
 	ht: 4,
 	l: 0
