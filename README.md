@@ -170,7 +170,7 @@ Oscillator.
 `detune` - Detune
 
 ## `<Op />`
-Basic operator.
+Basic operator with a programmable type.
 
 Contains an oscillator, and a gain.
 
