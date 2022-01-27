@@ -48,7 +48,7 @@ class Fader extends React.Component {
 					<div className="thumb" style={{
 						marginTop: this.props.param.value
 					}}>
-						<div className="mark"></div>
+						<div className="tick"></div>
 					</div>
 				</div>
 				<svg xmlns="http://www.w3.org/2000/svg" className="inc">

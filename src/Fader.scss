@@ -27,7 +27,7 @@ $ht: 100px;
 		background: $bg;
 		box-shadow: 0px 0px 1px 1px $inert;
 
-		.mark {
+		.tick {
 			width: calc(#{$wd} - (#{$margin} * 2));
 			margin-left: $margin;
 			border-top: 2px solid $fg;
