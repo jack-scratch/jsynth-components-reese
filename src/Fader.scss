@@ -22,7 +22,7 @@ $ht: 100px;
 		height: $ht;
 		margin-left: calc((#{$wd} / 2) * -1);
 		margin-top: calc((#{$ht} / 2) * -1);
-		border-radius: 6px;
+		border-radius: $bevel;
 		cursor: pointer;
 		background: $bg;
 		box-shadow: 0px 0px 1px 1px $inert;
