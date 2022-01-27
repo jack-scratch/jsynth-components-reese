@@ -11,6 +11,17 @@ class Op extends Source {
 		if (this.props.type) {
 			this.node.osc.type = this.props.type;
 		}
+
+		this.type = [
+			"sine",
+			"square",
+			"sawtooth",
+			"triangle"
+		];
+
+		this.state = {
+			l: 0
+		};
 	}
 
 	componentDidMount() {
@@ -26,7 +37,7 @@ class Op extends Source {
 			<div className="module">
 				<div>
 					<Text buff={[
-						"asdf"
+						this.type[this.state.l]
 					]} wd={10} ht={1} />
 				</div>
 				<Source name={this.props.name} param={[
