@@ -1,5 +1,15 @@
 import Source from "./Source";
 import Text from "./Text";
+import {
+	Btn
+} from "./Btn";
+import {
+	FontAwesomeIcon
+} from "@fortawesome/react-fontawesome";
+import {
+	faSortUp,
+	faSortDown
+} from "@fortawesome/free-solid-svg-icons";
 
 class Op extends Source {
 	constructor(props) {
@@ -36,9 +46,15 @@ class Op extends Source {
 		return (
 			<div className="module">
 				<div>
-					<Text buff={[
-						this.type[this.state.l]
-					]} wd={10} ht={1} />
+					<div className="head">
+						<Text buff={[
+							this.type[this.state.l]
+						]} wd={10} ht={1} />
+					</div>
+					<div className="body">
+						<Btn ht={26} name={<FontAwesomeIcon icon={faSortUp} />} />
+						<Btn ht={26} name={<FontAwesomeIcon icon={faSortDown} />} />
+					</div>
 				</div>
 				<Source name={this.props.name} param={[
 					{
