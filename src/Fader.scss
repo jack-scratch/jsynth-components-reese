@@ -23,9 +23,9 @@ $ht: 100px;
 		margin-left: calc((#{$wd} / 2) * -1);
 		margin-top: calc((#{$ht} / 2) * -1);
 		border-radius: $bevel;
-		cursor: pointer;
 		background: $bg;
 		box-shadow: 0px 0px 1px 1px $inert;
+		cursor: pointer;
 
 		.tick {
 			width: calc(#{$wd} - (#{$margin} * 2));
