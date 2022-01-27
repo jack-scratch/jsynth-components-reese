@@ -46,7 +46,7 @@ class Btn extends React.Component {
 
 	render() {
 		return (
-			<div className={"btn " + (this.state.down ? " " : "raised ")} onMouseDown={this.push} onMouseUp={this.release} onMouseLeave={this.release} style={{
+			<div className={"btn" + (this.state.down ? " " : " raised")} onMouseDown={this.push} onMouseUp={this.release} onMouseLeave={this.release} style={{
 				width: this.props.wd,
 				height: this.props.ht
 			}} onClick={this.props.call}>
