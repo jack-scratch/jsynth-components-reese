@@ -155,7 +155,9 @@ class Osc extends Source {
 }
 ```
 
-Modules can be extended via child elements.
+As a default, parameters are mapped to produce individual sections with a knob and an input port.
+
+Child elements can be used to extend.
 
 ### Props
 `name` - Title
