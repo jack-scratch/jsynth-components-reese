@@ -31,22 +31,26 @@ class Osc extends Source {
 					point: this.node.main.frequency,
 					min: this.props.rngFreq[0],
 					max: this.props.rngFreq[1],
-					unit: unit["time"][0]
+					unit: unit["time"][0],
+					hook: (val) => {
+						this.node.main.frequency.value = val;
+					}
 				}, {
 					name: "Detune",
 					point: this.node.main.detune,
 					min: this.props.rngDetune[0],
 					max: this.props.rngDetune[1],
-					unit: unit["cents"]
+					unit: unit["cents"],
+					hook: (val) => {
+						this.node.main.detune.value = val;
+					} 
 				}
 			]} port={[
 				{
 					type: "out",
 					point: this.node.main
 				}
-			]} hookKnobTurn={(val) => {
-				this.node.main.frequency.value = val;
-			}} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} activeCable={this.props.activeCable} marked={this.props.marked} />
+			]} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} activeCable={this.props.activeCable} marked={this.props.marked} />
 		);
 	}
 }
