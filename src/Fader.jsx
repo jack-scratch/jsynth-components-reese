@@ -53,7 +53,7 @@ class Fader extends React.Component {
 				down: false
 			})} onMouseMove={this.scrub}>
 				<div className="groove">
-					<svg className="thumb" overflow="visible">
+					<svg className="thumb" width={this.wd} height={this.ht}>
 						<path d={`
 						M 0,${this.ht - bevel}
 						C 0,${this.ht - bevel} 0,${this.ht} ${bevel},${this.ht} L ${this.wd - bevel},${this.ht}
