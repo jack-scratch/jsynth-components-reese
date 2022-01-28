@@ -26,10 +26,12 @@ class Bitcrush extends Module {
 			<Module name={this.props.name} param={[
 				{
 					name: "Fidelity",
-					point: this.state.bitDepth,
 					min: 1,
 					max: 6,
-					quant: 6
+					quant: 6,
+					hook: (val) => {
+						this.state.bitDepth.value = val;
+					}
 				}
 			]} port={[
 				{

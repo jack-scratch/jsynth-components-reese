@@ -19,10 +19,12 @@ class Gain extends Effect {
 			<Effect name="Gain" param={[
 				{
 					name: "Level",
-					point: this.node.main.gain,
 					min: -12.0,
 					max: 12.0,
-					unit: unit["freq"]
+					unit: unit["freq"],
+					hook: (val) => {
+						this.node.main.gain = val;
+					}
 				}
 			]} point={this.node.main} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} marked={this.props.marked} />
 		);

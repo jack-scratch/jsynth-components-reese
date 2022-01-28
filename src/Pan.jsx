@@ -16,7 +16,9 @@ class Pan extends Effect {
 			<Effect name={this.props.name} param={[
 				{
 					name: "Rate",
-					point: this.node.main.pan
+					hook: (val) => {
+						this.node.main.pan.value = val;
+					}
 				}
 			]} />
 		);

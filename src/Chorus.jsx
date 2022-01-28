@@ -15,10 +15,12 @@ class Chorus extends Effect {
 			<Effect name={this.props.name} param={[
 				{
 					name: "Spread",
-					point: this.node.main.frequency,
 					min: 1,
 					max: 100,
-					unit: unit["time"][0]
+					unit: unit["time"][0],
+					hook: (val) => {
+						this.node.main.frequency.value = val;
+					}
 				}
 			]} port={[{
 				type: "in",

@@ -20,9 +20,11 @@ class Flanger extends Effect {
 			<Effect name={this.props.name} param={[
 				{
 					name: "Delay",
-					point: this.node.main.frequency,
 					min: 1.0,
-					max: 50.0
+					max: 50.0,
+					hook: (val) => {
+						this.node.main.frequency = val;
+					}
 				}
 			]} port={[
 				{
