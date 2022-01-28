@@ -52,7 +52,7 @@ class Knob extends React.Component {
 			}, () => {
 				let deltaY = this.state.currY - this.state.startY;
 
-				this.props.param.value = clamp(this.state.prevVal - deltaY, this.props.min, this.props.max);
+				this.props.hook(clamp(this.state.prevVal - deltaY, this.props.min, this.props.max));
 			});
 		}
 	}
