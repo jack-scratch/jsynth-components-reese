@@ -10,7 +10,7 @@ class Text extends React.Component {
 		super(props);
 
 		this.charWd = 8;
-		this.lineHt = 16;
+		this.lineHt = 14;
 
 		this.refer = React.createRef();
 
