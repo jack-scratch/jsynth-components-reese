@@ -33,10 +33,12 @@ class Knob extends React.Component {
 	}
 
 	componentDidMount() {
-		this.markBound = [
-			this.markRef.current.getBBox().x,
-			this.markRef.current.getBBox().y
-		];
+		if (this.props.marked) {
+			this.markBound = [
+				this.markRef.current.getBBox().x,
+				this.markRef.current.getBBox().y
+			];
+		}
 	}
 
 	grab(e) {
