@@ -299,6 +299,8 @@ Base chord.
 # Utilities
 Miscellaneous utilities.
 
+`clamp(no, min, max)` - Clamp a value between a range
+
 `fmt(i, off)` - Conversion of tone to formatted note on the harmonic scale
 
 # Formatting
