@@ -6,7 +6,7 @@
 	src: url("Neutra-Text-Bold.otf");
 }
 
-$nutRad: 26px;
+$nutRad: 22px;
 $portRad: 10px;
 
 h1,
@@ -116,7 +116,7 @@ text.mark {
 	polygon {
 		@extend .raised;
 
-		transform: translate(36px, 36px);
+		transform: translate(32px, 32px);
 	}
 
 	circle {
