@@ -16,9 +16,11 @@ class Delay extends Effect {
 			<Effect name={this.props.name} param={[
 				{
 					name: "Time",
-					point: this.node.worklet.time,
 					min: 0.01,
-					max: 10.0
+					max: 10.0,
+					hook: (val) => {
+						this.node.worklet.time.value = val;
+					}
 				}
 			]} />
 		);

@@ -31,10 +31,12 @@ class Lowpass extends Filter {
 			<Filter name="Lowpass" type="lowpass" param={[
 				{
 					name: "Frequency",
-					point: this.node.main.frequency,
 					min: this.props.rngFreq[0],
 					max: this.props.rngFreq[1],
-					unit: unit["freq"]
+					unit: unit["freq"],
+					hook: (val) => {
+						this.node.main.frequency.value = val;
+					}
 				}
 			]} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} marked={this.props.marked} />
 		);
@@ -47,10 +49,13 @@ class Highpass extends Filter {
 			<Filter name="Highpass" type="highpass" param={[
 				{
 					name: "Frequency",
-					point: this.node.main.frequency,
 					min: this.props.rngFreq[0],
 					max: this.props.rngFreq[1],
-					unit: unit["freq"]
+					unit: unit["freq"],
+					hook: (val) => {
+						this.node.main.frequency.value = val;
+					}
+
 				}
 			]} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} marked={this.props.marked} />
 		);
