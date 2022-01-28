@@ -11,6 +11,10 @@ $ht: 100px;
 		border: $stroke solid $inert;
 	}
 
+	.thumb {
+		cursor: pointer;
+	}
+
 	.inc {
 		position: absolute;
 		margin-top: -$ht;
