@@ -46,7 +46,7 @@ class Fader extends React.Component {
 				height: this.props.ln
 			}}>
 				<div className="groove">
-					<svg className="thumb" width={this.wd} height={this.ht} onMouseDown={() => this.setState({
+					<svg xmlns="http://www.w3.org/1999/xhtml" version="1.1" className="thumb" width={this.wd} height={this.ht} onMouseDown={() => this.setState({
 						down: true
 					})} onMouseUp={() => this.setState({
 						down: false

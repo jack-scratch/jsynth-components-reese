@@ -80,7 +80,7 @@ class Cable extends React.Component {
 		}
 
 		return (
-			<svg className="cable">
+			<svg xmlns="http://www.w3.org/1999/xhtml" version="1.1" className="cable">
 				<path d={`M ${start[0]},${start[1]} C ${start[0]},${start[1]} ${this.midX()},${this.midY()} ${end[0]},${end[1]}`} />
 			</svg>
 		);

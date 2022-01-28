@@ -79,7 +79,7 @@ class Knob extends React.Component {
 
 		return (
 			<div>
-				<svg className={"knob" + (this.props.marked ? " marked" : "")} width={diam} height={diam} onMouseDown={this.grab}>
+				<svg xmlns="http://www.w3.org/1999/xhtml" version="1.1" className={"knob" + (this.props.marked ? " marked" : "")} width={diam} height={diam} onMouseDown={this.grab}>
 					{this.props.marked && [...Array(this.props.marked).keys()].map((i) =>
 						<line x1={0} y1={0} x2={10} y2={0} transform={`translate(${this.props.rad} ${this.props.rad}) rotate(${i * stride}) translate(${this.props.rad + margin} 0)`} key={i} />
 					)}
