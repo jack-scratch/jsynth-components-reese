@@ -3,7 +3,7 @@ const unit = {
 	"cents": "%",
 	"level": " dB",
 	"time": [
-		" +V",
+		"ms",
 		"s"
 	],
 	"sign": {

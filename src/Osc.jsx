@@ -30,7 +30,7 @@ class Osc extends Source {
 					name: "Frequency",
 					min: this.props.rngFreq[0],
 					max: this.props.rngFreq[1],
-					unit: unit["time"][0],
+					unit: unit["freq"],
 					hook: (val) => {
 						this.node.main.frequency.value = val;
 					}
