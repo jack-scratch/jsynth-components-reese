@@ -153,6 +153,8 @@ class Osc extends Source {
 }
 ```
 
+Modules can be extended via child elements.
+
 ### Props
 `name` - Title
 `param` - List of parameters
