@@ -2,8 +2,6 @@
 @import "layout.scss";
 @import "col.scss";
 
-$ht: 100px;
-
 .fader {
 	width: 0;
 
@@ -18,8 +16,6 @@ $ht: 100px;
 	}
 
 	.inc {
-		height: calc(#{$ht} + #{$margin});
-		margin-top: -$ht;
 		position: absolute;
 		overflow: visible;
 		z-index: -1;
