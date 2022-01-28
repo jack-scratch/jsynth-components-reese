@@ -16,9 +16,9 @@ $ht: 100px;
 	}
 
 	.inc {
-		position: absolute;
-		margin-top: -$ht;
 		height: calc(#{$ht} + #{$margin});
+		margin-top: -$ht;
+		position: absolute;
 		overflow: visible;
 		z-index: -1;
 	}
