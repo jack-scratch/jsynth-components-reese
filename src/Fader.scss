@@ -1,5 +1,6 @@
 @import "main.scss";
 @import "layout.scss";
+@import "col.scss";
 
 $ht: 100px;
 
@@ -12,6 +13,7 @@ $ht: 100px;
 	}
 
 	.thumb {
+		fill: $bg;
 		cursor: pointer;
 	}
 
