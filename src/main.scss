@@ -6,8 +6,8 @@
 	src: url("Neutra-Text-Bold.otf");
 }
 
+$nutRad: 26px;
 $portRad: 10px;
-$hexRad: 26px;
 
 h1,
 h2,
@@ -104,8 +104,8 @@ text.mark {
 }
 
 .port {
-	width: calc((#{$hexRad} + #{$portRad}) * 2);
-	height: calc((#{$hexRad} + #{$portRad}) * 2);
+	width: calc((#{$nutRad} + #{$portRad}) * 2);
+	height: calc((#{$nutRad} + #{$portRad}) * 2);
 	fill: $bg;
 	overflow: visible;
 
@@ -121,8 +121,8 @@ text.mark {
 
 	circle {
 		r: $portRad;
-		cx: calc(#{$hexRad} + #{$portRad});
-		cy: calc(#{$hexRad} + #{$portRad});
+		cx: calc(#{$nutRad} + #{$portRad});
+		cy: calc(#{$nutRad} + #{$portRad});
 		fill: $inert;
 		cursor: pointer;
 	}
