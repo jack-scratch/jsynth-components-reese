@@ -14,14 +14,14 @@ class Fader extends React.Component {
 	constructor(props) {
 		super();
 
+		this.wd = 30;
+		this.ht = 60;
+
 		this.state = {
 			down: false
 		};
 
 		this.scrub = this.scrub.bind(this);
-
-		this.wd = 30;
-		this.ht = 60;
 	}
 
 	scrub(e) {
