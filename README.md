@@ -13,11 +13,13 @@ Upon any kind of mouse down event within the document, the context will be resum
 
 # Component
 ## Control
+Takes a function as a prop in `hook` and calls upon event.
+
 ### `<Btn />`
-Takes a function as a prop in `hook`, and calls this function upon mouse down.
+Calls a function on push.
 
 ### `<Knob />`
-Updates a numeric value upon being turned.
+Calls a function on turning, providing a value.
 
 #### Props
 ---
@@ -34,7 +36,7 @@ For numeric values specifically meant to be integral, the `quant` prop can be pa
 This will snap the knob and its values to specific increments.
 
 ### `<Fader />`
-Updates a numeric value upon being dragged.
+Calls a function on dragging, providing a value.
 
 Limited to a range.
 
