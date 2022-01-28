@@ -45,15 +45,15 @@ class Fader extends React.Component {
 		return (
 			<div className="fader" style={{
 				height: this.props.ln
-			}} onMouseDown={() => this.setState({
-				down: true
-			})} onMouseUp={() => this.setState({
-				down: false
-			})} onMouseLeave={() => this.setState({
-				down: false
-			})} onMouseMove={this.scrub}>
+			}}>
 				<div className="groove">
-					<svg className="thumb" width={this.wd} height={this.ht}>
+					<svg className="thumb" width={this.wd} height={this.ht} onMouseDown={() => this.setState({
+						down: true
+					})} onMouseUp={() => this.setState({
+						down: false
+					})} onMouseLeave={() => this.setState({
+						down: false
+					})} onMouseMove={this.scrub}>
 						<path d={`
 						M 0,${this.ht - bevel}
 						C 0,${this.ht - bevel} 0,${this.ht} ${bevel},${this.ht} L ${this.wd - bevel},${this.ht}
