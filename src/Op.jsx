@@ -70,7 +70,6 @@ class Op extends Source {
 			<Source name={this.props.name} param={[
 				{
 					name: "Frequency",
-					point: this.node.osc.frequency,
 					min: this.props.rngFreq[0],
 					max: this.props.rngFreq[1],
 					hook: (val) => {
@@ -78,7 +77,6 @@ class Op extends Source {
 					}
 				}, {
 					name: "Gain",
-					point: this.node.amp.gain,
 					min: this.props.rngVol[0],
 					max: this.props.rngVol[1],
 					hook: (val) => {
