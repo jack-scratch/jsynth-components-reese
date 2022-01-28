@@ -28,6 +28,14 @@ class Fader extends React.Component {
 	}
 
 	componentDidMount() {
+		let deltaY = this.state.currY - this.state.startY;
+
+		this.setState({
+			val: this.state.prevVal - deltaY
+		}, () => {
+			this.props.hook(this.state.val);
+		});
+
 		if (this.props.marked) {
 			this.markBound = [
 				this.markRef.current.getBBox().x,

@@ -33,6 +33,14 @@ class Knob extends React.Component {
 	}
 
 	componentDidMount() {
+		let deltaY = this.state.currY - this.state.startY;
+
+		this.setState({
+			val: clamp(this.state.prevVal - deltaY, this.props.min, this.props.max)
+		}, () => {
+			this.props.hook(this.state.val);
+		});
+
 		if (this.props.marked) {
 			this.markBound = [
 				this.markRef.current.getBBox().x,
