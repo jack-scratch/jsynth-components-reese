@@ -1,6 +1,7 @@
 import React from "react";
 import {
-	margin
+	margin,
+	bevel
 } from "./layout";
 import {
 	bg,
@@ -53,7 +54,13 @@ class Fader extends React.Component {
 			})} onMouseMove={this.scrub}>
 				<div className="groove">
 					<svg overflow="visible">
-						<rect width={this.wd} height={this.ht} fill={bg} />
+						<path d={`
+						M 0,${this.ht - bevel}
+						C 0,${this.ht - bevel} 0,${this.ht} ${bevel},${this.ht} L ${this.wd - bevel},${this.ht}
+						C ${this.wd - bevel},${this.ht} ${this.wd},${this.ht} ${this.wd},${this.ht - bevel} L ${this.wd},${bevel}
+						C ${this.wd},${bevel} ${this.wd},0 ${this.wd - bevel},0 L ${bevel},0
+						C ${bevel},0 0,0 0,${bevel} L 0,${this.ht - bevel}
+						`} />
 						<line x1={0} y1={this.ht / 2} x2={this.wd} y2={this.ht / 2} stroke={fg} stroke-width={3} />
 					</svg>
 				</div>

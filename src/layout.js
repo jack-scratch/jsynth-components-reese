@@ -6,6 +6,8 @@ const rotRad = Math.PI * 2;
 
 const lineLn = 16;
 
+const bevel = 4;
+
 const nutRad = 22;
 const portRad = 10;
 
@@ -15,6 +17,7 @@ export {
 	rotDeg,
 	rotRad,
 	lineLn,
+	bevel,
 	nutRad,
 	portRad
 };
