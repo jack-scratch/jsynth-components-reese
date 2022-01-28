@@ -53,7 +53,7 @@ class Fader extends React.Component {
 						down: false
 					})} onMouseLeave={() => this.setState({
 						down: false
-						})} onMouseMove={this.scrub} transform={`translate(-${this.wd / 2}, -${this.ht / 2})`}>
+					})} onMouseMove={this.scrub} transform={`translate(-${this.wd / 2}, -${this.ht / 2})`}>
 						<path d={`
 						M 0,${this.ht - bevel}
 						C 0,${this.ht - bevel} 0,${this.ht} ${bevel},${this.ht} L ${this.wd - bevel},${this.ht}
