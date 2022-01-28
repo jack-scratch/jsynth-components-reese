@@ -116,7 +116,7 @@ text.mark {
 	polygon {
 		@extend .raised;
 
-		transform: translate(32px, 32px);
+		transform: translate(calc(#{$nutRad} + #{$portRad}), calc(#{$nutRad} + #{$portRad}));
 	}
 
 	circle {
