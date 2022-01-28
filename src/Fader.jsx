@@ -20,7 +20,7 @@ class Fader extends React.Component {
 
 		this.scrub = this.scrub.bind(this);
 
-		this.wd = 32;
+		this.wd = 30;
 		this.ht = 60;
 	}
 
