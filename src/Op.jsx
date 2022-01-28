@@ -12,6 +12,13 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 class Op extends Source {
+	type = [
+		"sine",
+		"square",
+		"sawtooth",
+		"triangle"
+	];
+
 	constructor(props) {
 		super(props);
 
@@ -21,13 +28,6 @@ class Op extends Source {
 		if (this.props.type) {
 			this.node.osc.type = this.props.type;
 		}
-
-		this.type = [
-			"sine",
-			"square",
-			"sawtooth",
-			"triangle"
-		];
 
 		this.state = {
 			l: 0

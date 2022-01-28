@@ -11,11 +11,11 @@ import {
 import "./Fader.css";
 
 class Fader extends React.Component {
+	wd = 30;
+	ht = 60;
+
 	constructor(props) {
 		super();
-
-		this.wd = 30;
-		this.ht = 60;
 
 		this.markRef = React.createRef();
 

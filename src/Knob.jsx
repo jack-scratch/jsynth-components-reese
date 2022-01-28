@@ -12,10 +12,10 @@ import {
 import "./Knob.css";
 
 class Knob extends React.Component {
+	baseRot = 90;
+
 	constructor(props) {
 		super();
-
-		this.baseRot = 90;
 
 		this.state = {
 			down: false,

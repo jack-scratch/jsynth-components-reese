@@ -3,36 +3,36 @@ import Knob from "./Knob";
 import Label from "./Label";
 
 class Synth extends React.Component {
+	infoSrc = [
+		{
+			name: "Sine",
+			type: "sine"
+		}, {
+			name: "Square",
+			type: "square"
+		}, {
+			name: "Sawtooth",
+			type: "sawtooth"
+		}, {
+			name: "Triangle",
+			type: "triangle"
+		}
+	];
+
+	infoFx = [
+		{
+			name: "Lowpass",
+			type: "lowpass"
+		}, {
+			name: "Highpass",
+			type: "highpass"
+		}
+	];
+
 	constructor(props) {
 		super();
 
 		this.osc = window.ctx.createOscillator();
-
-		this.infoSrc = [
-			{
-				name: "Sine",
-				type: "sine"
-			}, {
-				name: "Square",
-				type: "square"
-			}, {
-				name: "Sawtooth",
-				type: "sawtooth"
-			}, {
-				name: "Triangle",
-				type: "triangle"
-			}
-		];
-
-		this.infoFx = [
-			{
-				name: "Lowpass",
-				type: "lowpass"
-			}, {
-				name: "Highpass",
-				type: "highpass"
-			}
-		];
 
 		this.bank = [];
 		for (let i = 0; i < this.infoSrc.length; i++) {
