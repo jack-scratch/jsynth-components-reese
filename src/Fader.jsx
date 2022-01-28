@@ -17,12 +17,21 @@ class Fader extends React.Component {
 		this.wd = 30;
 		this.ht = 60;
 
+		this.markRef = React.createRef();
+
 		this.state = {
 			val: 0,
 			down: false
 		};
 
 		this.scrub = this.scrub.bind(this);
+	}
+
+	componentDidMount() {
+		this.markBound = [
+			this.markRef.current.getBBox().x,
+			this.markRef.current.getBBox().y
+		];
 	}
 
 	scrub(e) {
@@ -63,7 +72,7 @@ class Fader extends React.Component {
 						<line className="tick" x1={0} y1={this.ht / 2} x2={this.wd} y2={this.ht / 2} />
 					</svg>
 				</div>
-				{this.props.marked && <svg className="inc">
+				{this.props.marked && <svg className="inc" ref={this.markRef}>
 					{[...Array(this.props.mark).keys()].map((i) =>
 						<line x1={margin * 2} y1={i * markStride} x2={(margin * 2) + 20} y2={i * markStride} className="tick" key={i} />
 					)}
