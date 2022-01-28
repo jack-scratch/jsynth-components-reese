@@ -2,6 +2,10 @@ import React from "react";
 import {
 	margin
 } from "./layout";
+import {
+	bg,
+	fg
+} from "./col";
 
 import "./Fader.css";
 
@@ -14,6 +18,9 @@ class Fader extends React.Component {
 		};
 
 		this.scrub = this.scrub.bind(this);
+
+		this.wd = 32;
+		this.ht = 60;
 	}
 
 	scrub(e) {
@@ -45,11 +52,10 @@ class Fader extends React.Component {
 				down: false
 			})} onMouseMove={this.scrub}>
 				<div className="groove">
-					<div className="thumb" style={{
-						marginTop: this.props.param.value
-					}}>
-						<div className="tick"></div>
-					</div>
+					<svg overflow="visible">
+						<rect width={this.wd} height={this.ht} fill={bg} />
+						<line x1={0} y1={this.ht / 2} x2={this.wd} y2={this.ht / 2} stroke={fg} stroke-width={3} />
+					</svg>
 				</div>
 				<svg xmlns="http://www.w3.org/2000/svg" className="inc">
 					{this.props.marked && [...Array(this.props.mark).keys()].map((i) =>

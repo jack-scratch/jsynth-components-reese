@@ -11,31 +11,6 @@ $ht: 100px;
 		border: $stroke solid $inert;
 	}
 
-	.thumb {
-		$wd: 32px;
-		$ht: 60px;
-
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		width: $wd;
-		height: $ht;
-		margin-left: calc((#{$wd} / 2) * -1);
-		margin-top: calc((#{$ht} / 2) * -1);
-		border-radius: $bevel;
-		background: $bg;
-		box-shadow: 0px 0px 1px 1px $inert;
-		cursor: pointer;
-
-		.tick {
-			width: calc(#{$wd} - (#{$margin} * 2));
-			margin-left: $margin;
-			border-top: 2px solid $fg;
-			border-bottom: 2px solid $fg;
-			border-radius: 2px;
-		}
-	}
-
 	.inc {
 		position: absolute;
 		margin-top: -$ht;
