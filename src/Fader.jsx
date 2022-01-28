@@ -61,7 +61,7 @@ class Fader extends React.Component {
 						C ${this.wd},${bevel} ${this.wd},0 ${this.wd - bevel},0 L ${bevel},0
 						C ${bevel},0 0,0 0,${bevel} L 0,${this.ht - bevel}
 						`} />
-						<line x1={0} y1={this.ht / 2} x2={this.wd} y2={this.ht / 2} stroke={fg} strokeWidth={3} />
+						<line className="tick" x1={0} y1={this.ht / 2} x2={this.wd} y2={this.ht / 2} />
 					</svg>
 				</div>
 				{this.props.marked && <svg className="inc">
