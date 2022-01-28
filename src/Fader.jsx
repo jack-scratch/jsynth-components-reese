@@ -64,11 +64,11 @@ class Fader extends React.Component {
 						<line x1={0} y1={this.ht / 2} x2={this.wd} y2={this.ht / 2} stroke={fg} stroke-width={3} />
 					</svg>
 				</div>
-				<svg xmlns="http://www.w3.org/2000/svg" className="inc">
-					{this.props.marked && [...Array(this.props.mark).keys()].map((i) =>
+				{this.props.marked && <svg xmlns="http://www.w3.org/2000/svg" className="inc">
+					{[...Array(this.props.mark).keys()].map((i) =>
 						<line x1={margin * 2} y1={i * markStride} x2={(margin * 2) + 20} y2={i * markStride} className="tick" key={i} />
 					)}
-				</svg>
+				</svg>}
 			</div>
 		);
 	}
