@@ -4,6 +4,15 @@ import {
 } from "./Btn";
 
 class Env extends React.Component {
+	init = {
+		"src": {
+			"type": "sawtooth"
+		},
+		"filter": {
+			"hz": 100.0
+		}
+	};
+
 	constructor(props) {
 		super(props);
 
@@ -11,7 +20,7 @@ class Env extends React.Component {
 
 		this.filter = window.ctx.createBiquadFilter();
 		this.filter.type = "lowpass";
-		this.filter.frequency.value = 100.0;
+		this.filter.frequency.value = this.init["filter"]["hz"];
 	}
 
 	render() {
@@ -19,7 +28,7 @@ class Env extends React.Component {
 			<div className="cont">
 				<Btn hookDown={() => {
 					this.src = window.ctx.createOscillator();
-					this.src.type = "sawtooth";
+					this.src.type = this.init["src"]["type"];
 
 					// route
 					this.src.connect(this.filter);
@@ -32,7 +41,7 @@ class Env extends React.Component {
 				}} hookUp={() => {
 					this.src.disconnect();
 
-					this.filter.frequency.value = 100.0;
+					this.filter.frequency.value = this.init["filter"]["hz"];
 				}} />
 			</div>
 		);
