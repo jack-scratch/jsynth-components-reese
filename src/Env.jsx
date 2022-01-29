@@ -20,7 +20,7 @@ class Env extends React.Component {
 
 		this.filter = window.ctx.createBiquadFilter();
 		this.filter.type = "lowpass";
-		this.filter.frequency.value = this.init["filter"]["hz"];
+		this.filter.frequency.value = 1.0;
 
 		this.state = {
 			atk: {
