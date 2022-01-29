@@ -63,7 +63,7 @@ class Env extends React.Component {
 						this.filter.frequency.cancelScheduledValues(window.ctx.currentTime);
 					}} />
 				</div>
-				<div className="ctrl" style={{
+				<div className="cont ctrl" style={{
 					display: "flex"
 				}}>
 					<div>
