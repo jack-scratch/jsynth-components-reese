@@ -74,6 +74,8 @@ class Bay extends React.Component {
 		this.state.patch[i].outRefer = refer;
 
 		this.state.patch[i].inPoint.connect(this.state.patch[i].outPoint);
+
+		this.release(i);
 	}
 
 	detachCable(e, refer, node, i) {
@@ -84,6 +86,8 @@ class Bay extends React.Component {
 
 		this.setState({
 			active: true
+		}, () => {
+			this.release(i);
 		});
 	}
 
@@ -98,21 +102,21 @@ class Bay extends React.Component {
 		}
 	}
 
-	release(e, i) {
-		// if (this.state.active) {
-		// 	if (this.state.patch[i].inPoint && this.state.patch[i].outPoint) {
-		// 		this.setState({
-		// 			active: false
-		// 		});
-		// 	} else {
-		// 		this.rmCable(i);
-		// 	}
-		// }
+	release(i) {
+		if (this.state.active) {
+			if (this.state.patch[i].inPoint && this.state.patch[i].outPoint) {
+				this.setState({
+					active: false
+				});
+			} else {
+				this.rmCable(i);
+			}
+		}
 	}
 
 	render() {
 		return (
-			<div className="cont" id="bay" onMouseMove={(e) => this.drag(e)} onMouseUp={(e) => this.release(e, this.state.patch.length - 1)}>
+			<div className="cont" id="bay" onMouseMove={(e) => this.drag(e)}>
 				{this.props.children && this.props.children.map((el, i) =>
 					React.cloneElement(el, {
 						hookOutDown: this.pushCable,
