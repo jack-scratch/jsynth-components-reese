@@ -23,8 +23,6 @@ class Bay extends React.Component {
 
 		this.detachCable = this.detachCable.bind(this);
 
-		this.release = this.release.bind(this);
-
 		this.drag = this.drag.bind(this);
 	}
 
@@ -75,7 +73,9 @@ class Bay extends React.Component {
 
 		this.state.patch[i].inPoint.connect(this.state.patch[i].outPoint);
 
-		this.release(i);
+		this.setState({
+			active: false
+		});
 	}
 
 	detachCable(e, refer, node, i) {
@@ -86,7 +86,6 @@ class Bay extends React.Component {
 
 		this.setState({
 			active: true
-		}, () => {
 		});
 	}
 
@@ -98,18 +97,6 @@ class Bay extends React.Component {
 					e.nativeEvent.clientY
 				]
 			});
-		}
-	}
-
-	release(i) {
-		if (this.state.active) {
-			if (this.state.patch[i].inPoint && this.state.patch[i].outPoint) {
-				this.setState({
-					active: false
-				});
-			} else {
-				this.rmCable(i);
-			}
 		}
 	}
 
