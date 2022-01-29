@@ -36,7 +36,7 @@ class Env extends React.Component {
 		return (
 			<div className="cont">
 				<div className="body">
-					<Btn hookOn={() => {
+					<Btn hookPush={() => {
 						this.src = window.ctx.createOscillator();
 						this.src.type = this.init["src"]["type"];
 
@@ -55,7 +55,7 @@ class Env extends React.Component {
 							1.0,
 							window.ctx.currentTime + this.state.atk + this.state.decay + this.state.rel
 						);
-					}} hookOff={() => {
+					}} hookRel={() => {
 						this.src.disconnect();
 
 						this.filter.frequency.value = 1.0;

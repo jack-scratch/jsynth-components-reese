@@ -49,7 +49,7 @@ class Btn extends React.Component {
 			<div className={"btn" + (this.state.down ? "" : " raised")} onMouseDown={this.push} onMouseUp={this.release} onMouseLeave={this.release} style={{
 				width: this.props.wd,
 				height: this.props.ht
-			}} onMouseDown={this.props.hookOn} onMouseUp={this.props.hookOff} onMouseLeave={this.props.hookOff}>
+			}} onMouseDown={this.props.hookPush} onMouseUp={this.props.hookRel} onMouseLeave={this.props.hookRel}>
 				<div>
 					<div className="mark">{this.props.name}</div>
 				</div>
