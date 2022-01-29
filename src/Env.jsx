@@ -42,6 +42,9 @@ class Env extends React.Component {
 	render() {
 		return (
 			<div className="sys">
+				<div className="head">
+					<h1>Envelope</h1>
+				</div>
 				<div className="body">
 					<Btn hookPush={() => {
 						this.src = window.ctx.createOscillator();
