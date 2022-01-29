@@ -29,14 +29,6 @@ class Env extends React.Component {
 			sust: 600.0,
 			rel: 0.3
 		};
-
-		this.asdf = this.asdf.bind(this);
-	}
-
-	asdf(val) {
-		this.setState({
-			atk: val
-		}, () => console.log(this.state.atk));
 	}
 
 	render() {
