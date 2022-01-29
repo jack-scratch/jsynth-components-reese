@@ -55,7 +55,6 @@ class Highpass extends Filter {
 					hook: (val) => {
 						this.node.main.frequency.value = val;
 					}
-
 				}
 			]} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} marked={this.props.marked} />
 		);
