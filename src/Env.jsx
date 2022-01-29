@@ -24,10 +24,10 @@ class Env extends React.Component {
 		this.filter.frequency.value = 1.0;
 
 		this.state = {
-			atk: 3.0,
-			decay: 0.7,
+			atk: 0.8,
+			decay: 0.3,
 			sust: 600.0,
-			rel: 0.3
+			rel: 0.1
 		};
 	}
 
