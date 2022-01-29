@@ -27,8 +27,10 @@ class Env extends React.Component {
 				"time": 0.3
 			},
 			decay: {
-				"val": 600.0,
 				"time": 0.7
+			},
+			sust: {
+				"val": 600.0
 			}
 		};
 	}
@@ -49,7 +51,7 @@ class Env extends React.Component {
 
 					this.filter.frequency.linearRampToValueAtTime(this.init["filter"]["hz"], window.ctx.currentTime + this.state.atk["time"]);
 
-					this.filter.frequency.exponentialRampToValueAtTime(this.state.decay["val"], window.ctx.currentTime + this.state.atk["time"] + this.state.decay["time"]);
+					this.filter.frequency.exponentialRampToValueAtTime(this.state.sust["val"], window.ctx.currentTime + this.state.atk["time"] + this.state.decay["time"]);
 				}} hookUp={() => {
 					this.src.disconnect();
 
