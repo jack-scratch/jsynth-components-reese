@@ -21,6 +21,17 @@ class Env extends React.Component {
 		this.filter = window.ctx.createBiquadFilter();
 		this.filter.type = "lowpass";
 		this.filter.frequency.value = this.init["filter"]["hz"];
+
+		this.state = {
+			atk: {
+				"val": 1000.0,
+				"time": 0.3
+			},
+			decay: {
+				"val": 600.0,
+				"time": 0.7
+			}
+		};
 	}
 
 	render() {
@@ -37,9 +48,9 @@ class Env extends React.Component {
 					// start
 					this.src.start();
 
-					this.filter.frequency.linearRampToValueAtTime(1000.0, window.ctx.currentTime + 0.3);
+					this.filter.frequency.linearRampToValueAtTime(this.state.atk["val"], window.ctx.currentTime + this.state.atk["time"]);
 
-					this.filter.frequency.exponentialRampToValueAtTime(600.0, window.ctx.currentTime + 0.3 + 0.3);
+					this.filter.frequency.exponentialRampToValueAtTime(this.state.decay["val"], window.ctx.currentTime + this.state.atk["time"] + this.state.decay["time"]);
 				}} hookUp={() => {
 					this.src.disconnect();
 
