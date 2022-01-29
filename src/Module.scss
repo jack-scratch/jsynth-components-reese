@@ -1,7 +1,7 @@
 @import "main.scss";
 
 .module {
-	@extend .cont;
+	padding: $pad;
 	display: inline-flex;
 	flex-direction: column;
 
