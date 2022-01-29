@@ -70,7 +70,7 @@ class Env extends React.Component {
 							<div className="mark">Attack</div>
 						</div>
 						<div className="body">
-							<Knob hook={() => console.log("asdf")} min={1.0} max={100.0} />
+							<Knob hook={() => console.log("asdf")} min={0.0} max={1.0} />
 						</div>
 					</div>
 					<div>
@@ -78,7 +78,7 @@ class Env extends React.Component {
 							<div className="mark">Decay</div>
 						</div>
 						<div className="body">
-							<Knob hook={() => console.log("asdf")} min={1.0} max={100.0} />
+							<Knob hook={() => console.log("asdf")} min={0.0} max={1.0} />
 						</div>
 					</div>
 					<div>
@@ -86,7 +86,7 @@ class Env extends React.Component {
 							<div className="mark">Sustain</div>
 						</div>
 						<div className="body">
-							<Knob hook={() => console.log("asdf")} min={1.0} max={100.0} />
+							<Knob hook={() => console.log("asdf")} min={1.0} max={1000.0} />
 						</div>
 					</div>
 					<div>
@@ -94,7 +94,7 @@ class Env extends React.Component {
 							<div className="mark">Release</div>
 						</div>
 						<div className="body">
-							<Knob hook={() => console.log("asdf")} min={1.0} max={100.0} />
+							<Knob hook={() => console.log("asdf")} min={0.0} max={1.0} />
 						</div>
 					</div>
 				</div>
