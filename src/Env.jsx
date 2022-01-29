@@ -9,7 +9,7 @@ class Env extends React.Component {
 			"type": "sawtooth"
 		},
 		"filter": {
-			"hz": 100.0
+			"hz": 1000.0
 		}
 	};
 
@@ -24,7 +24,6 @@ class Env extends React.Component {
 
 		this.state = {
 			atk: {
-				"val": 1000.0,
 				"time": 0.3
 			},
 			decay: {
@@ -48,13 +47,13 @@ class Env extends React.Component {
 					// start
 					this.src.start();
 
-					this.filter.frequency.linearRampToValueAtTime(this.state.atk["val"], window.ctx.currentTime + this.state.atk["time"]);
+					this.filter.frequency.linearRampToValueAtTime(this.init["filter"]["hz"], window.ctx.currentTime + this.state.atk["time"]);
 
 					this.filter.frequency.exponentialRampToValueAtTime(this.state.decay["val"], window.ctx.currentTime + this.state.atk["time"] + this.state.decay["time"]);
 				}} hookUp={() => {
 					this.src.disconnect();
 
-					this.filter.frequency.value = this.init["filter"]["hz"];
+					this.filter.frequency.value = 1.0;
 				}} />
 			</div>
 		);
