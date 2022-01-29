@@ -120,8 +120,8 @@ class Bay extends React.Component {
 						hookOutDown: this.pushCable,
 						hookInDown: this.detachCable,
 						hookInUp: this.connCable,
-						key: i,
-						activeCable: this.state.activeCable
+						activeCable: this.state.activeCable,
+						key: i
 					})
 				)}
 
