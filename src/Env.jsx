@@ -34,6 +34,9 @@ class Env extends React.Component {
 	render() {
 		return (
 			<div className="sys">
+				<div className="head">
+					<h1>Envelope</h1>
+				</div>
 				<div className="cont ctrl" style={{
 					display: "flex"
 				}}>
