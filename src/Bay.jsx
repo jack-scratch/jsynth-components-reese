@@ -24,6 +24,8 @@ class Bay extends React.Component {
 		this.detachCable = this.detachCable.bind(this);
 
 		this.drag = this.drag.bind(this);
+
+		this.release = this.release.bind(this);
 	}
 
 	pushCable(e, refer, node) {
@@ -100,9 +102,15 @@ class Bay extends React.Component {
 		}
 	}
 
+	release() {
+		this.setState({
+			active: false
+		});
+	}
+
 	render() {
 		return (
-			<div className="cont" id="bay" onMouseMove={(e) => this.drag(e)}>
+			<div className="cont" id="bay" onMouseUp={() => this.release()} onMouseMove={(e) => this.drag(e)}>
 				{this.props.children && this.props.children.map((el, i) =>
 					React.cloneElement(el, {
 						hookOutDown: this.pushCable,
