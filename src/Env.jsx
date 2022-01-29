@@ -38,6 +38,8 @@ class Env extends React.Component {
 					this.src.start();
 
 					this.filter.frequency.linearRampToValueAtTime(1000.0, window.ctx.currentTime + 0.3);
+
+					this.filter.frequency.exponentialRampToValueAtTime(600.0, window.ctx.currentTime + 0.3 + 0.3);
 				}} hookUp={() => {
 					this.src.disconnect();
 
