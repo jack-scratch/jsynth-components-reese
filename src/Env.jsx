@@ -24,11 +24,19 @@ class Env extends React.Component {
 		this.filter.frequency.value = 1.0;
 
 		this.state = {
-			atk: 0.3,
+			atk: 3.0,
 			decay: 0.7,
 			sust: 600.0,
 			rel: 0.3
 		};
+
+		this.asdf = this.asdf.bind(this);
+	}
+
+	asdf(val) {
+		this.setState({
+			atk: val
+		}, () => console.log(this.state.atk));
 	}
 
 	render() {
@@ -70,7 +78,9 @@ class Env extends React.Component {
 							<div className="mark">Attack</div>
 						</div>
 						<div className="body">
-							<Knob hook={() => console.log("asdf")} min={0.0} max={1.0} />
+							<Knob hook={(val) => this.setState({
+								atk: val
+							})} min={0.0} max={1.0} />
 						</div>
 					</div>
 					<div>
