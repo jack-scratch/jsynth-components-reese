@@ -25,18 +25,10 @@ class Env extends React.Component {
 		this.filter.frequency.value = 1.0;
 
 		this.state = {
-			atk: {
-				"time": 0.3
-			},
-			decay: {
-				"time": 0.7
-			},
-			sust: {
-				"val": 600.0
-			},
-			rel: {
-				"time": 0.3
-			}
+			atk: 0.3,
+			decay: 0.7,
+			sust: 600.0,
+			rel: 0.3
 		};
 	}
 
@@ -55,11 +47,14 @@ class Env extends React.Component {
 						// start
 						this.src.start();
 
-						this.filter.frequency.linearRampToValueAtTime(this.init["filter"]["hz"], window.ctx.currentTime + this.state.atk["time"]);
+						this.filter.frequency.linearRampToValueAtTime(this.init["filter"]["hz"], window.ctx.currentTime + this.state.atk);
 
-						this.filter.frequency.exponentialRampToValueAtTime(this.state.sust["val"], window.ctx.currentTime + this.state.atk["time"] + this.state.decay["time"]);
+						this.filter.frequency.exponentialRampToValueAtTime(this.state.sust, window.ctx.currentTime + this.state.atk + this.state.decay);
 
-						this.filter.frequency.exponentialRampToValueAtTime(1.0, window.ctx.currentTime + this.state.atk["time"] + this.state.decay["time"] + this.state.rel["time"]);
+						this.filter.frequency.exponentialRampToValueAtTime(
+							1.0,
+							window.ctx.currentTime + this.state.atk + this.state.decay + this.state.rel
+						);
 					}} hookUp={() => {
 						this.src.disconnect();
 
