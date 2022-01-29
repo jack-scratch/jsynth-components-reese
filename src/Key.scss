@@ -12,7 +12,6 @@ $markHt: 20px;
 
 .key {
 	@extend .raised;
-
 	width: $keyWd;
 	border-radius: 0px 0px $bevel $bevel;
 	cursor: pointer;

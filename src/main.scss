@@ -115,7 +115,6 @@ text.mark {
 
 	polygon {
 		@extend .raised;
-
 		transform: translate(calc(#{$nutRad} + #{$portRad}), calc(#{$nutRad} + #{$portRad}));
 	}
 
