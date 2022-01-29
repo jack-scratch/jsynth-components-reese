@@ -54,7 +54,7 @@ class Env extends React.Component {
 							1.0,
 							window.ctx.currentTime + this.state.atk + this.state.decay + this.state.rel
 						);
-					}} hookRel={() => {
+					}} hookRelease={() => {
 						this.src.disconnect();
 
 						this.filter.frequency.value = 1.0;
