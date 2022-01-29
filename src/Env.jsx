@@ -69,10 +69,7 @@ class Env extends React.Component {
 							<Label text="Attack" />
 						</div>
 						<div className="body">
-							<Knob hook={() => console.log("asdf")} rng={[
-								1.0,
-								100.0
-							]} />
+							<Knob hook={() => console.log("asdf")} min={1.0} max={100.0} />
 						</div>
 					</div>
 					<div>
@@ -80,10 +77,7 @@ class Env extends React.Component {
 							<Label text="Decay" />
 						</div>
 						<div className="body">
-							<Knob hook={() => console.log("asdf")} rng={[
-								1.0,
-								100.0
-							]} />
+							<Knob hook={() => console.log("asdf")} min={1.0} max={100.0} />
 						</div>
 					</div>
 					<div>
@@ -91,10 +85,7 @@ class Env extends React.Component {
 							<Label text="Sustain" />
 						</div>
 						<div className="body">
-							<Knob hook={() => console.log("asdf")} rng={[
-								1.0,
-								100.0
-							]} />
+							<Knob hook={() => console.log("asdf")} min={1.0} max={100.0} />
 						</div>
 					</div>
 					<div>
@@ -102,10 +93,7 @@ class Env extends React.Component {
 							<Label text="Release" />
 						</div>
 						<div className="body">
-							<Knob hook={() => console.log("asdf")} rng={[
-								1.0,
-								100.0
-							]} />
+							<Knob hook={() => console.log("asdf")} min={1.0} max={100.0} />
 						</div>
 					</div>
 				</div>
