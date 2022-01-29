@@ -87,7 +87,6 @@ class Bay extends React.Component {
 		this.setState({
 			active: true
 		}, () => {
-			this.release(i);
 		});
 	}
 
