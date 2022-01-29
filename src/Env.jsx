@@ -2,6 +2,8 @@ import React from "react";
 import {
 	Btn
 } from "./Btn";
+import Knob from "./Knob";
+import Label from "./Label";
 
 class Env extends React.Component {
 	init = {
@@ -41,27 +43,77 @@ class Env extends React.Component {
 	render() {
 		return (
 			<div className="cont">
-				<Btn hookDown={() => {
-					this.src = window.ctx.createOscillator();
-					this.src.type = this.init["src"]["type"];
+				<div className="body">
+					<Btn hookDown={() => {
+						this.src = window.ctx.createOscillator();
+						this.src.type = this.init["src"]["type"];
 
-					// route
-					this.src.connect(this.filter);
-					this.filter.connect(window.ctx.destination);
+						// route
+						this.src.connect(this.filter);
+						this.filter.connect(window.ctx.destination);
 
-					// start
-					this.src.start();
+						// start
+						this.src.start();
 
-					this.filter.frequency.linearRampToValueAtTime(this.init["filter"]["hz"], window.ctx.currentTime + this.state.atk["time"]);
+						this.filter.frequency.linearRampToValueAtTime(this.init["filter"]["hz"], window.ctx.currentTime + this.state.atk["time"]);
 
-					this.filter.frequency.exponentialRampToValueAtTime(this.state.sust["val"], window.ctx.currentTime + this.state.atk["time"] + this.state.decay["time"]);
+						this.filter.frequency.exponentialRampToValueAtTime(this.state.sust["val"], window.ctx.currentTime + this.state.atk["time"] + this.state.decay["time"]);
 
-					this.filter.frequency.exponentialRampToValueAtTime(1.0, window.ctx.currentTime + this.state.atk["time"] + this.state.decay["time"] + this.state.rel["time"]);
-				}} hookUp={() => {
-					this.src.disconnect();
+						this.filter.frequency.exponentialRampToValueAtTime(1.0, window.ctx.currentTime + this.state.atk["time"] + this.state.decay["time"] + this.state.rel["time"]);
+					}} hookUp={() => {
+						this.src.disconnect();
 
-					this.filter.frequency.value = 1.0;
-				}} />
+						this.filter.frequency.value = 1.0;
+					}} />
+				</div>
+				<div className="ctrl" style={{
+					display: "flex"
+				}}>
+					<div>
+						<div className="head">
+							<Label text="Attack" />
+						</div>
+						<div className="body">
+							<Knob hook={() => console.log("asdf")} rng={[
+								1.0,
+								100.0
+							]} />
+						</div>
+					</div>
+					<div>
+						<div className="head">
+							<Label text="Decay" />
+						</div>
+						<div className="body">
+							<Knob hook={() => console.log("asdf")} rng={[
+								1.0,
+								100.0
+							]} />
+						</div>
+					</div>
+					<div>
+						<div className="head">
+							<Label text="Sustain" />
+						</div>
+						<div className="body">
+							<Knob hook={() => console.log("asdf")} rng={[
+								1.0,
+								100.0
+							]} />
+						</div>
+					</div>
+					<div>
+						<div className="head">
+							<Label text="Release" />
+						</div>
+						<div className="body">
+							<Knob hook={() => console.log("asdf")} rng={[
+								1.0,
+								100.0
+							]} />
+						</div>
+					</div>
+				</div>
 			</div>
 		);
 	}
