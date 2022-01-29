@@ -3,7 +3,6 @@ import {
 	Btn
 } from "./Btn";
 import Knob from "./Knob";
-import Label from "./Label";
 
 class Env extends React.Component {
 	init = {
@@ -68,7 +67,7 @@ class Env extends React.Component {
 				}}>
 					<div>
 						<div className="head">
-							<Label text="Attack" />
+							<div className="mark">Attack</div>
 						</div>
 						<div className="body">
 							<Knob hook={() => console.log("asdf")} min={1.0} max={100.0} />
@@ -76,7 +75,7 @@ class Env extends React.Component {
 					</div>
 					<div>
 						<div className="head">
-							<Label text="Decay" />
+							<div className="mark">Decay</div>
 						</div>
 						<div className="body">
 							<Knob hook={() => console.log("asdf")} min={1.0} max={100.0} />
@@ -84,7 +83,7 @@ class Env extends React.Component {
 					</div>
 					<div>
 						<div className="head">
-							<Label text="Sustain" />
+							<div className="mark">Sustain</div>
 						</div>
 						<div className="body">
 							<Knob hook={() => console.log("asdf")} min={1.0} max={100.0} />
@@ -92,7 +91,7 @@ class Env extends React.Component {
 					</div>
 					<div>
 						<div className="head">
-							<Label text="Release" />
+							<div className="mark">Release</div>
 						</div>
 						<div className="body">
 							<Knob hook={() => console.log("asdf")} min={1.0} max={100.0} />
