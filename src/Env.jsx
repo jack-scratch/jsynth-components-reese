@@ -34,34 +34,6 @@ class Env extends React.Component {
 	render() {
 		return (
 			<div className="sys">
-				<div className="body">
-					<Btn hookPush={() => {
-						this.src = window.ctx.createOscillator();
-						this.src.type = this.init["src"]["type"];
-
-						// route
-						this.src.connect(this.filter);
-						this.filter.connect(window.ctx.destination);
-
-						// start
-						this.src.start();
-
-						this.filter.frequency.linearRampToValueAtTime(this.init["filter"]["hz"], window.ctx.currentTime + this.state.atk);
-
-						this.filter.frequency.exponentialRampToValueAtTime(this.state.sust, window.ctx.currentTime + this.state.atk + this.state.decay);
-
-						this.filter.frequency.exponentialRampToValueAtTime(
-							1.0,
-							window.ctx.currentTime + this.state.atk + this.state.decay + this.state.rel
-						);
-					}} hookRelease={() => {
-						this.src.disconnect();
-
-						this.filter.frequency.value = 1.0;
-
-						this.filter.frequency.cancelScheduledValues(window.ctx.currentTime);
-					}} />
-				</div>
 				<div className="cont ctrl" style={{
 					display: "flex"
 				}}>
@@ -105,6 +77,31 @@ class Env extends React.Component {
 							})} min={0.0} max={1.0} />
 						</div>
 					</div>
+				</div>
+				<div className="body">
+					<Btn hookPush={() => {
+						this.src = window.ctx.createOscillator();
+						this.src.type = this.init["src"]["type"];
+
+						// route
+						this.src.connect(this.filter);
+						this.filter.connect(window.ctx.destination);
+
+						// start
+						this.src.start();
+
+						this.filter.frequency.linearRampToValueAtTime(this.init["filter"]["hz"], window.ctx.currentTime + this.state.atk);
+
+						this.filter.frequency.exponentialRampToValueAtTime(this.state.sust, window.ctx.currentTime + this.state.atk + this.state.decay);
+
+						this.filter.frequency.exponentialRampToValueAtTime(1.0, window.ctx.currentTime + this.state.atk + this.state.decay + this.state.rel);
+					}} hookRelease={() => {
+						this.src.disconnect();
+
+						this.filter.frequency.value = 1.0;
+
+						this.filter.frequency.cancelScheduledValues(window.ctx.currentTime);
+					}} />
 				</div>
 			</div>
 		);
