@@ -41,6 +41,12 @@ class Launch extends React.Component {
 				let src = window.ctx.createBufferSource();
 				src.buffer = sampBuff;
 
+				src.addEventListener("ended", () => {
+					this.setState({
+						on: false
+					});
+				});
+
 				src.connect(window.ctx.destination);
 
 				src.start();
@@ -69,9 +75,7 @@ class Launch extends React.Component {
 									<tr key={`"row-${j}"`}>
 										{[...Array(this.props.x).keys()].map((i) =>
 											<td key={`btn-${i}`}>
-												<Btn wd={80} ht={80} name={1 + ((j * this.props.y) + i)} hookPush={() => this.play((j * this.props.x) + i)} hookRelease={() => this.setState({
-													on: false
-												})} />
+												<Btn wd={80} ht={80} name={1 + ((j * this.props.y) + i)} hookPush={() => this.play((j * this.props.x) + i)} />
 											</td>
 										)}
 									</tr>
