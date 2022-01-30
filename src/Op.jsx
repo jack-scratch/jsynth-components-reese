@@ -70,15 +70,15 @@ class Op extends Source {
 			<Source name={this.props.name} param={[
 				{
 					name: "Frequency",
-					min: this.props.rngFreq[0],
-					max: this.props.rngFreq[1],
+					min: this.props.rng["freq"][0],
+					max: this.props.rng["freq"][1],
 					hook: (val) => {
 						this.node.osc.frequency.value = val;
 					}
 				}, {
 					name: "Gain",
-					min: this.props.rngVol[0],
-					max: this.props.rngVol[1],
+					min: this.props.rng["vol"][0],
+					max: this.props.rng["vol"][1],
 					hook: (val) => {
 						this.node.amp.gain.value = val;
 					}
@@ -105,14 +105,16 @@ class Op extends Source {
 
 Op.defaultProps = {
 	name: "Operator",
-	rngFreq: [
-		1.0,
-		1000.0
-	],
-	rngVol: [
-		-12.0,
-		12.0
-	]
+	rng: {
+		"freq": [
+			1.0,
+			1000.0
+		],
+		"vol": [
+			-12.0,
+			12.0
+		]
+	}
 };
 
 export default Op;

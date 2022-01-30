@@ -28,16 +28,16 @@ class Osc extends Source {
 			<Source name={this.props.name} param={[
 				{
 					name: "Frequency",
-					min: this.props.rngFreq[0],
-					max: this.props.rngFreq[1],
+					min: this.props.rng["freq"][0],
+					max: this.props.rng["freq"][1],
 					unit: unit["freq"],
 					hook: (val) => {
 						this.node.main.frequency.value = val;
 					}
 				}, {
 					name: "Detune",
-					min: this.props.rngDetune[0],
-					max: this.props.rngDetune[1],
+					min: this.props.rng["detune"][0],
+					max: this.props.rng["detune"][1],
 					unit: unit["cents"],
 					hook: (val) => {
 						this.node.main.detune.value = val;
@@ -55,14 +55,16 @@ class Osc extends Source {
 
 Osc.defaultProps = {
 	name: "Oscillator",
-	rngFreq: [
-		1.0,
-		1000.0
-	],
-	rngDetune: [
-		-100.0,
-		100.0
-	]
+	rng: {
+		"freq": [
+			1.0,
+			1000.0
+		],
+		"detune": [
+			-100.0,
+			100.0
+		]
+	}
 };
 
 export default Osc;
