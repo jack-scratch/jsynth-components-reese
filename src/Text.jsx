@@ -9,7 +9,7 @@ class Text extends React.Component {
 				width: `${this.props.wd}ch`,
 				height: `${this.props.ht}ch`
 			}}>
-				{this.props.buff.map((el) => <div className="line">{el}</div>)}
+				{this.props.buff.map((el, i) => <div className="line" key={i}>{el}</div>)}
 			</div>
 		);
 	}
