@@ -7,7 +7,8 @@ import {
 	lineLn
 } from "./layout";
 import {
-	ws
+	ws,
+	sep
 } from "./path";
 import {
 	clamp
@@ -27,7 +28,7 @@ class Quant extends React.Component {
 		let serial = "";
 
 		// start
-		serial += `M ${Math.cos(this.sheerFac) * this.props.rad},${Math.sin(this.sheerFac) * this.props.rad}`;
+		serial += `M ${Math.cos(this.sheerFac) * this.props.rad}${sep}${Math.sin(this.sheerFac) * this.props.rad}`;
 		serial += ws;
 
 		for (let i = 0; i < this.props.n; i++) {
@@ -35,12 +36,12 @@ class Quant extends React.Component {
 			let snd = (i + 1) - this.sheerFac;
 			let mid = i + 0.5;
 
-			let curve = `C ${Math.cos(fst * stride) * this.props.rad},${Math.sin(fst * stride) * this.props.rad} ${Math.cos(mid * stride) * dip},${Math.sin(mid * stride) * dip} ${Math.cos(snd * stride) * this.props.rad},${Math.sin(snd * stride) * this.props.rad}`;
+			let curve = `C ${Math.cos(fst * stride) * this.props.rad}${sep}${Math.sin(fst * stride) * this.props.rad} ${Math.cos(mid * stride) * dip}${sep}${Math.sin(mid * stride) * dip} ${Math.cos(snd * stride) * this.props.rad}${sep}${Math.sin(snd * stride) * this.props.rad}`;
 
 			serial += ws;
 			serial += curve;
 
-			let ln = `L ${Math.cos(snd * stride) * this.props.rad},${Math.sin(snd * stride) * this.props.rad} ${Math.cos((snd + (this.sheerFac * 2)) * stride) * this.props.rad},${Math.sin((snd + (this.sheerFac * 2)) * stride) * this.props.rad}`;
+			let ln = `L ${Math.cos(snd * stride) * this.props.rad}${sep}${Math.sin(snd * stride) * this.props.rad} ${Math.cos((snd + (this.sheerFac * 2)) * stride) * this.props.rad}${sep}${Math.sin((snd + (this.sheerFac * 2)) * stride) * this.props.rad}`;
 
 			serial += ws;
 			serial += ln;
