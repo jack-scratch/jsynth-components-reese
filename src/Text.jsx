@@ -3,6 +3,14 @@ import React from "react";
 import "./Text.css";
 
 class Text extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			l: 0
+		};
+	}
+
 	render() {
 		return (
 			<div className="buff" style={{
