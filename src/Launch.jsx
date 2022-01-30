@@ -10,6 +10,10 @@ class Launch extends React.Component {
 	constructor(props) {
 		super(props);
 
+		this.state = {
+			on: false
+		};
+
 		this.play = this.play.bind(this);
 	}
 
@@ -40,6 +44,10 @@ class Launch extends React.Component {
 				src.connect(window.ctx.destination);
 
 				src.start();
+
+				this.setState({
+					on: true
+				});
 			});
 		}
 
@@ -51,7 +59,7 @@ class Launch extends React.Component {
 			<div className="launch">
 				<div className="head">
 					<h1>Launchpad</h1>
-					<Light />
+					<Light data={this.state.on} />
 				</div>
 				<div className="body">
 					<div className="group">
@@ -61,7 +69,9 @@ class Launch extends React.Component {
 									<tr key={`"row-${j}"`}>
 										{[...Array(this.props.x).keys()].map((i) =>
 											<td key={`btn-${i}`}>
-												<Btn wd={80} ht={80} name={1 + ((j * this.props.y) + i)} hookPush={() => this.play((j * this.props.x) + i)} />
+												<Btn wd={80} ht={80} name={1 + ((j * this.props.y) + i)} hookPush={() => this.play((j * this.props.x) + i)} hookRelease={() => this.setState({
+													on: false
+												})} />
 											</td>
 										)}
 									</tr>
