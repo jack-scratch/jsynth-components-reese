@@ -47,7 +47,7 @@ class Env extends React.Component {
 						<div className="body">
 							<Knob hook={(val) => this.setState({
 								atk: val
-							})} min={0.0} max={1.0} quant={6} />
+							})} min={0.0} max={1.0} />
 						</div>
 					</div>
 					<div>
