@@ -71,15 +71,11 @@ class Launch extends React.Component {
 					<div className="group">
 						<table>
 							<tbody>
-								{[...Array(this.props.y).keys()].map((j) =>
-									<tr key={`"row-${j}"`}>
-										{[...Array(this.props.x).keys()].map((i) =>
-											<td key={`btn-${i}`}>
-												<Btn wd={80} ht={80} name={1 + ((j * this.props.y) + i)} hookPush={() => this.play((j * this.props.x) + i)} />
-											</td>
-										)}
-									</tr>
-								)}
+								{[...Array(this.props.y).keys()].map((j) => <tr key={`"row-${j}"`}>
+									{[...Array(this.props.x).keys()].map((i) => <td key={`btn-${i}`}>
+										<Btn wd={80} ht={80} name={1 + ((j * this.props.y) + i)} hookPush={() => this.play((j * this.props.x) + i)} />
+									</td>)}
+								</tr>)}
 							</tbody>
 						</table>
 					</div>
