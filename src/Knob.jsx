@@ -84,7 +84,7 @@ class Knob extends React.Component {
 	render() {
 		let shape;
 		if (this.props.quant) {
-			shape = <Poly n={this.props.quant} rad={this.props.rad} bevel />
+			shape = <Poly n={this.props.quant} rad={this.props.rad} bevel />;
 		} else {
 			shape = <circle r={this.props.rad} />;
 		}
