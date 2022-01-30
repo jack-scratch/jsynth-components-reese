@@ -94,7 +94,7 @@ class Toggle extends Btn {
 				<span>
 					<FontAwesomeIcon icon={faStop} /> / <FontAwesomeIcon icon={faPlay} />
 				</span>
-			} wd={80} />
+			} />
 		);
 	}
 }
