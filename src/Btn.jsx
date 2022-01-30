@@ -49,7 +49,7 @@ class Btn extends React.Component {
 
 	render() {
 		return (
-			<svg className={"btn" + (this.state.down ? "" : " raised")} width={this.props.wd} height={this.props.ht} onMouseDown={this.push} onMouseUp={this.release} onMouseLeave={this.release}>
+			<svg xmlns="http://www.w3.org/1999/xhtml" version="1.1" className={"btn" + (this.state.down ? "" : " raised")} width={this.props.wd} height={this.props.ht} onMouseDown={this.push} onMouseUp={this.release} onMouseLeave={this.release}>
 				<rect width={this.props.wd} height={this.props.ht} />
 				<text className="mark" x={margin * 2} y={margin * 2}>{this.props.name}</text>
 			</svg>
