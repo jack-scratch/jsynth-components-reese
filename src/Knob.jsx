@@ -1,5 +1,6 @@
 import React from "react";
 import Poly from "./Poly";
+import Quant from "./Quant";
 import {
 	margin,
 	rotDeg,
@@ -84,7 +85,7 @@ class Knob extends React.Component {
 	render() {
 		let shape;
 		if (this.props.quant) {
-			shape = <Poly n={this.props.quant} rad={this.props.rad} bevel />;
+			shape = <Quant n={this.props.quant} rad={this.props.rad} bevel />;
 		} else {
 			shape = <circle r={this.props.rad} />;
 		}
@@ -98,10 +99,8 @@ class Knob extends React.Component {
 
 		return (
 			<div>
-				<svg xmlns="http://www.w3.org/1999/xhtml" version="1.1" className={"knob" + (this.props.marked ? " marked" : "")} width={diam} height={diam} onMouseDown={this.grab}>
-					{this.props.marked && [...Array(this.props.marked).keys()].map((i) =>
-						<line x1={0} y1={0} x2={10} y2={0} transform={`translate(${this.props.rad} ${this.props.rad}) rotate(${i * stride}) translate(${this.props.rad + margin} 0)`} key={i} />
-					)}
+				<svg xmlns="http://www.w3.org/1999/xhtml" version="1.1" className={"knob" + (this.props.marked ? " marked" : "")} width={diam} height={diam} onMouseDown={this.grab} overflow="visible">
+					{this.props.marked && [...Array(this.props.marked).keys()].map((i) => <line x1={0} y1={0} x2={10} y2={0} transform={`translate(${this.props.rad} ${this.props.rad}) rotate(${i * stride}) translate(${this.props.rad + margin} 0)`} key={i} />)}
 
 					<defs>
 						<clipPath id="perim">
