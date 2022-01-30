@@ -10,11 +10,48 @@ class Launch extends React.Component {
 	constructor(props) {
 		super(props);
 
+		this.state = {
+			sample: [
+				"Bamboo"
+			]
+		};
+
 		this.play = this.play.bind(this);
 	}
 
 	play(i) {
-		alert(i);
+		let name = this.state.sample[i];
+
+		let req = new XMLHttpRequest();
+		req.responseType = "arraybuffer";
+
+		req.open("GET", `snd/${name}.wav`, true);
+
+		req.onload = () => {
+			let data = req.response;
+
+			window.ctx.decodeAudioData(data, function(buff) {
+				let dataBuff = buff.getChannelData(0);
+
+				let sampBuff = window.ctx.createBuffer(1, dataBuff.length, window.ctx.sampleRate);
+
+				let ln = 0.7;
+
+				let ref = sampBuff.getChannelData(0);
+				for (let i = 0; i < ln * window.ctx.sampleRate; i++) {
+					ref[i] = dataBuff[i];
+				}
+
+				let src = window.ctx.createBufferSource();
+				src.buffer = sampBuff;
+
+				src.connect(window.ctx.destination);
+
+				src.start();
+			});
+		}
+
+		req.send();
 	}
 
 	render() {
