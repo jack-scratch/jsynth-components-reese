@@ -10,35 +10,32 @@ import {
 class Quant extends React.Component {
 	rot = Math.PI * 2;
 
+	dipFac = 6;
+	sheerFac = 0.1;
+
 	render() {
 		let pt = [];
 
-		const n = 6;
-		const stride = this.rot / n;
+		const stride = this.rot / this.props.n;
 
-		const sz = this.props.rad;
-
-		const dipFac = 6;
-		const dip = sz - dipFac;
-
-		const sheerFac = 0.1;
+		const dip = this.props.rad - this.dipFac;
 
 		let serial = "";
 
-		serial += `M ${Math.cos(sheerFac) * sz},${Math.sin(sheerFac) * sz}`;
+		serial += `M ${Math.cos(this.sheerFac) * this.props.rad},${Math.sin(this.sheerFac) * this.props.rad}`;
 		serial += ws;
 
-		for (let i = 0; i < n; i++) {
-			let fst = i + sheerFac;
-			let snd = (i + 1) - sheerFac;
+		for (let i = 0; i < this.props.n; i++) {
+			let fst = i + this.sheerFac;
+			let snd = (i + 1) - this.sheerFac;
 			let mid = i + 0.5;
 
-			let curve = `C ${Math.cos(fst * stride) * sz},${Math.sin(fst * stride) * sz} ${Math.cos(mid * stride) * dip},${Math.sin(mid * stride) * dip} ${Math.cos(snd * stride) * sz},${Math.sin(snd * stride) * sz}`;
+			let curve = `C ${Math.cos(fst * stride) * this.props.rad},${Math.sin(fst * stride) * this.props.rad} ${Math.cos(mid * stride) * dip},${Math.sin(mid * stride) * dip} ${Math.cos(snd * stride) * this.props.rad},${Math.sin(snd * stride) * this.props.rad}`;
 
 			serial += ws;
 			serial += curve;
 
-			let ln = `L ${Math.cos(snd * stride) * sz},${Math.sin(snd * stride) * sz} ${Math.cos((snd + (sheerFac * 2)) * stride) * sz},${Math.sin((snd + (sheerFac * 2)) * stride) * sz}`;
+			let ln = `L ${Math.cos(snd * stride) * this.props.rad},${Math.sin(snd * stride) * this.props.rad} ${Math.cos((snd + (this.sheerFac * 2)) * stride) * this.props.rad},${Math.sin((snd + (this.sheerFac * 2)) * stride) * this.props.rad}`;
 
 			serial += ws;
 			serial += ln;
