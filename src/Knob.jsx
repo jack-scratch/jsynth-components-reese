@@ -20,8 +20,6 @@ class Quant extends React.Component {
 	sheerFac = 0.1;
 
 	render() {
-		let pt = [];
-
 		const stride = rotRad / this.props.n;
 
 		const dip = this.props.rad - this.dipFac;
