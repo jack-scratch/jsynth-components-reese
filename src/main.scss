@@ -51,16 +51,16 @@ hr {
 	}
 }
 
-.body {
-	display: flex;
-	flex-direction: column;
-}
-
 .head,
 .body {
 	> * {
 		margin: $margin;
 	}
+}
+
+.body {
+	display: flex;
+	flex-direction: column;
 }
 
 .cont {
