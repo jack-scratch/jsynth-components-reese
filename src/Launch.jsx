@@ -10,17 +10,11 @@ class Launch extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this.state = {
-			sample: [
-				"Bamboo"
-			]
-		};
-
 		this.play = this.play.bind(this);
 	}
 
 	play(i) {
-		let name = this.state.sample[i];
+		let name = this.props.sample[i];
 
 		let req = new XMLHttpRequest();
 		req.responseType = "arraybuffer";
