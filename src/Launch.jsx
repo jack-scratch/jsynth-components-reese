@@ -7,6 +7,16 @@ import Light from "./Light";
 import "./Launch.css";
 
 class Launch extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.play = this.play.bind(this);
+	}
+
+	play(i) {
+		alert(i);
+	}
+
 	render() {
 		return (
 			<div className="launch">
@@ -22,7 +32,7 @@ class Launch extends React.Component {
 									<tr key={`"row-${j}"`}>
 										{[...Array(this.props.x).keys()].map((i) =>
 											<td key={`btn-${i}`}>
-												<Btn wd={80} ht={80} name={1 + ((j * this.props.y) + i)} />
+												<Btn wd={80} ht={80} name={1 + ((j * this.props.y) + i)} hookPush={() => this.play((j * this.props.x) + i)} />
 											</td>
 										)}
 									</tr>
