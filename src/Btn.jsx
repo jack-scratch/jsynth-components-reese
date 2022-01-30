@@ -6,10 +6,6 @@ import {
 	margin
 } from "./layout";
 import {
-	bg,
-	fg
-} from "./col";
-import {
 	faStop,
 	faPlay
 } from "@fortawesome/free-solid-svg-icons"
@@ -55,7 +51,7 @@ class Btn extends React.Component {
 		return (
 			<svg className={"btn" + (this.state.down ? "" : " raised")} width={this.props.wd} height={this.props.ht} onMouseDown={this.push} onMouseUp={this.release} onMouseLeave={this.release}>
 				<rect width={this.props.wd} height={this.props.ht} />
-				<text className="mark" fill={bg} x={margin * 2} y={margin * 2}>{this.props.name}</text>
+				<text className="mark" x={margin * 2} y={margin * 2}>{this.props.name}</text>
 			</svg>
 		);
 	}
