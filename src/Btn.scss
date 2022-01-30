@@ -3,12 +3,10 @@
 
 .btn {
 	border-radius: $bevel;
-	background: $bg;
+	fill: $bg;
 	cursor: pointer;
 
-	> div {
-		display: inline-block;
-		margin: $margin;
+	text {
 		font-weight: bold;
 	}
 }

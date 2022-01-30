@@ -3,6 +3,10 @@ import {
 	FontAwesomeIcon
 } from "@fortawesome/react-fontawesome"
 import {
+	bg,
+	fg
+} from "./col";
+import {
 	faStop,
 	faPlay
 } from "@fortawesome/free-solid-svg-icons"
@@ -46,14 +50,10 @@ class Btn extends React.Component {
 
 	render() {
 		return (
-			<div className={"btn" + (this.state.down ? "" : " raised")} onMouseDown={this.push} onMouseUp={this.release} onMouseLeave={this.release} style={{
-				width: this.props.wd,
-				height: this.props.ht
-			}} onMouseDown={this.props.hookPush} onMouseUp={this.props.hookRelease} onMouseLeave={this.props.hookRelease}>
-				<div>
-					<div className="mark">{this.props.name}</div>
-				</div>
-			</div>
+			<svg className={"btn" + (this.state.down ? "" : " raised")} width={this.props.wd} height={this.props.ht} onMouseDown={this.push} onMouseUp={this.release} onMouseLeave={this.release}>
+				<rect width={this.props.wd} height={this.props.ht} />
+				<text className="mark" fill={bg} x={10} y={10}>asdf</text>
+			</svg>
 		);
 	}
 }
