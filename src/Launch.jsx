@@ -24,7 +24,7 @@ class Launch extends React.Component {
 		req.onload = () => {
 			let data = req.response;
 
-			window.ctx.decodeAudioData(data, function(buff) {
+			window.ctx.decodeAudioData(data, (buff) => {
 				let dataBuff = buff.getChannelData(0);
 
 				let sampBuff = window.ctx.createBuffer(1, dataBuff.length, window.ctx.sampleRate);
