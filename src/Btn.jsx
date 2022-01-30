@@ -29,8 +29,8 @@ class Btn extends React.Component {
 	}
 
 	push() {
-		if (this.props.push) {
-			this.props.push();
+		if (this.props.hookPush) {
+			this.props.hookPush();
 		}
 
 		this.setState({
@@ -39,8 +39,8 @@ class Btn extends React.Component {
 	}
 
 	release() {
-		if (this.props.release) {
-			this.props.release();
+		if (this.props.hookRelease) {
+			this.props.hookRelease();
 		}
 
 		this.setState({
