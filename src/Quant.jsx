@@ -8,15 +8,13 @@ import {
 } from "./path";
 
 class Quant extends React.Component {
-	rot = Math.PI * 2;
-
 	dipFac = 6;
 	sheerFac = 0.1;
 
 	render() {
 		let pt = [];
 
-		const stride = this.rot / this.props.n;
+		const stride = rotRad / this.props.n;
 
 		const dip = this.props.rad - this.dipFac;
 
