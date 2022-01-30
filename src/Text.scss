@@ -1,9 +1,15 @@
 @import "col.scss";
 
+@font-face  {
+	font-family: Terminus;
+	src: url("terminus.bdf");
+}
+
 .buff {
 	background: map-get($light, "active");
 
 	.line {
 		color: map-get($light, "inert");
+		font-family: Terminus;
 	}
 }
