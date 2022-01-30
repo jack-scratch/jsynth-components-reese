@@ -29,10 +29,8 @@ class Launch extends React.Component {
 
 				let sampBuff = window.ctx.createBuffer(1, dataBuff.length, window.ctx.sampleRate);
 
-				let ln = 0.7;
-
 				let ref = sampBuff.getChannelData(0);
-				for (let i = 0; i < ln * window.ctx.sampleRate; i++) {
+				for (let i = 0; i < dataBuff.length; i++) {
 					ref[i] = dataBuff[i];
 				}
 
