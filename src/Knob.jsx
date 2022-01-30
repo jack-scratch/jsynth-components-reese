@@ -1,5 +1,4 @@
 import React from "react";
-import Poly from "./Poly";
 import {
 	margin,
 	rotDeg,
