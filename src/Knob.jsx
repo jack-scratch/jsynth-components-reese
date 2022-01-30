@@ -48,7 +48,7 @@ class Quant extends React.Component {
 		}
 
 		return (
-			<path d={serial} transform={`translate(${this.props.rad} ${this.props.rad})`} />
+			<path d={serial} />
 		);
 	}
 }
