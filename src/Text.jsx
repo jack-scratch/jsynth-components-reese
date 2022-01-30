@@ -1,66 +1,21 @@
 import React from "react";
 
-import {
-	bg,
-	light
-} from "./col";
+import "./Text.css";
 
 class Text extends React.Component {
-	constructor(props) {
-		super(props);
-
-		this.charWd = 8;
-		this.lineHt = 14;
-
-		this.refer = React.createRef();
-
-		this.clear = this.clear.bind(this);
-		this.draw = this.draw.bind(this);
-	}
-
-	async componentDidMount() {
-		this.canvCtx = this.refer.current.getContext("2d");
-
-		this.refer.current.width = this.props.wd * this.charWd;
-		this.refer.current.height = this.props.ht * this.lineHt;
-
-		this.canvCtx.font = `${this.lineHt}px VT323`;
-
-		this.clear();
-		this.draw();
-	}
-
-	componentDidUpdate() {
-		this.draw();
-	}
-
-	clear() {
-		this.canvCtx.fillStyle = bg;
-		this.canvCtx.fillRect(0, 0, this.refer.current.width, this.refer.current.height);
-
-		this.canvCtx.fillStyle = light["inert"];
-		this.canvCtx.fillRect(0, 0, this.refer.current.width, this.refer.current.height);
-	}
-
-	draw() {
-		this.clear();
-
-		this.canvCtx.fillStyle = light["active"];
-
-		for (let i = 0; i < this.props.buff.length; i++) {
-			this.canvCtx.fillText(this.props.buff[i], 0, (i + 1) * this.lineHt);
-		}
-	}
-
 	render() {
 		return (
-			<canvas ref={this.refer} />
+			<div className="buff" style={{
+				width: `${this.props.wd}ch`,
+				height: `${this.props.ht}ch`
+			}}>
+				{this.props.buff.map((el) => <div className="line">{el}</div>)}
+			</div>
 		);
 	}
 }
 
 Text.defaultProps = {
-	buff: [],
 	wd: 20,
 	ht: 4,
 	l: 0

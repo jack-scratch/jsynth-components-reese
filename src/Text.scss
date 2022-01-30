@@ -1,0 +1,9 @@
+@import "col.scss";
+
+.buff {
+	background: map-get($light, "active");
+
+	.line {
+		color: map-get($light, "inert");
+	}
+}
