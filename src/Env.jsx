@@ -3,6 +3,9 @@ import {
 	Btn
 } from "./Btn";
 import Knob from "./Knob";
+import {
+	unit
+} from "./fmt";
 
 class Env extends React.Component {
 	init = {
@@ -47,7 +50,7 @@ class Env extends React.Component {
 						<div className="body">
 							<Knob hook={(val) => this.setState({
 								atk: val
-							})} min={0.0} max={1.0} />
+							})} min={0.0} max={1.0} unit={unit["time"][0]} />
 						</div>
 					</div>
 					<div>
@@ -57,7 +60,7 @@ class Env extends React.Component {
 						<div className="body">
 							<Knob hook={(val) => this.setState({
 								decay: val
-							})} min={0.0} max={1.0} />
+							})} min={0.0} max={1.0} unit={unit["time"][0]} />
 						</div>
 					</div>
 					<div>
@@ -67,7 +70,7 @@ class Env extends React.Component {
 						<div className="body">
 							<Knob hook={(val) => this.setState({
 								sust: val
-							})} min={1.0} max={1000.0} />
+							})} min={1.0} max={1000.0} unit={unit["freq"]}/>
 						</div>
 					</div>
 					<div>
@@ -77,7 +80,7 @@ class Env extends React.Component {
 						<div className="body">
 							<Knob hook={(val) => this.setState({
 								rel: val
-							})} min={0.0} max={1.0} />
+							})} min={0.0} max={1.0} unit={unit["time"][0]}/>
 						</div>
 					</div>
 				</div>
