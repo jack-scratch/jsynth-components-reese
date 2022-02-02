@@ -18,9 +18,7 @@ class Bay extends React.Component {
 		this.pushCable = this.pushCable.bind(this);
 		this.rmCable = this.rmCable.bind(this);
 		this.popCable = this.popCable.bind(this);
-
 		this.connCable = this.connCable.bind(this);
-
 		this.detachCable = this.detachCable.bind(this);
 
 		this.drag = this.drag.bind(this);
