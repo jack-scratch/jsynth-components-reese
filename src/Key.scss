@@ -7,13 +7,15 @@ $keyWd: calc((48in / 52) * #{$scale});
 $keyHtWhite: calc(6in * #{$scale});
 $keyHtBlack: calc(3.5in * #{$scale});
 
+$bevel: 2px;
+
 $markOffset: 12px;
 $markHt: 20px;
 
 .key {
 	@extend .raised;
 	width: $keyWd;
-	border-radius: 0px 0px 2px 2px;
+	border-radius: 0px 0px $bevel $bevel;
 	cursor: pointer;
 
 	&.white {
