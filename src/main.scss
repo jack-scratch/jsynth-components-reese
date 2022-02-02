@@ -29,6 +29,7 @@ table {
 	background: $fg;
 	color: $bg;
 	border-radius: $bevel;
+	border-spacing: calc(#{$pad} / 2);
 
 	td {
 		padding: $pad;
