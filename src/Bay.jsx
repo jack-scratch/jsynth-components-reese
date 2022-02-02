@@ -1,6 +1,8 @@
 import React from "react";
 import Cable from "./Cable";
 
+import "./Bay.css";
+
 class Bay extends React.Component {
 	constructor(props) {
 		super();

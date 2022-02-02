@@ -1,0 +1,13 @@
+@import "layout.scss";
+@import "col.scss";
+
+#bay {
+	display: flex;
+	flex-wrap: wrap;
+
+	.module {
+		flex-grow: 1;
+		margin: $margin;
+		background: $inert;
+	}
+}
