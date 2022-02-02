@@ -1,10 +1,10 @@
 import React from "react";
 import {
-	FontAwesomeIcon
-} from "@fortawesome/react-fontawesome"
-import {
 	margin
 } from "./layout";
+import {
+	FontAwesomeIcon
+} from "@fortawesome/react-fontawesome"
 import {
 	faStop,
 	faPlay
