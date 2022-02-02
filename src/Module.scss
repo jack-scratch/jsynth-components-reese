@@ -1,9 +1,9 @@
 @import "main.scss";
 
 .module {
-	padding: $pad;
 	display: inline-flex;
 	flex-direction: column;
+	padding: $pad;
 
 	> * {
 		margin: $margin;
