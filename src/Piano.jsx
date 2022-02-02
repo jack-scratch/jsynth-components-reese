@@ -17,11 +17,9 @@ class Piano extends React.Component {
 						</div>)}
 					</div>
 					<div className="black">
-						{[...Array(this.props.ln - 1).keys()].map((i) =>
-							 <div key={i}>
-								<Key type="black" i={i} />
-							</div>
-						)}
+						{[...Array(this.props.ln - 1).keys()].map((i) => <div key={i}>
+							<Key type="black" i={i} />
+						</div>)}
 					</div>
 				</div>
 			</div>
