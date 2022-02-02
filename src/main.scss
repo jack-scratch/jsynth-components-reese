@@ -28,6 +28,7 @@ h6, {
 table {
 	background: $fg;
 	color: $bg;
+	border-radius: $bevel;
 
 	td {
 		padding: $pad;
