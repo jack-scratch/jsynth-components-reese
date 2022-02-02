@@ -24,7 +24,6 @@ class Bay extends React.Component {
 		this.detachCable = this.detachCable.bind(this);
 
 		this.drag = this.drag.bind(this);
-
 		this.release = this.release.bind(this);
 	}
 
