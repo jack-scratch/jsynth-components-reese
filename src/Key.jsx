@@ -46,9 +46,9 @@ class Key extends React.Component {
 
 	render() {
 		return (
-			<div className={`key ${this.props.type}`}onMouseDown={this.play} onMouseUp={this.release} onMouseLeave={this.release}>
-				<span className={`${this.props.type}`}></span>
-			</div>
+			<svg className={`key ${this.props.type}`}onMouseDown={this.play} onMouseUp={this.release} onMouseLeave={this.release}>
+				<text className={`${this.props.type}`}></text>
+			</svg>
 		);
 	}
 }
