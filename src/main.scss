@@ -103,6 +103,12 @@ text.mark {
 	user-select: none;
 }
 
+.tick {
+	stroke-width: $stroke;
+	stroke-linecap: round;
+	stroke: $fg;
+}
+
 .port {
 	width: calc((#{$nutRad} + #{$portRad}) * 2);
 	height: calc((#{$nutRad} + #{$portRad}) * 2);
@@ -162,12 +168,6 @@ text.mark {
 	.mark {
 		text-align: center;
 	}
-}
-
-.tick {
-	stroke-width: $stroke;
-	stroke-linecap: round;
-	stroke: $fg;
 }
 
 .dragField {
