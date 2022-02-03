@@ -24,18 +24,18 @@ class Meter extends React.Component {
 
 		this.refer = React.createRef();
 
-		this.analyser = window.ctx.createAnalyser();
+		this.end = window.ctx.createAnalyser();
 		this.proc = window.ctx.createScriptProcessor(this.sz, 1, 1);
 
-		this.analyser.fftSize = this.sz;
+		this.end.fftSize = this.sz;
 
 		// patch
-		this.props.point.connect(this.analyser);
+		this.props.point.connect(this.end);
 
-		this.analyser.connect(this.proc);
+		this.end.connect(this.proc);
 		this.proc.connect(window.ctx.destination);
 
-		this.data = new Uint8Array(this.analyser.frequencyBinCount);
+		this.data = new Uint8Array(this.end.frequencyBinCount);
 
 		this.clear = this.clear.bind(this);
 		this.draw = this.draw.bind(this);
@@ -63,7 +63,7 @@ class Meter extends React.Component {
 	draw() {
 		this.clear();
 
-		this.analyser.getByteFrequencyData(this.data);
+		this.end.getByteFrequencyData(this.data);
 
 		let stride = this.ht + (this.margin * 2);
 
