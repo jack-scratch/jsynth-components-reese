@@ -69,8 +69,6 @@ class Bay extends React.Component {
 	}
 
 	connCable(refer, node, i) {
-		alert(i)
-
 		this.state.patch[i].outPoint = node;
 		this.state.patch[i].outRefer = refer;
 
