@@ -22,7 +22,13 @@ class Filter extends Effect {
 }
 
 Filter.defaultProps = {
-	name: "Frequency"
+	name: "Frequency",
+	rng: {
+		"freq": [
+			1.0,
+			1000.0
+		]
+	}
 };
 
 class Lowpass extends Filter {
