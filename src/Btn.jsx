@@ -90,9 +90,7 @@ class Toggle extends Btn {
 	render() {
 		return (
 			<Btn name={
-				<span>
-					<FontAwesomeIcon icon={faStop} /> / <FontAwesomeIcon icon={faPlay} />
-				</span>
+				<FontAwesomeIcon icon={faStop} /> / <FontAwesomeIcon icon={faPlay} />
 			} />
 		);
 	}
