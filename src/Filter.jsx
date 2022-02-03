@@ -16,7 +16,15 @@ class Filter extends Effect {
 
 	render() {
 		return (
-			<Effect name={this.props.name} param={this.props.param} point={this.node.main} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} marked={this.props.marked} />
+			<Effect name={this.props.name} param={this.props.param} port={[
+				{
+					type: "in",
+					point: this.node.main
+				}, {
+					type: "out",
+					point: this.node.main
+				}
+			]} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} marked={this.props.marked} />
 		);
 	}
 }
