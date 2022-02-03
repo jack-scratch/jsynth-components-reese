@@ -113,8 +113,16 @@ class Knob extends React.Component {
 			}, () => {
 				let deltaY = this.state.currY - this.state.startY;
 
+				let snap = this.state.prevVal - deltaY;
+				if (this.props.quant) {
+					const rng = this.props.max - this.props.min;
+					const stride = rng / this.props.quant;
+
+					snap = snap - (snap % stride);
+				}
+
 				this.setState({
-					val: clamp(this.state.prevVal - deltaY, this.props.min, this.props.max)
+					val: clamp(snap, this.props.min, this.props.max)
 				}, () => {
 					this.props.hook(this.state.val);
 				});
