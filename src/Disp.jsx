@@ -28,7 +28,7 @@ class Disp extends React.Component {
 				<div className="body">
 					<Text buff={[
 						this.state.val
-					]} wd={8} ln={2} />
+					]} wd={8} ln={1} />
 				</div>
 				<div className="body">
 					<div className="ctrl">
