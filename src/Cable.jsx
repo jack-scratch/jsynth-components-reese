@@ -21,7 +21,7 @@ class Cable extends React.Component {
 		];
 
 		let end = [];
-		if (this.props.outPoint) {
+		if (this.props.output) {
 			end = [
 				this.props.outRefer.current.offsetLeft + nutRad + portRad,
 				this.props.outRefer.current.offsetTop + nutRad + portRad
@@ -37,7 +37,7 @@ class Cable extends React.Component {
 
 	midY() {
 		let start = [];
-		if (this.props.inPoint) {
+		if (this.props.input) {
 			start = [
 				this.props.inRefer.current.offsetLeft + nutRad + portRad,
 				this.props.inRefer.current.offsetTop + nutRad + portRad
@@ -47,7 +47,7 @@ class Cable extends React.Component {
 		}
 
 		let end = [];
-		if (this.props.outPoint) {
+		if (this.props.output) {
 			end = [
 				this.props.outRefer.current.offsetLeft + nutRad + portRad,
 				this.props.outRefer.current.offsetTop + nutRad + portRad
@@ -61,7 +61,7 @@ class Cable extends React.Component {
 
 	render() {
 		let start = [];
-		if (this.props.inPoint) {
+		if (this.props.input) {
 			start = [
 				this.props.inRefer.current.offsetLeft + nutRad + portRad,
 				this.props.inRefer.current.offsetTop + nutRad + portRad
@@ -71,7 +71,7 @@ class Cable extends React.Component {
 		}
 
 		let end = [];
-		if (this.props.outPoint) {
+		if (this.props.output) {
 			end = [
 				this.props.outRefer.current.offsetLeft + nutRad + portRad,
 				this.props.outRefer.current.offsetTop + nutRad + portRad

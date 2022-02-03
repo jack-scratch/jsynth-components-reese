@@ -36,8 +36,8 @@ class Bay extends React.Component {
 			patch: [
 				...prevState.patch,
 				{
-					inPoint: node,
-					outPoint: null,
+					input: node,
+					output: null,
 					inRefer: refer,
 					outRefer: null
 				}
@@ -51,7 +51,7 @@ class Bay extends React.Component {
 	}
 
 	rmCable(i) {
-		this.state.patch[i].inPoint.disconnect();
+		this.state.patch[i].input.disconnect();
 
 		let ls = [...this.state.patch];
 
@@ -69,10 +69,10 @@ class Bay extends React.Component {
 	}
 
 	connCable(refer, node, i) {
-		this.state.patch[i].outPoint = node;
+		this.state.patch[i].output = node;
 		this.state.patch[i].outRefer = refer;
 
-		this.state.patch[i].inPoint.connect(this.state.patch[i].outPoint);
+		this.state.patch[i].input.connect(this.state.patch[i].output);
 
 		this.setState({
 			active: false
@@ -80,10 +80,10 @@ class Bay extends React.Component {
 	}
 
 	detachCable(e, refer, node, i) {
-		this.state.patch[i].outPoint = null;
+		this.state.patch[i].output = null;
 		this.state.patch[i].outRefer = null;
 
-		this.state.patch[i].inPoint.disconnect();
+		this.state.patch[i].input.disconnect();
 
 		this.setState({
 			active: true
@@ -120,7 +120,7 @@ class Bay extends React.Component {
 					})
 				)}
 
-				{this.state.patch.map((el, i) => <Cable curr={this.state.curr} inPoint={el.inPoint} outPoint={el.outPoint} inRefer={el.inRefer} outRefer={el.outRefer} key={i} />)}
+				{this.state.patch.map((el, i) => <Cable curr={this.state.curr} input={el.input} output={el.output} inRefer={el.inRefer} outRefer={el.outRefer} key={i} />)}
 			</div>
 		);
 	}
