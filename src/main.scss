@@ -26,10 +26,10 @@ h6, {
 }
 
 table {
-	background: $fg;
-	color: $bg;
 	border-radius: $bevel;
 	border-spacing: calc(#{$pad} / 2);
+	background: $fg;
+	color: $bg;
 
 	td {
 		padding: $pad;
