@@ -24,7 +24,7 @@ class Filter extends Effect {
 					type: "out",
 					point: this.node.main
 				}
-			]} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} marked={this.props.marked} />
+			]} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} c={this.props.c} marked={this.props.marked} />
 		);
 	}
 }
@@ -52,7 +52,7 @@ class Lowpass extends Filter {
 						this.node.main.frequency.value = val;
 					}
 				}
-			]} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} marked={this.props.marked} />
+			]} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} c={this.props.c} marked={this.props.marked} />
 		);
 	}
 }
@@ -70,7 +70,7 @@ class Highpass extends Filter {
 						this.node.main.frequency.value = val;
 					}
 				}
-			]} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} marked={this.props.marked} />
+			]} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} c={this.props.c} marked={this.props.marked} />
 		);
 	}
 }
