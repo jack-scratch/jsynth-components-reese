@@ -9,7 +9,7 @@ $sz: 6px;
 	circle {
 		cx: calc(#{$sz} / 2);
 		cy: calc(#{$sz} / 2);
-		r: $sz;
+		r: calc(#{$sz} / 2);
 	}
 
 	&.off {
