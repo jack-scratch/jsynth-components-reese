@@ -25,6 +25,10 @@ class Meter extends React.Component {
 		this.refer = React.createRef();
 
 		this.end = window.ctx.createAnalyser();
+
+		this.end.maxDecibels = this.props.max;
+		this.end.minDecibels = this.props.min;
+
 		this.proc = window.ctx.createScriptProcessor(this.sz, 1, 1);
 
 		this.end.fftSize = this.sz;
