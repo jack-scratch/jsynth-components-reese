@@ -104,8 +104,8 @@ class Meter extends React.Component {
 
 Meter.defaultProps = {
 	tick: 20,
-	min: 0,
-	max: 12
+	min: 0.0,
+	max: 12.0
 };
 
 export default Meter;
