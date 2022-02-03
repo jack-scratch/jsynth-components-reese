@@ -46,7 +46,6 @@ hr {
 
 #app {
 	> * {
-		display: inline-block;
 		float: left;
 		margin: $margin;
 	}
@@ -148,7 +147,6 @@ text.mark {
 
 .sys {
 	@extend .cont;
-	display: inline-flex;
 
 	.module {
 		margin: $margin;
