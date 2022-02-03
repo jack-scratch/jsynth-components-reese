@@ -7,6 +7,12 @@
 
 .buff {
 	background: map-get($light, "active");
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 
 	.line {
 		color: map-get($light, "inert");
