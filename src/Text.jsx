@@ -7,7 +7,7 @@ class Text extends React.Component {
 		return (
 			<div className="buff" style={{
 				width: `${this.props.wd}ch`,
-				height: `${this.props.ht}ch`
+				height: `${this.props.ln}ch`
 			}}>{this.props.buff.map((el, i) => <div className="line" key={i}>{el}</div>)}</div>
 		);
 	}
@@ -15,7 +15,7 @@ class Text extends React.Component {
 
 Text.defaultProps = {
 	wd: 20,
-	ht: 4,
+	ln: 4,
 	l: 0
 };
 
