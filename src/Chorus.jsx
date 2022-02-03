@@ -28,7 +28,7 @@ class Chorus extends Effect {
 			}, ...[...Array(this.props.cnt).keys()].map((i) => ({
 				type: "out",
 				point: this.node.main
-			}))]} hookOutDown={this.props.hookOutDown} marked />
+			}))]} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} c={this.props.c} marked />
 		);
 	}
 }

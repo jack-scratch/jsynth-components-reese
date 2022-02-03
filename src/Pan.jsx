@@ -20,7 +20,7 @@ class Pan extends Effect {
 						this.node.main.pan.value = val;
 					}
 				}
-			]} />
+			]} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} c={this.props.c} marked={this.props.makred} />
 		);
 	}
 }
