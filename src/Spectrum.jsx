@@ -20,7 +20,7 @@ class Spectrum extends LCD {
 
 		this.data = new Uint8Array(this.analyser.frequencyBinCount);
 
-		// route
+		// patch
 		this.props.point.connect(this.analyser);
 
 		this.analyser.connect(this.proc);

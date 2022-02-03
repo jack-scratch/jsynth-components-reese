@@ -92,7 +92,7 @@ class Env extends React.Component {
 						this.src = window.ctx.createOscillator();
 						this.src.type = this.init["src"]["type"];
 
-						// route
+						// patch
 						this.src.connect(this.filter);
 						this.filter.connect(window.ctx.destination);
 

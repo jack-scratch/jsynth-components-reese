@@ -27,7 +27,7 @@ class Impulse extends React.Component {
 				let src = window.ctx.createBufferSource();
 				src.buffer = buff;
 
-				// route
+				// patch
 				src.connect(window.ctx.destination);
 
 				// start

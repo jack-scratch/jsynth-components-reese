@@ -29,7 +29,7 @@ class Meter extends React.Component {
 
 		this.analyser.fftSize = this.sz;
 
-		// route
+		// patch
 		this.props.point.connect(this.analyser);
 
 		this.analyser.connect(this.proc);

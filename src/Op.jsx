@@ -58,7 +58,7 @@ class Op extends Source {
 	}
 
 	componentDidMount() {
-		// route
+		// patch
 		this.node.osc.connect(this.node.amp);
 
 		// start
