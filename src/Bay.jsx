@@ -14,7 +14,7 @@ class Bay extends React.Component {
 				0,
 				0
 			],
-			activeCable: null
+			c: null
 		};
 
 		this.pushCable = this.pushCable.bind(this);
@@ -45,7 +45,7 @@ class Bay extends React.Component {
 			active: true
 		}), () => {
 			this.setState({
-				activeCable: this.state.patch.length - 1
+				c: this.state.patch.length - 1
 			});
 		});
 	}
@@ -115,7 +115,7 @@ class Bay extends React.Component {
 						hookOutDown: this.pushCable,
 						hookInDown: this.detachCable,
 						hookInUp: this.connCable,
-						activeCable: this.state.activeCable,
+						c: this.state.c,
 						key: i
 					})
 				)}

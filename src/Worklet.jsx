@@ -51,7 +51,7 @@ class Worklet extends Module {
 					type: "out",
 					point: this.node.worklet
 				}
-			]} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} activeCable={this.props.activeCable} marked={this.props.marked} />
+			]} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} c={this.props.c} marked={this.props.marked} />
 		);
 	}
 }

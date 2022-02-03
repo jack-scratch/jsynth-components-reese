@@ -16,7 +16,7 @@ class Port extends React.Component {
 
 	hookSetActive() {
 		this.setState({
-			i: this.props.activeCable
+			i: this.props.c
 		}, () => {
 			this.props.hookUp(this.refer, this.props.point, this.state.i);
 		});
@@ -38,7 +38,7 @@ class Port extends React.Component {
 class In extends React.Component {
 	render() {
 		return (
-			<Port type="in" point={this.props.point} hookDown={this.props.hookInDown} hookUp={this.props.hookInUp} activeCable={this.props.activeCable} />
+			<Port type="in" point={this.props.point} hookDown={this.props.hookInDown} hookUp={this.props.hookInUp} c={this.props.c} />
 		);
 	}
 }
@@ -46,7 +46,7 @@ class In extends React.Component {
 class Out extends React.Component {
 	render() {
 		return (
-			<Port type="out" point={this.props.point} hookDown={this.props.hookOutDown} activeCable={this.props.activeCable} />
+			<Port type="out" point={this.props.point} hookDown={this.props.hookOutDown} c={this.props.c} />
 		);
 	}
 }

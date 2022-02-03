@@ -9,7 +9,7 @@ class Source extends Module {
 
 	render() {
 		return (
-			<Module {...this.props} activeCable={this.props.activeCable} />
+			<Module {...this.props} c={this.props.c} />
 		);
 	}
 }
