@@ -15,7 +15,7 @@
 	user-select: none;
 
 	.line {
-		color: map-get($light, "inert");
 		font-family: Terminus;
+		color: map-get($light, "inert");
 	}
 }
