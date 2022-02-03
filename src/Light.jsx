@@ -5,7 +5,9 @@ import "./Light.css";
 class Light extends React.Component {
 	render() {
 		return (
-			<div className={`light ${(this.props.data ? "on" : "off")}`}></div>
+			<svg className={`light ${(this.props.data ? "on" : "off")}`}>
+				<circle />
+			</svg>
 		);
 	}
 }

@@ -5,13 +5,22 @@ $sz: 6px;
 .light {
 	width: $sz;
 	height: $sz;
-	border-radius: calc(#{$sz} / 2);
+
+	circle {
+		cx: calc(#{$sz} / 2);
+		cy: calc(#{$sz} / 2);
+		r: $sz;
+	}
 
 	&.off {
-		background: map-get($light, "inert");
+		circle {
+			fill: map-get($light, "inert");
+		}
 	}
 
 	&.on {
-		background: map-get($light, "active");
+		circle {
+			fill: map-get($light, "active");
+		}
 	}
 }
