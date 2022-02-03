@@ -75,11 +75,7 @@ class Spectrum extends LCD {
 
 	render() {
 		return (
-			<div className="cont">
-				<div className="cont">
-					<canvas ref={this.refer} />
-				</div>
-			</div>
+			<canvas ref={this.refer} />
 		);
 	}
 }
