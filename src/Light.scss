@@ -1,15 +1,16 @@
 @import "col.scss";
 
-$sz: 6px;
+$rad: 3px;
+$diam: calc(#{$rad} * 2);
 
 .light {
-	width: $sz;
-	height: $sz;
+	width: $diam;
+	height: $diam;
 
 	circle {
-		cx: calc(#{$sz} / 2);
-		cy: calc(#{$sz} / 2);
-		r: calc(#{$sz} / 2);
+		cx: $rad;
+		cy: $rad;
+		r: $rad;
 	}
 
 	&.off {
