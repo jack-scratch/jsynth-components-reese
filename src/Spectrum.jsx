@@ -85,8 +85,8 @@ class Spectrum extends LCD {
 }
 
 Spectrum.defaultProps = {
-	wd: 800,
-	ht: 300
+	wd: 400,
+	ht: 150
 };
 
 export default Spectrum;
