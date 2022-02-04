@@ -4,6 +4,7 @@ Offers a basic wrapper around the Web Audio API and its built-in utilities.
 
 <img src="fm.png" height="600"/>
 <img src="spectrum.png" height="600"/>
+<img src="sample.png" height="600"/>
 
 # Context
 At all points, the Web Audio API's context is available within the window object -- `window.ctx`.
