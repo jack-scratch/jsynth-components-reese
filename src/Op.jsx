@@ -95,8 +95,8 @@ class Op extends Source {
 					]} wd={10} ln={1} />
 				</div>
 				<div className="body">
-					<Btn ht={26} name={<FontAwesomeIcon icon={faSortUp} />} hookDown={this.inc} />
-					<Btn ht={26} name={<FontAwesomeIcon icon={faSortDown} />} hookDown={this.dec} />
+					<Btn ht={26} name={<FontAwesomeIcon icon={faSortUp} />} hookPush={this.inc} />
+					<Btn ht={26} name={<FontAwesomeIcon icon={faSortDown} />} hookPush={this.dec} />
 				</div>
 			</Source>
 		);
