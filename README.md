@@ -14,7 +14,7 @@ Upon any kind of mouse down event within the document, the context will be resum
 
 # Component
 ## Control
-Takes a function as a prop in `hook` and calls upon event.
+Takes hooks as props and calls them on various events, passing the internal value as an argument.
 
 ### `<Btn />`
 Calls a function on push.
