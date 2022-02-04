@@ -89,9 +89,7 @@ class L extends Btn {
 class Toggle extends Btn {
 	render() {
 		return (
-			<Btn name={
-				<FontAwesomeIcon icon={faStop} /> / <FontAwesomeIcon icon={faPlay} />
-			} />
+			<Btn name={<FontAwesomeIcon icon={faStop} /> / <FontAwesomeIcon icon={faPlay} />} />
 		);
 	}
 }
