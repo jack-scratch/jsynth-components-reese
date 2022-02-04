@@ -34,7 +34,7 @@ class Gain extends Effect {
 						type: "out",
 						point: this.node.main
 					}
-				]} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} c={this.props.c} marked={this.props.marked} />
+				]} c={this.props.c} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} marked={this.props.marked} />
 		);
 	}
 }
