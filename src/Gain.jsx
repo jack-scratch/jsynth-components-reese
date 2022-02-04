@@ -27,15 +27,15 @@ class Gain extends Effect {
 						this.node.main.gain.value = val;
 					}
 				}
-				]} point={this.node.main} port={[
-					{
-						type: "in",
-						point: this.node.main
-					}, {
-						type: "out",
-						point: this.node.main
-					}
-				]} c={this.props.c} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} marked={this.props.marked} />
+			]} point={this.node.main} port={[
+				{
+					type: "in",
+					point: this.node.main
+				}, {
+					type: "out",
+					point: this.node.main
+				}
+			]} c={this.props.c} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} marked={this.props.marked} />
 		);
 	}
 }
