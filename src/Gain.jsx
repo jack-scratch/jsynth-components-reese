@@ -19,8 +19,8 @@ class Gain extends Effect {
 			<Effect name="Gain" param={[
 				{
 					name: "Level",
-					min: -12.0,
-					max: 12.0,
+					min: this.props.rng["gain"][0],
+					max: this.props.rng["gain"][1],
 					unit: unit["freq"],
 					point: this.node.main.gain,
 					hook: (val) => {
@@ -39,5 +39,14 @@ class Gain extends Effect {
 		);
 	}
 }
+
+Gain.defaultProps = {
+	rng: {
+		"gain": [
+			-12.0,
+			12.0
+		]
+	}
+};
 
 export default Gain;
