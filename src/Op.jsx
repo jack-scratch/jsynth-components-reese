@@ -92,7 +92,7 @@ class Op extends Source {
 				<div className="head">
 					<Text buff={[
 						this.type[this.state.l]
-						]} wd={10} ht={1} />
+					]} wd={10} ht={1} />
 				</div>
 				<div className="body">
 					<Btn ht={26} name={<FontAwesomeIcon icon={faSortUp} />} hookDown={this.inc} />
