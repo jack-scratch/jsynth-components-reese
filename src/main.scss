@@ -64,6 +64,7 @@ hr {
 }
 
 .cont {
+	display: flex;
 	padding: $pad;
 	border-radius: $bevel;
 	background: $bg;
