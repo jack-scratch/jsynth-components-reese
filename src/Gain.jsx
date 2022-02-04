@@ -22,6 +22,7 @@ class Gain extends Effect {
 					min: -12.0,
 					max: 12.0,
 					unit: unit["freq"],
+					point: this.node.main.gain,
 					hook: (val) => {
 						this.node.main.gain.value = val;
 					}

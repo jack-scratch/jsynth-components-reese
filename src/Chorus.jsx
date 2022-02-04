@@ -18,6 +18,7 @@ class Chorus extends Effect {
 					min: 1,
 					max: 100,
 					unit: unit["time"][0],
+					point: this.node.main.frequency,
 					hook: (val) => {
 						this.node.main.frequency.value = val;
 					}

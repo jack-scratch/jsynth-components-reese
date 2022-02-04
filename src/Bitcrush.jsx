@@ -29,6 +29,7 @@ class Bitcrush extends Module {
 					min: 1,
 					max: 6,
 					quant: 6,
+					point: this.node.main.bitDepth,
 					hook: (val) => {
 						this.state.bitDepth.value = val;
 					}

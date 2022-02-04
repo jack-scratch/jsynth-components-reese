@@ -48,6 +48,7 @@ class Lowpass extends Filter {
 					min: this.props.rng["freq"][0],
 					max: this.props.rng["freq"][1],
 					unit: unit["freq"],
+					point: this.node.main.frequency,
 					hook: (val) => {
 						this.node.main.frequency.value = val;
 					}

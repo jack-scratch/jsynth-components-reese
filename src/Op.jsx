@@ -72,6 +72,7 @@ class Op extends Source {
 					name: "Frequency",
 					min: this.props.rng["freq"][0],
 					max: this.props.rng["freq"][1],
+					point: this.node.osc.frequency,
 					hook: (val) => {
 						this.node.osc.frequency.value = val;
 					}
@@ -79,6 +80,7 @@ class Op extends Source {
 					name: "Gain",
 					min: this.props.rng["vol"][0],
 					max: this.props.rng["vol"][1],
+					point: this.node.amp.gain,
 					hook: (val) => {
 						this.node.amp.gain.value = val;
 					}

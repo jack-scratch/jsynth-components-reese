@@ -22,6 +22,7 @@ class Flanger extends Effect {
 					name: "Delay",
 					min: 1.0,
 					max: 50.0,
+					point: this.node.main.frequency,
 					hook: (val) => {
 						this.node.main.frequency = val;
 					}

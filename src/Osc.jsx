@@ -31,6 +31,7 @@ class Osc extends Source {
 					min: this.props.rng["freq"][0],
 					max: this.props.rng["freq"][1],
 					unit: unit["freq"],
+					point: this.node.main.frequency,
 					hook: (val) => {
 						this.node.main.frequency.value = val;
 					}
@@ -39,6 +40,7 @@ class Osc extends Source {
 					min: this.props.rng["detune"][0],
 					max: this.props.rng["detune"][1],
 					unit: unit["cents"],
+					point: this.node.main.detune,
 					hook: (val) => {
 						this.node.main.detune.value = val;
 					} 

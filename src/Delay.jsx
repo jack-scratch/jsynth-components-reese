@@ -18,6 +18,7 @@ class Delay extends Effect {
 					name: "Time",
 					min: 0.01,
 					max: 10.0,
+					point: this.node.worklet.time,
 					hook: (val) => {
 						this.node.worklet.time.value = val;
 					}
