@@ -11,4 +11,10 @@
 		font-weight: bold;
 		alignment-baseline: hanging;
 	}
+
+	svg {
+		path {
+			fill: $fg;
+		}
+	}
 }
