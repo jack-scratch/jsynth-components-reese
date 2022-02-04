@@ -110,7 +110,7 @@ class Bay extends React.Component {
 	render() {
 		return (
 			<div className="cont" id="bay" onMouseUp={(e) => this.release()} onMouseMove={(e) => this.drag(e)}>
-				{this.props.children && this.props.children.map((el, i) => React.cloneElement(el, {
+				{this.props.children && React.Children.map(this.props.children, (el, i) => React.cloneElement(el, {
 					hookOutDown: this.pushCable,
 					hookInDown: this.detachCable,
 					hookInUp: this.connCable,
