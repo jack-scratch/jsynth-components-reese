@@ -18,7 +18,9 @@ class Port extends React.Component {
 		this.setState({
 			c: this.props.c
 		}, () => {
-			this.props.hookUp(this.refer, this.props.point, this.state.c);
+			if (this.props.hookUp) {
+				this.props.hookUp(this.refer, this.props.point, this.state.c);
+			}
 		});
 	}
 
