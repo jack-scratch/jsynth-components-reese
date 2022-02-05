@@ -5,11 +5,11 @@ class Port extends React.Component {
 	constructor(props) {
 		super();
 
-		this.refer = React.createRef();
-
 		this.state = {
 			i: 0
 		};
+
+		this.refer = React.createRef();
 
 		this.setActive = this.setActive.bind(this);
 	}
