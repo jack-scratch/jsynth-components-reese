@@ -171,7 +171,7 @@ Oscillator.
 
 ### Props
 `type` - "sine" / "square" / "sawtooth" / "triangle" / "custom"
-`hz` - Frequency
+`freq` - Frequency
 `detune` - Detune
 
 ## `<Op />`
@@ -181,7 +181,7 @@ Contains an oscillator, and a gain.
 
 ### Props
 `type` - "sine" / "square" / "sawtooth" / "triangle" / "custom"
-`hz` - Frequency
+`freq` - Frequency
 `vol` - Gain
 
 # Effect
@@ -198,13 +198,13 @@ Attenuates frequencies.
 `type` - "lowpass" / "highpass" / "bandpass"
 
 ### `<Lowpass />`
-`rngFreq` - Frequency range
+`rng` - Ranges of parameters
 
 ### `<Highpass />`
-`rngFreq` - Frequency range
+`rng` - Ranges of parameters
 
 ### Props
-`hz` - Frequency
+`freq` - Frequency
 
 ## `<Chorus />`
 Splits input into multiple outputs.
