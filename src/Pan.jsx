@@ -6,8 +6,8 @@ class Pan extends Effect {
 
 		this.node.main = window.ctx.createStereoPanner();
 
-		if (this.props.time) {
-			this.node.main.pan.value = this.props.time;
+		if (this.props.rate) {
+			this.node.main.pan.value = this.props.rate;
 		}
 	}
 
