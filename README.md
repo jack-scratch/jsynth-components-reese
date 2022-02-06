@@ -46,7 +46,7 @@ Limited to a range.
 `marked` - Mark range
 
 ### `<Key />`
-Takes a function as a prop in `hook`, and calls this function upon mouse down.
+Calls a function on press.
 
 #### Props
 ---
@@ -67,8 +67,8 @@ Can have at most one input.
 
 #### Props
 ---
-`hookInDown` - Function to call upon mouse down
-`hookInUp` - Function to call upon mouse up
+`hookDown` - Function to call upon mouse down
+`hookUp` - Function to call upon mouse up
 
 #### `<Out />`
 Strictly regards audio node's output.
@@ -80,7 +80,7 @@ Can have an effectively infinite number of outputs.
 
 #### Props
 ---
-`hookUpDown` - Function to call upon mouse up
+`hookDown` - Function to call upon mouse up
 
 ## Display
 ### `<Light />`
@@ -90,7 +90,7 @@ On upon the presence of the `on` prop, and off otherwise.
 
 #### Props
 ---
-`on` - On / off status
+`data` - Value
 
 ### `<Text />`
 2D Text display.
@@ -98,7 +98,7 @@ On upon the presence of the `on` prop, and off otherwise.
 #### Props
 ---
 `wd` - Width (characters)
-`ht` - Height (lines)
+`ln` - Height (lines)
 `l` - Line index
 
 ### `<LCD />`
