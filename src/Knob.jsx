@@ -56,7 +56,7 @@ class Knob extends React.Component {
 	baseRot = 90;
 
 	constructor(props) {
-		super();
+		super(props);
 
 		this.state = {
 			down: false,
@@ -65,6 +65,12 @@ class Knob extends React.Component {
 			val: 0,
 			prevVal: 0
 		};
+
+		if (this.props.init) {
+			this.state.val = this.props.init;
+		}
+
+		this.state.prevVal = this.state.val;
 
 		this.markRef = React.createRef();
 		
