@@ -24,10 +24,9 @@ Calls a function on turning, providing a value.
 
 #### Props
 ---
-`param` - Audio parameter
-`rad` - Radius
 `min` - Range minimum
 `max` - Range maximum
+`rad` - Radius
 `quant` - Quantize
 `marked` - Mark range
 
@@ -43,7 +42,6 @@ Limited to a range.
 
 #### Props
 ---
-`param` - Audio parameter
 `ln` - Height
 `marked` - Mark range
 
