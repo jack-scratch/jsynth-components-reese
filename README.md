@@ -181,8 +181,6 @@ Contains an oscillator, and a gain.
 
 ### Props
 `type` - "sine" / "square" / "sawtooth" / "triangle" / "custom"
-`freq` - Frequency
-`vol` - Gain
 
 # Effect
 ## `<Gain />`
@@ -216,12 +214,14 @@ Splits input into multiple outputs.
 Produces delayed copy.
 
 ### Props
+`type` - "sine" / "square" / "sawtooth" / "triangle" / "custom"
 `delay` - Delay
 
 ## `<Pan />`
 Fades between left and right channels.
 
-`.rate` - Rate
+### Props
+`rate` - Rate
 
 ## `<Delay />`
 Outputs unfiltrered input after a time interval has passed.
