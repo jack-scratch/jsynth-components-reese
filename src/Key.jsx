@@ -15,17 +15,19 @@ class Key extends React.Component {
 			down: false
 		};
 
+		this.node = null;
+
 		this.play = this.play.bind(this);
 		this.release = this.release.bind(this);
 	}
 
 	play() {
-		this.props.node = window.ctx.createOscillator();
-		this.props.node.type = 'sine';
-		this.props.node.frequency.value = trans(a, this.props.i * (1 / (oct - 1)));
+		this.node = window.ctx.createOscillator();
+		this.node.type = 'sine';
+		this.node.frequency.value = trans(a, this.props.i * (1 / (oct - 1)));
 
 		// start
-		this.props.node.start();
+		this.node.start();
 
 		this.setState({
 			down: true
@@ -33,10 +35,10 @@ class Key extends React.Component {
 	}
 
 	release() {
-		if (this.props.node) {
-			this.props.node.stop();
+		if (this.node) {
+			this.node.stop();
 
-			this.props.node = null;
+			this.node = null;
 		}
 
 		this.setState({
