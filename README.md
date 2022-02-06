@@ -177,7 +177,7 @@ Oscillator.
 ## `<Op />`
 Basic operator with a programmable type.
 
-Contains an oscillator, and a gain.
+Contains an oscillator and a gain.
 
 ### Props
 `type` - "sine" / "square" / "sawtooth" / "triangle" / "custom"
