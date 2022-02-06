@@ -118,7 +118,7 @@ class Knob extends React.Component {
 					const rng = this.props.max - this.props.min;
 					const stride = rng / this.props.quant;
 
-					snap = snap - (snap % stride);
+					snap -= snap % stride;
 				}
 
 				this.setState({
