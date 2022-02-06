@@ -17,12 +17,6 @@ h5,
 h6, {
 	font-family: Neutra Text Bold;
 	color: $fg;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
 }
 
 table {
@@ -96,12 +90,6 @@ path.mark {
 .label,
 .mark {
 	font-family: Arial;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
 }
 
 .tick {
