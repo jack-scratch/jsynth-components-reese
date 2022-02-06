@@ -32,7 +32,7 @@ class Disp extends React.Component {
 				</div>
 				<div className="body">
 					<div className="ctrl">
-						<Knob hook={this.update} min={0.0} max={100.0} />
+						<Knob hookTurn={this.update} min={0.0} max={100.0} />
 					</div>
 				</div>
 			</div>

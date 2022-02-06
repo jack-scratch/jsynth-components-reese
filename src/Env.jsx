@@ -48,7 +48,7 @@ class Env extends React.Component {
 							<div className="mark">Attack</div>
 						</div>
 						<div className="body">
-							<Knob hook={(val) => this.setState({
+							<Knob hookTurn={(val) => this.setState({
 								atk: val
 							})} min={0.0} max={1.0} unit={unit["time"][0]} />
 						</div>
@@ -58,7 +58,7 @@ class Env extends React.Component {
 							<div className="mark">Decay</div>
 						</div>
 						<div className="body">
-							<Knob hook={(val) => this.setState({
+							<Knob hookTurn={(val) => this.setState({
 								decay: val
 							})} min={0.0} max={1.0} unit={unit["time"][0]} />
 						</div>
@@ -68,7 +68,7 @@ class Env extends React.Component {
 							<div className="mark">Sustain</div>
 						</div>
 						<div className="body">
-							<Knob hook={(val) => this.setState({
+							<Knob hookTurn={(val) => this.setState({
 								sust: val
 							})} min={1.0} max={1000.0} unit={unit["freq"]}/>
 						</div>
@@ -78,7 +78,7 @@ class Env extends React.Component {
 							<div className="mark">Release</div>
 						</div>
 						<div className="body">
-							<Knob hook={(val) => this.setState({
+							<Knob hookTurn={(val) => this.setState({
 								rel: val
 							})} min={0.0} max={1.0} unit={unit["time"][0]}/>
 						</div>
