@@ -92,15 +92,6 @@ On upon the presence of the `on` prop, and off otherwise.
 ---
 `data` - Value
 
-### `<Text />`
-2D Text display.
-
-#### Props
----
-`wd` - Width (characters)
-`ln` - Height (lines)
-`l` - Line index
-
 ### `<LCD />`
 Base LCD.
 
@@ -125,6 +116,15 @@ Displays signal strength.
 #### Props
 ---
 `tick` - Height
+
+### `<Text />`
+2D Text display.
+
+#### Props
+	---
+	`wd` - Width (characters)
+`ln` - Height (lines)
+	`l` - Line index
 
 ## `<Bay></Bay>`
 Patch bay.
