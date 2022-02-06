@@ -108,7 +108,7 @@ Plots frequency.
 `wd` - Width (pixels)
 `ht` - Height (pixels)
 
-#### `<Meter />`
+### `<Meter />`
 Displays signal strength.
 
 `.draw()` - Draw
