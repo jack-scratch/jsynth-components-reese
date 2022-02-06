@@ -1,3 +1,4 @@
+import Osc from "./Osc";
 import Source from "./Source";
 import Text from "./Text";
 import {
@@ -11,7 +12,7 @@ import {
 	faSortDown
 } from "@fortawesome/free-solid-svg-icons";
 
-class Op extends Source {
+class Op extends Osc {
 	type = [
 		"sine",
 		"square",
@@ -22,11 +23,10 @@ class Op extends Source {
 	constructor(props) {
 		super(props);
 
-		this.node.osc = window.ctx.createOscillator();
 		this.node.amp = window.ctx.createGain();
 
 		if (this.props.type) {
-			this.node.osc.type = this.props.type;
+			this.node.main.type = this.props.type;
 		}
 
 		this.state = {
@@ -42,7 +42,7 @@ class Op extends Source {
 			this.setState((prevState) => ({
 				l: prevState.l + 1
 			}), () => {
-				this.node.osc.type = this.type[this.state.l];
+				this.node.main.type = this.type[this.state.l];
 			});
 		}
 	}
@@ -52,17 +52,17 @@ class Op extends Source {
 			this.setState((prevState) => ({
 				l: prevState.l - 1
 			}), () => {
-				this.node.osc.type = this.type[this.state.l];
+				this.node.main.type = this.type[this.state.l];
 			});
 		}
 	}
 
 	componentDidMount() {
 		// patch
-		this.node.osc.connect(this.node.amp);
+		this.node.main.connect(this.node.amp);
 
 		// start
-		this.node.osc.start();
+		this.node.main.start();
 	}
 
 	render() {
@@ -72,9 +72,9 @@ class Op extends Source {
 					name: "Frequency",
 					min: this.props.rng["freq"][0],
 					max: this.props.rng["freq"][1],
-					point: this.node.osc.frequency,
+					point: this.node.main.frequency,
 					hook: (val) => {
-						this.node.osc.frequency.value = val;
+						this.node.main.frequency.value = val;
 					}
 				}, {
 					name: "Gain",
