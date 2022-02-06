@@ -121,10 +121,10 @@ Displays signal strength.
 2D Text display.
 
 #### Props
-	---
-	`wd` - Width (characters)
+---
+`wd` - Width (characters)
 `ln` - Height (lines)
-	`l` - Line index
+`l` - Line index
 
 ## `<Bay></Bay>`
 Patch bay.
