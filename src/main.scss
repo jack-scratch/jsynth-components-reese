@@ -141,6 +141,11 @@ path.mark {
 	.module {
 		margin: $margin;
 		background: $inert;
+
+		.label,
+		.mark {
+			text-align: center;
+		}
 	}
 
 	.row {
@@ -150,11 +155,6 @@ path.mark {
 		> * {
 			flex-grow: 1;
 		}
-	}
-
-	.label,
-	.mark {
-		text-align: center;
 	}
 }
 
