@@ -27,7 +27,7 @@ class Gain extends Effect {
 						this.node.main.gain.value = val;
 					}
 				}
-			]} point={this.node.main} port={[
+			]} port={[
 				{
 					type: "in",
 					point: this.node.main
