@@ -1,18 +1,28 @@
-import Effect from "./Effect";
+import Module from "./Module";
 import {
 	unit
 } from "./fmt";
 
-class Chorus extends Effect {
+class Chorus extends Module {
 	constructor(props) {
 		super();
 
 		this.node.main = window.ctx.createOscillator();
 	}
 
+	async componentDidMount() {
+		await window.ctx.audioWorklet.addModule("worklet/dsp.js");
+
+		this.node.main = await new AudioWorkletNode(window.ctx, "chorus");
+
+		this.setState({
+			spread: this.node.main.parameters.get("spread")
+		});
+	}
+
 	render() {
 		return (
-			<Effect name={this.props.name} param={[
+			<Module name={this.props.name} param={[
 				{
 					name: "Spread",
 					min: 1,
