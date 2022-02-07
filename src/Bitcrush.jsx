@@ -23,7 +23,7 @@ class Bitcrush extends Module {
 
 	render() {
 		return (
-			<Module name={this.props.name} param={[
+			<Module name="Bitcrush" param={[
 				{
 					name: "Fidelity",
 					min: 1,
@@ -43,9 +43,5 @@ class Bitcrush extends Module {
 		);
 	}
 }
-
-Bitcrush.defaultProps = {
-	name: "Bitcrush"
-};
 
 export default Bitcrush;

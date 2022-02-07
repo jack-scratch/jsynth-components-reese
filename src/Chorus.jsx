@@ -22,7 +22,7 @@ class Chorus extends Module {
 
 	render() {
 		return (
-			<Module name={this.props.name} param={[
+			<Module name="Chorus" param={[
 				{
 					name: "Spread",
 					min: 1,
@@ -45,7 +45,6 @@ class Chorus extends Module {
 }
 
 Chorus.defaultProps = {
-	name: "Chorus",
 	cnt: 6
 };
 
