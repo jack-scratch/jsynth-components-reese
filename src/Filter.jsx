@@ -12,6 +12,10 @@ class Filter extends Effect {
 		if (this.props.type) {
 			this.node.main.type = this.props.type;
 		}
+
+		if (this.props.freq) {
+			this.node.main.frequency.value = this.props.freq;
+		}
 	}
 
 	render() {
