@@ -10,16 +10,18 @@ class Osc extends Source {
 
 		this.node.main = window.ctx.createOscillator();
 
-		if (this.props.type) {
-			this.node.main.type = this.props.type;
-		}
+		if (this.props.init) {
+			if (this.props.init["type"]) {
+				this.node.main.type = this.props.init["type"];
+			}
 
-		if (this.props.freq) {
-			this.node.main.frequency.value = this.props.freq;
-		}
+			if (this.props.init["freq"]) {
+				this.node.main.frequency.value = this.props.init["freq"];
+			}
 
-		if (this.props.detune) {
-			this.node.main.detune.value = this.props.detune;
+			if (this.props.init["detune"]) {
+				this.node.main.detune.value = this.props.init["detune"];
+			}
 		}
 	}
 
