@@ -85,7 +85,9 @@ class Knob extends React.Component {
 		this.setState({
 			val: clamp(this.state.prevVal - deltaY, this.props.min, this.props.max)
 		}, () => {
-			this.props.hookTurn(this.state.val);
+			if (this.props.hookTurn) {
+				this.props.hookTurn(this.state.val);
+			}
 		});
 
 		if (this.props.marked) {
@@ -130,7 +132,9 @@ class Knob extends React.Component {
 				this.setState({
 					val: clamp(orient, this.props.min, this.props.max)
 				}, () => {
-					this.props.hookTurn(this.state.val);
+					if (this.props.hookTurn) {
+						this.props.hookTurn(this.state.val);
+					}
 				});
 			});
 		}
