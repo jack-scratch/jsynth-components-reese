@@ -174,7 +174,7 @@ class Knob extends React.Component {
 						<line className="tick" x1={this.props.rad} x2={this.props.rad - lineLn} y1={0} y2={0} clipPath="url(#perim)" />
 					</g>
 
-					{this.props.marked && [...Array(this.props.marked).keys()].map((i) => <g ref={this.markRef}>
+					{this.props.marked && [...Array(this.props.marked).keys()].map((i) => <g ref={this.markRef} key={i}>
 						<text className="mark" textAnchor="end" x={-(margin * 2) + this.props.rad} y={(margin * 2) + diam}>{this.props.min}{this.props.unit}</text>
 						<text className="mark" textAnchor="start" x={(margin * 2) + this.props.rad} y={(margin * 2) + diam}>{this.props.max}{this.props.unit}</text>
 					</g>)}
