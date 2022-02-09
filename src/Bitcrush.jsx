@@ -6,7 +6,7 @@ class Bitcrush extends Module {
 
 		this.state = {
 			bitDepth: null,
-			reduction: null
+			reduct: null
 		};
 	}
 
@@ -17,7 +17,7 @@ class Bitcrush extends Module {
 
 		this.setState({
 			bitDepth: this.node.main.parameters.get("bitDepth"),
-			reduction: this.node.main.parameters.get("frequencyReduction")
+			reduct: this.node.main.parameters.get("freqReduct")
 		});
 	}
 
