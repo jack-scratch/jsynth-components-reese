@@ -25,14 +25,6 @@ class Op extends Osc {
 
 		this.node.amp = window.ctx.createGain();
 
-		if (this.props.type) {
-			this.node.main.type = this.props.type;
-		}
-
-		if (this.props.level) {
-			this.node.amp.gain.value = this.props.level;
-		}
-
 		this.state = {
 			l: 0
 		};

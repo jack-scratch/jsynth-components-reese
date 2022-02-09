@@ -5,10 +5,6 @@ class Delay extends Effect {
 		super(props);
 
 		this.node.worklet = window.ctx.createDelay();
-
-		if (this.props.time) {
-			this.node.worklet.time.value = this.props.time;
-		}
 	}
 
 	render() {

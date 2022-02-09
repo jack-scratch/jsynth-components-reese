@@ -5,10 +5,6 @@ class Flanger extends Effect {
 		super(props);
 
 		this.node.main = window.ctx.createOscillator();
-
-		if (this.props.type) {
-			this.node.main.type = this.props.type;
-		}
 	}
 
 	componentDidMount() {

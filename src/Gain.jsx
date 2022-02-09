@@ -8,10 +8,6 @@ class Gain extends Effect {
 		super(props);
 
 		this.node.main = window.ctx.createGain();
-
-		if (this.props.level) {
-			this.node.main.gain.value = this.props.level;
-		}
 	}
 
 	render() {

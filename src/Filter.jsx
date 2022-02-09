@@ -8,14 +8,6 @@ class Filter extends Effect {
 		super(props);
 
 		this.node.main = window.ctx.createBiquadFilter();
-
-		if (this.props.type) {
-			this.node.main.type = this.props.type;
-		}
-
-		if (this.props.freq) {
-			this.node.main.frequency.value = this.props.freq;
-		}
 	}
 
 	render() {
