@@ -171,8 +171,6 @@ Oscillator.
 
 ### Props
 `type` - "sine" / "square" / "sawtooth" / "triangle" / "custom"
-`freq` - Intiial frequency
-`detune` - Initial detune
 
 ## `<Op />`
 Basic operator with a programmable type.
@@ -201,9 +199,6 @@ Attenuates frequencies.
 ### `<Highpass />`
 `rng` - Ranges of parameters
 
-### Props
-`freq` - Initial frequency
-
 ## `<Chorus />`
 Splits input into multiple outputs.
 
@@ -215,7 +210,6 @@ Produces delayed copy.
 
 ### Props
 `type` - "sine" / "square" / "sawtooth" / "triangle" / "custom"
-`delay` - Initial delay
 
 ## `<Pan />`
 Fades between left and right channels.
