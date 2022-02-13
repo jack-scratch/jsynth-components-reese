@@ -8,7 +8,7 @@ class Text extends React.Component {
 			<div className="buff" style={{
 				width: `${this.props.wd}ch`,
 				height: `${this.props.ln * 2}ch`
-			}}>{this.props.buff.map((el, i) => <div className="line" key={i}>{el}</div>)}</div>
+			}}>{this.props.buff && this.props.buff.map((el, i) => <div className="line" key={i}>{el}</div>)}</div>
 		);
 	}
 }
