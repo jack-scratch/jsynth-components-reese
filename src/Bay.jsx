@@ -35,7 +35,11 @@ class Bay extends React.Component {
 		this.state.patch[i].outRefer = refer;
 	}
 
-	unsetDest() {
+	unsetDest(i) {
+		if (i) {
+			this.state.patch[i].output = null;
+			this.state.patch[i].outRefer = null;
+		}
 	}
 
 	pushCable(e, refer, node) {
