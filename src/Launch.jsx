@@ -62,7 +62,9 @@ class Launch extends React.Component {
 
 	render() {
 		return (
-			<div className="launch">
+			<div className="launch" style={{
+				flexDirection: "column"
+			}}>
 				<div className="head">
 					<h1>Launchpad</h1>
 					<Light data={this.state.on} />
@@ -72,7 +74,7 @@ class Launch extends React.Component {
 						<tbody>
 							{[...Array(this.props.y).keys()].map((j) => <tr key={`"row-${j}"`}>
 								{[...Array(this.props.x).keys()].map((i) => <td key={`btn-${i}`}>
-									<Btn wd={80} ht={80} name={1 + ((j * this.props.y) + i)} hookPush={() => this.play((j * this.props.x) + i)} />
+									<Btn wd={80} ht={80} name={<text>{1 + ((j * this.props.y) + i)}</text>} hookPush={() => this.play((j * this.props.x) + i)} />
 								</td>)}
 							</tr>)}
 						</tbody>
