@@ -23,8 +23,25 @@ class Bay extends React.Component {
 		this.connCable = this.connCable.bind(this);
 		this.detachCable = this.detachCable.bind(this);
 
+		this.setDest = this.setDest.bind(this);
+		this.unsetDest = this.unsetDest.bind(this);
+
 		this.drag = this.drag.bind(this);
 		this.release = this.release.bind(this);
+	}
+
+	setDest(refer, node, i) {
+		this.state.patch[i].output = node;
+		this.state.patch[i].outRefer = refer;
+
+		this.state.patch[i].input.connect(this.state.patch[i].output);
+
+		this.setState({
+			active: false
+		});
+	}
+
+	unsetDest() {
 	}
 
 	pushCable(e, refer, node) {
@@ -114,6 +131,8 @@ class Bay extends React.Component {
 					hookOutDown: this.pushCable,
 					hookInDown: this.detachCable,
 					hookInUp: this.connCable,
+					hookInEnter: this.setDest,
+					hookInLeave: this.unsetDest,
 					c: this.state.c,
 					key: i
 				}))}

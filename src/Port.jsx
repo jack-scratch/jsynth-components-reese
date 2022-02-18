@@ -18,8 +18,8 @@ class Port extends React.Component {
 		this.setState({
 			c: this.props.c
 		}, () => {
-			if (this.props.hookUp) {
-				this.props.hookUp(this.refer, this.props.point, this.state.c);
+			if (this.props.hookEnter) {
+				this.props.hookEnter(this.refer, this.props.point, this.state.c);
 			}
 		});
 	}
@@ -30,7 +30,7 @@ class Port extends React.Component {
 				<svg xmlns="http://www.w3.org/1999/xhtml" version="1.1" className="port">
 				<text className="mark" x="50%">{this.props.type === "in" ? "In" : "Out"}</text>
 					<Nut />
-					<circle onMouseDown={this.props.hookDown ? (e) => {this.props.hookDown(e, this.refer, this.props.point, this.state.c)} : null} onMouseUp={this.setActive} />
+					<circle onMouseDown={this.props.hookDown ? (e) => {this.props.hookDown(e, this.refer, this.props.point, this.state.c)} : null} onMouseEnter={this.setActive} />
 				</svg>
 			</div>
 		);
@@ -40,7 +40,7 @@ class Port extends React.Component {
 class In extends React.Component {
 	render() {
 		return (
-			<Port type="in" point={this.props.point} c={this.props.c} hookDown={this.props.hookInDown} hookUp={this.props.hookInUp} />
+			<Port type="in" point={this.props.point} c={this.props.c} hookDown={this.props.hookInDown} hookUp={this.props.hookInUp} hookEnter={this.props.hookInEnter} hookLeave={this.props.hookInLeave} />
 		);
 	}
 }
