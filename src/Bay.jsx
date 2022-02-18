@@ -84,9 +84,6 @@ class Bay extends React.Component {
 	}
 
 	connCable(refer, node, i) {
-		this.state.patch[i].output = node;
-		this.state.patch[i].outRefer = refer;
-
 		this.state.patch[i].input.connect(this.state.patch[i].output);
 
 		this.setState({
