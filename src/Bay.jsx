@@ -119,6 +119,12 @@ class Bay extends React.Component {
 	}
 
 	release() {
+		if (this.state.patch[this.state.c].output) {
+			this.state.patch[this.state.c].input.connect(this.state.patch[this.state.c].output);
+		} else {
+			this.rmCable(this.state.c);
+		}
+
 		this.setState({
 			active: false
 		});
