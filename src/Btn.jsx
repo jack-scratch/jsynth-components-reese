@@ -27,7 +27,9 @@ class Btn extends React.Component {
 		this.release = this.release.bind(this);
 	}
 
-	push() {
+	push(e) {
+		e.preventDefault();
+
 		if (this.props.hookPush) {
 			this.props.hookPush();
 		}
@@ -37,7 +39,9 @@ class Btn extends React.Component {
 		});
 	}
 
-	release() {
+	release(e) {
+		e.preventDefault();
+
 		if (this.props.hookRelease) {
 			this.props.hookRelease();
 		}
@@ -49,7 +53,7 @@ class Btn extends React.Component {
 
 	render() {
 		return (
-			<svg xmlns="http://www.w3.org/1999/xhtml" version="1.1" className={"btn" + (this.state.down ? "" : " raised")} width={this.props.wd} height={this.props.ht} onMouseDown={this.push} onMouseUp={this.release} onMouseLeave={this.release}>
+			<svg xmlns="http://www.w3.org/1999/xhtml" version="1.1" className={"btn" + (this.state.down ? "" : " raised")} width={this.props.wd} height={this.props.ht} onMouseDown={(e) => this.push(e)} onMouseUp={(e) => this.release(e)} onMouseLeave={this.release}>
 				<rect width={this.props.wd} height={this.props.ht} />
 				<g transform={`translate(${margin * 2} ${margin * 2})`}>
 					{this.props.name}
