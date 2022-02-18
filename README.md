@@ -4,7 +4,7 @@ Offers a basic wrapper around the Web Audio API and its built-in utilities.
 
 <img src="fm.png" height="600" />
 <img src="spectrum.png" height="600" />
-<img src="sample.png" height="600" />
+<img src="launch.png" height="600" />
 
 # Startup
 - `npm start`
