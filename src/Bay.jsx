@@ -103,6 +103,8 @@ class Bay extends React.Component {
 	}
 
 	drag(e) {
+		e.preventDefault();
+
 		if (this.state.active) {
 			this.setState({
 				curr: [
