@@ -20,6 +20,8 @@ class Pan extends Effect {
 			<Effect name={this.props.name} param={[
 				{
 					name: "Rate",
+					min: 0.1,
+					max: 10.0,
 					point: this.node.main.pan,
 					hook: (val) => {
 						this.node.lfo.frequency.value = val;
