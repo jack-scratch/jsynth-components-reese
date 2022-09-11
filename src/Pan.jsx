@@ -17,6 +17,11 @@ class Pan extends Effect {
 						this.node.main.pan.value = val;
 					}
 				}
+			]} port={[
+			{
+				type: "out",
+				point: this.node.main
+			}
 			]} c={this.props.c} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} marked={this.props.makred} />
 		);
 	}
