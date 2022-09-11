@@ -4,7 +4,15 @@ class Pan extends Effect {
 	constructor(props) {
 		super(props);
 
+		this.node.lfo = window.ctx.createOscillator();
+		this.node.lfo.type = 'sine';
+		this.node.lfo.frequency.value = 3.0;
+
 		this.node.main = window.ctx.createStereoPanner();
+
+		this.node.lfo.connect(this.node.main.pan);
+
+		this.node.lfo.start();
 	}
 
 	render() {
@@ -14,7 +22,7 @@ class Pan extends Effect {
 					name: "Rate",
 					point: this.node.main.pan,
 					hook: (val) => {
-						this.node.main.pan.value = val;
+						this.node.lfo.frequency.value = val;
 					}
 				}
 			]} port={[
