@@ -1,6 +1,6 @@
 import React from "react";
 import Knob from "./Knob";
-import Text from "./Text";
+import TextDisp from "./TextDisp";
 
 class Disp extends React.Component {
 	constructor(props) {
@@ -26,7 +26,7 @@ class Disp extends React.Component {
 					<h1>Display</h1>
 				</div>
 				<div className="body">
-					<Text buff={[
+					<TextDisp buff={[
 						this.state.val
 					]} wd={8} ln={1} />
 				</div>

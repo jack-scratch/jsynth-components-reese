@@ -1,6 +1,6 @@
 import Osc from "./Osc";
 import Source from "./Source";
-import Text from "./Text";
+import TextDisp from "./TextDisp";
 import {
 	Btn
 } from "./Btn";
@@ -88,7 +88,7 @@ class Op extends Osc {
 				}
 			]} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown}>
 				<div className="head">
-					<Text buff={[
+					<TextDisp buff={[
 						this.type[this.state.l]
 					]} wd={10} ln={1} />
 				</div>

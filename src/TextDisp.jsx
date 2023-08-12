@@ -1,8 +1,8 @@
 import React from "react";
 
-import "./Text.css";
+import "./TextDisp.css";
 
-class Text extends React.Component {
+class TextDisp extends React.Component {
 	render() {
 		return (
 			<div className="buff" style={{
@@ -14,10 +14,10 @@ class Text extends React.Component {
 	}
 }
 
-Text.defaultProps = {
+TextDisp.defaultProps = {
 	wd: 20,
 	ln: 4,
 	l: 0
 };
 
-export default Text;
+export default TextDisp;

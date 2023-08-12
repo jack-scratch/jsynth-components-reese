@@ -1,5 +1,5 @@
 import React from "react";
-import Text from "./Text";
+import TextDisp from "./TextDisp";
 import Impulse from "./Impulse";
 import {
 	Btn
@@ -62,7 +62,7 @@ class Sample extends React.Component {
 					flexDirection: "row"
 				}}>
 					<div className="body">
-						<Text buff={this.buff} ht={1} />
+						<TextDisp buff={this.buff} ht={1} />
 					</div>
 					<div className="body group">
 						<Btn name={<FontAwesomeIcon icon={faSortUp} />} wd={40} ht={26} call={this.dec} />
