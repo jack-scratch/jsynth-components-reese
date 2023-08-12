@@ -38,6 +38,12 @@ hr {
 	border: none;
 }
 
+textarea {
+	background: map-get($light, "active");
+	color: map-get($light, "inert");
+	border: 0;
+}
+
 #app {
 	> * {
 		float: left;
