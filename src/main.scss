@@ -43,6 +43,10 @@ textarea {
 	color: map-get($light, "inert");
 	border: 0;
 	resize: none;
+
+	&:focus {
+		outline: none;
+	}
 }
 
 #app {
