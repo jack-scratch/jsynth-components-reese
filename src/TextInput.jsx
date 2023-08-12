@@ -7,7 +7,7 @@ class TextInput extends React.Component {
 
 	render() {
 		return (
-			<textarea cols={this.props.wd} rows={this.props.ln}></textarea>
+			<textarea cols={this.props.wd} rows={this.props.ln} spellCheck="false"></textarea>
 		);
 	}
 }
