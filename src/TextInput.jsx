@@ -13,7 +13,7 @@ class TextInput extends React.Component {
 }
 
 TextInput.defaultProps = {
-	wd: 20,
+	wd: 30,
 	ln: 4
 };
 
