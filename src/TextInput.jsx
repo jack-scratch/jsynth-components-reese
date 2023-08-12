@@ -7,9 +7,14 @@ class TextInput extends React.Component {
 
 	render() {
 		return (
-			<textarea resize="none"></textarea>
+			<textarea cols={this.props.wd} rows={this.props.ln}></textarea>
 		);
 	}
 }
+
+Text.defaultProps = {
+	wd: 20,
+	ln: 4
+};
 
 export default TextInput;
