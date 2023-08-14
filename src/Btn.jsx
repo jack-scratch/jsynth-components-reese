@@ -68,6 +68,14 @@ Btn.defaultProps = {
 	ht: 50
 };
 
+class XS extends Btn {
+	render() {
+		return (
+			<Btn wd={32} ht={32} />
+		);
+	}
+}
+
 class S extends Btn {
 	render() {
 		return (
@@ -102,6 +110,7 @@ class Toggle extends Btn {
 
 export {
 	Btn,
+	XS,
 	S,
 	M,
 	L,
