@@ -19,7 +19,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-		"sass-dev": "sass --watch src"
+		"sass-dev": "sass --watch src",
+		"sass-prod": "sass --update src"
   },
   "eslintConfig": {
     "extends": [
