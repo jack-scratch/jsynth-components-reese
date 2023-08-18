@@ -65,12 +65,12 @@ class Sample extends React.Component {
 						<TextDisp buff={this.buff} ht={1} />
 					</div>
 					<div className="body group">
-						<Btn name={<FontAwesomeIcon icon={faSortUp} />} wd={40} ht={26} call={this.dec} />
-						<Btn name={<FontAwesomeIcon icon={faSortDown} />} wd={40} ht={26} call={this.inc} />
+						<Btn label={<FontAwesomeIcon icon={faSortUp} />} wd={40} ht={26} call={this.dec} />
+						<Btn label={<FontAwesomeIcon icon={faSortDown} />} wd={40} ht={26} call={this.inc} />
 					</div>
 				</div>
 				<div className="body">
-					<Impulse name={<FontAwesomeIcon icon={faPlay}/> } />
+					<Impulse label={<FontAwesomeIcon icon={faPlay}/> } />
 				</div>
 			</div>
 		);

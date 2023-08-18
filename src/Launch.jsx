@@ -74,7 +74,7 @@ class Launch extends React.Component {
 						<tbody>
 							{[...Array(this.props.y).keys()].map((j) => <tr key={`"row-${j}"`}>
 								{[...Array(this.props.x).keys()].map((i) => <td key={`btn-${i}`}>
-									<Btn wd={80} ht={80} name={<text>{1 + ((j * this.props.y) + i)}</text>} hookPush={() => this.play((j * this.props.x) + i)} />
+									<Btn wd={80} ht={80} label={<text>{1 + ((j * this.props.y) + i)}</text>} hookPush={() => this.play((j * this.props.x) + i)} />
 								</td>)}
 							</tr>)}
 						</tbody>

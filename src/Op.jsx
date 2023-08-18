@@ -93,8 +93,8 @@ class Op extends Osc {
 					]} wd={10} ln={1} />
 				</div>
 				<div className="body">
-					<Btn ht={26} name={<FontAwesomeIcon icon={faSortUp} />} hookPush={this.inc} />
-					<Btn ht={26} name={<FontAwesomeIcon icon={faSortDown} />} hookPush={this.dec} />
+					<Btn ht={26} label={<FontAwesomeIcon icon={faSortUp} />} hookPush={this.inc} />
+					<Btn ht={26} label={<FontAwesomeIcon icon={faSortDown} />} hookPush={this.dec} />
 				</div>
 			</Source>
 		);

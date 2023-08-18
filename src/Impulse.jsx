@@ -42,7 +42,7 @@ class Impulse extends React.Component {
 		return (
 			<div className="sys" onClick={this.play}>
 				<div className="body">
-					<Btn buff={this.state.buff} name={this.props.name} />
+					<Btn buff={this.state.buff} label={this.props.label} />
 				</div>
 			</div>
 		);

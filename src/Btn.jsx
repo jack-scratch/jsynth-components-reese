@@ -56,7 +56,7 @@ class Btn extends React.Component {
 			<svg xmlns="http://www.w3.org/1999/xhtml" version="1.1" className={`btn${this.state.down ? "" : " raised"}`} width={this.props.wd} height={this.props.ht} onMouseDown={(e) => this.push(e)} onMouseUp={(e) => this.release(e)} onMouseLeave={this.release}>
 				<rect width={this.props.wd} height={this.props.ht} />
 				<g transform={`translate(${margin * 2} ${margin * 2})`}>
-					{this.props.name}
+					{this.props.label}
 				</g>
 			</svg>
 		);
@@ -103,7 +103,7 @@ class L extends Btn {
 class Toggle extends Btn {
 	render() {
 		return (
-			<Btn name={<FontAwesomeIcon icon={faStop} /> / <FontAwesomeIcon icon={faPlay} />} />
+			<Btn label={<FontAwesomeIcon icon={faStop} /> / <FontAwesomeIcon icon={faPlay} />} />
 		);
 	}
 }
