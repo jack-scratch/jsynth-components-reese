@@ -1,6 +1,6 @@
 import Osc from "./Osc";
 import Source from "./Source";
-import TextDisp from "./TextDisp";
+import TextDisp from "./periph/TextDisp";
 import {
 	Btn
 } from "./Btn";

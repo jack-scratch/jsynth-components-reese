@@ -2,7 +2,7 @@ import React from "react";
 import {
 	Btn
 } from "./Btn";
-import Light from "./Light";
+import Light from "./periph/Light";
 
 import "./Launch.css";
 

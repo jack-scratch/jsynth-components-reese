@@ -1,5 +1,5 @@
 import React from "react";
-import TextDisp from "./TextDisp";
+import TextDisp from "./periph/TextDisp";
 import Impulse from "./Impulse";
 import {
 	Btn

@@ -1,5 +1,5 @@
 import React from "react";
-import LCD from "./LCD";
+import LCD from "./periph/LCD";
 import {
 	bg,
 	light
