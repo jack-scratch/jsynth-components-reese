@@ -3,8 +3,8 @@ import {
 	In,
 	Out
 } from "./Port";
-import Label from "./Label";
-import Knob from "./Knob";
+import Label from "../Label";
+import Knob from "../Knob";
 
 import "./Module.css";
 

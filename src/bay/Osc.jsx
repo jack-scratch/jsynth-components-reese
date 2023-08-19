@@ -2,7 +2,7 @@ import React from "react";
 import Source from "./Source";
 import {
 	unit
-} from "./fmt";
+} from "../fmt";
 
 class Osc extends Source {
 	constructor(props) {

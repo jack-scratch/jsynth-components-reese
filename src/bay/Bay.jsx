@@ -1,5 +1,5 @@
 import React from "react";
-import Cable from "./Cable";
+import Cable from "../Cable";
 
 import "./Bay.css";
 
@@ -31,14 +31,14 @@ class Bay extends React.Component {
 	}
 
 	setOut(refer, node, i) {
-		this.state.patch[i].output = node;
-		this.state.patch[i].outRefer = refer;
+		this.state.patch[i].output.push(node);
+		this.state.patch[i].outRefer.push(refer);
 	}
 
 	unsetOut(i) {
 		if (i) {
-			this.state.patch[i].output = null;
-			this.state.patch[i].outRefer = null;
+			this.state.patch[i].output.splice(i, null);
+			this.state.patch[i].outRefer.splice(i, null);
 		}
 	}
 

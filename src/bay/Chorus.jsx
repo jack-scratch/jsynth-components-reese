@@ -1,7 +1,7 @@
 import Module from "./Module";
 import {
 	unit
-} from "./fmt";
+} from "../fmt";
 
 class Chorus extends Module {
 	constructor(props) {

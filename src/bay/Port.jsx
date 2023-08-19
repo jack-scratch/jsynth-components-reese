@@ -1,5 +1,5 @@
 import React from "react";
-import Nut from "./Nut";
+import Nut from "../Nut";
 
 class Port extends React.Component {
 	constructor(props) {

@@ -1,9 +1,9 @@
 import Osc from "./Osc";
 import Source from "./Source";
-import TextDisp from "./periph/TextDisp";
+import TextDisp from "../periph/TextDisp";
 import {
 	Btn
-} from "./Btn";
+} from "../Btn";
 import {
 	FontAwesomeIcon
 } from "@fortawesome/react-fontawesome";
