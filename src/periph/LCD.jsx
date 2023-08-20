@@ -1,7 +1,7 @@
 import React from "react";
 import {
 	light
-} from "./col";
+} from "../col";
 
 class LCD extends React.Component {
 	constructor(props) {
