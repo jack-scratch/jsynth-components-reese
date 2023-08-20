@@ -1,5 +1,5 @@
 import React from "react";
-import Knob from "./Knob";
+import Knob from "../Knob";
 import TextDisp from "./TextDisp";
 
 class Disp extends React.Component {
