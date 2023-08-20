@@ -2,7 +2,7 @@ import React from "react";
 import {
 	In,
 	Out
-} from "./Port";
+} from "../Port";
 import Label from "../Label";
 import Knob from "../Knob";
 
