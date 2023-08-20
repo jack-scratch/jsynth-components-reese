@@ -4,6 +4,8 @@ import {
 } from "../col";
 
 class LCD extends React.Component {
+	ctx;
+
 	constructor(props) {
 		super(props);
 
@@ -26,6 +28,8 @@ class LCD extends React.Component {
 	}
 
 	render() {
+		this.clear();
+
 		return (
 			<canvas ref={this.refer} />
 		);
