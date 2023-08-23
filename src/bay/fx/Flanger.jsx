@@ -3,12 +3,6 @@ import Effect from "./Effect";
 class Flanger extends Effect {
 	constructor(props) {
 		super(props);
-
-		this.node.main = window.ctx.createOscillator();
-	}
-
-	componentDidMount() {
-		this.node.main.start();
 	}
 
 	render() {
