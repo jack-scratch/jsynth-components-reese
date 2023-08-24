@@ -88,11 +88,15 @@ class Sampler extends React.Component {
 					flexDirection: "row"
 				}}>
 					<div className="body">
-						<TextDisp buff={this.buff} ln={1} />
+						<TextDisp buff={[this.buff[this.state.l]]} ln={1} />
 					</div>
 					<div className="body group">
-						<Btn label={<FontAwesomeIcon icon={faSortUp} />} wd={40} ht={26} />
-						<Btn label={<FontAwesomeIcon icon={faSortDown} />} wd={40} ht={26} />
+						<Btn label={<FontAwesomeIcon icon={faSortUp} />} wd={40} ht={26} hookPush={() => this.setState((prevState) => ({
+							l: Math.min(prevState.l + 1, this.buff.length - 1)
+						}))} />
+						<Btn label={<FontAwesomeIcon icon={faSortDown} />} wd={40} ht={26} hookPush={() => this.setState((prevState) => ({
+							l: Math.max(prevState.l - 1, 0)
+						}))}/>
 					</div>
 				</div>
 				<div className="body">
