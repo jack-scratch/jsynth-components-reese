@@ -23,21 +23,21 @@ class Sampler extends React.Component {
 		48000
 	];
 
+	buff = [
+		"Bamboo",
+		"Bass-Drum-1",
+		"Bass-Drum-2",
+		"Bass-Drum-3",
+		"Boom-Kick",
+		"Bottle",
+		"Clap-1",
+		"Clap-2",
+		"Clap-3",
+		"Claves"
+	];
+
 	constructor(props) {
 		super();
-
-		this.buff = [
-			"Bamboo",
-			"Bass-Drum-1",
-			"Bass-Drum-2",
-			"Bass-Drum-3",
-			"Boom-Kick",
-			"Bottle",
-			"Clap-1",
-			"Clap-2",
-			"Clap-3",
-			"Claves"
-		];
 
 		this.state = {
 			l: 0,
