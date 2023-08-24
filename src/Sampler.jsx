@@ -14,6 +14,15 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 class Sampler extends React.Component {
+	sampRate = [
+		8000,
+		11025,
+		16000,
+		22050,
+		44100,
+		48000
+	];
+
 	constructor(props) {
 		super();
 
@@ -31,7 +40,8 @@ class Sampler extends React.Component {
 		];
 
 		this.state = {
-			l: 0
+			l: 0,
+			fid: 5
 		};
 
 		this.inc = this.inc.bind(this);
@@ -59,6 +69,19 @@ class Sampler extends React.Component {
 			<div className="cont body">
 				<div className="head">
 					<h1>Sampler</h1>
+				</div>
+				<div className="body">
+					<div className="body">
+						<TextDisp buff={[this.sampRate[this.state.fid]]} ln={1} wd={10} />
+					</div>
+					<div className="body">
+						<Btn label={<FontAwesomeIcon icon={faSortUp} />} wd={40} ht={26} hookPush={() => this.setState((prevState) => ({
+							fid: Math.min(prevState.fid + 1, 5)
+						}))} />
+						<Btn label={<FontAwesomeIcon icon={faSortDown} />} wd={40} ht={26} hookPush={() => this.setState((prevState) => ({
+							fid: Math.max(prevState.fid - 1, 0)
+						}))} />
+					</div>
 				</div>
 				<div className="body" style={{
 					display: "flex",
