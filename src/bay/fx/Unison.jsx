@@ -8,6 +8,14 @@ class Unison extends Effect {
 		return (
 			<Effect name="Unison" param={[
 				{
+					name: "Copies",
+					min: 1,
+					max: 8,
+					point: this.node.main.cp,
+					hook: (val) => {
+						this.node.main.cp.value = val;
+					}
+				}, {
 					name: "Spread",
 					min: this.props.rng["gain"][0],
 					max: this.props.rng["gain"][1],
