@@ -81,7 +81,7 @@ class Sampler extends React.Component {
 					</div>
 				</div>
 				<div className="body">
-					<Impulse label={<FontAwesomeIcon icon={faPlay} />} />
+					<Impulse label={<FontAwesomeIcon icon={faPlay} />} fName={this.buff[this.state.l]} />
 				</div>
 			</div>
 		);
