@@ -1,4 +1,7 @@
 import Effect from "./Effect";
+import {
+	unit
+} from "./fmt";
 
 class Flanger extends Effect {
 	constructor(props) {
@@ -25,7 +28,7 @@ class Flanger extends Effect {
 					type: "out",
 					point: this.node.main
 				}
-			]} c={this.props.c} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} marked />
+			]} c={this.props.c} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} marked unit={unit["time"][0]} />
 		);
 	}
 }
