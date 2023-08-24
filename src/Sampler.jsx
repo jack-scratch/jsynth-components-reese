@@ -43,25 +43,6 @@ class Sampler extends React.Component {
 			l: 0,
 			fid: 5
 		};
-
-		this.inc = this.inc.bind(this);
-		this.dec = this.dec.bind(this);
-	}
-
-	inc() {
-		if (this.state.l < this.buff.length) {
-			this.setState((prevState) => ({
-				l: prevState.l + 1
-			}));
-		}
-	}
-
-	dec() {
-		if (this.state.l > 0) {
-			this.setState((prevState) => ({
-				l: prevState.l - 1
-			}));
-		}
 	}
 
 	render() {
