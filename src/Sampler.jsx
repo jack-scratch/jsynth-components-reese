@@ -36,7 +36,7 @@ class Sampler extends React.Component {
 		"Claves"
 	];
 
-	constructor(props) {
+	constructor() {
 		super();
 
 		this.state = {
