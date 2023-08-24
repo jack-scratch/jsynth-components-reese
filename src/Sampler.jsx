@@ -13,7 +13,7 @@ import {
 	faSortDown
 } from "@fortawesome/free-solid-svg-icons";
 
-class Sample extends React.Component {
+class Sampler extends React.Component {
 	constructor(props) {
 		super();
 
@@ -77,4 +77,4 @@ class Sample extends React.Component {
 	}
 }
 
-export default Sample;
+export default Sampler;
