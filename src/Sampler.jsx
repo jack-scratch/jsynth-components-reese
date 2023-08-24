@@ -100,7 +100,7 @@ class Sampler extends React.Component {
 					</div>
 				</div>
 				<div className="body">
-					<Impulse label={<FontAwesomeIcon icon={faPlay}/> } />
+					<Impulse label={<FontAwesomeIcon icon={faPlay} />} />
 				</div>
 			</div>
 		);
