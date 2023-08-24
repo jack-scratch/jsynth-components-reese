@@ -15,6 +15,7 @@ class Flanger extends Effect {
 					name: "Delay",
 					min: 1.0,
 					max: 50.0,
+					unit: unit["time"][0],
 					point: this.node.main.frequency,
 					hook: (val) => {
 						this.node.main.frequency = val;
@@ -28,7 +29,7 @@ class Flanger extends Effect {
 					type: "out",
 					point: this.node.main
 				}
-			]} c={this.props.c} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} marked unit={unit["time"][0]} />
+			]} c={this.props.c} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} marked />
 		);
 	}
 }
