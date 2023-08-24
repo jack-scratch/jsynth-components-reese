@@ -37,8 +37,8 @@ class Bay extends React.Component {
 
 	unsetOut(i) {
 		if (i) {
-			this.state.patch[i].output.splice(i, null);
-			this.state.patch[i].outRefer.splice(i, null);
+			this.state.patch[i].output.splice(i, []);
+			this.state.patch[i].outRefer.splice(i, []);
 		}
 	}
 
@@ -52,9 +52,9 @@ class Bay extends React.Component {
 				...prevState.patch,
 				{
 					input: node,
-					output: null,
+					output: [],
 					inRefer: refer,
-					outRefer: null
+					outRefer: []
 				}
 			],
 			active: true
@@ -92,8 +92,8 @@ class Bay extends React.Component {
 	}
 
 	detachCable(e, refer, node, i) {
-		this.state.patch[i].output = null;
-		this.state.patch[i].outRefer = null;
+		this.state.patch[i].output = [];
+		this.state.patch[i].outRefer = [];
 
 		this.state.patch[i].input.disconnect();
 
