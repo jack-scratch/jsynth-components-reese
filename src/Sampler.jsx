@@ -56,7 +56,10 @@ class Sampler extends React.Component {
 
 	render() {
 		return (
-			<div className="cont">
+			<div className="cont body">
+				<div className="head">
+					<h1>Sampler</h1>
+				</div>
 				<div className="body" style={{
 					display: "flex",
 					flexDirection: "row"
