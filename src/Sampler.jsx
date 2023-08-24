@@ -68,8 +68,8 @@ class Sampler extends React.Component {
 						<TextDisp buff={this.buff} ln={1} />
 					</div>
 					<div className="body group">
-						<Btn label={<FontAwesomeIcon icon={faSortUp} />} wd={40} ht={26} call={this.dec} />
-						<Btn label={<FontAwesomeIcon icon={faSortDown} />} wd={40} ht={26} call={this.inc} />
+						<Btn label={<FontAwesomeIcon icon={faSortUp} />} wd={40} ht={26} />
+						<Btn label={<FontAwesomeIcon icon={faSortDown} />} wd={40} ht={26} />
 					</div>
 				</div>
 				<div className="body">
