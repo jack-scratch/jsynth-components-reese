@@ -53,7 +53,7 @@ class Synth extends React.Component {
 			this.fx[i].type = this.infoFx[i].type;
 		}
 
-		// patch
+		// Patch
 		for (let i = 0; i < this.bank.length; i++) {
 			this.lfoGain.connect(this.bank[i].frequency);
 		}
@@ -68,7 +68,7 @@ class Synth extends React.Component {
 			this.fx[i].connect(window.ctx.destination);
 		}
 
-		// start
+		// Start
 		for (let i = 0; i < this.bank.length; i++) {
 			this.bank[i].start();
 		}
