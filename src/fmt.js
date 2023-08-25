@@ -6,6 +6,10 @@ const unit = {
 		"ms",
 		"s"
 	],
+	"v": {
+		"pos": "+",
+		"neg": "-"
+	},
 	"sign": {
 		"sharp": "&#9839",
 		"flat": "&#9837"
