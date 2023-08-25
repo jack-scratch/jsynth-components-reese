@@ -9,7 +9,7 @@ class TextDisp extends React.Component {
 				width: `${this.props.wd}ch`,
 				height: `${this.props.ln * 2}ch`,
 				overflow: "hidden"
-			}}>{this.props.buff && this.props.buff.map((el, i) => <div className="line" key={i}>{el}</div>)}</div>
+			}}>{this.props.buff && typeof(this.props.buff) == "object" ? this.props.buff.map((el, i) => <div className="line" key={i}>{el}</div>) : <div className="line">{this.props.buff}</div>}</div>
 		);
 	}
 }
