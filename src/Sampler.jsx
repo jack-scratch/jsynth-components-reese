@@ -42,11 +42,22 @@ class Sampler extends React.Component {
 		req.open("GET", `./snd/${this.buff[this.state.l]}.wav`, true);
 
 		req.onload = () => {
-			let data = req.response;
+			let res = req.response;
 
-			window.ctx.decodeAudioData(data, (buff) => {
+			window.ctx.decodeAudioData(res, (buff) => {
+				let data = buff.getChannelData(0);
+
+				let buffSrc = window.ctx.createBuffer(1, data.length, this.sampRate[this.state.fid]);
+
+				let ref = buffSrc.getChannelData(0);
+				for (let i = 0; i < data.length; i += Math.pow(2, 3)) {
+					for (let h = 0; h < 8; h++) {
+						ref[i + h] = data[i];
+					}
+				}
+
 				let src = window.ctx.createBufferSource();
-				src.buffer = buff;
+				src.buffer = buffSrc;
 
 				// Patch
 				src.connect(window.ctx.destination);
