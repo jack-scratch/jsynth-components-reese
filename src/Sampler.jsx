@@ -1,6 +1,5 @@
 import React from "react";
 import TextDisp from "./periph/TextDisp";
-import Impulse from "./Impulse";
 import {
 	Btn
 } from "./Btn";
@@ -36,6 +35,30 @@ class Sampler extends React.Component {
 		"Claves"
 	];
 
+	play() {
+		let req = new XMLHttpRequest();
+		req.responseType = "arraybuffer";
+
+		req.open("GET", `./snd/${this.buff[this.state.l]}.wav`, true);
+
+		req.onload = () => {
+			let data = req.response;
+
+			window.ctx.decodeAudioData(data, (buff) => {
+				let src = window.ctx.createBufferSource();
+				src.buffer = buff;
+
+				// Patch
+				src.connect(window.ctx.destination);
+
+				// Start
+				src.start();
+			});
+		}
+
+		req.send();
+	}
+
 	constructor() {
 		super();
 
@@ -43,6 +66,8 @@ class Sampler extends React.Component {
 			l: 0,
 			fid: 5
 		};
+
+		this.play = this.play.bind(this);
 	}
 
 	render() {
@@ -81,7 +106,7 @@ class Sampler extends React.Component {
 					</div>
 				</div>
 				<div className="body">
-					<Impulse label={<FontAwesomeIcon icon={faPlay} />} fName={this.buff[this.state.l]} />
+					<Btn label={<FontAwesomeIcon icon={faPlay} />} fName={this.buff[this.state.l]} hookPush={this.play} />
 				</div>
 			</div>
 		);
