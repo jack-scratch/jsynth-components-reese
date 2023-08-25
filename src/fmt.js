@@ -13,7 +13,7 @@ const unit = {
 	"sign": {
 		"sharp": "&#9839",
 		"flat": "&#9837"
-	},
+	}
 };
 
 const chord = [ 
