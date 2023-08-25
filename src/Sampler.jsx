@@ -11,6 +11,9 @@ import {
 	faSortUp,
 	faSortDown
 } from "@fortawesome/free-solid-svg-icons";
+import {
+	clamp
+} from "./util";
 
 class Sampler extends React.Component {
 	sampRate = [
@@ -93,10 +96,10 @@ class Sampler extends React.Component {
 					</div>
 					<div className="body">
 						<Btn label={<FontAwesomeIcon icon={faSortUp} />} wd={40} ht={26} hookPush={() => this.setState((prevState) => ({
-							fid: Math.min(prevState.fid + 1, 5)
+							fid: clamp(prevState.fid + 1, 0, 5)
 						}))} />
 						<Btn label={<FontAwesomeIcon icon={faSortDown} />} wd={40} ht={26} hookPush={() => this.setState((prevState) => ({
-							fid: Math.max(prevState.fid - 1, 0)
+							fid: clamp(prevState.fid - 1, 0, 5)
 						}))} />
 					</div>
 				</div>
@@ -109,10 +112,10 @@ class Sampler extends React.Component {
 					</div>
 					<div className="body group">
 						<Btn label={<FontAwesomeIcon icon={faSortUp} />} wd={40} ht={26} hookPush={() => this.setState((prevState) => ({
-							l: Math.min(prevState.l + 1, this.buff.length - 1)
+							l: clamp(prevState.l + 1, 0, this.buff.length - 1)
 						}))} />
 						<Btn label={<FontAwesomeIcon icon={faSortDown} />} wd={40} ht={26} hookPush={() => this.setState((prevState) => ({
-							l: Math.max(prevState.l - 1, 0)
+							l: clamp(prevState.l - 1, 0, this.buff.length - 1)
 						}))}/>
 					</div>
 				</div>
