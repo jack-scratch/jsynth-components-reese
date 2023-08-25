@@ -96,10 +96,10 @@ class Sampler extends React.Component {
 					</div>
 					<div className="body">
 						<Btn label={<FontAwesomeIcon icon={faSortUp} />} wd={40} ht={26} hookPush={() => this.setState((prevState) => ({
-							fid: clamp(prevState.fid + 1, 0, 5)
+							fid: clamp(prevState.fid + 1, 0, this.sampRate.length - 1)
 						}))} />
 						<Btn label={<FontAwesomeIcon icon={faSortDown} />} wd={40} ht={26} hookPush={() => this.setState((prevState) => ({
-							fid: clamp(prevState.fid - 1, 0, 5)
+							fid: clamp(prevState.fid - 1, 0, this.sampRate.length - 1)
 						}))} />
 					</div>
 				</div>
