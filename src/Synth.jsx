@@ -68,7 +68,7 @@ class Synth extends React.Component {
 			this.fx[i].connect(window.ctx.destination);
 		}
 
-		// Start
+		// Schedule
 		for (let i = 0; i < this.bank.length; i++) {
 			this.bank[i].start();
 		}

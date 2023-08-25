@@ -26,7 +26,7 @@ class Quant extends React.Component {
 
 		let serial = "";
 
-		// Start
+		// Schedule
 		serial += `M ${Math.cos(this.sheerFac) * this.props.rad}${sep}${Math.sin(this.sheerFac) * this.props.rad}`;
 		serial += ws;
 

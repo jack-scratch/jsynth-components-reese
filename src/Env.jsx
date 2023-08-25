@@ -96,7 +96,7 @@ class Env extends React.Component {
 						this.src.connect(this.filter);
 						this.filter.connect(window.ctx.destination);
 
-						// Start
+						// Schedule
 						this.src.start();
 
 						this.filter.frequency.linearRampToValueAtTime(this.init["filter"]["hz"], window.ctx.currentTime + this.state.atk);

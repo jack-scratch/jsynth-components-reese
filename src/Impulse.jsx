@@ -30,7 +30,7 @@ class Impulse extends React.Component {
 				// Patch
 				src.connect(window.ctx.destination);
 
-				// Start
+				// Schedule
 				src.start();
 			});
 		}

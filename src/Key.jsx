@@ -26,7 +26,7 @@ class Key extends React.Component {
 		this.node.type = 'sine';
 		this.node.frequency.value = trans(a, this.props.i * (1 / (oct - 1)));
 
-		// Start
+		// Schedule
 		this.node.start();
 
 		this.setState({
