@@ -53,10 +53,8 @@ class Sampler extends React.Component {
 				let buffSrc = window.ctx.createBuffer(1, data.length, this.sampRate[this.state.fid]);
 
 				let ref = buffSrc.getChannelData(0);
-				for (let i = 0; i < data.length; i += Math.pow(2, 3)) {
-					for (let h = 0; h < 8; h++) {
-						ref[i + h] = data[i];
-					}
+				for (let i = 0; i < data.length; i++) {
+					ref[i] = data[i];
 				}
 
 				let src = window.ctx.createBufferSource();
