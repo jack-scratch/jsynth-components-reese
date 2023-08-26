@@ -50,11 +50,13 @@ class Sampler extends React.Component {
 			window.ctx.decodeAudioData(res, (buff) => {
 				let data = buff.getChannelData(0);
 
-				let buffSrc = window.ctx.createBuffer(1, data.length, this.sampRate[this.state.fid]);
+				let buffSrc = window.ctx.createBuffer(1, data.length, this.sampRate[this.state.fid] * buff.numberOfChannels);
 
 				let ref = buffSrc.getChannelData(0);
-				for (let i = 0; i < data.length; i++) {
-					ref[i] = data[i];
+				for (let i = 0; i < data.length; i += 2) {
+					for (let c = 0; c < 2; c++) {
+						ref[i + c] = data[i + c];
+					}
 				}
 
 				let src = window.ctx.createBufferSource();
