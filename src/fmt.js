@@ -10,6 +10,10 @@ const unit = {
 		"pos": "+",
 		"neg": "-"
 	},
+	"chan": [
+		"L",
+		"R"
+	],
 	"sign": {
 		"sharp": "&#9839",
 		"flat": "&#9837"
