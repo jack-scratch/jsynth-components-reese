@@ -21,9 +21,9 @@ const unit = {
 };
 
 const chord = [ 
-	"Maj",
-	"Min",
-	"Dim"
+	" Maj",
+	" Min",
+	" Dim"
 ];
 
 export {
