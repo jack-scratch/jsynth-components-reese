@@ -22,7 +22,6 @@ class Bell extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this.excite = null;
 		this.filter = window.ctx.createBiquadFilter();
 
 		this.decay = 1.0;
@@ -31,27 +30,27 @@ class Bell extends React.Component {
 	}
 
 	hit() {
-		this.obj = window.ctx.createOscillator();
-		this.obj.type = "sine";
-		this.obj.frequency.value = 1200.0;
+		let obj = window.ctx.createOscillator();
+		obj.type = "sine";
+		obj.frequency.value = 1200.0;
 
-		this.excite = window.ctx.createOscillator();
-		this.excite.type = "triangle";
-		this.excite.frequency.value = 1000.0;
+		let excite = window.ctx.createOscillator();
+		excite.type = "triangle";
+		excite.frequency.value = 1000.0;
 
 		this.filter.frequency.value = 800.0;
 
 		this.filter.frequency.exponentialRampToValueAtTime(1.0, window.ctx.currentTime + this.decay);
 
 		// Route
-		this.excite.connect(this.obj.frequency);
-		this.obj.connect(this.filter);
+		excite.connect(obj.frequency);
+		obj.connect(this.filter);
 		this.filter.connect(window.ctx.destination);
 
 		// Schedule
-		this.obj.start();
+		obj.start();
 
-		this.obj.stop(window.ctx.currentTime + this.decay);
+		obj.stop(window.ctx.currentTime + this.decay);
 	}
 
 	render() {
