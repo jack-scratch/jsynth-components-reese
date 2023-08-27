@@ -6,19 +6,21 @@ const unit = {
 		"ms",
 		"s"
 	],
-	"v": {
-		"pos": "+",
-		"neg": "-"
-	},
-	"chan": [
-		"L",
-		"R"
-	],
 	"sign": {
 		"sharp": "&#9839",
 		"flat": "&#9837"
 	}
 };
+
+const v = {
+	"pos": "+",
+	"neg": "-"
+};
+
+const chan = [
+	"L",
+	"R"
+];
 
 const chord = [ 
 	" Maj",
@@ -28,5 +30,7 @@ const chord = [
 
 export {
 	unit,
+	v,
+	chan,
 	chord
 };
