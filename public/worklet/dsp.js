@@ -136,3 +136,33 @@ class SnH extends AudioWorkletProcessor {
 		return true;
 	}
 }
+
+class Clip extends AudioWorkletProcessor {
+	static get parameterDescriptors() {
+		return [{
+			name: "Threshold",
+			defaultValue: 0,
+			minValue: 0,
+			maxValue: 1
+		}];
+	}
+
+	constructor() {
+		super();
+
+		this.thresh = 0;
+	}
+
+	process(input, output, param) {
+		let input = inputs[0];
+		let output = outputs[0];
+
+		for (let c = 0; c < 1; c++) {
+			for (let i = 0; i < input[c].length; i++) {
+				output[c][i] = Math.min(input[c][i], this.param["Threshold"]);
+			}
+		}
+
+		return true;
+	}
+}
