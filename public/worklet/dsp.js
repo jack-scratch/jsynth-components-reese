@@ -18,8 +18,8 @@ class Sin extends AudioWorkletProcessor {
 		];
   }
 
-  process(inPut, outPut, param) {
-    outPut[0].forEach((chan) => {
+  process(input, output, param) {
+    output[0].forEach((chan) => {
       for (let i = 0; i < chan.length; i++) {
         chan[i] = Math.sin((this.i * param["Frequency"] * Math.PI) / 44100);
 
@@ -43,11 +43,11 @@ class Feedback extends AudioWorkletProcessor {
 		];
 	}
 
-	process(inPut, outPut, param) {
-		outPut[0].forEach((chan) => {
+	process(input, output, param) {
+		output[0].forEach((chan) => {
 			for (let i = 0; i < chan.length; i++) {
 				for (let f = 0; f < param["Iterations"]; f++) {
-					chan[i] = inPut[0][0][i] * inPut[0][0][i];
+					chan[i] = input[0][0][i] * input[0][0][i];
 				}
 			}
 		});
@@ -78,9 +78,9 @@ class Bitcrush extends AudioWorkletProcessor {
 		this.samp = 0;
 	}
 
-	process(inPut, outPut, param) {
-		const input = inPut[0];
-		const output = outPut[0];
+	process(input, output, param) {
+		const input = input[0];
+		const output = output[0];
 
 		const bitDepth = param["Bit Depth"];
 		const reduct = param["Reduction"];
@@ -120,11 +120,11 @@ class SnH extends AudioWorkletProcessor {
 		this.samp = 0;
 	}
 
-	process(inPut, outPut, param) {
-		outPut[0].forEach((chan) => {
+	process(input, output, param) {
+		output[0].forEach((chan) => {
 			for (let i = 0; i < chan.length; i++) {
 				if (!(this.i % 3)) {
-					this.samp = inPut[0][0][i];
+					this.samp = input[0][0][i];
 				}
 
 				chan[this.i] = this.samp;
@@ -136,8 +136,3 @@ class SnH extends AudioWorkletProcessor {
 		return true;
 	}
 }
-
-registerProcessor("Sine", Sin);
-registerProcessor("Feedback", Feedback);
-registerProcessor("Bitcrush", Bitcrush);
-registerProcessor("SnH", SnH);
