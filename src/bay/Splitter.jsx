@@ -19,10 +19,10 @@ class Splitter extends Effect {
 
 	render() {
 		return (
-			<Effect name={this.props.name} port={[...Array(this.props.n).keys().map((i) => {
+			<Effect name={this.props.name} port={[...Array(this.props.n).keys().map((i) => ({
 				type: "out",
 				point: this.node.main
-			})]} c={this.props.c} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} hookInEnter={this.props.hookInEnter} hookInLeave={this.props.hookInLeave} marked={this.props.marked} />
+			}))]} c={this.props.c} hookInDown={this.props.hookInDown} hookInUp={this.props.hookInUp} hookOutDown={this.props.hookOutDown} hookInEnter={this.props.hookInEnter} hookInLeave={this.props.hookInLeave} marked={this.props.marked} />
 		);
 	}
 }
