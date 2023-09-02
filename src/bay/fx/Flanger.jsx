@@ -6,6 +6,10 @@ import {
 class Flanger extends Effect {
 	constructor(props) {
 		super(props);
+
+		this.lfo = window.ctx.createOscillator();
+		this.lfo.type = "sine";
+		this.lfo.frequency.value = 1.0;
 	}
 
 	render() {
