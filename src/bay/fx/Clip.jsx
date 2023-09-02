@@ -9,8 +9,8 @@ class Clip extends Effect {
 			<Effect name="Clipper" param={[
 				{
 					name: "Threshold",
-					min: this.props.rng["gain"][0],
-					max: this.props.rng["gain"][1],
+					min: this.props.rng["thresh"][0],
+					max: this.props.rng["thresh"][1],
 					unit: unit["freq"],
 					point: this.node.main.gain,
 					hook: (val) => {
@@ -32,7 +32,7 @@ class Clip extends Effect {
 
 Clip.defaultProps = {
 	rng: {
-		"gain": [
+		"thresh": [
 			-12.0,
 			12.0
 		]
