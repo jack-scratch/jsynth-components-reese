@@ -21,7 +21,7 @@ Upon any kind of mouse down event within the document, the context will be resum
 Takes hooks as props and calls them on various events, passing the internal value as an argument.
 
 ### `<Btn />`
-Calls a function on push.
+Calls a function on push or release.
 
 ### `<Knob />`
 Calls a function on turning, providing a value.
