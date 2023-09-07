@@ -1,4 +1,7 @@
 import Effect from "./Effect";
+import {
+	unit
+} from "./fmt";
 
 class Pan extends Effect {
 	constructor(props) {
@@ -25,7 +28,8 @@ class Pan extends Effect {
 					point: this.node.main.pan,
 					hook: (val) => {
 						this.node.lfo.frequency.value = val;
-					}
+					},
+					unit: unit["chan"]
 				}
 			]} port={[
 			{
