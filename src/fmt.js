@@ -22,6 +22,16 @@ const chan = [
 	"R"
 ];
 
+const note = [
+	"A",
+	"B",
+	"C",
+	"D",
+	"E",
+	"F",
+	"G"
+];
+
 const chord = [ 
 	" Maj",
 	" Min",
@@ -32,5 +42,6 @@ export {
 	unit,
 	v,
 	chan,
+	note,
 	chord
 };
