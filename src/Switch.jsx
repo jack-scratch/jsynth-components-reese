@@ -5,6 +5,8 @@ import {
 } from "./col";
 
 class Switch extends React.Component {
+	dim = 10;
+
 	constructor(props) {
 		super();
 
@@ -25,17 +27,17 @@ class Switch extends React.Component {
 		return (
 			<div className="cont">
 				<div id="track" style={{
-					height: 10,
-					width: 2 * 10,
+					height: this.dim,
+					width: 2 * this.dim,
 					background: inert,
 					cursor: "pointer"
 				}} onMouseDown={this.toggle}>
 					<div id="nub" style={{
 						position: "absolute",
-						height: 10,
-						width: 10,
+						height: this.dim,
+						width: this.dim,
 						background: bg,
-						marginLeft: this.state.on * 10
+						marginLeft: this.state.on * this.dim
 					}}></div>
 				</div>
 			</div>
