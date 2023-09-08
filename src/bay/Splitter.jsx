@@ -1,5 +1,5 @@
 import React from "react";
-import Effect from "./Effect";
+import Effect from "./fx/Effect";
 import {
 	unit
 } from "../fmt";
