@@ -142,7 +142,7 @@ class Clip extends AudioWorkletProcessor {
 		return [{
 			name: "Threshold",
 			defaultValue: 0,
-			minValue: 0,
+			minValue: -1,
 			maxValue: 1
 		}];
 	}
