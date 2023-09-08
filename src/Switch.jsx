@@ -21,6 +21,10 @@ class Switch extends React.Component {
 	toggle() {
 		this.setState((prevState) => ({
 			on: !prevState.on
+		}, () => {
+			if (this.props.hookToggle) {
+				this.props.tookToggle(this.state.on);
+			}
 		}));
 	}
 
