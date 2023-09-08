@@ -6,7 +6,7 @@ import {
 import "./Switch.css";
 
 class Switch extends React.Component {
-	dim = 10;
+	dim = 14;
 
 	constructor(props) {
 		super();
