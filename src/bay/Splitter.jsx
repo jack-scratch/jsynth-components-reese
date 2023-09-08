@@ -7,10 +7,6 @@ import {
 class Splitter extends Effect {
 	node = [];
 
-	constructor() {
-		super();
-	}
-
 	componentDidMount() {
 		for (let i = 0; i < this.props.n; i++) {
 			this.node.push(window.ctx.createOscillator());
