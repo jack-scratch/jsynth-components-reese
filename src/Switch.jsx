@@ -26,7 +26,7 @@ class Switch extends React.Component {
 
 	render() {
 		return (
-			<div className="cont">
+			<div className="body">
 				<div id="track" style={{
 					height: this.dim,
 					width: 2 * this.dim,
