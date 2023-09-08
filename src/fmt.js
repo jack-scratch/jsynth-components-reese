@@ -5,11 +5,7 @@ const unit = {
 	"time": [
 		"ms",
 		"s"
-	],
-	"sign": {
-		"sharp": "&#9839",
-		"flat": "&#9837"
-	}
+	]
 };
 
 const v = {
@@ -22,15 +18,21 @@ const chan = [
 	"R"
 ];
 
-const note = [
-	"A",
-	"B",
-	"C",
-	"D",
-	"E",
-	"F",
-	"G"
-];
+const note = {
+	"whole": [
+		"A",
+		"B",
+		"C",
+		"D",
+		"E",
+		"F",
+		"G"
+	],
+	"sign": {
+		"sharp": "&#9839",
+		"flat": "&#9837"
+	}
+};
 
 const chord = [ 
 	" Maj",
