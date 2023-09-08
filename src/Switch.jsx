@@ -11,6 +11,14 @@ class Switch extends React.Component {
 		this.state = {
 			on: false
 		};
+
+		this.toggle = this.toggle.bind(this);
+	}
+
+	toggle() {
+		this.setState((prevState) => ({
+			on: !prevState.on
+		}));
 	}
 
 	render() {
@@ -21,7 +29,7 @@ class Switch extends React.Component {
 					width: 2 * 10,
 					background: inert,
 					cursor: "pointer"
-				}}>
+				}} onMouseDown={this.toggle}>
 					<div id="nub" style={{
 						position: "absolute",
 						height: 10,
