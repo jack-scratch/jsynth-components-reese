@@ -3,6 +3,7 @@ import {
 	inert,
 	bg
 } from "./col";
+import "./Switch.css";
 
 class Switch extends React.Component {
 	dim = 10;
@@ -37,7 +38,8 @@ class Switch extends React.Component {
 						height: this.dim,
 						width: this.dim,
 						background: bg,
-						marginLeft: this.state.on * this.dim
+						webkitFilter: "drop-shadow(0px 0px 1px rgba(0, 0, 0, 1.0));",
+						marginLeft: this.state.on * this.dim,
 					}}></div>
 				</div>
 			</div>
