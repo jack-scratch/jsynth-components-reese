@@ -1,5 +1,5 @@
 import React from "react";
-import Cable from "../Cable";
+import Cable from "../ctrl/Cable";
 
 import "./Bay.css";
 
