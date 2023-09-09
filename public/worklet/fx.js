@@ -133,3 +133,43 @@ class Clip extends AudioWorkletProcessor {
 		return true;
 	}
 }
+
+class Fold extends AudioWorkletProcessor {
+	static get parameterDescriptors() {
+		return [
+			{
+				name: "Roof",
+				defaultValue: 1,
+				minValue: -1,
+				maxValue: 1
+			}, {
+				name: "Floor",
+				defaultValue: -1,
+				minValue: -1,
+				maxValue: 1
+			}
+		];
+	}
+
+	process(input, output, param) {
+		output[0].forEach((chan) => {
+			for (let i = 0; i < chan.length; i++) {
+				let sample = input[0][0][i];
+
+				if (sample < this.param.roof) {
+					chan[i] = sample;
+				} else {
+					chan[i] = this.param.roof - sample;
+				}
+
+				if (sample > this.param.floor) {
+					chan[i] = sample;
+				} else {
+					chan[i] = this.param.floor - sample;
+				}
+			}
+		});
+
+		return true;
+	}
+}
