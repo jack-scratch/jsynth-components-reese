@@ -3,7 +3,7 @@ import Source from "./Source";
 import TextDisp from "../periph/TextDisp";
 import {
 	Btn
-} from "../Btn";
+} from "../ctrl/Btn";
 import {
 	FontAwesomeIcon
 } from "@fortawesome/react-fontawesome";

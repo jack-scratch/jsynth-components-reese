@@ -1,7 +1,7 @@
 import React from "react";
 import {
 	Btn
-} from "./Btn";
+} from "./ctrl/Btn";
 import Knob from "./Knob";
 import {
 	unit

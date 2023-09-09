@@ -1,5 +1,5 @@
 import React from "react";
-import Key from "./Key";
+import Key from "./ctrl/Key";
 import {
 	oct
 } from "./math";

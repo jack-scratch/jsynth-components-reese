@@ -1,7 +1,7 @@
 import React from "react";
 import {
 	Btn
-} from "./Btn";
+} from "./ctrl/Btn";
 import Light from "./periph/Light";
 
 import "./Launch.css";
