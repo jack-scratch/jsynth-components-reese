@@ -4,14 +4,14 @@ import {
 	rotDeg,
 	rotRad,
 	lineLn
-} from "./layout";
+} from "../layout";
 import {
 	ws,
 	sep
-} from "./path";
+} from "../path";
 import {
 	clamp
-} from "./util";
+} from "../util";
 
 import "./Knob.css";
 

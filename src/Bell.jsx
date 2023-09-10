@@ -2,7 +2,7 @@ import React from "react";
 import {
 	Btn
 } from "./ctrl/Btn";
-import Knob from "./Knob";
+import Knob from "./ctrl/Knob";
 import Label from "./Label";
 import {
 	FontAwesomeIcon

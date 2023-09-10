@@ -1,5 +1,5 @@
 import React from "react";
-import Knob from "./Knob";
+import Knob from "./ctrl/Knob";
 import Label from "./Label";
 
 class Synth extends React.Component {
