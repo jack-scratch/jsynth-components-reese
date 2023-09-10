@@ -40,7 +40,7 @@ class Note extends React.Component {
 				</div>
 				<div className="cont body">
 					<div className="mark">Octave</div>
-					<TextDisp ln={1} buff={this.state.o} ht/>
+					<TextDisp wd={4} ln={1} buff={this.state.o} ht/>
 					<div className="cont body">
 						<Btn ht={16} />
 						<Btn ht={16} />
