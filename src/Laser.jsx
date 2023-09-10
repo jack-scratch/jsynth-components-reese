@@ -17,6 +17,9 @@ class Laser extends React.Component {
 
 	fire() {
 		this.filter.connect(window.ctx.destination);
+
+		this.osc.frequency.value = 1000.0;
+		this.osc.frequency.exponentialRampToValueAtTime(1.0, window.ctx.currentTime + 0.2);
 	}
 
 	constructor() {
