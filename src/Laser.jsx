@@ -15,8 +15,14 @@ class Laser extends React.Component {
 	osc;
 	filter;
 
+	fire() {
+		this.filter.connect(window.ctx.destination);
+	}
+
 	constructor() {
 		super();
+
+		this.fire = this.fire.bind(this);
 
 		// Source
 		this.osc = window.ctx.createOscillator();
@@ -30,7 +36,6 @@ class Laser extends React.Component {
 
 		// Route
 		this.osc.connect(this.filter);
-		this.filter.connect(window.ctx.destination);
 
 		// Schedule
 		this.osc.start();
@@ -47,7 +52,7 @@ class Laser extends React.Component {
 					<Knob />
 				</div>
 				<div className="cont body">
-					<Btn label="Fire" />
+					<Btn label="Fire" hookPush={this.fire} />
 				</div>
 			</div>
 		);
