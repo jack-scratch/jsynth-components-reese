@@ -28,7 +28,7 @@ const note = {
 		"A",
 		"B"
 	],
-	"sign": {
+	"semi": {
 		"sharp": "&#9839",
 		"flat": "&#9837"
 	}
