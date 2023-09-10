@@ -54,7 +54,7 @@ class Laser extends React.Component {
 				</div>
 				<div className="cont body">
 					<div className="mark">Power</div>
-					<Knob />
+					<Knob hookTurn={(val) => this.ln = val} />
 				</div>
 				<div className="cont body">
 					<XS hookPush={this.fire} />
