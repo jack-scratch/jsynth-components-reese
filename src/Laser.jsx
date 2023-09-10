@@ -12,6 +12,30 @@ import {
 } from "@fortawesome/free-solid-svg-icons"
 
 class Laser extends React.Component {
+	osc;
+	filter;
+
+	constructor() {
+		super();
+
+		// Source
+		this.osc = window.ctx.createOscillator();
+		this.osc.type = "sawtooth";
+		this.osc.frequency.value = 1000.0;
+
+		// Filter
+		this.filter = window.ctx.createBiquadFilter();
+		this.filter.type = "lowpass";
+		this.filter.frequency.value = 1000.0;
+
+		// Route
+		this.osc.connect(this.filter);
+		this.filter.connect(window.ctx.destination);
+
+		// Schedule
+		this.osc.start();
+	}
+
 	render() {
 		return (
 			<div className="cont body">
