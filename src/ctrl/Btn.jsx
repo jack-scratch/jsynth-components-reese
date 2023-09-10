@@ -1,7 +1,7 @@
 import React from "react";
 import {
 	margin
-} from "./layout";
+} from "../layout";
 import {
 	FontAwesomeIcon
 } from "@fortawesome/react-fontawesome"

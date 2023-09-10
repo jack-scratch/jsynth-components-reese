@@ -2,7 +2,7 @@ import React from "react";
 import {
 	margin,
 	bevel
-} from "./layout";
+} from "../layout";
 import {
 	bg,
 	fg
