@@ -20,13 +20,13 @@ const chan = [
 
 const note = {
 	"whole": [
-		"A",
-		"B",
 		"C",
 		"D",
 		"E",
 		"F",
-		"G"
+		"G",
+		"A",
+		"B"
 	],
 	"sign": {
 		"sharp": "&#9839",
