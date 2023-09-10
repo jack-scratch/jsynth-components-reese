@@ -2,7 +2,7 @@ import React from "react";
 import Knob from "./ctrl/Knob";
 
 import {
-	Btn
+	XS
 } from "./ctrl/Btn";
 import {
 	FontAwesomeIcon
@@ -57,7 +57,7 @@ class Laser extends React.Component {
 					<Knob />
 				</div>
 				<div className="cont body">
-					<Btn label="Fire" hookPush={this.fire} />
+					<XS hookPush={this.fire} />
 				</div>
 			</div>
 		);
