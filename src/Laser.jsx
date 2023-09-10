@@ -18,8 +18,8 @@ class Laser extends React.Component {
 	fire() {
 		this.filter.connect(window.ctx.destination);
 
-		this.osc.frequency.value = 1000.0;
-		this.osc.frequency.exponentialRampToValueAtTime(1.0, window.ctx.currentTime + 0.2);
+		this.osc.frequency.value = 2600.0;
+		this.osc.frequency.exponentialRampToValueAtTime(1.0, window.ctx.currentTime + 0.3);
 	}
 
 	constructor() {
@@ -29,13 +29,13 @@ class Laser extends React.Component {
 
 		// Source
 		this.osc = window.ctx.createOscillator();
-		this.osc.type = "sawtooth";
-		this.osc.frequency.value = 1000.0;
+		this.osc.type = "triangle";
+		this.osc.frequency.value = 2600.0;
 
 		// Filter
 		this.filter = window.ctx.createBiquadFilter();
 		this.filter.type = "lowpass";
-		this.filter.frequency.value = 1000.0;
+		this.filter.frequency.value = 1800.0;
 
 		// Route
 		this.osc.connect(this.filter);
