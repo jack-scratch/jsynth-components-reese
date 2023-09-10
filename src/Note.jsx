@@ -9,6 +9,9 @@ import {
 import {
 	a
 } from "./math";
+import {
+	clamp
+} from "./util";
 
 class Note extends React.Component {
 	osc;
@@ -42,8 +45,12 @@ class Note extends React.Component {
 					<div className="mark">Octave</div>
 					<TextDisp wd={4} ln={1} buff={this.state.o} ht/>
 					<div className="cont body">
-						<Btn ht={16} />
-						<Btn ht={16} />
+						<Btn ht={16} hookPush={() => this.setState((prevState) => ({
+							o: prevState.o + 1
+						}))} />
+						<Btn ht={16} hookPush={() => this.setState((prevState) => ({
+							o: prevState.o - 1
+						}))} />
 					</div>
 				</div>
 				<div className="cont body" style={{
@@ -51,14 +58,18 @@ class Note extends React.Component {
 					flexDirection: "row"
 				}}>
 					<div className="cont body">
-						<TextDisp wd={2} ln={1} buff={note["whole"][this.state.s]} />
+						<TextDisp wd={2} ln={1} buff={note["whole"][this.state.t]} />
 					</div>
 					<div>
 						<div className="cont body">
 							<div className="mark">Note</div>
 							<div className="cont body">
-								<Btn ht={16} />
-								<Btn ht={16} />
+								<Btn ht={16} hookPush={() => this.setState((prevState) => ({
+									t: clamp(prevState.t + 1, 0, 6)
+								}))} />
+								<Btn ht={16} hookPush={() => this.setState((prevState) => ({
+									t: clamp(prevState.t - 1, 0, 6)
+								}))} />
 							</div>
 						</div>
 						<div className="cont body">
