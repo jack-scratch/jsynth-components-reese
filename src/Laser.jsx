@@ -12,14 +12,25 @@ import {
 } from "@fortawesome/free-solid-svg-icons"
 
 class Laser extends React.Component {
-	osc;
+	ln = 0.3;
+
 	filter;
 
 	fire() {
-		this.filter.connect(window.ctx.destination);
+		// Source
+		let osc = window.ctx.createOscillator();
+		osc.type = "triangle";
+		osc.frequency.value = 2600.0;
 
-		this.osc.frequency.value = 2600.0;
-		this.osc.frequency.exponentialRampToValueAtTime(1.0, window.ctx.currentTime + 0.3);
+		// Route
+		osc.connect(this.filter);
+
+		// Schedule
+		osc.start();
+
+		osc.frequency.exponentialRampToValueAtTime(1.0, window.ctx.currentTime + this.ln);
+
+		osc.stop(this.ln);
 	}
 
 	constructor() {
@@ -27,21 +38,12 @@ class Laser extends React.Component {
 
 		this.fire = this.fire.bind(this);
 
-		// Source
-		this.osc = window.ctx.createOscillator();
-		this.osc.type = "triangle";
-		this.osc.frequency.value = 2600.0;
-
 		// Filter
 		this.filter = window.ctx.createBiquadFilter();
 		this.filter.type = "lowpass";
 		this.filter.frequency.value = 1800.0;
 
-		// Route
-		this.osc.connect(this.filter);
-
-		// Schedule
-		this.osc.start();
+		this.filter.connect(window.ctx.destination);
 	}
 
 	render() {
