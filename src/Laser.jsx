@@ -30,7 +30,7 @@ class Laser extends React.Component {
 
 		osc.frequency.exponentialRampToValueAtTime(1.0, window.ctx.currentTime + this.ln);
 
-		osc.stop(this.ln);
+		osc.stop(window.ctx.currentTime + this.ln);
 	}
 
 	constructor() {
