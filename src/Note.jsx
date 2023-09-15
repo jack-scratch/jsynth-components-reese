@@ -8,13 +8,16 @@ import {
 	note
 } from "./fmt";
 import {
-	a
+	a,
+	oct
 } from "./math";
 import {
 	clamp
 } from "./util";
 
 class Note extends React.Component {
+	noteLn = oct - 1 - 1;
+
 	fmtSemi = {
 		"sharp": "#",
 		"flat": "b"
@@ -60,10 +63,10 @@ class Note extends React.Component {
 							<div className="mark">Note</div>
 							<div className="cont body">
 								<Select hookPush={() => this.setState((prevState) => ({
-									t: clamp(prevState.t + 1, 0, 6)
+									t: clamp(prevState.t + 1, 0, this.noteLn)
 								}))} />
 								<Select hookPush={() => this.setState((prevState) => ({
-									t: clamp(prevState.t - 1, 0, 6)
+									t: clamp(prevState.t - 1, 0, this.noteLn)
 								}))} />
 							</div>
 						</div>
