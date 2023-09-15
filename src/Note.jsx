@@ -28,7 +28,7 @@ class Note extends React.Component {
 		super();
 
 		this.state = {
-			o: 0,
+			o: 4,
 			t: 0,
 			s: 0
 		};
@@ -42,7 +42,7 @@ class Note extends React.Component {
 				</div>
 				<div>
 					<div className="cont body">
-						<TextDisp wd={6} ln={1} buff={`${note["whole"][this.state.t]}${this.fmtSemi[this.state.s]}${this.state.o ? this.state.o : ""}`} />
+						<TextDisp wd={6} ln={1} buff={`${note["whole"][this.state.t]}${this.fmtSemi[this.state.s]}${this.state.o}`} />
 					</div>
 					<div style={{
 						display: "flex",
@@ -57,7 +57,7 @@ class Note extends React.Component {
 									o: prevState.o + 1
 								}))} />
 								<Select hookPush={() => this.setState((prevState) => ({
-									o: prevState.o - 1
+									o: Math.max(prevState.o - 1, 0)
 								}))} />
 							</div>
 						</div>
