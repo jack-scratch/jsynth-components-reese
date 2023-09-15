@@ -1,7 +1,8 @@
 import React from "react";
 import TextDisp from "./periph/TextDisp";
 import {
-	Btn
+	Btn,
+	Select
 } from "./ctrl/Btn";
 import {
 	note
@@ -39,10 +40,10 @@ class Note extends React.Component {
 					<div className="mark">Octave</div>
 					<TextDisp wd={4} ln={1} buff={this.state.o} ht/>
 					<div className="cont body">
-						<Btn ht={16} hookPush={() => this.setState((prevState) => ({
+						<Select hookPush={() => this.setState((prevState) => ({
 							o: prevState.o + 1
 						}))} />
-						<Btn ht={16} hookPush={() => this.setState((prevState) => ({
+						<Select hookPush={() => this.setState((prevState) => ({
 							o: prevState.o - 1
 						}))} />
 					</div>
@@ -58,10 +59,10 @@ class Note extends React.Component {
 						<div className="cont body">
 							<div className="mark">Note</div>
 							<div className="cont body">
-								<Btn ht={16} hookPush={() => this.setState((prevState) => ({
+								<Select hookPush={() => this.setState((prevState) => ({
 									t: clamp(prevState.t + 1, 0, 6)
 								}))} />
-								<Btn ht={16} hookPush={() => this.setState((prevState) => ({
+								<Select hookPush={() => this.setState((prevState) => ({
 									t: clamp(prevState.t - 1, 0, 6)
 								}))} />
 							</div>
@@ -69,8 +70,8 @@ class Note extends React.Component {
 						<div className="cont body">
 							<div className="mark">Semitone</div>
 							<div className="cont body">
-								<Btn ht={16} />
-								<Btn ht={16} />
+								<Select />
+								<Select />
 							</div>
 						</div>
 					</div>
