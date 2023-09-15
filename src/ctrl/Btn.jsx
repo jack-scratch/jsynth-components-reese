@@ -105,7 +105,7 @@ class L extends Btn {
 class Toggle extends Btn {
 	render() {
 		return (
-			<Btn label={<FontAwesomeIcon icon={faStop} /> / <FontAwesomeIcon icon={faPlay} />} />
+			<Btn label={<FontAwesomeIcon icon={faStop} /> / <FontAwesomeIcon icon={faPlay} />} hookPush={this.props.hookPush} hookRelease={this.props.hookRelease} />
 		);
 	}
 }
@@ -113,7 +113,7 @@ class Toggle extends Btn {
 class Select extends Btn {
 	render() {
 		return (
-			<Btn ht={16} label={this.props.dir == "next" ? <FontAwesomeIcon icon={faChevronDown} /> : <FontAwesomeIcon icon={faChevronUp} />} />
+			<Btn ht={16} label={this.props.dir == "next" ? <FontAwesomeIcon icon={faChevronDown} /> : <FontAwesomeIcon icon={faChevronUp} />} hookPush={this.props.hookPush} hookRelease={this.props.hookRelease} />
 		);
 	}
 }
