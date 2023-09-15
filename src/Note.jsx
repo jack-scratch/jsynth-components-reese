@@ -51,14 +51,14 @@ class Note extends React.Component {
 						}))} />
 					</div>
 				</div>
-				<div className="cont body" style={{
-					display: "flex",
-					flexDirection: "row"
-				}}>
+				<div>
 					<div className="cont body">
 						<TextDisp wd={2} ln={1} buff={`${note["whole"][this.state.t]}${this.fmtSemi[this.state.s == 1 ? "sharp" : "flat"]}`} />
 					</div>
-					<div>
+					<div style={{
+						display: "flex",
+						flexDirection: "row"
+					}}>
 						<div className="cont body">
 							<div className="mark">Note</div>
 							<div className="cont body">
