@@ -4,7 +4,7 @@ import {
 	Out
 } from "../Port";
 import Label from "../Label";
-import Knob from "../Knob";
+import Knob from "../ctrl/Knob";
 
 import "./Module.css";
 
