@@ -18,10 +18,11 @@ import {
 class Note extends React.Component {
 	noteLn = oct - 1 - 1;
 
-	fmtSemi = {
-		"sharp": "#",
-		"flat": "b"
-	};
+	fmtSemi = [
+		"",
+		"#",
+		"b"
+	];
 
 	constructor() {
 		super();
@@ -39,26 +40,25 @@ class Note extends React.Component {
 				<div className="head">
 					<h1>Notes</h1>
 				</div>
-				<div className="cont body">
-					<div className="mark">Octave</div>
-					<TextDisp wd={4} ln={1} buff={this.state.o} ht/>
-					<div className="cont body">
-						<Select hookPush={() => this.setState((prevState) => ({
-							o: prevState.o + 1
-						}))} />
-						<Select hookPush={() => this.setState((prevState) => ({
-							o: prevState.o - 1
-						}))} />
-					</div>
-				</div>
 				<div>
 					<div className="cont body">
-						<TextDisp wd={2} ln={1} buff={`${note["whole"][this.state.t]}${this.fmtSemi[this.state.s == 1 ? "sharp" : "flat"]}`} />
+						<TextDisp wd={6} ln={1} buff={`${note["whole"][this.state.t]}${this.fmtSemi[this.state.s]}${this.state.o ? this.state.o : ""}`} />
 					</div>
 					<div style={{
 						display: "flex",
 						flexDirection: "row"
 					}}>
+						<div className="cont body">
+							<div className="mark">Octave</div>
+							<div className="cont body">
+								<Select hookPush={() => this.setState((prevState) => ({
+									o: prevState.o + 1
+								}))} />
+								<Select hookPush={() => this.setState((prevState) => ({
+									o: prevState.o - 1
+								}))} />
+							</div>
+						</div>
 						<div className="cont body">
 							<div className="mark">Note</div>
 							<div className="cont body">
@@ -73,12 +73,12 @@ class Note extends React.Component {
 						<div className="cont body">
 							<div className="mark">Semitone</div>
 							<div className="cont body">
-								<Select hookPush={() => this.setState({
-									s: 1
-								})}/>
-								<Select hookPush={() => this.setState({
-									s: -1
-								})}/>
+								<Select hookPush={() => this.setState((prevState) => ({
+									s: clamp(prevState.s + 1, 0, 2)
+								}))}/>
+								<Select hookPush={() => this.setState((prevState) => ({
+									s: clamp(prevState.s - 1, 0, 2)
+								}))}/>
 							</div>
 						</div>
 					</div>
