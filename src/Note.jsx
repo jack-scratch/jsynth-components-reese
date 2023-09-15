@@ -56,7 +56,7 @@ class Note extends React.Component {
 					flexDirection: "row"
 				}}>
 					<div className="cont body">
-						<TextDisp wd={2} ln={1} buff={note["whole"][this.state.t]} />
+						<TextDisp wd={2} ln={1} buff={`${note["whole"][this.state.t]}${this.fmtSemi[this.state.s == 1 ? "sharp" : "flat"]}`} />
 					</div>
 					<div>
 						<div className="cont body">
