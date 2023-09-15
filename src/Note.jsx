@@ -49,8 +49,10 @@ class Note extends React.Component {
 						flexDirection: "row"
 					}}>
 						<div className="cont body">
-							<div className="mark">Octave</div>
-							<div className="cont body">
+							<div className="body">
+								<div className="mark">Octave</div>
+							</div>
+							<div className="body">
 								<Select hookPush={() => this.setState((prevState) => ({
 									o: prevState.o + 1
 								}))} />
@@ -60,8 +62,10 @@ class Note extends React.Component {
 							</div>
 						</div>
 						<div className="cont body">
-							<div className="mark">Note</div>
-							<div className="cont body">
+							<div className="body">
+								<div className="mark">Note</div>
+							</div>
+							<div className="body">
 								<Select hookPush={() => this.setState((prevState) => ({
 									t: clamp(prevState.t + 1, 0, this.noteLn)
 								}))} />
@@ -71,8 +75,10 @@ class Note extends React.Component {
 							</div>
 						</div>
 						<div className="cont body">
-							<div className="mark">Semitone</div>
-							<div className="cont body">
+							<div className="body">
+								<div className="mark">Semitone</div>
+							</div>
+							<div className="body">
 								<Select hookPush={() => this.setState((prevState) => ({
 									s: clamp(prevState.s + 1, 0, 2)
 								}))}/>
