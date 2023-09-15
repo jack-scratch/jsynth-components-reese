@@ -4,12 +4,16 @@ const oct = 8;
 const semi = 12;
 
 class Chord {
-	constructor(note) {
+	constructor(note, n = 2) {
+		this.n = n;
 		this.note = note;
 	}
 }
 
 class Triad extends Chord {
+	constructor(note) {
+		super(3, note);
+	}
 }
 
 class Maj extends Triad {
