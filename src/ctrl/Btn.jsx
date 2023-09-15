@@ -7,7 +7,9 @@ import {
 } from "@fortawesome/react-fontawesome"
 import {
 	faStop,
-	faPlay
+	faPlay,
+	faChevronDown,
+	faChevronUp
 } from "@fortawesome/free-solid-svg-icons"
 
 import "./Btn.css";
@@ -108,11 +110,24 @@ class Toggle extends Btn {
 	}
 }
 
+class Select extends Btn {
+	render() {
+		return (
+			<Btn ht={16} label={this.props.dir == "next" ? <FontAwesomeIcon icon={faChevronDown} /> : <FontAwesomeIcon icon={faChevronUp} />} />
+		);
+	}
+}
+
+Select.defaultProps = {
+	dir: "next"
+};
+
 export {
 	Btn,
 	XS,
 	S,
 	M,
 	L,
-	Toggle
+	Toggle,
+	Select
 };
