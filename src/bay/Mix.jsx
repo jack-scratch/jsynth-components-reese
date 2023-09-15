@@ -4,7 +4,7 @@ import {
 	unit
 } from "../fmt";
 
-class Merger extends Effect {
+class Mixer extends Effect {
 	node = [];
 
 	constructor() {
@@ -27,8 +27,8 @@ class Merger extends Effect {
 	}
 }
 
-Merger.defaultProps = {
+Mixer.defaultProps = {
 	n: 2
 };
 
-export default Merger;
+export default Mixer;
