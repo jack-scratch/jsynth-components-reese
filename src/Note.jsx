@@ -19,9 +19,9 @@ class Note extends React.Component {
 	noteLn = oct - 1 - 1;
 
 	fmtSemi = [
+		"b",
 		"",
-		"#",
-		"b"
+		"#"
 	];
 
 	constructor() {
@@ -30,7 +30,7 @@ class Note extends React.Component {
 		this.state = {
 			o: 4,
 			t: 0,
-			s: 0
+			s: 1
 		};
 	}
 
