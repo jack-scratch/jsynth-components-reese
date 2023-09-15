@@ -77,7 +77,7 @@ class Note extends React.Component {
 					</div>
 				</div>
 				<div className="cont body">
-					<Btn hookPush={this.props.hook && this.props.hook(a * Math.pow(2, this.state.o + ((1 / 7) * this.state.t) + ((this.state.s == 1 ? 1 : -1) * (1 / 12))))} />
+					<Btn hookPush={this.props.hook && this.props.hook(a * Math.pow(2, this.state.o + ((1 / 7) * this.state.t) + ((this.state.s === 1 ? 1 : -1) * (1 / 12))))} />
 				</div>
 			</div>
 		);

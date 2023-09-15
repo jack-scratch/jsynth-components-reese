@@ -113,7 +113,7 @@ class Toggle extends Btn {
 class Select extends Btn {
 	render() {
 		return (
-			<Btn ht={16} label={this.props.dir == "next" ? <FontAwesomeIcon icon={faChevronDown} /> : <FontAwesomeIcon icon={faChevronUp} />} hookPush={this.props.hookPush} hookRelease={this.props.hookRelease} />
+			<Btn ht={16} label={this.props.dir === "next" ? <FontAwesomeIcon icon={faChevronDown} /> : <FontAwesomeIcon icon={faChevronUp} />} hookPush={this.props.hookPush} hookRelease={this.props.hookRelease} />
 		);
 	}
 }
