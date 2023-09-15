@@ -73,8 +73,12 @@ class Note extends React.Component {
 						<div className="cont body">
 							<div className="mark">Semitone</div>
 							<div className="cont body">
-								<Select />
-								<Select />
+								<Select hookPush={() => this.setState({
+									s: 1
+								})}/>
+								<Select hookPush={() => this.setState({
+									s: -1
+								})}/>
 							</div>
 						</div>
 					</div>
