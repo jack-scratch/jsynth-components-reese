@@ -33,7 +33,7 @@ class Fader extends React.Component {
 		this.setState({
 			val: this.state.prevVal - deltaY
 		}, () => {
-			this.props.hook(this.state.val);
+			this.props.hook && this.props.hook(this.state.val);
 		});
 
 		if (this.props.marked) {
