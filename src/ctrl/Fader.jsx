@@ -6,7 +6,7 @@ import {
 import {
 	bg,
 	fg
-} from "./col";
+} from "../col";
 
 import "./Fader.css";
 
