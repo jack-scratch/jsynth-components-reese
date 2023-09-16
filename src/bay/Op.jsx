@@ -54,10 +54,10 @@ class Op extends Osc {
 	}
 
 	componentDidMount() {
-		// patch
+		// Patch
 		this.node.main.connect(this.node.amp);
 
-		// start
+		// Schedule
 		this.node.main.start();
 	}
 
