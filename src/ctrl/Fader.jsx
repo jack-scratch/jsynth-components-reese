@@ -83,9 +83,7 @@ class Fader extends React.Component {
 					</svg>
 				</div>
 				{this.props.marked && <svg className="inc" ref={this.markRef}>
-					{[...Array(this.props.mark).keys()].map((i) =>
-						<line x1={margin * 2} y1={i * markStride} x2={(margin * 2) + 20} y2={i * markStride} className="tick" key={i} />
-					)}
+					{[...Array(this.props.mark).keys()].map((i) => <line x1={margin * 2} y1={i * markStride} x2={(margin * 2) + 20} y2={i * markStride} className="tick" key={i} />)}
 				</svg>}
 			</div>
 		);
