@@ -10,7 +10,7 @@ import {
 	unit
 } from "./fmt";
 
-class Meter extends React.Component {
+class VU extends React.Component {
 	sz = Math.pow(2, 10);
 
 	// layout
@@ -106,10 +106,10 @@ class Meter extends React.Component {
 	}
 }
 
-Meter.defaultProps = {
+VU.defaultProps = {
 	tick: 20,
 	min: 0.0,
 	max: 12.0
 };
 
-export default Meter;
+export default VU;
