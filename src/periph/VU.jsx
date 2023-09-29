@@ -13,7 +13,7 @@ import {
 class VU extends React.Component {
 	sz = Math.pow(2, 10);
 
-	// layout
+	// Layout
 	wd = 14;
 	ht = 6;
 
