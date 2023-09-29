@@ -3,9 +3,6 @@ import Source from "./Source";
 import {
 	Btn
 } from "../ctrl/Btn";
-import {
-	unit
-} from "../fmt";
 
 class Pulse extends Source {
 	render() {
