@@ -24,6 +24,13 @@ class Chord extends React.Component {
 		"#"
 	];
 
+	fmtType = [
+		"Maj",
+		"Min",
+		"Aug",
+		"Dim"
+	];
+
 	constructor() {
 		super();
 
@@ -90,7 +97,7 @@ class Chord extends React.Component {
 						</div>
 					</div>
 					<div className="cont body">
-						<TextDisp wd={6} ln={1} buff={this.state.type} />
+						<TextDisp wd={6} ln={1} buff={this.fmtType[this.state.type]} />
 					</div>
 				</div>
 				<div className="cont body">
