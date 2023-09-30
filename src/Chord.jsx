@@ -97,7 +97,18 @@ class Chord extends React.Component {
 						</div>
 					</div>
 					<div className="cont body">
+						<div className="body">
+							<div className="mark">Type</div>
+						</div>
 						<TextDisp wd={6} ln={1} buff={this.fmtType[this.state.type]} />
+						<div className="body">
+							<Select hookPush={() => this.setState((prevState) => ({
+								type: clamp(prevState.type + 1, 0, this.fmtType.length - 1)
+							}))} />
+							<Select hookPush={() => this.setState((prevState) => ({
+								type: clamp(prevState.type - 1, 0, this.fmtType.length - 1)
+							}))} />
+						</div>
 					</div>
 				</div>
 				<div className="cont body">
