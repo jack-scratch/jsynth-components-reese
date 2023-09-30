@@ -50,7 +50,7 @@ class Chord extends React.Component {
 				</div>
 				<div>
 					<div className="cont body">
-						<TextDisp wd={6} ln={1} buff={`${note["whole"][this.state.t]}${this.fmtSemi[this.state.s]}${this.state.o}`} />
+						<TextDisp wd={10} ln={1} buff={`${note["whole"][this.state.t]}${this.fmtSemi[this.state.s]}${this.state.o} ${this.fmtType[this.state.type]}`} />
 					</div>
 					<div style={{
 						display: "flex",
@@ -100,7 +100,6 @@ class Chord extends React.Component {
 						<div className="body">
 							<div className="mark">Type</div>
 						</div>
-						<TextDisp wd={6} ln={1} buff={this.fmtType[this.state.type]} />
 						<div className="body">
 							<Select hookPush={() => this.setState((prevState) => ({
 								type: clamp(prevState.type + 1, 0, this.fmtType.length - 1)
