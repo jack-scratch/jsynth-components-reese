@@ -1,7 +1,26 @@
 import "./main.css";
 import Knob from "./ctrl/Knob";
+import React from "react";
 
 window.ctx = new window.AudioContext() || window.webkitAudioContext();
+
+class Reese extends React.Component {
+	render() {
+		return <div class="cont">
+			<div class="head">
+			<h1>Reese Bass</h1>
+			</div>
+			<div class="body">
+			<div>
+			<Knob />
+			</div>
+			<div>
+			<Knob />
+			</div>
+			</div>
+			</div>;
+	}
+}
 
 function App() {
   return (
@@ -10,19 +29,7 @@ function App() {
 				window.ctx.resume();
 			}
 		}}>
-			<div class="cont">
-				<div class="head">
-					<h1>Reese Bass</h1>
-				</div>
-				<div class="body">
-					<div>
-						<Knob />
-					</div>
-					<div>
-						<Knob />
-					</div>
-				</div>
-			</div>
+			<Reese />
 		</div>
   );
 }
