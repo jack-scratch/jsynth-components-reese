@@ -5,6 +5,12 @@ import React from "react";
 window.ctx = new window.AudioContext() || window.webkitAudioContext();
 
 class Reese extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.osc = window.ctx.createOscillator();
+	}
+
 	render() {
 		return <div class="cont">
 			<div class="head">
