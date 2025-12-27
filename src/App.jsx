@@ -18,10 +18,10 @@ class Reese extends React.Component {
 			</div>
 			<div class="body">
 			<div>
-			<Knob />
+			<Knob val={this.osc.frequency.value} />
 			</div>
 			<div>
-			<Knob />
+			<Knob val={this.osc.frequency.value} />
 			</div>
 			</div>
 			</div>;
