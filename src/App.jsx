@@ -8,7 +8,10 @@ class Reese extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this.osc = window.ctx.createOscillator();
+		this.osc = [
+			window.ctx.createOscillator(),
+			window.ctx.createOscillator()
+		];
 	}
 
 	render() {
@@ -18,10 +21,10 @@ class Reese extends React.Component {
 			</div>
 			<div class="body">
 			<div>
-			<Knob val={this.osc.frequency.value} />
+			<Knob val={this.osc[0].frequency.value} />
 			</div>
 			<div>
-			<Knob val={this.osc.frequency.value} />
+			<Knob val={this.osc[1].frequency.value} />
 			</div>
 			</div>
 			</div>;
